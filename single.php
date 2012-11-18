@@ -12,11 +12,5 @@
             $tpl_data['date'] = get_the_time('F jS Y');
         }
 
-        if (isset($_POST['ajax'])) {
-            echo json_encode($tpl_data);
-        } else {
-            get_header();
-            echo $single_tpl->render($tpl_data);
-            get_footer();
-        }
+        page_output($single_tpl, $tpl_data);
     }

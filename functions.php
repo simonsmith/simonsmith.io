@@ -13,6 +13,16 @@ $mustache = new Mustache_Engine(array(
 
 add_theme_support('post-thumbnails', array('post', 'work'));
 
+function page_output($tpl, $data) {
+    if (isset($_POST['ajax'])) {
+        echo json_encode($data);
+    } else {
+        get_header();
+        echo $tpl->render($data);
+        get_footer();
+    }
+}
+
 function load_mustache_template($template) {
     global $mustache;
     return $mustache->loadTemplate($template);

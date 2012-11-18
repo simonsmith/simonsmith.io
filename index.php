@@ -22,10 +22,4 @@
         endwhile;
         wp_reset_postdata();
 
-        if (isset($_POST['ajax'])) {
-            echo json_encode($tpl_data);
-        } else {
-            get_header();
-            echo $home_tpl->render($tpl_data);
-            get_footer();
-        }
+        page_output($home_tpl, $tpl_data);
