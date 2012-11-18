@@ -11,16 +11,20 @@ $mustache = new Mustache_Engine(array(
     'partials_loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates/partials')
 ));
 
-add_theme_support('post-thumbnails', array('post', 'work'));
+add_theme_support('post-thumbnails', ['post', 'work']);
 
 function page_output($tpl, $data) {
-    if (isset($_POST['ajax'])) {
+    if (!isset($_POST['ajax'])) {
         echo json_encode($data);
     } else {
         get_header();
         echo $tpl->render($data);
         get_footer();
     }
+}
+
+function get_permalink_by_title($title) {
+    return get_permalink(get_page_by_title($title)->ID);
 }
 
 function load_mustache_template($template) {
@@ -30,18 +34,18 @@ function load_mustache_template($template) {
 
 function create_post_type() {
     register_post_type('work',
-        array(
-            'labels' => array(
+        [
+            'labels' => [
                 'name' => __('Work'),
                 'singular_name' => __('Work')
-            ),
+            ],
             'public' => true,
             'has_archive' => true,
-            'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments', 'revisions', 'custom-fields'),
-            'taxonomies' => array('category', 'post_tag'),
+            'supports' => ['title', 'editor', 'thumbnail', 'excerpt', 'comments', 'revisions', 'custom-fields'],
+            'taxonomies' => ['category', 'post_tag'],
             'menu_position' => 5,
             'rewrite' => true
-        )
+        ]
     );
 }
 
