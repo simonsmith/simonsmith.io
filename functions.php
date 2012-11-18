@@ -4,17 +4,17 @@ require('kint/Kint.class.php');
 require('Mustache/Autoloader.php');
 Mustache_Autoloader::register();
 
-$mustache = new Mustache_Engine(array(
-    'template_class_prefix' => '__PEWordpress_',
+$mustache = new Mustache_Engine([
+    'template_class_prefix' => '__blinkdesign_',
     'cache' => dirname(__FILE__).'/templates/cache',
     'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates'),
     'partials_loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates/partials')
-));
+]);
 
 add_theme_support('post-thumbnails', ['post', 'work']);
 
 function page_output($tpl, $data) {
-    if (!isset($_POST['ajax'])) {
+    if (isset($_POST['ajax'])) {
         echo json_encode($data);
     } else {
         get_header();

@@ -2,9 +2,14 @@
     <article>
         <header>
             <h1 class="hdr hdr-page">{{{title}}}</h1>
-            <time datetime="{{w3c_date}}">{{date}}</time>
+            <p class="description">{{{excerpt}}}</p>
         </header>
         <div class="post-content">
             {{{content}}}
+        </div>
+        <div class="work-images">
+            {{#attachments}}
+                {{> attachment}}
+            {{/attachments}}
         </div>
     </article>
