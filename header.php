@@ -1,31 +1,34 @@
+<?
+    global $page, $paged;
+?>
 <!doctype html>
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
         <title>
             <?
-            /*
-             * Print the <title> tag based on what is being viewed.
-             */
-            global $page, $paged;
+                /*
+                 * Print the <title> tag based on what is being viewed.
+                 */
+                wp_title('', true, 'right');
 
-            wp_title( '', true, 'right' );
+                if (is_page( 'home' )) {
+                    echo "Home";
+                }
+                echo " | ";
 
-            if ( is_page( 'home' ) ) echo "Home";
+                // Add the blog name.
+                bloginfo( 'name' );
 
-            echo " | ";
-
-            // Add the blog name.
-            bloginfo( 'name' );
-
-            // Add the blog description for the home/front page.
-            $site_description = get_bloginfo( 'description', 'display' );
-            if ( $site_description ) echo " - $site_description";
-
-            // Add a page number if necessary:
-            if ( $paged >= 2 || $page >= 2 )
-                echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
-
+                // Add the blog description for the home/front page.
+                $site_description = get_bloginfo( 'description', 'display' );
+                if ( $site_description ) {
+                    echo " - $site_description";
+                }
+                // Add a page number if necessary:
+                if ( $paged >= 2 || $page >= 2 ) {
+                    echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
+                }
             ?>
       	</title>
         <meta name="description" content="<? if ( $site_description ) echo "$site_description"; ?>">
