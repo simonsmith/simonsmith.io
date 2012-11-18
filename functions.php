@@ -1,4 +1,4 @@
-<?php
+<?
 
 require('Mustache/Autoloader.php');
 Mustache_Autoloader::register();
@@ -34,11 +34,11 @@ function create_post_type() {
     );
 }
 
-function new_excerpt_length($length) {
+function new_excerpt_length() {
     return 20;
 }
 
-function new_excerpt_more($more) {
+function new_excerpt_more() {
     return '...';
 }
 
