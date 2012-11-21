@@ -46,6 +46,28 @@ function load_mustache_template($template) {
     return $mustache->loadTemplate($template);
 }
 
+function page_title() {
+    global $page, $paged;
+    wp_title('', true, 'right');
+
+    if (is_home()) {
+        echo "Home";
+    }
+    echo " | ";
+
+    bloginfo( 'name' );
+
+    $site_description = get_bloginfo( 'description', 'display' );
+
+    if ( $site_description ) {
+        echo " - $site_description";
+    }
+
+    if ( $paged >= 2 || $page >= 2 ) {
+        echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
+    }
+}
+
 function create_post_type() {
     register_post_type('project',
         [

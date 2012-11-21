@@ -1,35 +1,9 @@
-<?
-    global $page, $paged;
-?>
 <!doctype html>
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
         <title>
-            <?
-                /*
-                 * Print the <title> tag based on what is being viewed.
-                 */
-                wp_title('', true, 'right');
-
-                if (is_home()) {
-                    echo "Home";
-                }
-                echo " | ";
-
-                // Add the blog name.
-                bloginfo( 'name' );
-
-                // Add the blog description for the home/front page.
-                $site_description = get_bloginfo( 'description', 'display' );
-                if ( $site_description ) {
-                    echo " - $site_description";
-                }
-                // Add a page number if necessary:
-                if ( $paged >= 2 || $page >= 2 ) {
-                    echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
-                }
-            ?>
+            <? page_title(); ?>
       	</title>
         <meta name="description" content="<? if ( $site_description ) echo "$site_description"; ?>">
         <meta name="viewport" content="width=device-width">
