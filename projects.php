@@ -1,21 +1,21 @@
 <?
     /**
-        Template name: Work
+        Template name: Projects
     */
 
     $tpl_data = [
-        'work_items' => []
+        'project_items' => []
     ];
-    $home_tpl = load_mustache_template('work');
+    $home_tpl = load_mustache_template('projects');
 
-    $work_items = new WP_Query([
-        'post_type' => 'work',
+    $project_items = new WP_Query([
+        'post_type' => 'project',
         'orderby' => 'date',
         'posts_per_page' => 20
     ]);
 
-    while ($work_items->have_posts()) : $work_items->the_post();
-        array_push($tpl_data['work_items'], [
+    while ($project_items->have_posts()) : $project_items->the_post();
+        array_push($tpl_data['project_items'], [
             'url' => get_permalink(),
             'title' => get_the_title(),
             'excerpt' => get_the_excerpt(),

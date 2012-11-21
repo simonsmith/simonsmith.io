@@ -1,6 +1,6 @@
 
 <?
-    $single_work_tpl = load_mustache_template('single-work');
+    $single_work_tpl = load_mustache_template('single-project');
 
     $attachments = (new AttachmentsPro)->get_attachments([
         'instance'  => 'portfolio',

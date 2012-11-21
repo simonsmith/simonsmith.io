@@ -11,7 +11,7 @@ $mustache = new Mustache_Engine([
     'partials_loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates/partials')
 ]);
 
-add_theme_support('post-thumbnails', ['post', 'work']);
+add_theme_support('post-thumbnails', ['post', 'work', 'project']);
 
 function page_output($tpl, $data) {
     if (isset($_POST['ajax'])) {
@@ -33,11 +33,11 @@ function load_mustache_template($template) {
 }
 
 function create_post_type() {
-    register_post_type('work',
+    register_post_type('project',
         [
             'labels' => [
-                'name' => __('Work'),
-                'singular_name' => __('Work')
+                'name' => __('Projects'),
+                'singular_name' => __('Projects')
             ],
             'public' => true,
             'has_archive' => true,
@@ -50,7 +50,7 @@ function create_post_type() {
 }
 
 function new_excerpt_length() {
-    return 20;
+    return 50;
 }
 
 function new_excerpt_more() {
