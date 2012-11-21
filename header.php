@@ -12,7 +12,7 @@
                  */
                 wp_title('', true, 'right');
 
-                if (is_page( 'home' )) {
+                if (is_home()) {
                     echo "Home";
                 }
                 echo " | ";
@@ -58,13 +58,14 @@
 
                 <nav class="nav" id="nav" role="navigation">
                     <h1 class="visuallyhidden">Site navigation</h1>
-                    <ul class="nav-list">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#"><abbr title="Curriculum Vitae">CV</abbr></a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                    <?
+                        wp_nav_menu([
+                            'theme_location' => 'main-nav',
+                            'container' => false,
+                            'menu_class' => 'nav-list',
+                            'menu_id' => false
+                        ]);
+                    ?>
                 </nav>
             </header>
 

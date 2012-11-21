@@ -11,16 +11,30 @@ $mustache = new Mustache_Engine([
     'partials_loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates/partials')
 ]);
 
-add_theme_support('post-thumbnails', ['post', 'work', 'project']);
-
 function page_output($tpl, $data) {
     if (isset($_POST['ajax'])) {
+        header('Content-Type: application/json');
+        $data['page_meta'] = [
+            'body_class' => implode(' ', get_body_class()),
+            'page_title' => (is_home() ? 'Home' : wp_title('', false))
+        ];
         echo json_encode($data);
     } else {
         get_header();
         echo $tpl->render($data);
         get_footer();
     }
+}
+
+function get_nav_items_by_name($menu_name) {
+    $locations = get_nav_menu_locations();
+
+    if (!isset($locations[$menu_name])) {
+        return null;
+    }
+
+    $menu = wp_get_nav_menu_object($locations[$menu_name]);
+    return wp_get_nav_menu_items($menu->term_id);
 }
 
 function get_permalink_by_title($title) {
@@ -49,6 +63,12 @@ function create_post_type() {
     );
 }
 
+function register_menus() {
+  register_nav_menus(
+    ['main-nav' => __( 'Main Nav')]
+  );
+}
+
 function new_excerpt_length() {
     return 50;
 }
@@ -60,6 +80,8 @@ function new_excerpt_more() {
 add_filter('excerpt_more', 'new_excerpt_more');
 add_filter('excerpt_length', 'new_excerpt_length');
 add_action('init', 'create_post_type');
+add_action( 'init', 'register_menus' );
+add_theme_support('post-thumbnails', ['post', 'work', 'project']);
 
 function commentLayout($comment, $args, $depth) {
 

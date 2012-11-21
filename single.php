@@ -1,4 +1,3 @@
-
 <?
     $single_tpl = load_mustache_template('single');
 
