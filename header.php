@@ -5,7 +5,7 @@
         <title>
             <? page_title(); ?>
       	</title>
-        <meta name="description" content="<? if ( $site_description ) echo "$site_description"; ?>">
+        <meta name="description" content="<?= get_bloginfo('description', 'display') ?>">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/blinkdesign.css">
     </head>
@@ -32,14 +32,12 @@
 
                 <nav class="nav" id="nav" role="navigation">
                     <h1 class="visuallyhidden">Site navigation</h1>
-                    <?
-                        wp_nav_menu([
-                            'theme_location' => 'main-nav',
-                            'container' => false,
-                            'menu_class' => 'nav-list',
-                            'menu_id' => false
-                        ]);
-                    ?>
+                    <div class="nav-list-container">
+                        <?
+                            global $nav_options;
+                            wp_nav_menu($nav_options);
+                        ?>
+                    </div>
                 </nav>
             </header>
 

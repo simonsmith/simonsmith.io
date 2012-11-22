@@ -11,13 +11,25 @@ $mustache = new Mustache_Engine([
     'partials_loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates/partials')
 ]);
 
+// Nav options here for re-use
+$nav_options = [
+    'theme_location' => 'main-nav',
+    'container' => false,
+    'menu_class' => 'nav-list',
+    'menu_id' => false
+];
+
+// Render as normal or return JSON if parameter is present
 function page_output($tpl, $data) {
     if (isset($_POST['ajax'])) {
-        header('Content-Type: application/json');
+        global $nav_options;
+        $nav_options['echo'] = false;
         $data['page_meta'] = [
             'body_class' => implode(' ', get_body_class()),
-            'page_title' => (is_home() ? 'Home' : wp_title('', false))
+            'page_title' => (is_home() ? 'Home' : wp_title('', false)),
+            'nav_menu' => wp_nav_menu($nav_options)
         ];
+        header('Content-Type: application/json');
         echo json_encode($data);
     } else {
         get_header();
@@ -55,16 +67,16 @@ function page_title() {
     }
     echo " | ";
 
-    bloginfo( 'name' );
+    bloginfo('name');
 
-    $site_description = get_bloginfo( 'description', 'display' );
+    $site_description = get_bloginfo('description', 'display');
 
-    if ( $site_description ) {
+    if ($site_description) {
         echo " - $site_description";
     }
 
-    if ( $paged >= 2 || $page >= 2 ) {
-        echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
+    if ($paged >= 2 || $page >= 2) {
+        echo ' | ' . sprintf( __( 'Page %s' ), max($paged, $page));
     }
 }
 
