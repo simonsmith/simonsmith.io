@@ -13,10 +13,17 @@
                 'title' => get_the_title(),
                 'excerpt' => get_the_excerpt(),
                 'content' => get_the_content(),
+                'attachments' => []
             ];
 
             if (!empty($attachments)) {
-                $tpl_data['attachments'] = $attachments;
+                foreach ($attachments as $attachment) {
+                    array_push($tpl_data['attachments'], [
+                        'url' => $attachment['url'],
+                        'thumb' => $attachment['thumb'],
+                        'name' => $attachment['name']
+                    ]);
+                }
             }
         }
 
