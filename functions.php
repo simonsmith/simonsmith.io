@@ -26,7 +26,7 @@ function page_output($tpl, $data) {
         $nav_options['echo'] = false;
         $data['page_meta'] = [
             'body_class' => implode(' ', get_body_class()),
-            'page_title' => (is_home() ? 'Home' : wp_title('', false)),
+            'page_title' => (is_home() ? 'Home' : trim(wp_title('', false))),
             'nav_menu' => wp_nav_menu($nav_options)
         ];
         header('Content-Type: application/json');
