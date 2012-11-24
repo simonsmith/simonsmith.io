@@ -62,8 +62,8 @@ function page_title() {
     global $page, $paged;
     wp_title('', true, 'right');
 
-    if (is_home()) {
-        echo "Home";
+    if (is_page('Blog')) {
+        echo "Blog";
     }
     echo " | ";
 
