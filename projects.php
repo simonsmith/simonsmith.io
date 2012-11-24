@@ -10,7 +10,6 @@
 
     $project_items = new WP_Query([
         'post_type' => 'project',
-        'orderby' => 'date',
         'posts_per_page' => 20
     ]);
 

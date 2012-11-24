@@ -10,8 +10,7 @@
 
     $blog_posts = new WP_Query([
         'category_name' => 'blog',
-        'orderby' => 'date',
-        'posts_per_page' => 10
+        'posts_per_page' => 20
     ]);
 
     while ($blog_posts->have_posts()) : $blog_posts->the_post();
