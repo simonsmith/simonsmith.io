@@ -21,7 +21,7 @@ $nav_options = [
 
 // Render as normal or return JSON if parameter is present
 function page_output($tpl, $data) {
-    if (isset($_POST['ajax'])) {
+    if (isset($_GET['ajax'])) {
         global $nav_options;
         $nav_options['echo'] = false;
         $data['page_meta'] = [
