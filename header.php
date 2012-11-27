@@ -1,3 +1,6 @@
+<?
+    global $tpl_name;
+?>
 <!doctype html>
 <html lang="en" class="no-js">
     <head>
@@ -43,7 +46,7 @@
         <div class="container">
 
             <header role="banner" class="header">
-                <a class="logo" href="<?= home_url(); ?>">
+                <a class="logo ajax" href="<?= home_url(); ?>">
                     <h1 class="logo-title">Simon Smith</h1>
                     <p class="logo-description">Front-end developer</p>
                 </a>

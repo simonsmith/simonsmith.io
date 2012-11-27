@@ -3,10 +3,12 @@
         Template name: Projects
     */
 
+    $tpl_name = 'projects.mustache';
     $tpl_data = [
+        'template' => $tpl_name,
         'project_items' => []
     ];
-    $home_tpl = load_mustache_template('projects');
+    $home_tpl = load_mustache_template($tpl_name);
 
     $project_items = new WP_Query([
         'post_type' => 'project',

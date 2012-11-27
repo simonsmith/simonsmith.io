@@ -3,10 +3,12 @@
         Template name: Blog
     */
 
+    $tpl_name = 'home.mustache';
     $tpl_data = [
+        'template' => $tpl_name,
         'blog_posts' => []
     ];
-    $home_tpl = load_mustache_template('home');
+    $tpl = load_mustache_template($tpl_name);
 
     $blog_posts = new WP_Query([
         'category_name' => 'blog',
@@ -24,4 +26,4 @@
     endwhile;
     wp_reset_postdata();
 
-    page_output($home_tpl, $tpl_data);
+    page_output($tpl, $tpl_data);

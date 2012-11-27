@@ -1,5 +1,6 @@
 <?
-    $single_work_tpl = load_mustache_template('single_project');
+    $tpl_name = 'single_project.mustache';
+    $single_work_tpl = load_mustache_template($tpl_name);
 
     $attachments = (new AttachmentsPro)->get_attachments([
         'instance'  => 'portfolio',
@@ -10,6 +11,7 @@
         while (have_posts()) {
             the_post();
             $tpl_data = [
+                'template' => $tpl_name,
                 'title' => get_the_title(),
                 'excerpt' => get_the_excerpt(),
                 'content' => get_the_content(),
