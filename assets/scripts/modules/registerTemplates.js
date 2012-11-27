@@ -14,9 +14,12 @@
             require('templates/partials/post_excerpt');
             require('templates/partials/work_item');
 
-            Handlebars.registerPartial('attachment', Handlebars.templates['attachment.mustache']);
-            Handlebars.registerPartial('post_excerpt', Handlebars.templates['post_excerpt.mustache']);
-            Handlebars.registerPartial('work_item', Handlebars.templates['work_item.mustache']);
+            Handlebars.registerPartial({
+                'work_item': Handlebars.templates['work_item.mustache'],
+                'attachment': Handlebars.templates['attachment.mustache'],
+                'post_excerpt': Handlebars.templates['post_excerpt.mustache']
+            });
+
         };
 
     });
