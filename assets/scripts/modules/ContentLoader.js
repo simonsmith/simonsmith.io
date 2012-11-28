@@ -25,6 +25,9 @@
         });
 
         window.addEventListener('popstate', function(event) {
+            if (!event.state) {
+                return;
+            }
             var tpl = Handlebars.templates[event.state.template];
             $content.html(tpl(event.state));
             event.preventDefault();
