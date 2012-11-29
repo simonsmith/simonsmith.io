@@ -4,7 +4,8 @@
             new ContentLoader({
                 container: '.container',
                 links: '.ajax, .nav-ajax a',
-                injectTarget: '#content'
+                injectTarget: '#content',
+                nav: '.nav-list-container'
             });
         });
     }
