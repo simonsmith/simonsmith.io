@@ -12,6 +12,11 @@
             this.nav = $(elements.nav);
 
             this.body = $('body');
+            this.loadingElem = $('<div></div>', {
+                'class': 'loading',
+                'aria-hidden': true,
+                html: '<span class="spinner">Loading...</span>'
+            }).appendTo(this.container).hide();
 
             this.setInitialPage();
             this.attachEvents();
@@ -49,6 +54,7 @@
                 var ajaxReq = $.ajax({
                     dataType: 'json',
                     context: this,
+                    beforeSend: this.showLoading,
                     url: $elem.attr('href'),
                     type: 'get',
                     data: {
@@ -61,7 +67,24 @@
                 ajaxReq.done(this.updatePageNavigation);
                 ajaxReq.done(this.updatePageTitle);
 
+                ajaxReq.always(this.hideLoading);
+                ajaxReq.fail(this.redirectUser);
+
                 event.preventDefault();
+            },
+
+            showLoading: function() {
+                this.loadingElem.attr('aria-hidden', false).show();
+                this.container.attr('aria-busy', true);
+            },
+
+            hideLoading: function() {
+                this.loadingElem.attr('aria-hidden', true).hide();
+                this.container.attr('aria-busy', false);
+            },
+
+            redirectUser: function() {
+                // TODO - Redirect user to url manually
             },
             
             updatePageTitle:  function(json) {
