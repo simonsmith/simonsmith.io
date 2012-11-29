@@ -27,12 +27,12 @@ function page_output($tpl, $data) {
 
         $data['page_meta'] = [
             'body_class' => implode(' ', get_body_class()),
-            'page_title' => (is_home() ? 'Home' : html_entity_decode(trim(wp_title('', false)))), // ew
+            'page_title' => (is_front_page() ? 'Home' : html_entity_decode(trim(wp_title('', false)))), // ew
             'nav_menu' => wp_nav_menu($nav_options)
         ];
 
         header('Content-Type: application/json');
-        
+
         echo json_encode($data);
     } else {
         get_header();
@@ -101,9 +101,9 @@ function create_post_type() {
 }
 
 function register_menus() {
-  register_nav_menus(
-    ['main-nav' => __( 'Main Nav')]
-  );
+    register_nav_menus(
+        ['main-nav' => __('Main Nav')]
+    );
 }
 
 function new_excerpt_length() {
@@ -117,7 +117,7 @@ function new_excerpt_more() {
 add_filter('excerpt_more', 'new_excerpt_more');
 add_filter('excerpt_length', 'new_excerpt_length');
 add_action('init', 'create_post_type');
-add_action( 'init', 'register_menus' );
+add_action('init', 'register_menus');
 add_theme_support('post-thumbnails', ['post', 'work', 'project']);
 
 function commentLayout($comment, $args, $depth) {
