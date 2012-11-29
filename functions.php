@@ -24,12 +24,15 @@ function page_output($tpl, $data) {
     if (isset($_GET['ajax'])) {
         global $nav_options;
         $nav_options['echo'] = false;
+
         $data['page_meta'] = [
             'body_class' => implode(' ', get_body_class()),
             'page_title' => (is_home() ? 'Home' : html_entity_decode(trim(wp_title('', false)))), // ew
             'nav_menu' => wp_nav_menu($nav_options)
         ];
+
         header('Content-Type: application/json');
+        
         echo json_encode($data);
     } else {
         get_header();
