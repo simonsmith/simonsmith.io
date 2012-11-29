@@ -21,7 +21,7 @@
 
             setInitialPage: function() {
                 $.getJSON(location.href, {ajax: true}, function(json) {
-                    history.replaceState(json, null, location.href);
+                    history.replaceState(json, json.page_meta.page_title, location.href);
                 });
             },
 
@@ -38,6 +38,7 @@
                     this.renderTemplate(json.template, json);
                     this.updateBodyClass(json);
                     this.updatePageNavigation(json);
+                    this.updatePageTitle(json);
 
                     event.preventDefault();
                 }.bind(this));
@@ -58,8 +59,15 @@
                 ajaxReq.done(this.updatePageContent.bind(this, $elem));
                 ajaxReq.done(this.updateBodyClass);
                 ajaxReq.done(this.updatePageNavigation);
+                ajaxReq.done(this.updatePageTitle);
 
                 event.preventDefault();
+            },
+            
+            updatePageTitle:  function(json) {
+                var newTitle = json.page_meta.page_title;
+                var titleParts = document.title.split('|');
+                document.title = [newTitle, ' | ', $.trim(titleParts[1])].join('');
             },
 
             updatePageNavigation: function(json) {
@@ -72,7 +80,7 @@
 
             updatePageContent: function(clickedElem, json) {
                 this.renderTemplate(json.template, json);
-                history.pushState(json, null, clickedElem.attr('href'));
+                history.pushState(json, json.page_meta.page_title, clickedElem.attr('href'));
             },
 
             renderTemplate: function(tplName, data) {
