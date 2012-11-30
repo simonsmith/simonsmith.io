@@ -48,7 +48,7 @@
             <header role="banner" class="header">
                 <a class="logo ajax" href="<?= home_url(); ?>">
                     <h1 class="logo-title">Simon Smith</h1>
-                    <p class="logo-description">Front-end developer</p>
+                    <p class="logo-description">$ Front-end developer</p>
                 </a>
 
                 <nav class="nav" id="nav" role="navigation">

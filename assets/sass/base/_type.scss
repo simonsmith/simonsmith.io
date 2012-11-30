@@ -1,0 +1,36 @@
+
+html {
+    font-size: 1em;
+}
+
+body {
+    font-family: "Georgia", serif;
+    color: #444;
+}
+
+a {
+    color: #558cce;
+    border-bottom: 1px dotted;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    font-weight: normal;
+    
+    a {
+        color: #666;
+    }
+}
+
+p, ul, dl, .post-content {
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: px(26);
+}
+
+h2 {
+    font-size: px(22);
+}

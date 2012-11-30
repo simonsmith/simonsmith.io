@@ -1,3 +1,10 @@
-@import "mixins";
-@import "normalize";
-@import "utils";
+@import "imports/vars";
+@import "imports/mixins";
+@import "imports/fonts";
+
+@import "base/normalize";
+@import "base/utils";
+@import "base/type";
+
+@import "layout/header";
+@import "layout/common";

@@ -1,0 +1,44 @@
+$fontPath: '../fonts/';
+
+// Fonts
+$baseFontSize:          16;
+$unitType:              0rem;
+
+@function px($num) {
+    @return ($num / $baseFontSize) + $unitType;
+}
+
+$px1:                  px(1);
+$px2:                  px(2);
+$px3:                  px(3);
+$px4:                  px(4);
+$px5:                  px(5);
+$px6:                  px(6);
+$px7:                  px(7);
+$px8:                  px(8);
+$px9:                  px(9);
+$px10:                 px(10);
+$px11:                 px(11);
+$px12:                 px(12);
+$px13:                 px(13);
+$px14:                 px(14);
+$px15:                 px(15);
+$px16:                 px(16);
+$px17:                 px(17);
+$px18:                 px(18);
+$px19:                 px(19);
+$px20:                 px(20);
+$px21:                 px(21);
+$px22:                 px(22);
+$px23:                 px(23);
+$px24:                 px(24);
+$px25:                 px(25);
+$px26:                 px(26);
+$px27:                 px(27);
+$px28:                 px(28);
+$px29:                 px(29);
+$px30:                 px(30);
+$px31:                 px(31);
+$px32:                 px(32);
+$px33:                 px(33);
+$px34:                 px(34);
