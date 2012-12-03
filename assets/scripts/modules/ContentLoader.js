@@ -66,6 +66,7 @@
                 ajaxReq.done(this.updateBodyClass);
                 ajaxReq.done(this.updatePageNavigation);
                 ajaxReq.done(this.updatePageTitle);
+                ajaxReq.done(this.scrollToTop);
 
                 ajaxReq.always(this.hideLoading);
                 ajaxReq.fail(this.redirectUser);
@@ -85,6 +86,12 @@
 
             redirectUser: function() {
                 // TODO - Redirect user to url manually
+            },
+
+            scrollToTop: function() {
+                $('html, body').animate({
+                    scrollTop: 0
+                });
             },
             
             updatePageTitle:  function(json) {
