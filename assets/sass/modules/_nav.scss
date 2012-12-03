@@ -1,0 +1,30 @@
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: table;
+    width: 100%;
+    border-style: dotted;
+    border-width: 1px 0 1px 0;
+    border-color: #bbb;
+
+    > li {
+        display: table-cell;
+        width: auto;
+        text-align: center;
+    }
+
+    a {
+        padding: px(10) 0;
+        display: block;
+        border-bottom: none;
+        color: #666;
+    }
+}
+
+.current-menu-item a,
+.single-post .nav-list .blog a,
+.single-project .nav-list .projects a {
+    color: #111;
+    @include text-shadow(1px 1px 1px rgba(0,0,0,.3));
+}

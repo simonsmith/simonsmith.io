@@ -17,6 +17,7 @@ a {
 h1, h2, h3 {
     line-height: 1.2;
     font-weight: normal;
+    @include text-shadow(1px 1px 1px rgba(0,0,0,.3));
     
     a {
         color: #666;

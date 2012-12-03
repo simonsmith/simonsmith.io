@@ -208,6 +208,12 @@
             column-gap: $columnGap;
 }
 
+@mixin text-shadow($value) {
+  -webkit-text-shadow: $value;
+     -moz-text-shadow: $value;
+          text-shadow: $value;
+}
+
 // Optional hyphenation
 @mixin hyphens($mode: auto) {
   word-wrap: break-word;
