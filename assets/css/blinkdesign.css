@@ -485,6 +485,10 @@ h1 a, h2 a, h3 a {
   color: #666;
 }
 
+img {
+  max-width: 100%;
+}
+
 p, ul, dl, .post-content {
   line-height: 1.4;
 }
@@ -547,4 +551,8 @@ h2 {
   -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.excerpt {
+  margin-bottom: 1.5625rem;
 }

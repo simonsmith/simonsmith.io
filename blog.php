@@ -21,7 +21,8 @@
             'url' => get_permalink(),
             'excerpt' => get_the_excerpt(),
             'w3c_date' => get_the_time('c'),
-            'date' => get_the_time('F jS Y')
+            'date' => get_the_time('F jS Y'),
+            'has_date' => true // Stupid work around because JS mustache is not the same as PHP
         ]);
     endwhile;
     wp_reset_postdata();

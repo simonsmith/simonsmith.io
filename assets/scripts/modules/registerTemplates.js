@@ -11,13 +11,11 @@
 
             // Partials
             require('templates/partials/attachment');
-            require('templates/partials/post_excerpt');
-            require('templates/partials/work_item');
+            require('templates/partials/excerpt');
 
             Handlebars.registerPartial({
-                'work_item': Handlebars.templates['work_item.mustache'],
                 'attachment': Handlebars.templates['attachment.mustache'],
-                'post_excerpt': Handlebars.templates['post_excerpt.mustache']
+                'excerpt': Handlebars.templates['excerpt.mustache']
             });
 
         };

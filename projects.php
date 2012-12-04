@@ -20,7 +20,8 @@
             'url' => get_permalink(),
             'title' => get_the_title(),
             'excerpt' => get_the_excerpt(),
-            'image' => get_the_post_thumbnail(get_the_ID(), [100, 100], ['title' => null, 'alt' => get_the_title()])
+            'image' => get_the_post_thumbnail(get_the_ID(), [100, 100], ['title' => null, 'alt' => get_the_title()]),
+            'has_image' => true
         ]);
     endwhile;
     wp_reset_postdata();
