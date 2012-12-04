@@ -14,7 +14,7 @@
                 'template' => $tpl_name,
                 'title' => get_the_title(),
                 'excerpt' => get_the_excerpt(),
-                'content' => get_the_content(),
+                'content' => apply_filters('the_content', get_the_content()),
                 'attachments' => []
             ];
 
