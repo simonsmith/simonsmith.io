@@ -9,3 +9,9 @@
             });
         });
     }
+
+    require(['domready', 'prettyprint'], function(domReady, prettyPrint) {
+        domReady(function() {
+            prettyPrint();
+        });
+    });

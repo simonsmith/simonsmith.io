@@ -18,11 +18,15 @@
                 paths: {
                     'jquery': 'lib/jquery',
                     'handlebars': 'lib/handlebars',
-                    'text': 'lib/text'
+                    'prettyprint': 'lib/prettify',
+                    'domready': 'lib/domready'
                 },
                 shim: {
                     'handlebars': {
                         'exports': 'Handlebars'
+                    },
+                    'prettyprint': {
+                        'exports': 'prettyPrint'
                     }
                 },
                 urlArgs: "bust=" +  (new Date()).getTime()
