@@ -7,7 +7,7 @@ templates['excerpt.mustache'] = template(function (Handlebars,depth0,helpers,par
 function program1(depth0,data) {
   
   var buffer = "", stack1, foundHelper;
-  buffer += "<time datetime=\"";
+  buffer += "<time class=\"post-date\" datetime=\"";
   foundHelper = helpers.w3c_date;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.w3c_date; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
@@ -26,12 +26,14 @@ function program3(depth0,data) {
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   buffer += escapeExpression(stack1) + "\" class=\"work-img work-img-mini\">";
-  depth0 = typeof depth0 === functionType ? depth0() : depth0;
-  if(depth0 || depth0 === 0) { buffer += depth0; }
+  foundHelper = helpers.image;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "</a>";
   return buffer;}
 
-  buffer += "<article class=\"excerpt post-excerpt\">\n    <h1 class=\"hdr hdr-excerpt\"><a href=\"";
+  buffer += "<article class=\"excerpt post-excerpt\">\n    <h1 class=\"excerpt-hdr\"><a href=\"";
   foundHelper = helpers.url;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
@@ -52,10 +54,10 @@ function program3(depth0,data) {
   if (!helpers.has_date) { stack1 = blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data)}); }
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    ";
-  foundHelper = helpers.image;
+  foundHelper = helpers.has_image;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{},inverse:self.noop,fn:self.program(3, program3, data)}); }
-  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  if (!helpers.image) { stack1 = blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data)}); }
+  else { stack1 = depth0.has_image; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  if (!helpers.has_image) { stack1 = blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data)}); }
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</article>\n";
   return buffer;});

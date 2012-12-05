@@ -10,7 +10,7 @@ templates['single.mustache'] = template(function (Handlebars,depth0,helpers,part
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</h1>\n            <time datetime=\"";
+  buffer += "</h1>\n            <time class=\"post-date\" datetime=\"";
   foundHelper = helpers.w3c_date;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.w3c_date; stack1 = typeof stack1 === functionType ? stack1() : stack1; }

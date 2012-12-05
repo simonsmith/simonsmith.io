@@ -530,5 +530,9 @@ h2 {
 }
 
 .excerpt {
-  margin-bottom: 1.5625rem;
+  margin-bottom: 1.875rem;
+}
+
+.post-date {
+  font-weight: bold;
 }
