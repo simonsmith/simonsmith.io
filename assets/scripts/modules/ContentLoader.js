@@ -68,6 +68,15 @@
                 ajaxReq.done(this.updatePageTitle);
                 ajaxReq.done(this.scrollToTop);
 
+                // Code highlight if it's a blog post, hacky but does the job
+                ajaxReq.done(function() {
+                    if (document.body.className.match(/single-post/)) {
+                        require(['prettyprint'], function(prettyPrint) {
+                            prettyPrint();
+                        });
+                    }
+                });
+
                 ajaxReq.always(this.hideLoading);
                 ajaxReq.fail(this.redirectUser);
 

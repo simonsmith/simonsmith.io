@@ -1,3 +1,14 @@
 .post-date {
     font-weight: bold;
 }
+
+.post-footer {
+    margin-top: px(40);
+    background-color: #f2f2f2;
+    @include border-radius(px(5));
+    padding: px(10);
+
+    > p {
+        margin: 0;
+    }
+}

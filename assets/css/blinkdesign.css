@@ -498,6 +498,11 @@ h2 {
   padding-right: 0.625rem;
 }
 
+.info {
+  border-top: 1px dotted #ccc;
+  margin-top: 2.5rem;
+}
+
 .nav-list {
   margin: 0;
   padding: 0;
@@ -535,6 +540,18 @@ h2 {
 
 .post-date {
   font-weight: bold;
+}
+
+.post-footer {
+  margin-top: 2.5rem;
+  background-color: #f2f2f2;
+  -webkit-border-radius: 0.3125rem;
+  -moz-border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
+}
+.post-footer > p {
+  margin: 0;
 }
 
 .com {
@@ -605,5 +622,6 @@ ol.linenums li {
     -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
     -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
     box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+    padding-left: 2.5rem;
   }
 }

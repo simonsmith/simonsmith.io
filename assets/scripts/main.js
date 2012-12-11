@@ -10,8 +10,12 @@
         });
     }
 
-    require(['domready', 'prettyprint'], function(domReady, prettyPrint) {
+    require(['domready'], function(domReady) {
         domReady(function() {
-            prettyPrint();
+            if (document.body.className.match(/single-post/)) {
+                require(['prettyprint'], function(prettyPrint) {
+                    prettyPrint();
+                });
+            }
         });
     });
