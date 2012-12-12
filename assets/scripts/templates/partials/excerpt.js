@@ -7,7 +7,7 @@ templates['excerpt.mustache'] = template(function (Handlebars,depth0,helpers,par
 function program1(depth0,data) {
   
   var buffer = "", stack1, foundHelper;
-  buffer += "<time class=\"post-date\" datetime=\"";
+  buffer += "\n            <time class=\"post-date\" datetime=\"";
   foundHelper = helpers.w3c_date;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.w3c_date; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
@@ -15,13 +15,13 @@ function program1(depth0,data) {
   foundHelper = helpers.date;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</time>";
+  buffer += escapeExpression(stack1) + "</time>\n        ";
   return buffer;}
 
 function program3(depth0,data) {
   
   var buffer = "", stack1, foundHelper;
-  buffer += "<a href=\"";
+  buffer += "\n        <a href=\"";
   foundHelper = helpers.url;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
@@ -30,10 +30,10 @@ function program3(depth0,data) {
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</a>";
+  buffer += "</a>\n    ";
   return buffer;}
 
-  buffer += "<article class=\"excerpt post-excerpt\">\n    <header class=\"post-title excerpt-title\">\n        <h1 class=\"excerpt-hdr\"><a href=\"";
+  buffer += "<article class=\"excerpt\">\n    <header class=\"excerpt-title post-title\">\n        <h1 class=\"hdr hdr-post excerpt-hdr\"><a href=\"";
   foundHelper = helpers.url;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1() : stack1; }

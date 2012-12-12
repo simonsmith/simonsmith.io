@@ -14,7 +14,7 @@ function program1(depth0,data) {
   buffer += "\n            ";
   return buffer;}
 
-  buffer += "\n    <article>\n        <header>\n            <h1 class=\"hdr hdr-page\">";
+  buffer += "\n    <article>\n        <header class=\"post-title\">\n            <h1 class=\"hdr hdr-post\">";
   foundHelper = helpers.title;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
