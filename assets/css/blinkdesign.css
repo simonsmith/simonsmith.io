@@ -539,10 +539,6 @@ h2 {
   margin-bottom: 1.875rem;
 }
 
-.post-date {
-  font-weight: bold;
-}
-
 .post-footer {
   margin-top: 2.5rem;
   background-color: #f2f2f2;
@@ -555,11 +551,27 @@ h2 {
   margin: 0;
 }
 
+.post-title {
+  margin-bottom: 1.875rem;
+}
+
 .post-content code {
   font-family: Monaco, 'Courier New', Courier;
   padding: 1px 5px 1px 5px;
   font-size: 0.875rem;
   background-color: #eee;
+}
+.post-content h2 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5625rem;
+}
+
+.hdr-post {
+  margin-bottom: 0.625rem;
+}
+
+.post-date {
+  color: #999;
 }
 
 .wp-caption {
