@@ -12,6 +12,7 @@
             this.nav = $(elements.nav);
 
             this.body = $('body');
+            this.scrollable = this.body.add($('html'));
             this.loadingElem = $('<div></div>', {
                 'class': 'loading',
                 'aria-hidden': true,
@@ -98,7 +99,7 @@
             },
 
             scrollToTop: function() {
-                $('html, body').animate({
+                this.scrollable.animate({
                     scrollTop: 0
                 });
             },
