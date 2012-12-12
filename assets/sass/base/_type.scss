@@ -25,7 +25,8 @@ h1, h2, h3 {
 }
 
 img {
-    max-width: 100%;
+    max-width: 100% !important;
+    height: auto !important;
 }
 
 p, ul, dl, .post-content {

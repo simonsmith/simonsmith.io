@@ -12,3 +12,16 @@
         margin: 0;
     }
 }
+
+.post-content {
+    code {
+        font-family: Monaco, 'Courier New', Courier;
+        padding: 1px 5px 1px 5px;
+        font-size: px(14);
+        background-color: #eee;
+    }
+}
+
+.wp-caption {
+    max-width: 100% !important;
+}

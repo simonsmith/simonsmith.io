@@ -6,6 +6,9 @@
                 <section class="about" id="about">
                     <h1>Who</h1>
                     <p>My name is Simon. I make things happen with <abbr title="HyperText Markup Language">HTML</abbr>5, <abbr title="Cascading Style Sheets">CSS</abbr>3, JavaScript and mobile first responsive design</p>
+                    <div class="bio-img">
+                        <img src="http://placekitten.com/g/150/150" alt="Photo of Simon Smith">
+                    </div>
                 </section>
                 <section class="contact" id="contact">
                     <h1>Contact</h1>

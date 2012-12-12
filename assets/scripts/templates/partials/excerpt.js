@@ -33,7 +33,7 @@ function program3(depth0,data) {
   buffer += "</a>";
   return buffer;}
 
-  buffer += "<article class=\"excerpt post-excerpt\">\n    <h1 class=\"excerpt-hdr\"><a href=\"";
+  buffer += "<article class=\"excerpt post-excerpt\">\n    <header class=\"post-title excerpt-title\">\n        <h1 class=\"excerpt-hdr\"><a href=\"";
   foundHelper = helpers.url;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
@@ -42,18 +42,18 @@ function program3(depth0,data) {
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</a></h1>\n    <p>";
-  foundHelper = helpers.excerpt;
-  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
-  else { stack1 = depth0.excerpt; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n    ";
+  buffer += "</a></h1>\n        ";
   foundHelper = helpers.has_date;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{},inverse:self.noop,fn:self.program(1, program1, data)}); }
   else { stack1 = depth0.has_date; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if (!helpers.has_date) { stack1 = blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data)}); }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    ";
+  buffer += "\n    </header>\n    <p>";
+  foundHelper = helpers.excerpt;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.excerpt; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</p>\n    ";
   foundHelper = helpers.has_image;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{},inverse:self.noop,fn:self.program(3, program3, data)}); }
   else { stack1 = depth0.has_image; stack1 = typeof stack1 === functionType ? stack1() : stack1; }

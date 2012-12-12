@@ -462,7 +462,8 @@ h1 a, h2 a, h3 a {
 }
 
 img {
-  max-width: 100%;
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 p, ul, dl, .post-content {
@@ -554,6 +555,17 @@ h2 {
   margin: 0;
 }
 
+.post-content code {
+  font-family: Monaco, 'Courier New', Courier;
+  padding: 1px 5px 1px 5px;
+  font-size: 0.875rem;
+  background-color: #eee;
+}
+
+.wp-caption {
+  max-width: 100% !important;
+}
+
 .com {
   color: #93a1a1;
 }
@@ -624,4 +636,12 @@ ol.linenums li {
     box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
     padding-left: 2.5rem;
   }
+}
+.bio-img {
+  text-align: center;
+}
+.bio-img img {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 3px;
 }
