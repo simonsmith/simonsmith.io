@@ -657,3 +657,28 @@ ol.linenums li {
   display: inline-block;
   padding: 3px;
 }
+
+.excerpt-work {
+  min-height: 160px;
+  margin-bottom: 2.5rem;
+}
+.excerpt-work .excerpt-title {
+  margin-bottom: 0.9375rem;
+}
+.excerpt-work .excerpt-content {
+  position: relative;
+}
+.excerpt-work .excerpt-content p {
+  margin-left: 120px;
+}
+.excerpt-work .excerpt-content .work-img-mini {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+.excerpt-work .excerpt-content .work-img-mini img {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 3px;
+}

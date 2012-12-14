@@ -26,7 +26,7 @@ function program3(depth0,data) {
 function program5(depth0,data) {
   
   var buffer = "", stack1, foundHelper;
-  buffer += "\n        <a href=\"";
+  buffer += "\n            <a href=\"";
   foundHelper = helpers.url;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
@@ -35,7 +35,7 @@ function program5(depth0,data) {
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</a>\n    ";
+  buffer += "</a>\n        ";
   return buffer;}
 
   buffer += "<article class=\"excerpt";
@@ -59,17 +59,17 @@ function program5(depth0,data) {
   else { stack1 = depth0.has_date; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if (!helpers.has_date) { stack1 = blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data)}); }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    </header>\n    <p>";
+  buffer += "\n    </header>\n    <div class=\"excerpt-content\">\n        <p>";
   foundHelper = helpers.excerpt;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.excerpt; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n    ";
+  buffer += "</p>\n        ";
   foundHelper = helpers.has_image;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{},inverse:self.noop,fn:self.program(5, program5, data)}); }
   else { stack1 = depth0.has_image; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if (!helpers.has_image) { stack1 = blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(5, program5, data)}); }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</article>\n";
+  buffer += "\n    </div>\n</article>\n";
   return buffer;});
 });
