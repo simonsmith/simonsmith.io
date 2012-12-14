@@ -15,8 +15,7 @@
             this.scrollable = this.body.add($('html'));
             this.loadingElem = $('<div></div>', {
                 'class': 'loading',
-                'aria-hidden': true,
-                html: '<span class="spinner">Loading...</span>'
+                'aria-hidden': true
             }).appendTo(this.container).hide();
 
             this.setInitialPage();
