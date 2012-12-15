@@ -30,7 +30,7 @@ function program5(depth0,data) {
   foundHelper = helpers.url;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "\" class=\"work-img work-img-mini\">";
+  buffer += escapeExpression(stack1) + "\">";
   foundHelper = helpers.image;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1() : stack1; }

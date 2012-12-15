@@ -20,7 +20,15 @@
             'url' => get_permalink(),
             'title' => get_the_title(),
             'excerpt' => get_the_excerpt(),
-            'image' => get_the_post_thumbnail(get_the_ID(), [100, 100], ['title' => null, 'alt' => get_the_title()]),
+            'image' => get_the_post_thumbnail(
+                get_the_ID(),
+                [100, 100],
+                [
+                    'title' => null,
+                    'alt' => get_the_title(),
+                    'class' => 'work-img work-img-mini img-border'
+                ]
+            ),
             'has_image' => true
         ]);
     endwhile;

@@ -17,13 +17,19 @@
             position: absolute;
             top: 0;
             left: 0;
-            border: 0;
-
-            img {
-                border: 1px solid #ccc;
-                display: inline-block;
-                padding: 3px;
-            }
         }
+    }
+}
+
+.description {
+    font-style: italic;
+    color: #999;
+}
+
+.work-img-container {
+    text-align: center;
+
+    &:first-of-type {
+        margin-bottom: px(15);
     }
 }
