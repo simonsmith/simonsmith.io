@@ -505,7 +505,7 @@ h2 {
 }
 
 .loading {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.7);
@@ -646,7 +646,7 @@ ol.linenums li {
   display: block;
   width: auto;
   overflow: auto;
-  max-height: 600px;
+  max-height: 700px;
   white-space: pre;
   word-wrap: normal;
   padding: 0.3125rem;
@@ -666,11 +666,6 @@ ol.linenums li {
 }
 .bio-img {
   text-align: center;
-}
-.bio-img img {
-  border: 1px solid #ccc;
-  display: inline-block;
-  padding: 3px;
 }
 
 .excerpt-work {
@@ -699,6 +694,9 @@ ol.linenums li {
 
 .work-img-container {
   text-align: center;
+}
+.work-img-container a {
+  border: 0;
 }
 .work-img-container:first-of-type {
   margin-bottom: 0.9375rem;

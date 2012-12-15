@@ -28,6 +28,10 @@
 
 .work-img-container {
     text-align: center;
+    
+    a {
+        border: 0;
+    }
 
     &:first-of-type {
         margin-bottom: px(15);
