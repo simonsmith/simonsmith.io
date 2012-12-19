@@ -12,6 +12,11 @@ a {
     color: $link;
     border-bottom: 1px dotted;
     text-decoration: none;
+    @include transition(all .2s);
+
+    &:hover {
+        color: lighten($link, 15%);
+    }
 }
 
 h1, h2, h3 {
@@ -21,6 +26,10 @@ h1, h2, h3 {
     
     a {
         color: $grayMid;
+
+        &:hover {
+            color: lighten($grayMid, 15%);
+        }
     }
 }
 

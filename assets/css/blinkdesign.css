@@ -448,6 +448,13 @@ a {
   color: #558cce;
   border-bottom: 1px dotted;
   text-decoration: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+a:hover {
+  color: #90b4df;
 }
 
 h1, h2, h3 {
@@ -459,6 +466,9 @@ h1, h2, h3 {
 }
 h1 a, h2 a, h3 a {
   color: #666666;
+}
+h1 a:hover, h2 a:hover, h3 a:hover {
+  color: #8c8c8c;
 }
 
 img {
