@@ -701,3 +701,27 @@ ol.linenums li {
 .work-img-container:first-of-type {
   margin-bottom: 0.9375rem;
 }
+
+.contact ul {
+  padding: 0;
+}
+.contact li {
+  margin-bottom: 0.625rem;
+  background-image: url("../images/contact-sprite.png");
+  background-repeat: no-repeat;
+  background-size: 24px 145px;
+  padding: 0.0625rem 0 0.0625rem 2rem;
+  list-style-type: none;
+}
+.contact .twitter {
+  background-position: 0 -30px;
+}
+.contact .github {
+  background-position: 0 -60px;
+}
+.contact .stackoverflow {
+  background-position: 0 -90px;
+}
+.contact .linkedin {
+  background-position: 0 -120px;
+}

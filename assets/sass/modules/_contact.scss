@@ -1,0 +1,30 @@
+.contact {
+    ul {
+        padding: 0;
+    }
+    
+    li {
+        margin-bottom: px(10);
+        background-image: url("#{$imgPath}contact-sprite.png");
+        background-repeat: no-repeat;
+        background-size: 24px 145px;
+        padding: px(1) 0 px(1) px(32);
+        list-style-type: none;
+    }
+
+    .twitter {
+        background-position: 0 -30px;
+    }
+
+    .github {
+        background-position: 0 -60px;
+    }
+
+    .stackoverflow {
+        background-position: 0 -90px;
+    }
+
+    .linkedin {
+        background-position: 0 -120px;
+    }
+}
