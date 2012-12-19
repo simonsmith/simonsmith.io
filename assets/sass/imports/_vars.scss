@@ -5,6 +5,15 @@ $imgPath: '../images/';
 $baseFontSize:          16;
 $unitType:              0rem;
 
+// Colors
+$bodyText:              #444;
+$link:                  #558cce;
+$grayMid:               #666;
+$grayLight:             #999;
+$grayLighter:           #eee;
+$offBlack:              #111;
+$offWhite:              #f2f2f2;
+
 @function px($num) {
     @return ($num / $baseFontSize) + $unitType;
 }

@@ -5,11 +5,11 @@ html {
 
 body {
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    color: #444;
+    color: $bodyText;
 }
 
 a {
-    color: #558cce;
+    color: $link;
     border-bottom: 1px dotted;
     text-decoration: none;
 }
@@ -20,7 +20,7 @@ h1, h2, h3 {
     @include text-shadow(1px 1px 1px rgba(0,0,0,.3));
     
     a {
-        color: #666;
+        color: $grayMid;
     }
 }
 

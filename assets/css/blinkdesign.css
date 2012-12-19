@@ -441,7 +441,7 @@ html {
 
 body {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  color: #444;
+  color: #444444;
 }
 
 a {
@@ -458,7 +458,7 @@ h1, h2, h3 {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 h1 a, h2 a, h3 a {
-  color: #666;
+  color: #666666;
 }
 
 img {
@@ -538,13 +538,13 @@ h2 {
   padding: 0.625rem 0;
   display: block;
   border-bottom: none;
-  color: #666;
+  color: #666666;
 }
 
 .current-menu-item a,
 .single-post .nav-list .blog a,
 .single-project .nav-list .projects a {
-  color: #111;
+  color: #111111;
   -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -574,7 +574,7 @@ h2 {
   font-family: Monaco, 'Courier New', Courier;
   padding: 1px 5px 1px 5px;
   font-size: 0.875rem;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .post-content h2 {
   margin-top: 1.25rem;
@@ -586,7 +586,7 @@ h2 {
 }
 
 .post-date {
-  color: #999;
+  color: #999999;
 }
 
 .wp-caption {
@@ -689,7 +689,7 @@ ol.linenums li {
 
 .description {
   font-style: italic;
-  color: #999;
+  color: #999999;
 }
 
 .work-img-container {
