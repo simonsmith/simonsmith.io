@@ -679,7 +679,7 @@ ol.linenums li {
 }
 
 .excerpt-work {
-  min-height: 160px;
+  min-height: 10rem;
   margin-bottom: 2.5rem;
 }
 .excerpt-work .excerpt-title {
@@ -689,7 +689,7 @@ ol.linenums li {
   position: relative;
 }
 .excerpt-work .excerpt-content p {
-  margin-left: 120px;
+  margin-left: 7.5rem;
 }
 .excerpt-work .excerpt-content .work-img-mini {
   position: absolute;

@@ -1,5 +1,5 @@
 .excerpt-work {
-    min-height: 160px;
+    min-height: px(20) * 8;
     margin-bottom: px(40);
     
     .excerpt-title {
@@ -10,7 +10,7 @@
         position: relative;
 
         p {
-            margin-left: 120px;
+            margin-left: px(30) * 4;
         }
 
         .work-img-mini {
