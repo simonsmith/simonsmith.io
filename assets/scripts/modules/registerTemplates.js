@@ -8,6 +8,7 @@
             require('templates/single_project');
             require('templates/home');
             require('templates/projects');
+            require('templates/cv');
 
             // Partials
             require('templates/partials/attachment');
