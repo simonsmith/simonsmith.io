@@ -15,7 +15,9 @@ $offBlack:              #111;
 $offWhite:              #f2f2f2;
 
 // Breakpoints
+$largePhone:            40em;
 $tablet:                48em;
+$desktop:               61.875em;
 
 @function px($num) {
     @return ($num / $baseFontSize) + $unitType;

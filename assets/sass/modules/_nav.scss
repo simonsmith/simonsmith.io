@@ -28,3 +28,29 @@
     color: $offBlack;
     @include text-shadow(1px 1px 1px rgba(0,0,0,.3));
 }
+
+@media screen and (min-width: $tablet) {
+
+    .nav {
+        position: absolute;
+        top: px(25);
+        right: px(10);
+        width: px(40) * 7;
+    }
+
+    .nav-list {
+        display: block;
+        border: 0;
+
+        > li {
+            display: inline-block;
+            width: 32%;
+        }
+
+        .about,
+        .contact {
+            display: none;
+        }
+    }
+
+}

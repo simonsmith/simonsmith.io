@@ -22,3 +22,40 @@
     display: inline-block;
     padding: 3px;
 }
+
+@media screen and (min-width: $tablet) {
+    
+    .content {
+        float: right;
+        width: 65%;
+        border-left: 1px dotted #ccc;
+        padding-left: px(20);
+        padding-bottom: px(40);
+    }
+    
+    .info {
+        float: left;
+        width: 27%;
+        margin-top: 0;
+        border-top: 0;
+    }
+    
+}
+
+@media screen and (min-width: $desktop) {
+
+    .container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (min-width: 1140px) {
+    
+    .container {
+        width: 970px;
+    }
+    
+}

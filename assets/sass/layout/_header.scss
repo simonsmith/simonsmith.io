@@ -14,3 +14,18 @@
     margin-top: 0;
 }
 
+@media screen and (min-width: $tablet) {
+    
+    .logo {
+        text-align: left;
+        display: block;
+        border: none;
+        padding-left: px(10);   
+    }
+
+    .header {
+        position: relative;
+        border-bottom: 1px dotted #bbb;
+    }
+    
+}

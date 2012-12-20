@@ -504,6 +504,19 @@ h2 {
   margin-top: 0;
 }
 
+@media screen and (min-width: 48em) {
+  .logo {
+    text-align: left;
+    display: block;
+    border: none;
+    padding-left: 0.625rem;
+  }
+
+  .header {
+    position: relative;
+    border-bottom: 1px dotted #bbb;
+  }
+}
 .content, .info {
   padding-left: 0.625rem;
   padding-right: 0.625rem;
@@ -529,6 +542,34 @@ h2 {
   padding: 3px;
 }
 
+@media screen and (min-width: 48em) {
+  .content {
+    float: right;
+    width: 65%;
+    border-left: 1px dotted #ccc;
+    padding-left: 1.25rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .info {
+    float: left;
+    width: 27%;
+    margin-top: 0;
+    border-top: 0;
+  }
+}
+@media screen and (min-width: 61.875em) {
+  .container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .container {
+    width: 970px;
+  }
+}
 .nav-list {
   margin: 0;
   padding: 0;
@@ -560,6 +601,27 @@ h2 {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+@media screen and (min-width: 48em) {
+  .nav {
+    position: absolute;
+    top: 1.5625rem;
+    right: 0.625rem;
+    width: 17.5rem;
+  }
+
+  .nav-list {
+    display: block;
+    border: 0;
+  }
+  .nav-list > li {
+    display: inline-block;
+    width: 32%;
+  }
+  .nav-list .about,
+  .nav-list .contact {
+    display: none;
+  }
+}
 .excerpt {
   margin-bottom: 1.875rem;
 }
@@ -678,6 +740,22 @@ ol.linenums li {
   text-align: center;
 }
 
+@media screen and (min-width: 40em) {
+  .bio-img {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 48em) {
+  .bio-img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+
+  .about {
+    margin-bottom: 2.5rem;
+  }
+}
 .excerpt-work {
   min-height: 10rem;
   margin-bottom: 2.5rem;
@@ -712,6 +790,19 @@ ol.linenums li {
   margin-bottom: 0.9375rem;
 }
 
+@media screen and (min-width: 40em) {
+  .work-images {
+    text-align: center;
+    margin-top: 1.875rem;
+  }
+
+  .work-img-container {
+    display: inline-block;
+  }
+  .work-img-container:first-of-type {
+    margin-right: 0.625rem;
+  }
+}
 .contact ul {
   padding: 0;
 }

@@ -37,3 +37,20 @@
         margin-bottom: px(15);
     }
 }
+
+@media screen and (min-width: $largePhone) {
+
+    .work-images {
+        text-align: center;
+        margin-top: px(30);
+    }
+    
+    .work-img-container {
+        display: inline-block;
+        
+        &:first-of-type {
+            margin-right: px(10);
+        }
+    }
+
+}

@@ -1,3 +1,30 @@
 .bio-img {
     text-align: center;
 }
+
+@media screen and (min-width: $largePhone) {
+    
+    .bio-img {
+        text-align: left;
+    }
+    
+}
+
+@media screen and (min-width: $tablet) {
+
+    .bio-img {
+        @include size(100px, 100px);
+        margin: auto;
+    }
+    
+    .about {
+        margin-bottom: px(40);
+    }
+    
+    .info {
+        h1 {
+
+        }
+    }
+
+}
