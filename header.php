@@ -14,7 +14,7 @@
         <script src="<?= get_template_directory_uri(); ?>/assets/scripts/lib/modernizr.js"></script>
         <script>
             var require = {
-                baseUrl: '<?= get_template_directory_uri(); ?>/assets/scripts/',
+                baseUrl: '<?= get_template_directory_uri(); ?>/assets/scripts.min/',
                 paths: {
                     'jquery': 'lib/jquery',
                     'handlebars': 'lib/handlebars',
@@ -28,8 +28,7 @@
                     'prettyprint': {
                         'exports': 'prettyPrint'
                     }
-                },
-                urlArgs: "bust=" +  (new Date()).getTime()
+                }
             }
         </script>
         <script src="<?= get_template_directory_uri(); ?>/assets/scripts/lib/require.js" data-main="main"></script>
