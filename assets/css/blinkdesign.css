@@ -551,7 +551,7 @@ h2 {
 @media screen and (min-width: 48em) {
   .content {
     float: right;
-    width: 70%;
+    width: 68%;
     border-left: 1px dotted #ccc;
     padding-left: 1.25rem;
     padding-bottom: 2.5rem;
@@ -559,7 +559,7 @@ h2 {
 
   .info {
     float: left;
-    width: 27%;
+    width: 30%;
     margin-top: 0;
     border-top: 0;
   }
