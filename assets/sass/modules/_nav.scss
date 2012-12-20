@@ -19,6 +19,10 @@
         display: block;
         border-bottom: none;
         color: $grayMid;
+
+        &:hover {
+            color: lighten($grayMid, 15%);
+        }
     }
 }
 
@@ -33,7 +37,7 @@
 
     .nav {
         position: absolute;
-        top: px(25);
+        top: px(27);
         right: px(10);
         width: px(40) * 7;
     }
@@ -41,10 +45,11 @@
     .nav-list {
         display: block;
         border: 0;
+        text-align: right;
 
         > li {
             display: inline-block;
-            width: 32%;
+            margin-left: px(35);
         }
 
         .about,

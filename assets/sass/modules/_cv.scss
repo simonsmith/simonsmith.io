@@ -48,6 +48,10 @@
 }
 
 .hresume {
+    > h1 {
+        margin-top: px(21);
+    }
+    
     .hdr-main {
         border-bottom: 1px dotted #aaa;
     }

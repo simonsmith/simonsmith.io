@@ -689,6 +689,9 @@ h2 {
   border-bottom: none;
   color: #666666;
 }
+.nav-list a:hover {
+  color: #8c8c8c;
+}
 
 .current-menu-item a,
 .single-post .nav-list .blog a,
@@ -702,7 +705,7 @@ h2 {
 @media screen and (min-width: 48em) {
   .nav {
     position: absolute;
-    top: 1.5625rem;
+    top: 1.6875rem;
     right: 0.625rem;
     width: 17.5rem;
   }
@@ -710,10 +713,11 @@ h2 {
   .nav-list {
     display: block;
     border: 0;
+    text-align: right;
   }
   .nav-list > li {
     display: inline-block;
-    width: 32%;
+    margin-left: 2.1875rem;
   }
   .nav-list .about,
   .nav-list .contact {
@@ -987,6 +991,9 @@ ol.linenums li {
   margin-left: 0;
 }
 
+.hresume > h1 {
+  margin-top: 1.3125rem;
+}
 .hresume .hdr-main {
   border-bottom: 1px dotted #aaa;
 }
