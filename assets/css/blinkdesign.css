@@ -517,6 +517,12 @@ h2 {
     border-bottom: 1px dotted #bbb;
   }
 }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .content, .info {
   padding-left: 0.625rem;
   padding-right: 0.625rem;
@@ -545,7 +551,7 @@ h2 {
 @media screen and (min-width: 48em) {
   .content {
     float: right;
-    width: 65%;
+    width: 70%;
     border-left: 1px dotted #ccc;
     padding-left: 1.25rem;
     padding-bottom: 2.5rem;

@@ -1,3 +1,9 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .content, .info {
     padding-left: px(10);
     padding-right: px(10);
@@ -27,7 +33,7 @@
     
     .content {
         float: right;
-        width: 65%;
+        width: 70%;
         border-left: 1px dotted #ccc;
         padding-left: px(20);
         padding-bottom: px(40);
