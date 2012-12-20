@@ -488,6 +488,98 @@ h2 {
   font-size: 1.375rem;
 }
 
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  .recruiter-warning {
+    text-align: center;
+    font-size: 16pt;
+    display: block;
+  }
+
+  .nav,
+  .bio-img {
+    display: none;
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .work-images {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .work-img-container {
+    display: inline-block;
+  }
+  .work-img-container:first-of-type {
+    margin-right: 10px;
+  }
+
+  .contact ul {
+    padding: 0;
+    margin: 0;
+  }
+  .contact li {
+    padding: 0;
+    margin-bottom: 3px;
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
 .logo {
   text-decoration: none;
   text-align: center;
@@ -761,6 +853,10 @@ ol.linenums li {
   .about {
     margin-bottom: 2.5rem;
   }
+
+  .info h1 {
+    margin-top: 1.3125rem;
+  }
 }
 .excerpt-work {
   min-height: 10rem;
@@ -831,4 +927,69 @@ ol.linenums li {
 }
 .contact .linkedin {
   background-position: 0 -120px;
+}
+
+.company-url {
+  margin: 0 0 0.1875rem;
+}
+
+.employment-dates {
+  *zoom: 1;
+  font-style: italic;
+}
+.employment-dates:before, .employment-dates:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.employment-dates:after {
+  clear: both;
+}
+.employment-dates dt, .employment-dates dd {
+  float: left;
+  margin-right: 0.3125rem;
+}
+.employment-dates dt {
+  text-transform: lowercase;
+}
+.employment-dates dt:first-of-type {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.tools {
+  margin-left: 0;
+  margin-bottom: 1.875rem;
+}
+.tools > li {
+  list-style-type: square;
+  margin-bottom: 0.3125rem;
+}
+
+.entry {
+  margin: 0 0 2.25rem;
+}
+
+.recruiter-warning {
+  display: none;
+}
+
+.employment-dates {
+  margin-top: 0.3125rem;
+}
+.employment-dates dd {
+  margin-left: 0;
+}
+
+.hresume .hdr-main {
+  border-bottom: 1px dotted #aaa;
+}
+.hresume .hdr-item {
+  margin-bottom: 0.3125rem;
 }

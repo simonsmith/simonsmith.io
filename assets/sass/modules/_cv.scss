@@ -1,0 +1,58 @@
+.company-url {
+    margin: 0 0 px(3);
+}
+
+.employment-dates {
+    @include cf;
+    font-style: italic;
+
+    dt, dd {
+        float: left;
+        margin-right: px(5);
+    }
+
+    dt {
+        text-transform: lowercase;
+
+        &:first-of-type {
+            @include visuallyhidden;
+        }
+    }
+
+}
+
+.tools {
+    margin-left: 0;
+    margin-bottom: px(30);
+
+    > li {
+        list-style-type: square;
+        margin-bottom: px(5);
+    }
+}
+
+.entry {
+    margin: 0 0 px(36);
+}
+
+.recruiter-warning {
+    display: none;
+}
+
+.employment-dates {
+    margin-top: px(5);
+
+    dd {
+        margin-left: 0;
+    }
+}
+
+.hresume {
+    .hdr-main {
+        border-bottom: 1px dotted #aaa;
+    }
+    
+    .hdr-item {
+        margin-bottom: px(5);
+    }
+}
