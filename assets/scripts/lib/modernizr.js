@@ -198,9 +198,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
         return bool;
     };
-    tests['history'] = function() {
-      return !!(window.history && history.pushState);
-    };
+
     for ( var feature in tests ) {
         if ( hasOwnProp(tests, feature) ) {
                                     featureName  = feature.toLowerCase();
@@ -423,3 +421,19 @@ window.Modernizr = (function( window, document, undefined ) {
 
 })(this, this.document);
 ;
+
+Modernizr.addTest('history', function() {
+    var ua = navigator.userAgent;
+
+    // So apparently Safari sucks and doesn't support history.pushState properly. Ugh
+    // Ripped from here - https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
+    if (
+        ua.indexOf('Safari') !== -1 &&
+        ua.indexOf('Chrome') === -1
+        ) {
+        return false;
+    } else {
+        // Return the regular check
+        return (window.history && 'pushState' in history);
+    }
+});
