@@ -19,3 +19,7 @@
             }
         });
     });
+
+    if (Modernizr.mq('(max-width: 48em)')) {
+        require(['mobile']);
+    }

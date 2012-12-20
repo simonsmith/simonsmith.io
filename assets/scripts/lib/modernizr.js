@@ -1,5 +1,5 @@
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-history-touch-shiv-cssclasses-teststyles-prefixes
+ * Build: http://modernizr.com/download/#-history-touch-shiv-mq-cssclasses-teststyles-prefixes
  */
 ;
 
@@ -36,7 +36,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     slice = classes.slice,
 
-    featureName,
+    featureName, 
 
 
     injectElementWithStyles = function( rule, callback, nodes, testnames ) {
@@ -77,6 +77,25 @@ window.Modernizr = (function( window, document, undefined ) {
       return !!ret;
 
     },
+
+    testMediaQuery = function( mq ) {
+
+      var matchMedia = window.matchMedia || window.msMatchMedia;
+      if ( matchMedia ) {
+        return matchMedia(mq).matches;
+      }
+
+      var bool;
+
+      injectElementWithStyles('@media ' + mq + ' { #' + mod + ' { position: absolute; } }', function( node ) {
+        bool = (window.getComputedStyle ?
+                  getComputedStyle(node, null) :
+                  node.currentStyle)['position'] == 'absolute';
+      });
+
+      return bool;
+
+     },
     _hasOwnProperty = ({}).hasOwnProperty, hasOwnProp;
 
     if ( !is(_hasOwnProperty, 'undefined') && !is(_hasOwnProperty.call, 'undefined') ) {
@@ -85,7 +104,7 @@ window.Modernizr = (function( window, document, undefined ) {
       };
     }
     else {
-      hasOwnProp = function (object, property) {
+      hasOwnProp = function (object, property) { 
         return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
       };
     }
@@ -217,7 +236,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
        }
 
-       return Modernizr;
+       return Modernizr; 
      };
 
 
@@ -395,6 +414,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     Modernizr._prefixes     = prefixes;
 
+    Modernizr.mq            = testMediaQuery;
     Modernizr.testStyles    = injectElementWithStyles;    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') +
 
                                                     (enableClasses ? ' js ' + classes.join(' ') : '');
