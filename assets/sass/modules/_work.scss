@@ -28,7 +28,7 @@
 
 .work-img-container {
     text-align: center;
-    
+
     a {
         border: 0;
     }
@@ -44,10 +44,11 @@
         text-align: center;
         margin-top: px(30);
     }
-    
+
     .work-img-container {
-        display: inline-block;
-        
+        display: inline;
+        overflow: hidden;
+
         &:first-of-type {
             margin-right: px(10);
         }
