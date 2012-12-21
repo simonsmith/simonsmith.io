@@ -3,6 +3,7 @@
 require('Mustache/Autoloader.php');
 Mustache_Autoloader::register();
 
+
 $mustache = new Mustache_Engine([
     'template_class_prefix' => '__blinkdesign_',
     'cache' => dirname(__FILE__).'/templates/cache',
@@ -118,3 +119,25 @@ add_filter('excerpt_length', 'new_excerpt_length');
 add_action('init', 'create_post_type');
 add_action('init', 'register_menus');
 add_theme_support('post-thumbnails', ['post', 'work', 'project']);
+
+class ScriptPath {
+
+    private $server;
+    private $template_dir;
+
+    function __construct() {
+        $this->server = $_SERVER['SERVER_NAME'];
+        $this->template_dir = get_template_directory_uri();
+    }
+
+    public function getPath() {
+        if ($this->server === 'blink-design.net') {
+            $folder = 'scripts.min';
+        } else {
+            $folder = 'scripts';
+        }
+
+        return "{$this->template_dir}/assets/{$folder}";
+    }
+
+}
