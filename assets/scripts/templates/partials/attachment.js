@@ -9,7 +9,7 @@ templates['attachment.mustache'] = template(function (Handlebars,depth0,helpers,
   foundHelper = helpers.url;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "\">\n        <img class=\"work-img work-img-large img-border\" src=\"";
+  buffer += escapeExpression(stack1) + "\" class=\"highslide\">\n        <img class=\"work-img work-img-large\" src=\"";
   foundHelper = helpers.thumb;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.thumb; stack1 = typeof stack1 === functionType ? stack1() : stack1; }

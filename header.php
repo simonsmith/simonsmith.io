@@ -16,24 +16,16 @@
         <script src="<?= $script_path->getPath() ?>/lib/modernizr.js"></script>
         <script>
             var require = {
-                baseUrl: '<?= $script_path->getPath() ?>/',
-                paths: {
-                    'jquery': 'lib/jquery',
-                    'handlebars': 'lib/handlebars',
-                    'prettyprint': 'lib/prettify',
-                    'domready': 'lib/domready'
-                },
-                shim: {
-                    'handlebars': {
-                        'exports': 'Handlebars'
-                    },
-                    'prettyprint': {
-                        'exports': 'prettyPrint'
-                    }
-                }
+                baseUrl: '<?= $script_path->getPath() ?>/'
             }
         </script>
-        <script src="<?= $script_path->getPath() ?>/lib/require.js" data-main="main"></script>
+        <script src="<?= $script_path->getPath() ?>/lib/require.js"></script>
+        <script>
+            define('settings', {
+                templateDir: '<?= get_template_directory_uri(); ?>/'
+            });
+            require(['main']);
+        </script>
     </head>
     <body <? body_class(); ?>>
 

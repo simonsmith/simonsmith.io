@@ -6,7 +6,8 @@
         'jquery': 'lib/jquery',
         'handlebars': 'lib/handlebars',
         'prettyprint': 'lib/prettify',
-        'domready': 'lib/domready'
+        'domready': 'lib/domready',
+        'highslide': 'lib/highslide'
     },
     shim: {
         'handlebars': {
@@ -14,6 +15,9 @@
         },
         'prettyprint': {
             'exports': 'prettyPrint'
+        },
+        'highslide': {
+            'exports': 'hs'
         }
     },
 
@@ -34,5 +38,8 @@
         {
             name: 'mobile'
         },
+        {
+            name: 'highslide'
+        }
     ]
 })
