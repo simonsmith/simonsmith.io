@@ -33,7 +33,7 @@
     modules: [
         {
             name: 'main',
-            exclude: ['mobile']
+            exclude: ['mobile', 'highslide']
         },
         {
             name: 'mobile'
