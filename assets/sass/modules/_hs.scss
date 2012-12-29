@@ -59,6 +59,9 @@
 	margin: 0.4em;
 }
 .highslide-dimming {
+    position: fixed;
+    width: 100%;
+    height: 100%;
 	background: black;
 }
 a.highslide-full-expand {

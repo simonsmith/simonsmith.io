@@ -52,6 +52,7 @@
             hs.outlineType = null;
             hs.align = 'center';
             hs.dimmingOpacity = 0.85;
+            hs.dimmingDuration = 100;
 
             domReady(function() {
                 $('.container').on('click', '.highslide', function(event) {
