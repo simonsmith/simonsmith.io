@@ -25,6 +25,21 @@
         margin-top: px(20);
         margin-bottom: px(25);
     }
+    
+    a[href$="jpeg"],
+    a[href$="jpg"],
+    a[href$="png"] {
+        border: none;
+    }
+
+    img[class*="wp-image"] {
+        $margin: 30;
+        border: 1px solid #ccc;
+        display: block;
+        padding: px(3);
+        margin-top: px($margin);
+        margin-bottom: px($margin);
+    }
 }
 
 .hdr-post {
@@ -35,7 +50,26 @@
     color: $grayLight;
 }
 
-.wp-caption {
-    max-width: 100% !important;
+.aligncenter {
+   	margin-left: auto;
+   	margin-right: auto;
 }
+
+.wp-caption {
+    max-width: 100% !important; // override wordpress
+    
+    img[class*="wp-image"] {
+        margin-bottom: 0;
+    }
+}
+
+.wp-caption-text {
+    color: #888;
+    width: 90%;
+    @extend .aligncenter;
+    margin-bottom: px(25);
+    text-align: center;
+}
+
+
 

@@ -55,7 +55,7 @@
             hs.dimmingDuration = 100;
 
             domReady(function() {
-                $('.container').on('click', '.highslide', function(event) {
+                $('.container').on('click', 'a.highslide', function(event) {
                     hs.expand(this);
                     event.preventDefault();
                 });
