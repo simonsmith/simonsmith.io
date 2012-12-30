@@ -18,9 +18,13 @@
     
     .logo {
         text-align: left;
-        display: block;
+        display: inline-block;
         border: none;
-        padding-left: px(10);   
+        padding-left: px(10);
+
+        &:hover {
+            color: #ff5e99;
+        }
     }
 
     .header {
