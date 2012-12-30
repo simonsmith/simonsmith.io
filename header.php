@@ -13,6 +13,7 @@
         <meta name="description" content="<?= get_bloginfo('description', 'display') ?>">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/blinkdesign.css">
+        <script>document.cookie='resolution='+screen.width+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
         <script src="<?= $script_path->getPath() ?>/lib/modernizr.js"></script>
         <script>
             var require = {
