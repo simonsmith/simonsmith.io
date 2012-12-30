@@ -141,12 +141,51 @@ function give_linked_images_class($html, $id, $caption, $title, $align, $url, $s
     return $html;
 }
 
+function my_attachments( $attachments ) {
+  $args = array(
+
+    // title of the meta box (string)
+    'label'         => 'My Attachments',
+    // all post types to utilize (string|array)
+    'post_type'     => array('project'),
+    // allowed file type(s) (array) (image|video|text|audio|application)
+    'filetype'      => null,  // no filetype limit
+    // include a note within the meta box (string)
+    'note'          => 'Attach files here!',
+    // text for 'Attach' button in meta box (string)
+    'button_text'   => __( 'Attach Files', 'attachments' ),
+    // text for modal 'Attach' button (string)
+    'modal_text'    => __( 'Attach', 'attachments' ),
+    /**
+     * Fields for the instance are stored in an array. Each field consists of
+     * an array with three keys: name, type, label.
+     *
+     * name  - (string) The field name used. No special characters.
+     * type  - (string) The registered field type.
+     *                  Fields available: text, textarea
+     * label - (string) The label displayed for the field.
+     */
+    'fields'        => array(
+      array(
+        'name'  => 'alt',                          // unique field name
+        'type'  => 'text',                           // registered field type
+        'label' => __( 'Alt', 'attachments' ),     // label to display
+      )
+    ),
+
+  );
+  $attachments->register( 'project_attachments', $args ); // unique instance name
+}
+
+add_action( 'attachments_register', 'my_attachments' );
 add_filter('image_send_to_editor','give_linked_images_class',10,8);
 add_filter('excerpt_more', 'new_excerpt_more');
 add_filter('excerpt_length', 'new_excerpt_length');
 add_action('init', 'create_post_type');
 add_action('init', 'register_menus');
 add_theme_support('post-thumbnails', ['post', 'work', 'project']);
+
+
 
 class ScriptPath {
 

@@ -1,11 +1,7 @@
 <?
     $tpl_name = 'single_project.mustache';
     $single_work_tpl = load_mustache_template($tpl_name);
-
-    $attachments = (new AttachmentsPro)->get_attachments([
-        'instance'  => 'portfolio',
-        'details'   => true
-    ]);
+    $attachments = new Attachments('project_attachments');
 
     if (have_posts()) {
         while (have_posts()) {
@@ -18,12 +14,12 @@
                 'attachments' => []
             ];
 
-            if (!empty($attachments)) {
-                foreach ($attachments as $attachment) {
+            if ($attachments->exist()) {
+                while ($attachments->get()) {
                     array_push($tpl_data['attachments'], [
-                        'url' => $attachment['url'],
-                        'thumb' => $attachment['thumb'],
-                        'name' => $attachment['name']
+                        'url' => $attachments->src('full'),
+                        'thumb' => $attachments->src('thumbnail'),
+                        'alt' => $attachments->field('alt')
                     ]);
                 }
             }
