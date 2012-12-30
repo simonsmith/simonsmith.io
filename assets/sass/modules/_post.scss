@@ -40,6 +40,14 @@
         margin-top: px($margin);
         margin-bottom: px($margin);
     }
+    
+    blockquote {
+        border-left: 8px solid $grayLighter;
+        padding-left: px(10);
+        color: #888;
+        margin-top: px(30);
+        margin-bottom: px(30);
+    }
 }
 
 .hdr-post {
