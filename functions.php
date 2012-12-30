@@ -114,6 +114,34 @@ function new_excerpt_more() {
     return '...';
 }
 
+/**
+ * Attach a class to linked images' parent anchors
+ * e.g. a img => a.img img
+ *
+ * @param $html
+ * @param $id
+ * @param $caption
+ * @param $title
+ * @param $align
+ * @param $url
+ * @param $size
+ * @param string $alt
+ * @return mixed
+ */
+function give_linked_images_class($html, $id, $caption, $title, $align, $url, $size, $alt = '') {
+    // separated by spaces, e.g. 'img image-link'
+    $classes = 'highslide';
+
+    // check if there are already classes assigned to the anchor
+    if (preg_match('/<a.*? class=".*?">/', $html)) {
+        $html = preg_replace('/(<a.*? class=".*?)(".*?>)/', '$1 ' . $classes . '$2', $html);
+    } else {
+        $html = preg_replace('/(<a.*?)>/', '$1 class="' . $classes . '" >', $html);
+    }
+    return $html;
+}
+
+add_filter('image_send_to_editor','give_linked_images_class',10,8);
 add_filter('excerpt_more', 'new_excerpt_more');
 add_filter('excerpt_length', 'new_excerpt_length');
 add_action('init', 'create_post_type');
