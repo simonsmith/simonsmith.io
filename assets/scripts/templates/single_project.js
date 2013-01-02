@@ -19,7 +19,17 @@ function program1(depth0,data) {
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</h1>\n            <p class=\"description\">";
+  buffer += "</h1>\n            <p class=\"url\"><a href=\"http://";
+  foundHelper = helpers.url;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\">www.";
+  foundHelper = helpers.url;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</a></p>\n            <p class=\"description\">";
   foundHelper = helpers.excerpt;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.excerpt; stack1 = typeof stack1 === functionType ? stack1() : stack1; }

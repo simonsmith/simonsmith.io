@@ -10,6 +10,7 @@
                 'template' => $tpl_name,
                 'title' => get_the_title(),
                 'excerpt' => get_the_excerpt(),
+                'url' => get_post_meta(get_the_ID(), 'url', true),
                 'content' => apply_filters('the_content', get_the_content()),
                 'attachments' => []
             ];
