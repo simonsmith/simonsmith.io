@@ -24,7 +24,6 @@
         <script>
             define('settings', {
                 templateDir: '<?= get_template_directory_uri(); ?>/',
-                urlArgs: "bust=" +  (new Date()).getTime()
             });
             require(['main']);
         </script>
