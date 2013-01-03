@@ -54,6 +54,7 @@
                 var ajaxReq = $.ajax({
                     dataType: 'json',
                     context: this,
+                    timeout: 6,
                     beforeSend: this.showLoading,
                     url: $elem.attr('href'),
                     type: 'get',
@@ -78,7 +79,7 @@
                 });
 
                 ajaxReq.always(this.hideLoading);
-                ajaxReq.fail(this.redirectUser);
+                ajaxReq.fail(this.redirectUser.bind(this, $elem.attr('href')));
 
                 event.preventDefault();
             },
@@ -93,8 +94,8 @@
                 this.container.attr('aria-busy', false);
             },
 
-            redirectUser: function() {
-                // TODO - Redirect user to url manually
+            redirectUser: function(url) {
+                location.href = url;
             },
 
             scrollToTop: function() {
