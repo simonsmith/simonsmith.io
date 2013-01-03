@@ -54,7 +54,7 @@
                 var ajaxReq = $.ajax({
                     dataType: 'json',
                     context: this,
-                    timeout: 6,
+                    timeout: 6000,
                     beforeSend: this.showLoading,
                     url: $elem.attr('href'),
                     type: 'get',
