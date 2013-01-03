@@ -20,17 +20,21 @@
         }
     });
 
+    // Only bother with the fancy history stuff if we can use it
     if (Modernizr.history) {
-        require(['modules/ContentLoader'], function(ContentLoader) {
-            new ContentLoader({
-                container: '.container',
-                links: '.ajax, .nav-ajax a',
-                injectTarget: '#content',
-                nav: '.nav-list-container'
+        require(['modules/pageController', 'domready'], function(pageController, domReady) {
+            domReady(function() {
+                pageController.init({
+                    container: '.container',
+                    links: '.ajax, .nav-ajax a',
+                    injectTarget: '#content',
+                    nav: '.nav-list-container'
+                });
             });
         });
     }
 
+    // Highlight code if user lands on post page
     require(['domready'], function(domReady) {
         domReady(function() {
             if (document.body.className.match(/single-post/)) {
@@ -41,10 +45,12 @@
         });
     });
 
+    // Load mobile fixes
     if (Modernizr.mq('(max-width: 48em)')) {
         require(['mobile']);
     }
 
+    // Highslide just for desktops
     if (Modernizr.mq('(min-width: 48em)')) {
         require(['settings', 'jquery', 'highslide', 'domready'], function(settings, $, hs, domReady) {
             hs.graphicsDir = settings.templateDir + 'assets/images/hs/';
