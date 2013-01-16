@@ -1,6 +1,7 @@
 <?
 
-require('Mustache/Autoloader.php');
+require_once('Mustache/Autoloader.php');
+require_once('ScriptPath.php');
 Mustache_Autoloader::register();
 
 
@@ -184,29 +185,3 @@ add_filter('excerpt_length', 'new_excerpt_length');
 add_action('init', 'create_post_type');
 add_action('init', 'register_menus');
 add_theme_support('post-thumbnails', ['post', 'work', 'project']);
-
-
-
-class ScriptPath {
-
-    private $server;
-    private $template_dir;
-    private $domain;
-
-    function __construct($domain) {
-        $this->server = $_SERVER['SERVER_NAME'];
-        $this->template_dir = get_template_directory_uri();
-        $this->domain = $domain;
-    }
-
-    public function getPath() {
-        if ($this->server === $this->domain) {
-            $folder = 'scripts.min';
-        } else {
-            $folder = 'scripts';
-        }
-
-        return "{$this->template_dir}/assets/{$folder}";
-    }
-
-}
