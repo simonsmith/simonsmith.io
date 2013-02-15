@@ -13,9 +13,9 @@
                 <section class="contact" id="contact">
                     <h1>Contact</h1>
                     <ul>
-                        <li class="email"><a href="mailto:email@blink-design.net">email@blink-design.net</a></li>
-                        <li class="twitter"><a href="http://twitter.com/blinkdesign">@blinkdesign</a></li>
+                        <li class="email"><a href="mailto:me@simonsmith.io">me@simonsmith.io</a></li>
                         <li class="github"><a href="https://github.com/simonsmith">github</a></li>
+                        <li class="twitter"><a href="http://twitter.com/blinkdesign">@blinkdesign</a></li>
                         <li class="stackoverflow"><a href="http://stackoverflow.com/users/617615/simon-smith">stackoverflow</a></li>
                         <li class="linkedin"><a href="http://uk.linkedin.com/in/blinkdesign">linkedin</a></li>
                     </ul>
