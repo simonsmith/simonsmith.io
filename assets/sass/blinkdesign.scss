@@ -1,20 +1,21 @@
-@import "imports/vars";
-@import "imports/mixins";
+@import 
+    "imports/vars",
+    "imports/mixins",
 
-@import "base/normalize";
-@import "base/utils";
-@import "base/type";
-@import "base/print";
-
-@import "layout/header";
-@import "layout/common";
-
-@import "modules/nav";
-@import "modules/excerpt";
-@import "modules/post";
-@import "modules/prettify";
-@import "modules/info";
-@import "modules/work";
-@import "modules/contact";
-@import "modules/cv";
-@import "modules/hs";
+    "base/normalize",
+    "base/utils",
+    "base/type",
+    "base/print",
+    
+    "layout/header",
+    "layout/common",
+    
+    "modules/nav",
+    "modules/excerpt",
+    "modules/post",
+    "modules/prettify",
+    "modules/info",
+    "modules/work",
+    "modules/contact",
+    "modules/cv",
+    "modules/hs";
