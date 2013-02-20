@@ -1,6 +1,6 @@
 <?
     global $tpl_name;
-    $script_path = new ScriptPath('blink-design.net');
+    $script_path = new ScriptPath('simonsmith.io');
 ?>
 <!doctype html>
 <html lang="en" class="no-js">
