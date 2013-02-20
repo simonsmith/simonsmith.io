@@ -59,7 +59,7 @@
 
                 <nav class="nav" id="nav" role="navigation">
                     <h1 class="visuallyhidden">Site navigation</h1>
-                    <div class="nav-list-container">
+                    <div class="js-nav-container">
                         <?
                             global $nav_options;
                             wp_nav_menu($nav_options);
