@@ -68,4 +68,5 @@
                 </nav>
             </header>
 
-            <div class="content" id="content" role="main">
+            <div class="content" id="content">
+                <main role="main">
