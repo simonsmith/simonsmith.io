@@ -1,17 +1,17 @@
                 </main>
             </div>
 
-            <aside class="info" role="complementary">
+            <aside class="layout-aside" role="complementary">
                 <h1 class="visuallyhidden">Additional info</h1>
                 <section class="about" id="about">
-                    <h1>Who</h1>
+                    <h1 class="hdr-aside">Who</h1>
                     <p>My name is Simon. I make things happen with <abbr title="HyperText Markup Language">HTML</abbr>5, <abbr title="Cascading Style Sheets">CSS</abbr>3, JavaScript and mobile first responsive design</p>
                     <div class="bio-img">
                         <img src="http://www.gravatar.com/avatar/<?= md5('simon@interlopers.net')?>?s=200" width="150" height="150" alt="Photo of Simon Smith" class="img-border">
                     </div>
                 </section>
                 <section class="contact" id="contact">
-                    <h1>Contact</h1>
+                    <h1 class="hdr-aside">Contact</h1>
                     <ul>
                         <li class="email"><a href="mailto:me@simonsmith.io">me@simonsmith.io</a></li>
                         <li class="github"><a href="https://github.com/simonsmith">github</a></li>
