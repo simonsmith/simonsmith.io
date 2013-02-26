@@ -49,7 +49,7 @@
             </ul>
         </nav>
 
-        <div class="layout-container">
+        <div class="layout-container js-container">
 
             <header role="banner" class="layout-header">
                 <a class="logo ajax" href="<?= home_url(); ?>">

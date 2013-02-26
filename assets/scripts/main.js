@@ -25,7 +25,7 @@ if (Modernizr.history) {
     require(['modules/pageController', 'domready'], function(pageController, domReady) {
         domReady(function() {
             pageController.init({
-                container: '.container',
+                container: '.js-container',
                 links: '.ajax, .nav-ajax a',
                 injectTarget: '#content',
                 nav: '.js-nav-container'
