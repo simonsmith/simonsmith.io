@@ -29,7 +29,7 @@
                 baseUrl: '<?= $script_path->getPath() ?>/'
             }
         </script>
-        <script src="<?= $script_path->getPath() ?>/lib/require.js"></script>
+        <script src="<?= $script_path->getPath() ?>/lib/require/require.js"></script>
         <script>
             define('settings', {
                 templateDir: '<?= get_template_directory_uri(); ?>/'

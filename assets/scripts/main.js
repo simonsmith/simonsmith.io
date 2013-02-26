@@ -4,7 +4,7 @@ require.config({
         'jquery': 'lib/jquery',
         'handlebars': 'lib/handlebars',
         'prettyprint': 'lib/prettify',
-        'domready': 'lib/domready',
+        'domready': 'lib/require/domready',
         'highslide': 'lib/highslide'
     },
     shim: {

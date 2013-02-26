@@ -1,5 +1,5 @@
 // Mobile stuffs
-require(['lib/orientation-fix', 'lib/address-bar'], function(orientationFix, addressBar) {
+require(['lib/mobile/orientation-fix', 'lib/mobile/address-bar'], function(orientationFix, addressBar) {
     if (/mobile/i.test(navigator.userAgent)) {
         addressBar();
     }
