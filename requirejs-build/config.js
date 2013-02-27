@@ -33,7 +33,7 @@
     modules: [
         {
             name: 'main',
-            exclude: ['mobile', 'highslide']
+            exclude: ['mobile', 'highslide', 'modules/morePosts']
         },
         {
             name: 'mobile'
@@ -42,7 +42,7 @@
             name: 'highslide'
         },
         {
-            name: 'more-posts',
+            name: 'modules/morePosts',
             exclude: ['jquery', 'handlebars', 'templates/partials/excerpt']
         }
     ]

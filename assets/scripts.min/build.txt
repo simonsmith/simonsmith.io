@@ -1,16 +1,13 @@
 
 main.js
 ----------------
-lib/jquery.js
 modules/spinner.js
-lib/handlebars.js
 templates/single.js
 templates/single_project.js
 templates/home.js
 templates/projects.js
 templates/cv.js
 templates/partials/attachment.js
-templates/partials/excerpt.js
 modules/registerTemplates.js
 modules/pageUpdater.js
 modules/scroller.js
@@ -29,7 +26,6 @@ lib/highslide.js
 ----------------
 lib/highslide.js
 
-more-posts.js
+modules/morePosts.js
 ----------------
 modules/morePosts.js
-more-posts.js

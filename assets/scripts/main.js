@@ -15,10 +15,15 @@ if (Modernizr.history) {
 
 require(['domready'], function(domReady) {
     domReady(function() {
-        // Highlight code if user lands on post page
         if (document.body.className.match(/single-post/)) {
             require(['prettyprint'], function(prettyPrint) {
                 prettyPrint();
+            });
+        }
+        
+        if (document.body.className.match(/home/)) {
+            require(['modules/morePosts'], function(morePosts) {
+                morePosts.init($('.excerpt-list'));
             });
         }
     });

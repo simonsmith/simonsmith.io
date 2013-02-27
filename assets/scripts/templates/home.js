@@ -20,6 +20,6 @@ function program1(depth0,data) {
   else { stack1 = depth0.blog_posts; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if (!helpers.blog_posts) { stack1 = blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data)}); }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    </div>\n    <script>require(['more-posts']);</script>\n</section>\n";
+  buffer += "\n    </div>\n</section>\n";
   return buffer;});
 });
