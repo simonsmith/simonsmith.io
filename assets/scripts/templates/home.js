@@ -7,19 +7,19 @@ templates['home.mustache'] = template(function (Handlebars,depth0,helpers,partia
 function program1(depth0,data) {
   
   var buffer = "", stack1;
-  buffer += "\n        ";
+  buffer += "\n            ";
   stack1 = depth0;
   stack1 = self.invokePartial(partials.excerpt, 'excerpt', stack1, helpers, partials);;
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    ";
+  buffer += "\n        ";
   return buffer;}
 
-  buffer += "<section>\n    <h1 class=\"hdr hdr-page\">Blog</h1>\n\n    ";
+  buffer += "<section>\n    <h1 class=\"hdr hdr-page\">Blog</h1>\n\n    <div class=\"excerpt-list\">\n        ";
   foundHelper = helpers.blog_posts;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{},inverse:self.noop,fn:self.program(1, program1, data)}); }
   else { stack1 = depth0.blog_posts; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if (!helpers.blog_posts) { stack1 = blockHelperMissing.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data)}); }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</section>\n";
+  buffer += "\n    </div>\n    <script>require(['more-posts']);</script>\n</section>\n";
   return buffer;});
 });

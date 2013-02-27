@@ -1,25 +1,4 @@
 
-require.config({
-    paths: {
-        'jquery': 'lib/jquery',
-        'handlebars': 'lib/handlebars',
-        'prettyprint': 'lib/prettify',
-        'domready': 'lib/require/domready',
-        'highslide': 'lib/highslide'
-    },
-    shim: {
-        'handlebars': {
-            'exports': 'Handlebars'
-        },
-        'prettyprint': {
-            'exports': 'prettyPrint'
-        },
-        'highslide': {
-            'exports': 'hs'
-        }
-    }
-});
-
 // Only bother with the fancy history stuff if we can use it
 if (Modernizr.history) {
     require(['modules/pageController', 'domready'], function(pageController, domReady) {
@@ -34,9 +13,9 @@ if (Modernizr.history) {
     });
 }
 
-// Highlight code if user lands on post page
 require(['domready'], function(domReady) {
     domReady(function() {
+        // Highlight code if user lands on post page
         if (document.body.className.match(/single-post/)) {
             require(['prettyprint'], function(prettyPrint) {
                 prettyPrint();

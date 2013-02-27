@@ -1,7 +1,10 @@
 <section>
     <h1 class="hdr hdr-page">Blog</h1>
 
-    {{#blog_posts}}
-        {{> excerpt}}
-    {{/blog_posts}}
+    <div class="excerpt-list">
+        {{#blog_posts}}
+            {{> excerpt}}
+        {{/blog_posts}}
+    </div>
+    <script>require(['more-posts']);</script>
 </section>
