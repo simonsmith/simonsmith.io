@@ -15,16 +15,21 @@ modules/registerTemplates.js
 modules/pageUpdater.js
 modules/scroller.js
 modules/pageController.js
-lib/domready.js
+lib/require/domready.js
 settings.js
 main.js
 
 mobile.js
 ----------------
-lib/orientation-fix.js
-lib/address-bar.js
+lib/mobile/orientation-fix.js
+lib/mobile/address-bar.js
 mobile.js
 
 lib/highslide.js
 ----------------
 lib/highslide.js
+
+more-posts.js
+----------------
+modules/morePosts.js
+more-posts.js

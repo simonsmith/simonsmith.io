@@ -6,7 +6,7 @@
         'jquery': 'lib/jquery',
         'handlebars': 'lib/handlebars',
         'prettyprint': 'lib/prettify',
-        'domready': 'lib/domready',
+        'domready': 'lib/require/domready',
         'highslide': 'lib/highslide'
     },
     shim: {
@@ -40,6 +40,10 @@
         },
         {
             name: 'highslide'
+        },
+        {
+            name: 'more-posts',
+            exclude: ['jquery', 'handlebars', 'templates/partials/excerpt']
         }
     ]
 })
