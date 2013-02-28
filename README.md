@@ -1,3 +1,3 @@
-# Blink Design
+# simonsmith.io
 
-The theme for my website - http://blink-design.net
+The theme for my website - http://simonsmith.io
