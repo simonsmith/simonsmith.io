@@ -50,7 +50,7 @@
             </ul>
         </nav>
 
-        <div class="layout-container js-container">
+        <div class="layout-container js-container cf">
 
             <header role="banner" class="layout-header">
                 <a class="logo ajax" href="<?= home_url(); ?>">
