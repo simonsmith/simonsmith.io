@@ -26,25 +26,7 @@
         <script src="<?= $script_path->getPath() ?>/lib/modernizr.js"></script>
         <script>
             var require = {
-                baseUrl: '<?= $script_path->getPath() ?>/',
-                paths: {
-                    'jquery': 'lib/jquery',
-                    'handlebars': 'lib/handlebars',
-                    'prettyprint': 'lib/prettify',
-                    'domready': 'lib/require/domready',
-                    'highslide': 'lib/highslide'
-                },
-                shim: {
-                    'handlebars': {
-                        'exports': 'Handlebars'
-                    },
-                    'prettyprint': {
-                        'exports': 'prettyPrint'
-                    },
-                    'highslide': {
-                        'exports': 'hs'
-                    }
-                }
+                baseUrl: '<?= $script_path->getPath() ?>/'
             }
         </script>
         <script src="<?= $script_path->getPath() ?>/lib/require/require.js"></script>
