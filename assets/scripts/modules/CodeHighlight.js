@@ -4,10 +4,14 @@ define(function(require) {
     var mediator    = require('mediator');
     
     var CodeHighlight = function(events) {
-        mediator.subscribe(events.render, this.highlight, null, this);
+        this.attachEvents(events.render);
     };
     
     CodeHighlight.prototype = {
+
+        attachEvents: function(renderEvent) {
+            mediator.subscribe(renderEvent, this.highlight, null, this);
+        },
         
         highlight: function(bodyClass) {
             if (bodyClass.match(/single-post/)) {

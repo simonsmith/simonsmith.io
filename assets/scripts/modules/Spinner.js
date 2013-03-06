@@ -12,11 +12,15 @@ define(function(require) {
         }).hide();
         this.elem.appendTo(this.container);
 
-        mediator.subscribe(events.show, this.show, null, this);
-        mediator.subscribe(events.hide, this.hide, null, this);
+        this.attachEvents(events);
     }
 
     Spinner.prototype = {
+
+        attachEvents: function(events) {
+            mediator.subscribe(events.show, this.show, null, this);
+            mediator.subscribe(events.hide, this.hide, null, this);
+        },
 
         show: function() {
             this.elem.attr('aria-hidden', false).show();

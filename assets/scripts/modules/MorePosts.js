@@ -19,12 +19,16 @@ define(function(require) {
             text: 'Load more posts'
         });
 
-        this.container.on('click', '.js-load-posts', this.btnPress.bind(this));
-        mediator.subscribe(events.render, this.checkPage, null, this);
-        mediator.subscribe('posts:get:done', this.addPostsToPage, null, this);
+        this.attachEvents(events.render);
     };
 
     MorePosts.prototype = {
+
+        attachEvents: function(renderEvent) {
+            this.container.on('click', '.js-load-posts', this.btnPress.bind(this));
+            mediator.subscribe(renderEvent, this.checkPage, null, this);
+            mediator.subscribe('posts:get:done', this.addPostsToPage, null, this);
+        },
 
         checkPage: function(bodyClass) {
             if (bodyClass.match(/home/)) {

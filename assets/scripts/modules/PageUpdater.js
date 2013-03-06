@@ -12,10 +12,14 @@ define(function(require) {
         this.injectTarget = $(injectTarget);
         this.body = $(document.body);
 
-        mediator.subscribe(events.contentLoad, this.updatePage, null, this);
+        this.attachEvents(events.contentLoad);
     };
 
     PageUpdater.prototype = {
+
+        attachEvents: function(contentLoadEvent) {
+            mediator.subscribe(contentLoadEvent, this.updatePage, null, this);
+        },
 
         updatePage: function(data) {
             var json = data.response;
