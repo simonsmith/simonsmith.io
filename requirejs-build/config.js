@@ -7,11 +7,28 @@
         'handlebars': 'lib/handlebars',
         'prettyprint': 'lib/prettify',
         'domready': 'lib/require/domready',
-        'highslide': 'lib/highslide'
+        'highslide': 'lib/highslide',
+        'mediator': 'lib/mediator'
     },
     shim: {
         'handlebars': {
-            'exports': 'Handlebars'
+            exports: 'Handlebars',
+            init: function() {
+                // Allow object of multiple partials to be added
+                Handlebars.registerPartial = function(name, str) {
+                    var type = toString.call(name);
+
+                    if (type === '[object Object]') {
+                        for (var partial in name) {
+                            if (name.hasOwnProperty(partial)) {
+                                this.partials[partial] = name[partial];
+                            }
+                        }
+                    } else {
+                        this.partials[name] = str;
+                    }
+                };
+            }
         },
         'prettyprint': {
             'exports': 'prettyPrint'
@@ -32,8 +49,7 @@
 
     modules: [
         {
-            name: 'main',
-            exclude: ['mobile', 'highslide', 'modules/morePosts']
+            name: 'main'
         },
         {
             name: 'mobile'
@@ -42,8 +58,8 @@
             name: 'highslide'
         },
         {
-            name: 'modules/morePosts',
-            exclude: ['jquery', 'handlebars', 'templates/partials/excerpt']
+            name: 'modules/PageController',
+            exclude: ['jquery', 'handlebars', 'templates/partials/excerpt', 'mediator']
         }
     ]
 })

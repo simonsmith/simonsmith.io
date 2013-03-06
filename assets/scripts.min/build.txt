@@ -1,19 +1,15 @@
 
 main.js
 ----------------
-modules/spinner.js
-templates/single.js
-templates/single_project.js
-templates/home.js
-templates/projects.js
-templates/cv.js
-templates/partials/attachment.js
-modules/registerTemplates.js
-modules/pageUpdater.js
-modules/scroller.js
-modules/pageController.js
+lib/mediator.js
 lib/require/domready.js
-settings.js
+lib/prettify.js
+modules/CodeHighlight.js
+lib/handlebars.js
+templates/partials/excerpt.js
+lib/jquery.js
+modules/MorePosts.js
+app.js
 main.js
 
 mobile.js
@@ -26,6 +22,16 @@ lib/highslide.js
 ----------------
 lib/highslide.js
 
-modules/morePosts.js
+modules/PageController.js
 ----------------
-modules/morePosts.js
+modules/Spinner.js
+modules/Scroller.js
+templates/single.js
+templates/single_project.js
+templates/home.js
+templates/projects.js
+templates/cv.js
+templates/partials/attachment.js
+modules/registerTemplates.js
+modules/PageUpdater.js
+modules/PageController.js
