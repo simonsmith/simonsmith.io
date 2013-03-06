@@ -12,7 +12,7 @@ define(function(require) {
         this.injectTarget = $(injectTarget);
         this.body = $(document.body);
 
-        mediator.subscribe(events.updatePage, this.updatePage, null, this);
+        mediator.subscribe(events.contentLoad, this.updatePage, null, this);
     };
 
     PageUpdater.prototype = {

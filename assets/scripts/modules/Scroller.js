@@ -4,7 +4,7 @@ define(function(require) {
     var mediator = require('mediator');
 
     var Scroller = function(events) {
-        mediator.subscribe(events.scroll, this.scrollToTop, null, this);
+        mediator.subscribe(events.contentLoad, this.scrollToTop, null, this);
     };
 
     Scroller.prototype = {

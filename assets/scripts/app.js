@@ -7,7 +7,7 @@ define(function(require) {
     return function() {
         domReady(function() {
             new CodeHighlight({
-                highlight: 'content:rendered'
+                render: 'content:rendered'
             });
 
             // Fire on initial page load in case user lands on post with code snippets

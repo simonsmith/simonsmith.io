@@ -17,11 +17,11 @@ define(function(require) {
         });
 
         new Scroller({
-            scroll: 'content:get:done'
+            contentLoad: 'content:get:done'
         });
 
         new PageUpdater(this.nav, this.injectTarget, {
-            updatePage: 'content:get:done'
+            contentLoad: 'content:get:done'
         });
 
         this.setInitialPage();

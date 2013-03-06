@@ -4,7 +4,7 @@ define(function(require) {
     var mediator    = require('mediator');
     
     var CodeHighlight = function(events) {
-        mediator.subscribe(events.highlight, this.highlight, null, this);
+        mediator.subscribe(events.render, this.highlight, null, this);
     };
     
     CodeHighlight.prototype = {
