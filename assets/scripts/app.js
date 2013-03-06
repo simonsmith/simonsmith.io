@@ -3,6 +3,7 @@ define(function(require) {
     var mediator      = require('mediator');
     var domReady      = require('domready');
     var CodeHighlight = require('modules/CodeHighlight');
+    var MorePosts     = require('modules/MorePosts');
 
     return function() {
         domReady(function() {
@@ -10,7 +11,11 @@ define(function(require) {
                 render: 'content:rendered'
             });
 
-            // Fire on initial page load in case user lands on post with code snippets
+            new MorePosts('.js-container', '.excerpt-list', {
+                render: 'content:rendered'
+            });
+
+            // Fire on page load (no ajax used)
             mediator.publish('content:rendered', document.body.className);
         });
 
