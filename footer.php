@@ -1,7 +1,7 @@
                 </main>
             </div>
 
-            <aside class="layout-aside" role="complementary">
+            <aside class="layout-aside layout-col-left" role="complementary">
                 <h1 class="visuallyhidden">Additional info</h1>
                 <section class="about" id="about">
                     <h1 class="hdr-aside">Who</h1>
@@ -21,6 +21,11 @@
                     </ul>
                 </section>
             </aside>
+                    
+            <footer class="layout-footer layout-col-left footer cf" role="contentinfo">
+                <p>Simon Smith <?= date('Y'); ?></p>
+                <p>View the sauce <a href="https://github.com/simonsmith/blinkdesign">on GitHub</a></p>
+            </footer>
 
         </div>
 

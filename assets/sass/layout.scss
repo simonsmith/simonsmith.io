@@ -1,3 +1,6 @@
+.layout-footer {
+    margin-top: px(50);
+}
 
 .layout-content, .layout-aside {
     padding-left: px(10);
@@ -10,7 +13,7 @@
 }
 
 @media screen and (min-width: $tablet) {
-    
+
     .layout-content {
         float: right;
         width: 68%;
@@ -18,14 +21,29 @@
         padding-left: px(20);
         padding-bottom: px(40);
     }
-    
-    .layout-aside {
+
+    .layout-col-left {
         float: left;
         width: 30%;
+    }
+
+    .layout-aside {
         margin-top: 0;
         border-top: 0;
     }
-    
+
+    .layout-header {
+        position: relative;
+        border-bottom: 1px dotted #bbb;
+    }
+
+    .layout-header .nav {
+        position: absolute;
+        top: px(27);
+        right: px(10);
+        width: px(280);
+    }
+
 }
 
 @media screen and (min-width: $desktop) {
@@ -39,9 +57,10 @@
 }
 
 @media screen and (min-width: 1140px) {
-    
+
     .layout-container {
         width: 970px;
     }
-    
+
 }
+
