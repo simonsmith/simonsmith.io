@@ -1,6 +1,6 @@
 .post-footer {
     margin-top: px(40);
-    background-color: $offWhite;
+    background-color: $off-white;
     @include border-radius(px(5));
     padding: px(10);
 
@@ -18,7 +18,7 @@
         font-family: Monaco, 'Courier New', Courier;
         padding: 1px 5px 1px 5px;
         font-size: px(14);
-        background-color: $grayLighter;
+        background-color: $gray-lighter;
     }
     
     h2 {
@@ -42,7 +42,7 @@
     }
     
     blockquote {
-        border-left: 8px solid $grayLighter;
+        border-left: 8px solid $gray-lighter;
         padding-left: px(10);
         color: #888;
         margin-top: px(30);
@@ -55,7 +55,7 @@
 }
 
 .post-date {
-    color: $grayLight;
+    color: $gray-light;
 }
 
 .aligncenter {

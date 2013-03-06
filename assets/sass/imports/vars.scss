@@ -1,24 +1,26 @@
-$fontPath: '../fonts/';
-$imgPath: '../images/';
+
+$font-path:               '../fonts/';
+$img-path:                '../images/';
 
 // Fonts
-$baseFontSize:          16;
-$unitType:              0rem;
+$base-font-size:          16;
+$unit-type:               0rem;
 
 // Colors
-$bodyText:              #444;
-$link:                  #558cce;
-$grayMid:               #666;
-$grayLight:             #999;
-$grayLighter:           #eee;
-$offBlack:              #111;
-$offWhite:              #f2f2f2;
+$body-text:              #444;
+$link:                   #558cce;
+$gray-mid:               #666;
+$gray-light:             #999;
+$gray-lighter:           #eee;
+$off-black:              #111;
+$off-white:              #f2f2f2;
 
 // Breakpoints
-$largePhone:            40em;
-$tablet:                48em;
-$desktop:               61.875em;
+$large-phone:            40em;
+$tablet:                 48em;
+$desktop:                61.875em;
+$fixed:                  1140px;
 
 @function px($num) {
-    @return ($num / $baseFontSize) + $unitType;
+    @return ($num / $base-font-size) + $unit-type;
 }

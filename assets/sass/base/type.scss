@@ -8,7 +8,7 @@ html {
 
 body {
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    color: $bodyText;
+    color: $body-text;
 }
 
 a {
@@ -28,10 +28,10 @@ h1, h2, h3 {
     @include text-shadow(1px 1px 1px rgba(0,0,0,.3));
     
     a {
-        color: $grayMid;
+        color: $gray-mid;
 
         &:hover {
-            color: lighten($grayMid, 15%);
+            color: lighten($gray-mid, 15%);
         }
     }
 }

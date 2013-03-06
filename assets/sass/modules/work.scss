@@ -23,7 +23,7 @@
 
 .description {
     font-style: italic;
-    color: $grayLight;
+    color: $gray-light;
 }
 
 .work-img-container {
@@ -38,7 +38,7 @@
     }
 }
 
-@media screen and (min-width: $largePhone) {
+@media screen and (min-width: $large-phone) {
 
     .work-images {
         text-align: center;

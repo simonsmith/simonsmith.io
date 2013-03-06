@@ -18,10 +18,10 @@
         padding: px(10) 0;
         display: block;
         border-bottom: none;
-        color: $grayMid;
+        color: $gray-mid;
 
         &:hover {
-            color: lighten($grayMid, 15%);
+            color: lighten($gray-mid, 15%);
         }
     }
 }
@@ -29,7 +29,7 @@
 .current-menu-item a,
 .single-post .nav-list .blog a,
 .single-project .nav-list .projects a {
-    color: $offBlack;
+    color: $off-black;
     @include text-shadow(1px 1px 1px rgba(0,0,0,.3));
 }
 
