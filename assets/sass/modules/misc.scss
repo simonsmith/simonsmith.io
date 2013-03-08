@@ -22,3 +22,8 @@
     border-top: 1px dotted #ccc;
     padding-top: px(5);
 }
+
+.posts-loading span {
+    background: url('#{$img-path}ajax.gif') no-repeat right center;
+    padding-right: 20px;
+}

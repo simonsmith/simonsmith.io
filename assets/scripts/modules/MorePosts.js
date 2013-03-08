@@ -16,7 +16,7 @@ define(function(require) {
 
         this.loadBtn = $('<button></button>', {
             'class': 'load-posts js-load-posts',
-            text: 'Load more posts'
+            html: '<span>Load more posts</span>'
         });
 
         this.attachEvents(events.render);
@@ -28,6 +28,8 @@ define(function(require) {
             this.container.on('click', '.js-load-posts', this.btnPress.bind(this));
             mediator.subscribe(renderEvent, this.checkPage, null, this);
             mediator.subscribe('posts:get:done', this.addPostsToPage, null, this);
+            mediator.subscribe('posts:get:before', this.showLoading, null, this);
+            mediator.subscribe('posts:get:done', this.hideLoading, null, this);
         },
 
         checkPage: function(bodyClass) {
@@ -52,7 +54,17 @@ define(function(require) {
             event && event.preventDefault();
         },
 
+        showLoading: function() {
+            this.loadBtn.addClass('posts-loading');
+        },
+
+        hideLoading: function() {
+            this.loadBtn.removeClass('posts-loading');
+        },
+
         getPosts: function() {
+            mediator.publish('posts:get:before');
+
             $.getJSON('/more-posts/?limit=5&offset=' + this.offset, function(response) {
                 mediator.publish('posts:get:done', response);
             });
