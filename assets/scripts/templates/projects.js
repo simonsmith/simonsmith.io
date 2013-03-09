@@ -14,7 +14,7 @@ function program1(depth0,data) {
   buffer += "\n            ";
   return buffer;}
 
-  buffer += "\n    <section>\n        <h1>Projects</h1>\n\n        <div class=\"work\">\n            ";
+  buffer += "\n    <section>\n        <h1>Projects</h1>\n\n        <div class=\"layout-excerpt layout-excerpt-grid cf\">\n            ";
   foundHelper = helpers.project_items;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{},inverse:self.noop,fn:self.program(1, program1, data)}); }
   else { stack1 = depth0.project_items; stack1 = typeof stack1 === functionType ? stack1() : stack1; }

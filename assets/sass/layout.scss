@@ -12,6 +12,19 @@
     margin-top: px(40);
 }
 
+.layout-spacing-bottom,
+.layout-excerpt > *{
+    margin-bottom: px(30);
+}
+
+.layout-excerpt-grid > * {
+    min-height: px(160);
+}
+
+.layout-entries > .entry {
+    margin: 0 0 px(36);
+}
+
 @media all and (min-width: $tablet) {
 
     .layout-content {
@@ -42,6 +55,21 @@
         top: px(27);
         right: px(10);
         width: px(280);
+    }
+
+    .layout-excerpt-grid {
+        > * {
+            float: left;
+            width: 45%;
+
+            &:nth-child(even) {
+                margin-left: 5%;
+            }
+
+            &:nth-child(odd) {
+                clear: left;
+            }
+        }
     }
 
 }
