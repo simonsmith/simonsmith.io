@@ -1,4 +1,3 @@
-
 define(function(require) {
     'use strict';
                      require('templates/partials/excerpt');

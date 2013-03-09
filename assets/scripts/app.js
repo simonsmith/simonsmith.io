@@ -1,4 +1,3 @@
-
 define(function(require) {
     'use strict';
     var mediator      = require('mediator');
