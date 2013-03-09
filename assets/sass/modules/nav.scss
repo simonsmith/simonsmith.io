@@ -33,7 +33,7 @@
     @include text-shadow(1px 1px 1px rgba(0,0,0,.3));
 }
 
-@media screen and (min-width: $tablet) {
+@media all and (min-width: $tablet) {
 
     .nav-list {
         display: block;

@@ -38,7 +38,7 @@
     }
 }
 
-@media screen and (min-width: $large-phone) {
+@media all and (min-width: $large-phone) {
 
     .work-images {
         text-align: center;

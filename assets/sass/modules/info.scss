@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-@media screen and (min-width: $tablet) {
+@media all and (min-width: $tablet) {
 
     .bio-img {
         @include size(100px, 100px);

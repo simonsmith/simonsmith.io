@@ -79,7 +79,7 @@
     text-align: center;
 }
 
-@media screen and (min-width: $tablet) {
+@media all and (min-width: $tablet) {
 
     .post-title {
         position: relative;
