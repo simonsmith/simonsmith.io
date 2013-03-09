@@ -1,5 +1,6 @@
 
 define(function(require) {
+    'use strict';
     var $                 = require('jquery');
     var Handlebars        = require('handlebars');
     var mediator          = require('mediator');

@@ -1,5 +1,6 @@
 
 define(function(require) {
+    'use strict';
     var mediator      = require('mediator');
     var domReady      = require('domready');
     var CodeHighlight = require('modules/CodeHighlight');

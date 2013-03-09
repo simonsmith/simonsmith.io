@@ -1,5 +1,6 @@
 
 define(function(require) {
+    'use strict';
     var Handlebars = require('handlebars');
 
     return function() {

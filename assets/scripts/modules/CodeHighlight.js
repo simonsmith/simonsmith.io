@@ -1,5 +1,6 @@
 
 define(function(require) {
+    'use strict';
     var prettyPrint = require('prettyprint');
     var mediator    = require('mediator');
     

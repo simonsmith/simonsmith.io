@@ -1,5 +1,6 @@
 
 define(function(require) {
+    'use strict';
                      require('templates/partials/excerpt');
     var $          = require('jquery');
     var Handlebars = require('handlebars');
