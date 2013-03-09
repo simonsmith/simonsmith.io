@@ -23,7 +23,7 @@
             </aside>
                     
             <footer class="layout-footer layout-col-left footer cf" role="contentinfo">
-                <p>Simon Smith <?= date('Y'); ?></p>
+                <p>Simon Smith <time datetime="<?= date('Y-m-d') ?>"><?= date('Y') ?></time></p>
                 <p>View the sauce <a href="https://github.com/simonsmith/blinkdesign">on GitHub</a></p>
             </footer>
 
