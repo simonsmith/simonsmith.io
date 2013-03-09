@@ -11,7 +11,7 @@ define(function(require) {
                 render: 'content:rendered'
             });
 
-            new MorePosts('.js-container', '.excerpt-list', {
+            new MorePosts('.js-container', '.js-post-list', {
                 render: 'content:rendered'
             });
 
