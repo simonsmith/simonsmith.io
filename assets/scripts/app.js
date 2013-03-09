@@ -50,7 +50,7 @@ define(function(require) {
                 hs.dimmingDuration = 100;
 
                 domReady(function() {
-                    $('.container').on('click', 'a.highslide', function(event) {
+                    $('.js-container').on('click', 'a.highslide', function(event) {
                         hs.expand(this);
                         event.preventDefault();
                     });
