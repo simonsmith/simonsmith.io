@@ -1,13 +1,13 @@
 
 main.js
 ----------------
+lib/jquery.js
 lib/mediator.js
 lib/require/domready.js
 lib/prettify.js
 modules/CodeHighlight.js
 lib/handlebars.js
 templates/partials/excerpt.js
-lib/jquery.js
 modules/MorePosts.js
 app.js
 main.js
