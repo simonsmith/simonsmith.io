@@ -16,7 +16,7 @@ define(function(require) {
         },
 
         scrollToTop: function(data) {
-            if (data.type == 'ajax') {
+            if (data.navType == 'ajax') {
                 this.scrollable.animate({
                     scrollTop: 0
                 });
