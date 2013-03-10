@@ -40,6 +40,12 @@ define(function(require) {
             this.container.on('click', this.links.selector, this.getPageContent.bind(this));
 
             window.addEventListener('popstate', function(event) {
+                // Chrome/Safari seem to fire popstate on normal page load, bah
+                // http://goo.gl/JJfwR
+                if (!event.state) {
+                    return;
+                }
+
                 mediator.publish('content:get:done', {
                     response: event.state,
                     navType: 'popstate'
