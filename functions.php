@@ -29,7 +29,8 @@ function page_output($tpl, $data) {
         $data['page_meta'] = [
             'body_class' => implode(' ', get_body_class()),
             'page_title' => (is_front_page() ? 'Blog' : html_entity_decode(trim(wp_title('', false)))), // ew
-            'nav_menu' => wp_nav_menu($nav_options)
+            'nav_menu'   => wp_nav_menu($nav_options),
+            'item_id'    => get_the_ID()
         ];
 
         header('Content-Type: application/json');

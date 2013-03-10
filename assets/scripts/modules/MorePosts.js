@@ -32,8 +32,8 @@ define(function(require) {
             mediator.subscribe('posts:get:done', this.hideLoading, null, this);
         },
 
-        checkPage: function(bodyClass) {
-            if (bodyClass.match(/home/)) {
+        checkPage: function(meta) {
+            if (meta.body_class.match(/home/)) {
                 this.addBtn();
             } else {
                 this.resetIncrement();
