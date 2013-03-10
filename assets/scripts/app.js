@@ -1,11 +1,18 @@
 define(function(require) {
     'use strict';
+    var $             = require('jquery');
     var mediator      = require('mediator');
     var domReady      = require('domready');
     var CodeHighlight = require('modules/CodeHighlight');
     var MorePosts     = require('modules/MorePosts');
 
     return function() {
+        // Set initial history page
+        $.getJSON(location.href, { ajax: true }, function(json) {
+            history.replaceState(json, null, location.href);
+            mediator.publish('content:rendered', json.page_meta);
+        });
+
         domReady(function() {
             new CodeHighlight({
                 render: 'content:rendered'
@@ -15,9 +22,6 @@ define(function(require) {
                 render: 'content:rendered'
             });
 
-            // Fire on initial page load as Ajax won't have been called and
-            // above stuff won't run
-            mediator.publish('content:rendered', document.body.className);
         });
 
         // Main ajax loading/pushState stuff
@@ -41,7 +45,7 @@ define(function(require) {
 
         // Highslide just for desktops
         if (Modernizr.mq('(min-width: 48em)')) {
-            require(['settings', 'jquery', 'highslide'], function(settings, $, hs) {
+            require(['settings', 'highslide'], function(settings, hs) {
                 hs.graphicsDir = settings.templateDir + 'assets/images/hs/';
                 hs.showCredits = false;
                 hs.outlineType = null;

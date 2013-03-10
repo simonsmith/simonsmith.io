@@ -24,17 +24,10 @@ define(function(require) {
             contentLoad: 'content:get:done'
         });
 
-        this.setInitialPage();
         this.attachEvents();
     }
 
     PageController.prototype = {
-
-        setInitialPage: function() {
-            $.getJSON(location.href, { ajax: true }, function(json) {
-                history.replaceState(json, null, location.href);
-            });
-        },
 
         attachEvents: function() {
             this.container.on('click', this.links.selector, this.getPageContent.bind(this));
