@@ -48,7 +48,7 @@ define(function(require) {
                 
                 mediator.publish('content:get:done', {
                     response: json,
-                    type: 'popstate'
+                    navType: 'popstate'
                 });
             }.bind(this));
         },
@@ -75,7 +75,7 @@ define(function(require) {
             req.done(function(json) {
                 mediator.publish('content:get:done', {
                     response: json,
-                    type: 'ajax',
+                    navType: 'ajax',
                     element: $elem
                 });
             });

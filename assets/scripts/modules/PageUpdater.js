@@ -24,15 +24,23 @@ define(function(require) {
         updatePage: function(data) {
             var json = data.response;
 
+            // If users requests same page again then bail
+            // so history is not duplicated
+            if (json.page_meta.page_title == $.trim(document.title.split('|')[0])) {
+                return;
+            }
+
             this.updateNavigation(json.page_meta.nav_menu);
             this.updateBodyClass(json.page_meta.body_class);
             this.updateTitle(json.page_meta.page_title);
 
-            if (data.type == 'ajax') {
+            if (data.navType == 'ajax') {
                 this.updateContent(data.element, json);
             }
 
-            if (data.type == 'popstate') {
+            // User is going back/forward so just render the template and leave
+            // history alone
+            if (data.navType == 'popstate') {
                 this.renderTemplate(json.template, json);
             }
         },
