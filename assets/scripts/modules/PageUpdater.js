@@ -66,8 +66,8 @@ define(function(require) {
         renderTemplate: function(tplName, data) {
             var tpl = Handlebars.templates[tplName];
             this.injectTarget.html(tpl(data));
-            
-            mediator.publish('content:rendered', data.page_meta.body_class);
+
+            mediator.publish('content:rendered', data.page_meta);
         }
 
     };

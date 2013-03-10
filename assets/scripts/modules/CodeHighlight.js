@@ -13,8 +13,8 @@ define(function(require) {
             mediator.subscribe(renderEvent, this.highlight, null, this);
         },
         
-        highlight: function(bodyClass) {
-            if (bodyClass.match(/single-post/)) {
+        highlight: function(meta) {
+            if (meta.body_class.match(/single-post/)) {
                 prettyPrint();
             }
         }
