@@ -15,7 +15,8 @@ define(function(require) {
                 render: 'content:rendered'
             });
 
-            // Fire on page load (no ajax used)
+            // Fire on initial page load as Ajax won't have been called and
+            // above stuff won't run
             mediator.publish('content:rendered', document.body.className);
         });
 

@@ -40,14 +40,8 @@ define(function(require) {
             this.container.on('click', this.links.selector, this.getPageContent.bind(this));
 
             window.addEventListener('popstate', function(event) {
-                var json = event.state;
-
-                if (!json) {
-                    return;
-                }
-                
                 mediator.publish('content:get:done', {
-                    response: json,
+                    response: event.state,
                     navType: 'popstate'
                 });
             }.bind(this));
