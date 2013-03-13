@@ -14,8 +14,7 @@ require.config({
             init: function() {
                 // Allow object of multiple partials to be added
                 Handlebars.registerPartial = function(name, str) {
-                    var type = toString.call(name);
-
+                    var type = Object.prototype.toString.call(name);
                     if (type === '[object Object]') {
                         for (var partial in name) {
                             if (name.hasOwnProperty(partial)) {
