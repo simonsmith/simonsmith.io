@@ -15,10 +15,7 @@ define(function(require) {
         require('templates/partials/attachment');
         require('templates/partials/excerpt');
 
-        Handlebars.registerPartial({
-            'attachment': Handlebars.templates['attachment.mustache'],
-            'excerpt': Handlebars.templates['excerpt.mustache']
-        });
-
+        Handlebars.registerPartial('attachment', Handlebars.templates['attachment.mustache']);
+        Handlebars.registerPartial('excerpt', Handlebars.templates['excerpt.mustache']);
     };
 });

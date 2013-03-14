@@ -9,6 +9,7 @@ modules/CodeHighlight.js
 lib/handlebars.js
 templates/partials/excerpt.js
 modules/MorePosts.js
+modules/Comments.js
 app.js
 main.js
 
