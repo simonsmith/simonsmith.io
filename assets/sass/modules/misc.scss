@@ -2,9 +2,10 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, .7);
+    background: rgba(255, 255, 255, .7) url('#{$img-path}ajax-large.gif') no-repeat center 25px;
     z-index: 100;
     top: 0;
+    left: 0;
 }
 
 .img-border {
