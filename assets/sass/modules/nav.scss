@@ -18,10 +18,10 @@
         padding: px(10) 0;
         display: block;
         border-bottom: none;
-        color: $gray-mid;
+        color: $gray;
 
         &:hover {
-            color: lighten($gray-mid, 15%);
+            color: lighten($gray, 15%);
         }
     }
 }

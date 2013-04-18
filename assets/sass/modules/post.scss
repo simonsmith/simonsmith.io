@@ -18,9 +18,10 @@
     list-style-type: none;
     padding: 0;
 
-    > li {
+    > dd {
         display: inline-block;
         margin-right: px(5);
+        margin-left: 0;
     }
 }
 

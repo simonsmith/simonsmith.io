@@ -23,10 +23,18 @@ a {
 }
 
 .link-dark {
-    color: $gray-mid;
+    color: $gray;
 
     &:hover {
-        color: lighten($gray-mid, 15%);
+        color: lighten($gray, 15%);
+    }
+}
+
+.link-lighter {
+    color: $gray-mid-light;
+
+    &:hover {
+        color: $gray-light;
     }
 }
 
