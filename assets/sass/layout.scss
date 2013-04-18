@@ -1,3 +1,5 @@
+$border-style: 1px solid #ddd;
+
 .layout-footer {
     margin-top: px(50);
 }
@@ -8,7 +10,7 @@
 }
 
 .layout-aside {
-    border-top: 1px dotted #ccc;
+    border-top: $border-style;
     margin-top: px(40);
 }
 
@@ -30,7 +32,7 @@
     .layout-content {
         float: right;
         width: 68%;
-        border-left: 1px dotted #ccc;
+        border-left: $border-style;
         padding-left: px(20);
         padding-bottom: px(40);
     }
@@ -47,7 +49,7 @@
 
     .layout-header {
         position: relative;
-        border-bottom: 1px dotted #bbb;
+        border-bottom: $border-style;
     }
 
     .layout-header .nav {
