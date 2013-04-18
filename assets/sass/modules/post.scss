@@ -13,6 +13,17 @@
     margin-bottom: px(30);
 }
 
+.post-tags {
+    margin-top: px(8);
+    list-style-type: none;
+    padding: 0;
+
+    > li {
+        display: inline-block;
+        margin-right: px(5);
+    }
+}
+
 .post-content {
     code {
         font-family: Monaco, 'Courier New', Courier;
@@ -51,7 +62,7 @@
 }
 
 .hdr-post {
-    margin-bottom: px(10);
+    margin-bottom: px(12);
 }
 
 .post-date {

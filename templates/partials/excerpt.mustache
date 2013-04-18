@@ -1,9 +1,10 @@
 <article class="excerpt{{#has_image}} excerpt-work{{/has_image}}">
     <header class="excerpt-title post-title">
-        <h1 class="hdr hdr-post excerpt-hdr"><a href="{{url}}" class="ajax">{{{title}}}</a></h1>
+        <h1 class="hdr hdr-post excerpt-hdr"><a href="{{url}}" class="ajax link-dark">{{{title}}}</a></h1>
         {{#has_date}}
             <time class="post-date" datetime="{{w3c_date}}">{{date}}</time>
         {{/has_date}}
+        {{> tags}}
     </header>
     <div class="excerpt-content">
         <p>{{{excerpt}}}</p>

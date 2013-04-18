@@ -58,6 +58,23 @@ function get_permalink_by_title($title) {
     return get_permalink(get_page_by_title($title)->ID);
 }
 
+function make_tag_array() {
+    $tags = get_the_tags();
+    $tag_array = [];
+
+    if (gettype($tags) !== 'array') {
+        return;
+    }
+
+    foreach ($tags as $tag) {
+        $tag = (array) $tag;
+        $tag['site_root'] = home_url();
+        array_push($tag_array, $tag);
+    }
+
+    return $tag_array;
+}
+
 function load_mustache_template($template) {
     global $mustache;
     return $mustache->loadTemplate($template);
