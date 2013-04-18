@@ -1,0 +1,1 @@
+define(["handlebars"],function(e){var t=e.template,n=e.templates=e.templates||{}});

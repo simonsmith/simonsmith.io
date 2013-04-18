@@ -31,7 +31,9 @@ templates/single_project.js
 templates/home.js
 templates/projects.js
 templates/cv.js
+templates/tag.js
 templates/partials/attachment.js
+templates/partials/tags.js
 modules/registerTemplates.js
 modules/PageUpdater.js
 modules/PageController.js
