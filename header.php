@@ -35,6 +35,7 @@
             }
         </script>
         <script src="<?= $script_path->getPath() ?>/lib/require/require.js"></script>
+        <script src="<?= get_template_directory_uri(); ?>/assets/scripts/requirejs-config.js"></script>
         <script>
             require(['main']);
         </script>
