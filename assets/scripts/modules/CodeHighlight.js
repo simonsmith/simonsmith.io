@@ -1,7 +1,7 @@
 define(function(require) {
     'use strict';
-    var prettyPrint = require('prettyprint');
-    var mediator    = require('mediator');
+    var prettify    = require('prettify');
+    var mediator    = require('mediator-js');
     
     var CodeHighlight = function(events) {
         this.attachEvents(events.render);
@@ -15,7 +15,7 @@ define(function(require) {
         
         highlight: function(meta) {
             if (meta.body_class.match(/single-post/)) {
-                prettyPrint();
+                prettify.prettyPrint();
             }
         }
 

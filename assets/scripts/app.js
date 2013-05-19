@@ -1,8 +1,7 @@
 define(function(require, exports, module) {
     'use strict';
     var $             = require('jquery');
-    var mediator      = require('mediator');
-    var domReady      = require('domready');
+    var mediator      = require('mediator-js');
     var CodeHighlight = require('modules/CodeHighlight');
     var MorePosts     = require('modules/MorePosts');
 
@@ -13,27 +12,22 @@ define(function(require, exports, module) {
             mediator.publish('content:rendered', json.page_meta);
         });
 
-        domReady(function() {
-            new CodeHighlight({
-                render: 'content:rendered'
-            });
+        new CodeHighlight({
+            render: 'content:rendered'
+        });
 
-            new MorePosts('.js-container', '.js-post-list', {
-                render: 'content:rendered'
-            });
-
+        new MorePosts('.js-container', '.js-post-list', {
+            render: 'content:rendered'
         });
 
         // Main ajax loading/pushState stuff
         if (Modernizr.history) {
             require(['modules/PageController'], function(PageController) {
-                domReady(function() {
-                     new PageController({
-                         container: '.js-container',
-                         links: '.ajax, .nav-ajax a',
-                         injectTarget: '#content',
-                         nav: '.js-nav-container'
-                    });
+                 new PageController({
+                     container: '.js-container',
+                     links: '.ajax, .nav-ajax a',
+                     injectTarget: '#content',
+                     nav: '.js-nav-container'
                 });
             });
         }
@@ -44,7 +38,7 @@ define(function(require, exports, module) {
         }
 
         // Highslide just for desktops
-        if (Modernizr.mq('(min-width: 48em)')) {
+/*        if (Modernizr.mq('(min-width: 48em)')) {
             require(['highslide'], function(hs) {
                 hs.graphicsDir = module.config().templateDir + 'assets/images/hs/';
                 hs.showCredits = false;
@@ -53,13 +47,11 @@ define(function(require, exports, module) {
                 hs.dimmingOpacity = 0.85;
                 hs.dimmingDuration = 100;
 
-                domReady(function() {
-                    $('.js-container').on('click', 'a.highslide', function(event) {
-                        hs.expand(this);
-                        event.preventDefault();
-                    });
-                })
+                $('.js-container').on('click', 'a.highslide', function(event) {
+                    hs.expand(this);
+                    event.preventDefault();
+                });
             });
-        }
+        }*/
     }
 });

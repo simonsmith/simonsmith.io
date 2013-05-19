@@ -1,0 +1,26 @@
+{
+  "name": "simonsmith.io",
+  "version": "1.0.0",
+  "description": "Portfolio of Simon Smith",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-handlebars": "~0.5.8",
+    "grunt-contrib-requirejs": "~0.4.0",
+    "grunt-contrib-watch": "~0.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simonsmith/blinkdesign.git"
+  },
+  "author": "Simon Smith",
+  "license": "BSD",
+  "gitHead": "dd670c4c50ef69c1f69310548bfd43e5e138e4d1",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "grunt": "~0.4.1"
+  }
+}

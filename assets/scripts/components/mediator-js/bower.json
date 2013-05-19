@@ -1,0 +1,9 @@
+{
+  "name": "mediator-js",
+  "main": "index.js",
+  "version": "0.0.0",
+  "repository": {
+    "type": "asset",
+    "url": "https://raw.github.com/ajacksified/Mediator.js/master/lib/mediator.js"
+  }
+}

@@ -1,7 +1,7 @@
 define(function(require) {
     'use strict';
     var $        = require('jquery');
-    var mediator = require('mediator');
+    var mediator = require('mediator-js');
 
     function Spinner(container, events) {
         this.container = $(container);

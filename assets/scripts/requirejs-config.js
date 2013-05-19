@@ -1,21 +1,16 @@
 require.config({
     paths: {
-        'jquery': 'lib/jquery',
-        'handlebars': 'lib/handlebars',
-        'prettyprint': 'lib/prettify',
-        'domready': 'lib/require/domready',
-        'highslide': 'lib/highslide',
-        'mediator': 'lib/mediator'
+        'jquery':                   'components/jquery/jquery',
+        'handlebars':               'components/handlebars/handlebars.runtime',
+        'prettify':                 'components/google-code-prettify/src/prettify',
+        'mediator-js':              'components/mediator-js/index'
     },
     shim: {
-        'handlebars': {
+        handlebars: {
             exports: 'Handlebars'
         },
-        'prettyprint': {
-            'exports': 'prettyPrint'
-        },
-        'highslide': {
-            'exports': 'hs'
+        highslide: {
+            exports: 'hs'
         }
     }
 });
