@@ -26,15 +26,16 @@
         <script src="<?= $script_path->getPath() ?>/lib/modernizr.js"></script>
         <script>
             var require = {
-                baseUrl: '<?= $script_path->getPath() ?>/'
+                baseUrl: '<?= $script_path->getPath() ?>/',
+                config: {
+                    'app': {
+                        templateDir: '<?= get_template_directory_uri(); ?>/'
+                    }
+                }
             }
         </script>
         <script src="<?= $script_path->getPath() ?>/lib/require/require.js"></script>
         <script>
-            define('settings', {
-                templateDir: '<?= get_template_directory_uri(); ?>/'
-            });
-            // Require main after script element so that 'settings' is available
             require(['main']);
         </script>
     </head>

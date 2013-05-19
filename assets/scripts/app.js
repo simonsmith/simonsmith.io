@@ -1,4 +1,4 @@
-define(function(require) {
+define(function(require, exports, module) {
     'use strict';
     var $             = require('jquery');
     var mediator      = require('mediator');
@@ -45,8 +45,8 @@ define(function(require) {
 
         // Highslide just for desktops
         if (Modernizr.mq('(min-width: 48em)')) {
-            require(['settings', 'highslide'], function(settings, hs) {
-                hs.graphicsDir = settings.templateDir + 'assets/images/hs/';
+            require(['highslide'], function(hs) {
+                hs.graphicsDir = module.config().templateDir + 'assets/images/hs/';
                 hs.showCredits = false;
                 hs.outlineType = null;
                 hs.align = 'center';
