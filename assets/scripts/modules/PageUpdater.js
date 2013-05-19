@@ -3,9 +3,6 @@ define(function(require) {
     var $                 = require('jquery');
     var Handlebars        = require('handlebars');
     var mediator          = require('mediator-js');
-    var registerTemplates = require('modules/registerTemplates');
-
-    registerTemplates();
 
     var PageUpdater = function(nav, injectTarget, events) {
         this.nav = $(nav);

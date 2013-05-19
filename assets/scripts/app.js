@@ -4,6 +4,7 @@ define(function(require, exports, module) {
     var mediator      = require('mediator-js');
     var CodeHighlight = require('modules/CodeHighlight');
     var MorePosts     = require('modules/MorePosts');
+                        require('templates/compiled-templates');
 
     return function() {
         // Set initial history page
