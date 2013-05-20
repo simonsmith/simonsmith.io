@@ -10,7 +10,9 @@
     "grunt": "~0.4.1",
     "grunt-contrib-handlebars": "~0.5.8",
     "grunt-contrib-requirejs": "~0.4.0",
-    "grunt-contrib-watch": "~0.4.1"
+    "grunt-contrib-watch": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0"
   },
   "repository": {
     "type": "git",

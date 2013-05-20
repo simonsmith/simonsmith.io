@@ -1,43 +1,7 @@
 ({
     baseUrl: '../assets/scripts',
     dir: '../assets/scripts.min',
-
-    paths: {
-        'jquery': 'lib/jquery',
-        'handlebars': 'lib/handlebars',
-        'prettyprint': 'lib/prettify',
-        'domready': 'lib/require/domready',
-        'highslide': 'lib/highslide',
-        'mediator': 'lib/mediator'
-    },
-    shim: {
-        'handlebars': {
-            exports: 'Handlebars',
-            init: function() {
-                // Allow object of multiple partials to be added
-                Handlebars.registerPartial = function(name, str) {
-                    var type = toString.call(name);
-
-                    if (type === '[object Object]') {
-                        for (var partial in name) {
-                            if (name.hasOwnProperty(partial)) {
-                                this.partials[partial] = name[partial];
-                            }
-                        }
-                    } else {
-                        this.partials[name] = str;
-                    }
-                };
-            }
-        },
-        'prettyprint': {
-            'exports': 'prettyPrint'
-        },
-        'highslide': {
-            'exports': 'hs'
-        }
-    },
-
+    mainConfigFile: '../assets/scripts/requirejs-config.js',
     removeCombined: true,
 
     optimize: 'uglify',
@@ -46,6 +10,7 @@
         max_line_length: 3500,
         no_copyright: true
     },
+    optimizeCss: 'none',
 
     modules: [
         {
@@ -55,11 +20,8 @@
             name: 'mobile'
         },
         {
-            name: 'highslide'
-        },
-        {
             name: 'modules/PageController',
-            exclude: ['jquery', 'handlebars', 'templates/partials/excerpt', 'mediator']
+            exclude: ['jquery', 'handlebars', 'mediator-js']
         }
     ]
 })

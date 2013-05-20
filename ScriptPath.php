@@ -13,7 +13,7 @@ class ScriptPath {
 
     public function getPath() {
         if ($this->server === $this->domain) {
-            $folder = 'scripts.min';
+            $folder = 'scripts.dist';
         } else {
             $folder = 'scripts';
         }

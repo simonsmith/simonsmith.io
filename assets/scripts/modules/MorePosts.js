@@ -3,6 +3,7 @@ define(function(require) {
     var $          = require('jquery');
     var Handlebars = require('handlebars');
     var mediator   = require('mediator-js');
+                     require('templates/compiled-templates');
     var template   = Handlebars.templates['excerpt.mustache'];
 
     var MorePosts = function(container, postList, events) {
