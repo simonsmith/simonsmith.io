@@ -9,6 +9,8 @@ define(function(require) {
     
     CodeHighlight.prototype = {
 
+        constructor: CodeHighlight,
+
         attachEvents: function(renderEvent) {
             mediator.subscribe(renderEvent, this.highlight, null, this);
         },

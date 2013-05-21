@@ -29,6 +29,8 @@ define(function(require) {
 
     PageController.prototype = {
 
+        constructor: PageController,
+
         attachEvents: function() {
             this.container.on('click', this.links.selector, this.getPageContent.bind(this));
 

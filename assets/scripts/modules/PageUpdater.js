@@ -14,6 +14,8 @@ define(function(require) {
 
     PageUpdater.prototype = {
 
+        constructor: PageUpdater,
+
         attachEvents: function(contentLoadEvent) {
             mediator.subscribe(contentLoadEvent, this.updatePage, null, this);
         },

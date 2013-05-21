@@ -24,6 +24,8 @@ define(function(require) {
 
     MorePosts.prototype = {
 
+        constructor: MorePosts,
+
         attachEvents: function(renderEvent) {
             this.container.on('click', '.js-load-posts', this.btnPress.bind(this));
             mediator.subscribe(renderEvent, this.checkPage, null, this);

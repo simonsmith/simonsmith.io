@@ -9,6 +9,8 @@ define(function(require) {
 
     Scroller.prototype = {
 
+        constructor: Scroller,
+
         scrollable: $('html, body'),
 
         attachEvents: function(contentLoadEvent) {

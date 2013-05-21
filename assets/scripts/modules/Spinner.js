@@ -17,6 +17,8 @@ define(function(require) {
 
     Spinner.prototype = {
 
+        constructor: Spinner,
+
         attachEvents: function(events) {
             mediator.subscribe(events.show, this.show, null, this);
             mediator.subscribe(events.hide, this.hide, null, this);
