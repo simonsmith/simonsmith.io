@@ -34,8 +34,8 @@
                 }
             }
         </script>
-        <script src="<?= get_template_directory_uri(); ?>/assets/scripts/components/requirejs/require.js"></script>
-        <script src="<?= get_template_directory_uri(); ?>/assets/scripts/requirejs-config.js"></script>
+        <script src="<?= $script_path->getPath() ?>/components/requirejs/require.js"></script>
+        <script src="<?= $script_path->getPath() ?>/requirejs-config.js"></script>
     </head>
     <body <? body_class(); ?>>
         <!--[if lt IE 8]>
