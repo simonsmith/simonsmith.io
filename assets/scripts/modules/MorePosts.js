@@ -3,28 +3,26 @@ define(function(require) {
     var $          = require('jquery');
     var Handlebars = require('handlebars');
     var mediator   = require('mediator-js');
+    var prime      = require('prime');
                      require('templates/compiled-templates');
     var template   = Handlebars.templates['excerpt.mustache'];
 
-    var MorePosts = function(container, postList, events) {
-        this.container = $(container);
-        this.postList = $(postList);
-        this.postListSelector = this.postList.selector;
+    return prime({
+        constructor: function(container, postList, events) {
+            this.container = $(container);
+            this.postList = $(postList);
+            this.postListSelector = this.postList.selector;
 
-        this.offset = 5;
-        this.incrementBy = 5;
+            this.offset = 5;
+            this.incrementBy = 5;
 
-        this.loadBtn = $('<button></button>', {
-            'class': 'load-posts js-load-posts',
-            html: '<span>Load more posts</span>'
-        });
+            this.loadBtn = $('<button></button>', {
+                'class': 'load-posts js-load-posts',
+                html: '<span>Load more posts</span>'
+            });
 
-        this.attachEvents(events.render);
-    };
-
-    MorePosts.prototype = {
-
-        constructor: MorePosts,
+            this.attachEvents(events.render);
+        },
 
         attachEvents: function(renderEvent) {
             this.container.on('click', '.js-load-posts', this.btnPress.bind(this));
@@ -50,7 +48,7 @@ define(function(require) {
         removeBtn: function() {
             this.loadBtn.detach();
         },
-        
+
         btnPress: function(event) {
             this.getPosts();
             event && event.preventDefault();
@@ -91,8 +89,5 @@ define(function(require) {
         resetIncrement: function() {
             this.offset = 5;
         }
-
-    };
-
-    return MorePosts;
+    });
 });

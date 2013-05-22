@@ -3,18 +3,16 @@ define(function(require) {
     var $                 = require('jquery');
     var Handlebars        = require('handlebars');
     var mediator          = require('mediator-js');
+    var prime             = require('prime');
 
-    var PageUpdater = function(nav, injectTarget, events) {
-        this.nav = $(nav);
-        this.injectTarget = $(injectTarget);
-        this.body = $(document.body);
+    return prime({
+        constructor: function(nav, injectTarget, events) {
+            this.nav = $(nav);
+            this.injectTarget = $(injectTarget);
+            this.body = $(document.body);
 
-        this.attachEvents(events.contentLoad);
-    };
-
-    PageUpdater.prototype = {
-
-        constructor: PageUpdater,
+            this.attachEvents(events.contentLoad);
+        },
 
         attachEvents: function(contentLoadEvent) {
             mediator.subscribe(contentLoadEvent, this.updatePage, null, this);
@@ -68,8 +66,5 @@ define(function(require) {
 
             mediator.publish('content:rendered', data.page_meta);
         }
-
-    };
-
-    return PageUpdater;
+    });
 });

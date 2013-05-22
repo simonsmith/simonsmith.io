@@ -2,34 +2,32 @@ define(function(require) {
     'use strict';
     var $           = require('jquery');
     var mediator    = require('mediator-js');
+    var prime       = require('prime');
     var Spinner     = require('modules/Spinner');
     var Scroller    = require('modules/Scroller');
     var PageUpdater = require('modules/PageUpdater');
 
-    function PageController(elements) {
-        $.each(elements, function(key, value) {
-            this[key] = $(value);
-        }.bind(this));
+    return prime({
+        constructor: function(elements) {
+            $.each(elements, function(key, value) {
+                this[key] = $(value);
+            }.bind(this));
 
-        new Spinner(this.container, {
-            show: 'content:get:before',
-            hide: 'content:get:always'
-        });
+            new Spinner(this.container, {
+                show: 'content:get:before',
+                hide: 'content:get:always'
+            });
 
-        new Scroller({
-            contentLoad: 'content:get:done'
-        });
+            new Scroller({
+                contentLoad: 'content:get:done'
+            });
 
-        new PageUpdater(this.nav, this.injectTarget, {
-            contentLoad: 'content:get:done'
-        });
+            new PageUpdater(this.nav, this.injectTarget, {
+                contentLoad: 'content:get:done'
+            });
 
-        this.attachEvents();
-    }
-
-    PageController.prototype = {
-
-        constructor: PageController,
+            this.attachEvents();
+        },
 
         attachEvents: function() {
             this.container.on('click', this.links.selector, this.getPageContent.bind(this));
@@ -77,8 +75,5 @@ define(function(require) {
 
             event && event.preventDefault();
         }
-
-    };
-
-    return PageController;
+    });
 });

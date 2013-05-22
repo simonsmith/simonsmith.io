@@ -4,6 +4,7 @@ main.js
 components/jquery/jquery.js
 components/mediator-js/index.js
 components/google-code-prettify/src/prettify.js
+lib/prime/node_modules/prime/index.js
 modules/CodeHighlight.js
 components/handlebars/handlebars.runtime.js
 templates/compiled-templates.js

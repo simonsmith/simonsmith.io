@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                         },
                         {
                             name: 'modules/PageController',
-                            exclude: ['jquery', 'handlebars', 'mediator-js']
+                            exclude: ['jquery', 'handlebars', 'mediator-js', 'prime']
                         }
                     ],
 

@@ -2,14 +2,12 @@ define(function(require) {
     'use strict';
     var $        = require('jquery');
     var mediator = require('mediator-js');
+    var prime    = require('prime');
 
-    var Scroller = function(events) {
-        this.attachEvents(events.contentLoad);
-    };
-
-    Scroller.prototype = {
-
-        constructor: Scroller,
+    return prime({
+        constructor: function(events) {
+            this.attachEvents(events.contentLoad);
+        },
 
         scrollable: $('html, body'),
 
@@ -24,8 +22,5 @@ define(function(require) {
                 });
             }
         }
-
-    };
-
-    return Scroller;
+    });
 });

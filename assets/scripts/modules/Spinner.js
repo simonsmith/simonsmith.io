@@ -2,22 +2,20 @@ define(function(require) {
     'use strict';
     var $        = require('jquery');
     var mediator = require('mediator-js');
+    var prime    = require('prime');
 
-    function Spinner(container, events) {
-        this.container = $(container);
+    return prime({
+        constructor: function(container, events) {
+            this.container = $(container);
 
-        this.elem = $('<div></div>', {
-            'class': 'loading',
-            'aria-hidden': true
-        }).hide();
-        this.elem.appendTo(this.container);
+            this.elem = $('<div></div>', {
+                'class': 'loading',
+                'aria-hidden': true
+            }).hide();
+            this.elem.appendTo(this.container);
 
-        this.attachEvents(events);
-    }
-
-    Spinner.prototype = {
-
-        constructor: Spinner,
+            this.attachEvents(events);
+        },
 
         attachEvents: function(events) {
             mediator.subscribe(events.show, this.show, null, this);
@@ -33,8 +31,5 @@ define(function(require) {
             this.elem.attr('aria-hidden', true).hide();
             this.container.attr('aria-busy', false);
         }
-
-    };
-
-    return Spinner;
+    });
 });

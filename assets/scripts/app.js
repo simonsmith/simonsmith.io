@@ -24,7 +24,7 @@ define(function(require, exports, module) {
         // Main ajax loading/pushState stuff
         if (Modernizr.history) {
             require(['modules/PageController'], function(PageController) {
-                 new PageController({
+                new PageController({
                      container: '.js-container',
                      links: '.ajax, .nav-ajax a',
                      injectTarget: '#content',
