@@ -5,7 +5,7 @@ define(function(require) {
     var mediator   = require('mediator-js');
     var prime      = require('prime');
                      require('templates/compiled-templates');
-    var template   = Handlebars.templates['excerpt.mustache'];
+    var template   = Handlebars.partials['excerpt'];
 
     return prime({
         constructor: function(container, postList, events) {
