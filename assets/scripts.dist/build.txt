@@ -9,6 +9,7 @@ modules/CodeHighlight.js
 components/handlebars/handlebars.runtime.js
 templates/compiled-templates.js
 modules/MorePosts.js
+components/fancybox/source/jquery.fancybox.js
 app.js
 main.js
 

@@ -24,6 +24,7 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "grunt": "~0.4.1",
-    "prime": "~0.1.0"
+    "prime": "~0.1.0",
+    "grunt-contrib-cssmin": "~0.6.1"
   }
 }

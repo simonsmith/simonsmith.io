@@ -3,7 +3,8 @@ require.config({
         'jquery':                   'components/jquery/jquery',
         'handlebars':               'components/handlebars/handlebars.runtime',
         'prettify':                 'components/google-code-prettify/src/prettify',
-        'mediator-js':              'components/mediator-js/index'
+        'mediator-js':              'components/mediator-js/index',
+        'fancybox':                 'components/fancybox/source/jquery.fancybox'
     },
     map: {
         '*': {
@@ -16,6 +17,7 @@ require.config({
         },
         highslide: {
             exports: 'hs'
-        }
+        },
+        'fancybox': ['jquery']
     }
 });

@@ -26,6 +26,14 @@ module.exports = function(grunt) {
             }
         },
 
+        cssmin: {
+            build: {
+                files: {
+                    'assets/css/blinkdesign.css': 'assets/css/blinkdesign.css'
+                }
+            }
+        },
+
         clean: {
             build: ['assets/scripts.dist/components']
         },
@@ -72,11 +80,12 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', ['handlebars:templates', 'requirejs:build', 'clean:build', 'uglify:build']);
+    grunt.registerTask('default', ['handlebars:templates', 'requirejs:build', 'clean:build', 'uglify:build', 'cssmin:build']);
 
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 };

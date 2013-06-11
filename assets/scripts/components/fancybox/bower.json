@@ -1,0 +1,8 @@
+{
+  "name": "fancybox",
+  "version": "2.1.4",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fancyapps/fancyBox.git"
+  }
+}

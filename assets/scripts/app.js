@@ -4,6 +4,7 @@ define(function(require, exports, module) {
     var mediator      = require('mediator-js');
     var CodeHighlight = require('modules/CodeHighlight');
     var MorePosts     = require('modules/MorePosts');
+                        require('fancybox');
                         require('templates/compiled-templates');
 
     return function() {
@@ -37,22 +38,13 @@ define(function(require, exports, module) {
         if (Modernizr.mq('(max-width: 48em)')) {
             require(['mobile']);
         }
+        
 
-        // Highslide just for desktops
-/*        if (Modernizr.mq('(min-width: 48em)')) {
-            require(['highslide'], function(hs) {
-                hs.graphicsDir = module.config().templateDir + 'assets/images/hs/';
-                hs.showCredits = false;
-                hs.outlineType = null;
-                hs.align = 'center';
-                hs.dimmingOpacity = 0.85;
-                hs.dimmingDuration = 100;
-
-                $('.js-container').on('click', 'a.highslide', function(event) {
-                    hs.expand(this);
-                    event.preventDefault();
-                });
-            });
-        }*/
+        $('.js-container').on('click', 'a', function(event) {
+            if (/([.]png|jpg|jpeg)$/.test(this.href)) {
+                $.fancybox(this.href);
+            }
+            event.preventDefault();
+        });
     }
 });
