@@ -8,12 +8,6 @@ define(function(require, exports, module) {
                         require('templates/compiled-templates');
 
     return function() {
-        // Set initial history page
-        $.getJSON(location.href, { ajax: true }, function(json) {
-            history.replaceState(json, null, location.href);
-            mediator.publish('content:rendered', json.page_meta);
-        });
-
         new CodeHighlight({
             render: 'content:rendered'
         });
@@ -32,19 +26,23 @@ define(function(require, exports, module) {
                      nav: '.js-nav-container'
                 });
             });
+        } else {
+            // Fire event anyway as other modules still need to know
+            mediator.publish('content:rendered', {
+                body_class: document.body.className
+            });
         }
 
         // Load mobile fixes
         if (Modernizr.mq('(max-width: 48em)')) {
             require(['mobile']);
         }
-        
 
         $('.js-container').on('click', 'a', function(event) {
             if (/([.]png|jpg|jpeg)$/.test(this.href)) {
                 $.fancybox(this.href);
+                event.preventDefault();
             }
-            event.preventDefault();
         });
     }
 });

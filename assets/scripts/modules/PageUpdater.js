@@ -31,8 +31,8 @@ define(function(require) {
             this.updateBodyClass(json.page_meta.body_class);
             this.updateTitle(json.page_meta.page_title);
 
-            if (data.navType == 'ajax') {
-                this.updateContent(data.element, json);
+            if (!data.navType) {
+                this.updateContent(data.href, json);
             }
 
             // User is going back/forward so just render the template and leave
@@ -55,9 +55,9 @@ define(function(require) {
             this.body.removeClass().addClass(bodyClass);
         },
 
-        updateContent: function(clickedElem, json) {
+        updateContent: function(href, json) {
             this.renderTemplate(json.template, json);
-            history.pushState(json, null, clickedElem.attr('href'));
+            history.pushState(json, null, href);
         },
 
         renderTemplate: function(tplName, data) {

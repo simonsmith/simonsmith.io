@@ -6,6 +6,7 @@ define(function(require) {
     var Spinner     = require('modules/Spinner');
     var Scroller    = require('modules/Scroller');
     var PageUpdater = require('modules/PageUpdater');
+    var storage     = require('modules/Storage');
 
     return prime({
         constructor: function(elements) {
@@ -25,6 +26,9 @@ define(function(require) {
             new PageUpdater(this.nav, this.injectTarget, {
                 contentLoad: 'content:get:done'
             });
+
+            // Set initial page
+            this.getPageContent(location.href);
 
             this.attachEvents();
         },
@@ -47,13 +51,38 @@ define(function(require) {
         },
 
         getPageContent: function(event) {
-            var $elem = $(event.currentTarget);
+            var href = (typeof event == 'string' ? event : event.currentTarget.href);
+
+            // Try to get the page from storage first
+            if (!this.fetchFromStorage(href)) {
+                this.fetchFromServer(href);
+            }
+
+            event && event.preventDefault && event.preventDefault();
+        },
+
+        fetchFromStorage: function(href) {
+            var json = storage.getItem(href);
+
+            if (!json) {
+                return null;
+            }
+
+            mediator.publish('content:get:done', {
+                response: json,
+                href: href
+            });
+
+            return json;
+        },
+
+        fetchFromServer: function(href) {
             var req = $.ajax({
                 data: { ajax: true },
                 dataType: 'json',
                 context: this,
                 timeout: 6000,
-                url: $elem.attr('href'),
+                url: href,
                 beforeSend: function() {
                     mediator.publish('content:get:before');
                 }
@@ -63,17 +92,16 @@ define(function(require) {
                 mediator.publish('content:get:always');
             });
             req.fail(function() {
-                mediator.publish('content:get:fail', { element: $elem });
+                mediator.publish('content:get:fail');
             });
             req.done(function(json) {
                 mediator.publish('content:get:done', {
                     response: json,
-                    navType: 'ajax',
-                    element: $elem
+                    href: href
                 });
-            });
 
-            event && event.preventDefault();
+                storage.setItem(href, json);
+            });
         }
     });
 });
