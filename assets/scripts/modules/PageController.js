@@ -27,9 +27,6 @@ define(function(require) {
                 contentLoad: 'content:get:done'
             });
 
-            // Set initial page
-            this.getPageContent(location.href);
-
             this.attachEvents();
         },
 

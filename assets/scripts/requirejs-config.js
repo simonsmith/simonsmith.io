@@ -4,7 +4,8 @@ require.config({
         'handlebars':               'components/handlebars/handlebars.runtime',
         'prettify':                 'components/google-code-prettify/src/prettify',
         'mediator-js':              'components/mediator-js/index',
-        'fancybox':                 'components/fancybox/source/jquery.fancybox'
+        'fancybox':                 'components/fancybox/source/jquery.fancybox',
+        'hammer':                   'components/hammerjs/dist/hammer'
     },
     map: {
         '*': {

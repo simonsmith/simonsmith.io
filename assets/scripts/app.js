@@ -2,6 +2,8 @@ define(function(require, exports, module) {
     'use strict';
     var $             = require('jquery');
     var mediator      = require('mediator-js');
+    var Hammer        = require('hammer');
+    var storage       = require('modules/Storage');
     var CodeHighlight = require('modules/CodeHighlight');
     var MorePosts     = require('modules/MorePosts');
                         require('fancybox');
@@ -38,11 +40,29 @@ define(function(require, exports, module) {
             require(['mobile']);
         }
 
+        // Fancybox init
         $('.js-container').on('click', 'a', function(event) {
             if (/([.]png|jpg|jpeg)$/.test(this.href)) {
                 $.fancybox(this.href);
                 event.preventDefault();
             }
         });
+
+        // Set initial history page
+        // TODO - Improve this
+        // This is bad and is repeating code from PageController
+        // but fixing replaceState in there is tough for now
+        var initialJSON = storage.getItem(location.href);
+        var load = function(json) {
+            history.replaceState(json, null, location.href);
+            mediator.publish('content:rendered', json.page_meta);
+        };
+        if (initialJSON) {
+            load(initialJSON);
+        } else {
+            $.getJSON(location.href, { ajax: true }, function(json) {
+                load(json);
+            });
+        }
     }
 });

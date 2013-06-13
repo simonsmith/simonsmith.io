@@ -52,7 +52,7 @@
         <div class="layout-container js-container cf">
 
             <header role="banner" class="layout-header">
-                <a class="logo ajax" href="<?= home_url(); ?>">
+                <a class="logo ajax" href="<?= home_url(); ?>/">
                     <h1 class="logo-title">Simon Smith</h1>
                     <p class="logo-description">$ Front-end developer</p>
                 </a>
