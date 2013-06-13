@@ -24,6 +24,7 @@ define(function(require) {
             // If users requests same page again then bail
             // so history is not duplicated
             if (json.page_meta.page_title == $.trim(document.title.split('|')[0])) {
+                mediator.publish('content:rendered', json.page_meta);
                 return;
             }
 
