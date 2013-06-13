@@ -62,6 +62,7 @@ define(function(require, exports, module) {
         } else {
             $.getJSON(location.href, { ajax: true }, function(json) {
                 load(json);
+                storage.setItem(location.href, json);
             });
         }
     }
