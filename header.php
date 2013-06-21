@@ -34,8 +34,7 @@
                 }
             }
         </script>
-        <script src="<?= $script_path->getPath() ?>/components/requirejs/require.js"></script>
-        <script src="<?= $script_path->getPath() ?>/requirejs-config.js"></script>
+        <script src="<?= $script_path->getPath() ?>/components/requirejs/require.js" data-main="<?= $script_path->getPath() ?>/main.js"></script>
     </head>
     <body <? body_class(); ?>>
         <!--[if lt IE 8]>

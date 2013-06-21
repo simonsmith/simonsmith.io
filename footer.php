@@ -29,9 +29,5 @@
 
         </div>
 
-        <script>
-            require(['main']);
-        </script>
-
     </body>
 </html>

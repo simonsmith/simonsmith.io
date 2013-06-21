@@ -2,7 +2,6 @@ define(function(require, exports, module) {
     'use strict';
     var $             = require('jquery');
     var mediator      = require('mediator-js');
-    var Hammer        = require('hammer');
     var storage       = require('modules/Storage');
     var CodeHighlight = require('modules/CodeHighlight');
     var MorePosts     = require('modules/MorePosts');
