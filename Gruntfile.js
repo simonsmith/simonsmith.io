@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'assets/css/blinkdesign.css': 'assets/sass/blinkdesign.scss'
+                    'assets/css/site.css': 'assets/sass/site.scss'
                 }
             },
             build: {
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'assets/css/blinkdesign.css': 'assets/sass/blinkdesign.scss'
+                    'assets/css/site.css': 'assets/sass/site.scss'
                 }
             }
         },
@@ -49,14 +49,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
-/*        cssmin: {
-            build: {
-                files: {
-                    'assets/css/blinkdesign.css': 'assets/css/blinkdesign.css'
-                }
-            }
-        },*/
 
         clean: {
             build: ['assets/scripts.dist/components']
@@ -111,5 +103,4 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    //grunt.loadNpmTasks('grunt-contrib-cssmin');
 };
