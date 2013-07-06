@@ -45,8 +45,7 @@ module.exports = function(grunt) {
                     'assets/scripts.dist/modules/PageController.js': ['assets/scripts.dist/modules/PageController.js'],
                     'assets/scripts.dist/lib/modernizr.js': ['assets/scripts.dist/lib/modernizr.js'],
                     'assets/scripts.dist/mobile.js': ['assets/scripts.dist/mobile.js'],
-                    'assets/scripts.dist/components/requirejs/require.js': ['assets/scripts/components/requirejs/require.js'],
-                    'assets/scripts.dist/requirejs-config.js': ['assets/scripts.dist/requirejs-config.js']
+                    'assets/scripts.dist/components/requirejs/require.js': ['assets/scripts/components/requirejs/require.js']
                 }
             }
         },
@@ -56,7 +55,7 @@ module.exports = function(grunt) {
                 options: {
                     baseUrl: 'assets/scripts',
                     dir: 'assets/scripts.dist',
-                    mainConfigFile: 'assets/scripts/requirejs-config.js',
+                    mainConfigFile: 'assets/scripts/main.js',
                     optimizeCss: 'none',
                     removeCombined: true,
 
