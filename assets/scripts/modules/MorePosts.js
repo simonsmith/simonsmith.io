@@ -27,6 +27,7 @@ define(function(require) {
         attachEvents: function(renderEvent) {
             this.container.on('click', '.js-load-posts', this.btnPress.bind(this));
             mediator.subscribe(renderEvent, this.checkPage, null, this);
+            mediator.subscribe(renderEvent, this.resetBtnText, null, this);
             mediator.subscribe('posts:get:done', this.addPostsToPage, null, this);
             mediator.subscribe('posts:get:before', this.showLoading, null, this);
             mediator.subscribe('posts:get:done', this.hideLoading, null, this);
@@ -39,6 +40,10 @@ define(function(require) {
                 this.resetIncrement();
                 this.removeBtn();
             }
+        },
+
+        resetBtnText: function() {
+            this.loadBtn.find('span').text('Load 5 more posts');
         },
 
         addBtn: function() {
