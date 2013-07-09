@@ -52,12 +52,12 @@
 
             <header role="banner" class="layout-header">
                 <a class="logo ajax" href="<?= home_url(); ?>/">
-                    <h1 class="logo-title">Simon Smith</h1>
+                    <p class="logo-title hdr">Simon Smith</p>
                     <p class="logo-description">$ Front-end developer</p>
                 </a>
 
                 <nav class="nav" id="nav" role="navigation">
-                    <h1 class="visuallyhidden">Site navigation</h1>
+                    <p class="visuallyhidden">Site navigation</p>
                     <div class="js-nav-container">
                         <?
                             global $nav_options;

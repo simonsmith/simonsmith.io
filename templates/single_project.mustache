@@ -1,16 +1,14 @@
 
-    <article>
-        <header class="post-title">
-            <h1 class="hdr hdr-post">{{{title}}}</h1>
-            <p class="url"><a href="http://{{{url}}}">www.{{{url}}}</a></p>
-            <p class="description">{{{excerpt}}}</p>
-        </header>
-        <div class="post-content">
-            {{{content}}}
-        </div>
-        <div class="work-images">
-            {{#attachments}}
-                {{> attachment}}
-            {{/attachments}}
-        </div>
-    </article>
+    <header class="post-title">
+        <h1 class="hdr hdr-post">{{{title}}}</h1>
+        <p class="url"><a href="http://{{{url}}}">www.{{{url}}}</a></p>
+        <p class="description">{{{excerpt}}}</p>
+    </header>
+    <div class="post-content">
+        {{{content}}}
+    </div>
+    <div class="work-images">
+        {{#attachments}}
+            {{> attachment}}
+        {{/attachments}}
+    </div>

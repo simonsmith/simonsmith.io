@@ -38,10 +38,16 @@ a {
     }
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4, .hdr {
     line-height: 1.2;
     font-weight: normal;
     @include text-shadow(1px 1px 1px rgba(0,0,0,.3));
+}
+
+.hdr-section {
+    margin-top: px(15);
+    margin-bottom: px(12);
+    font-size: px(22);
 }
 
 img {
@@ -53,7 +59,7 @@ p, ul, dl, .post-content {
     line-height: 1.4;
 }
 
-h1 {
+h1, .hdr-post {
     font-size: px(26);
 }
 
