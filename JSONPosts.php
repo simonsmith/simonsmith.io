@@ -2,39 +2,34 @@
 
 class JSONPosts {
 
-    private $limit;
-    private $offset;
-    private $postsRemaning;
     private $maxLimit = 20;
 
-    public function __construct($limit, $offset) {
-        $this->limit = (int) $limit;
-        $this->offset = (int) $offset;
+    public function getPosts($limit, $offset) {
+        $limit = (int) $limit;
+        $offset = (int) $offset;
 
-        if ($this->limit > $this->maxLimit) {
-            return;
+        if ($limit > $this->maxLimit) {
+            return json_encode([]);
         }
 
-        $this->query = new WP_Query([
+        $query = new WP_Query([
             'category_name' => 'blog',
-            'posts_per_page' => $this->limit,
-            'offset' => $this->offset
+            'posts_per_page' => $limit,
+            'offset' => $offset
         ]);
 
-        $this->postsRemaning = new WP_Query([
+        $postsRemaning = new WP_Query([
             'category_name' => 'blog',
-            'posts_per_page' => $this->limit,
-            'offset' => $this->offset + $this->offset
+            'posts_per_page' => $limit,
+            'offset' => $offset + $offset
         ]);
-    }
 
-    public function getPosts() {
         $data = [
-            'posts_remaining' => $this->postsRemaning->post_count,
+            'posts_remaining' => $postsRemaning->post_count,
             'posts' => []
         ];
 
-        while ($this->query->have_posts()) : $this->query->the_post();
+        while ($query->have_posts()) : $query->the_post();
             array_push($data['posts'], [
                 'title' => get_the_title(),
                 'url' => get_permalink(),

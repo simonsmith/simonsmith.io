@@ -4,5 +4,6 @@
 */
 
 require_once 'JSONPosts.php';
+$posts = new JSONPosts();
 
-echo (new JSONPosts($_GET['limit'], $_GET['offset']))->getPosts();
+echo $posts->getPosts($_GET['limit'], $_GET['offset']);
