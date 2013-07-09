@@ -1,7 +1,7 @@
 /*jslint bitwise: true, nomen: true, plusplus: true, white: true */
 
 /*!
-* Mediator.js Library v0.9.4
+* Mediator.js Library v0.9.5
 * https://github.com/ajacksified/Mediator.js
 *
 * Copyright 2013, Jack Lawson
@@ -10,24 +10,24 @@
 * For more information: http://thejacklawson.com/2011/06/mediators-for-modularized-asynchronous-programming-in-javascript/index.html
 * Project on GitHub: https://github.com/ajacksified/Mediator.js
 *
-* Last update: Jan 04 2013
+* Last update: June 13 2013
 */
 
-(function(root, factory) {
+(function(global, factory) {
   'use strict';
 
-  if(typeof root.exports === 'function') {
+  if(typeof exports !== 'undefined') {
     // Node/CommonJS
-    root.exports.Mediator = factory();
+    exports.Mediator = factory();
   } else if(typeof define === 'function' && define.amd) {
     // AMD
     define('mediator-js', [], function() {
-      root.Mediator = factory();
-      return root.Mediator();
+      global.Mediator = factory();
+      return global.Mediator();
     });
   } else {
     // Browser global
-    root.Mediator = factory();
+    global.Mediator = factory();
   }
 }(this, function() {
   'use strict';
@@ -199,7 +199,8 @@
       var x = 0,
           y = this._subscribers.length,
           called = false,
-          subscriber, l;
+          subscriber, l,
+          subsBefore,subsAfter;
 
       // Priority is preserved in the _subscribers index.
       for(x, y; x < y; x++) {
@@ -211,7 +212,13 @@
               called = true;
             }
           }else{
+            subsBefore = this._subscribers.length;
             subscriber.fn.apply(subscriber.context, data);
+            subsAfter = this._subscribers.length;
+            y = subsAfter;
+            if (subsAfter === subsBefore - 1){
+              x--;              
+            }
             called = true;
           }
         }
@@ -223,8 +230,6 @@
             this.removeSubscriber(subscriber.id);
             y--;
             x--;
-          }else{
-            subscriber.update(subscriber.options);
           }
         }
       }
@@ -345,7 +350,8 @@
 
   Mediator.Channel = Channel;
   Mediator.Subscriber = Subscriber;
-  Mediator.version = "0.9.4";
+  Mediator.version = "0.9.5";
 
   return Mediator;
 }));
+  

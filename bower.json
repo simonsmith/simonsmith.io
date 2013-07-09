@@ -5,8 +5,7 @@
     "handlebars": "git://github.com/components/handlebars.js#1.0.0-rc.4",
     "jquery": "git://github.com/components/jquery.git#2.0.0",
     "mediator-js": "https://raw.github.com/ajacksified/Mediator.js/master/lib/mediator.js",
-    "requirejs": "git://github.com/jrburke/requirejs#2.1.6",
-    "google-code-prettify": "~1.0.0",
-    "hammerjs": "~1.0.5"
+    "requirejs": "2.1.8",
+    "google-code-prettify": "~1.0.0"
   }
 }
