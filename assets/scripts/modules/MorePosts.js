@@ -18,7 +18,7 @@ define(function(require) {
 
             this.loadBtn = $('<button></button>', {
                 'class': 'load-posts js-load-posts',
-                html: '<span>Load more posts</span>'
+                html: '<span>Load 5 more posts</span>'
             });
 
             this.attachEvents(events.render);
@@ -71,19 +71,21 @@ define(function(require) {
         },
 
         addPostsToPage: function(response) {
-            if (response.length == 0) {
-                this.removeBtn();
-                this.resetIncrement();
-                return;
-            }
-
             var html = '';
-            $.each(response, function(key, value) {
+            $.each(response.posts, function(key, value) {
                 html += template(value);
             });
 
             this.offset += this.incrementBy;
-            this.loadBtn.before(html);
+            this.loadBtn
+                .before(html)
+                .find('span')
+                .text('Load ' + response.posts_remaining + ' more posts');
+
+            if (response.posts_remaining == 0) {
+                this.removeBtn();
+                this.resetIncrement();
+            }
         },
 
         resetIncrement: function() {

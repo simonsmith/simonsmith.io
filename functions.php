@@ -2,6 +2,7 @@
 
 require_once('Mustache/Autoloader.php');
 require_once('ScriptPath.php');
+require_once('kint/Kint.class.php');
 Mustache_Autoloader::register();
 
 
