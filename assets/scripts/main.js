@@ -1,23 +1,19 @@
 require.config({
     paths: {
-        'jquery':                   'components/jquery/jquery',
-        'handlebars':               'components/handlebars/handlebars.runtime',
-        'prettify':                 'components/google-code-prettify/src/prettify',
-        'mediator-js':              'components/mediator-js/index',
-        'fancybox':                 'components/fancybox/source/jquery.fancybox',
-        'hammer':                   'components/hammerjs/dist/hammer'
+        'handlebars':  'components/handlebars/handlebars.runtime',
+        'fancybox':    'components/fancybox/source/jquery.fancybox',
+        'jquery':      'components/jquery/jquery',
+        'mediator-js': 'components/mediator-js/index'
     },
     map: {
         '*': {
-            'prime': 'lib/prime/node_modules/prime/index'
+            'prettify':    'components/google-code-prettify/src/prettify',
+            'prime':       'components/primish/prime'
         }
     },
     shim: {
         handlebars: {
             exports: 'Handlebars'
-        },
-        highslide: {
-            exports: 'hs'
         },
         'fancybox': ['jquery']
     }
