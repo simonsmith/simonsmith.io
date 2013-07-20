@@ -1,5 +1,5 @@
-                </main>
-            </div>
+                </div>
+            </main>
 
             <div class="layout-aside layout-col-left" role="complementary">
                 <h1 class="visuallyhidden">About</h1>

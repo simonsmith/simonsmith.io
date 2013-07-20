@@ -67,5 +67,5 @@
                 </nav>
             </header>
 
-            <div class="layout-content" id="content">
-                <main role="main">
+            <main role="main">
+                <div class="layout-content" id="content">
