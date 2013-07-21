@@ -72,7 +72,7 @@ module.exports = function(grunt) {
                         },
                         {
                             name: 'modules/PageController',
-                            exclude: ['zepto', 'handlebars', 'mediator-js', 'prime']
+                            exclude: ['zepto', 'handlebars', 'mediator-js', 'prime', 'modules/Storage']
                         }
                     ],
 

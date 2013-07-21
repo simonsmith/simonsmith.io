@@ -26,5 +26,4 @@ modules/PageController.js
 modules/Spinner.js
 modules/Scroller.js
 modules/PageUpdater.js
-modules/Storage.js
 modules/PageController.js
