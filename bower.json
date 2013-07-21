@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "dependencies": {
     "handlebars": "git://github.com/components/handlebars.js#1.0.0-rc.4",
-    "jquery": "2.0.3",
     "mediator-js": "https://raw.github.com/ajacksified/Mediator.js/master/lib/mediator.js",
     "requirejs": "2.1.8",
     "google-code-prettify": "~1.0.0",

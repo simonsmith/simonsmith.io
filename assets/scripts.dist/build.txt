@@ -1,16 +1,17 @@
 
 main.js
 ----------------
-components/jquery/jquery.js
+lib/zepto/zepto.js
+lib/deferred.js
+lib/zepto/zepto-custom.js
 components/mediator-js/index.js
 modules/Storage.js
 components/google-code-prettify/src/prettify.js
-lib/prime/node_modules/prime/index.js
+components/primish/prime.js
 modules/CodeHighlight.js
 components/handlebars/handlebars.runtime.js
 templates/compiled-templates.js
 modules/MorePosts.js
-components/fancybox/source/jquery.fancybox.js
 app.js
 main.js
 

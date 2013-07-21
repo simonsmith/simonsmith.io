@@ -1,11 +1,10 @@
-define(function(require, exports, module) {
+define(function(require) {
     'use strict';
-    var $             = require('jquery');
+    var $             = require('zepto');
     var mediator      = require('mediator-js');
     var storage       = require('modules/Storage');
     var CodeHighlight = require('modules/CodeHighlight');
     var MorePosts     = require('modules/MorePosts');
-                        require('fancybox');
                         require('templates/compiled-templates');
 
     return function() {
@@ -38,14 +37,6 @@ define(function(require, exports, module) {
         if (Modernizr.mq('(max-width: 48em)')) {
             require(['mobile']);
         }
-
-        // Fancybox init
-        $('.js-container').on('click', 'a', function(event) {
-            if (/([.]png|jpg|jpeg)$/.test(this.href)) {
-                $.fancybox(this.href);
-                event.preventDefault();
-            }
-        });
 
         // Set initial history page
         // TODO - Improve this

@@ -1,6 +1,6 @@
 define(function(require) {
     'use strict';
-    var $           = require('jquery');
+    var $           = require('zepto');
     var mediator    = require('mediator-js');
     var prime       = require('prime');
     var Spinner     = require('modules/Spinner');
@@ -55,7 +55,7 @@ define(function(require) {
                 this.fetchFromServer(href);
             }
 
-            event && event.preventDefault && event.preventDefault();
+            event && event.preventDefault();
         },
 
         fetchFromStorage: function(href) {

@@ -1,21 +1,30 @@
 require.config({
     paths: {
         'handlebars':  'components/handlebars/handlebars.runtime',
-        'fancybox':    'components/fancybox/source/jquery.fancybox',
-        'jquery':      'components/jquery/jquery',
-        'mediator-js': 'components/mediator-js/index'
+        'mediator-js': 'components/mediator-js/index',
+        'zepto':       'lib/zepto/zepto',
+        'deferred':    'lib/deferred'
     },
     map: {
         '*': {
             'prettify':    'components/google-code-prettify/src/prettify',
-            'prime':       'components/primish/prime'
+            'prime':       'components/primish/prime',
+            'zepto':       'lib/zepto/zepto-custom'
+        },
+        'lib/zepto/zepto-custom': {
+            'zepto': 'zepto'
         }
     },
     shim: {
+        deferred: {
+            exports: 'Deferred'
+        },
+        zepto: {
+            exports: 'Zepto'
+        },
         handlebars: {
             exports: 'Handlebars'
-        },
-        'fancybox': ['jquery']
+        }
     }
 });
 

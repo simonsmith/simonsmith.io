@@ -51,19 +51,7 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            build: ['assets/scripts.dist/components']
-        },
-
-        uglify: {
-            build: {
-                files: {
-                    'assets/scripts.dist/main.js': ['assets/scripts.dist/main.js'],
-                    'assets/scripts.dist/modules/PageController.js': ['assets/scripts.dist/modules/PageController.js'],
-                    'assets/scripts.dist/lib/modernizr.js': ['assets/scripts.dist/lib/modernizr.js'],
-                    'assets/scripts.dist/mobile.js': ['assets/scripts.dist/mobile.js'],
-                    'assets/scripts.dist/components/requirejs/require.js': ['assets/scripts/components/requirejs/require.js']
-                }
-            }
+            build: ['assets/scripts.dist/components/!(require)']
         },
 
         requirejs: {
@@ -84,22 +72,21 @@ module.exports = function(grunt) {
                         },
                         {
                             name: 'modules/PageController',
-                            exclude: ['jquery', 'handlebars', 'mediator-js', 'prime']
+                            exclude: ['zepto', 'handlebars', 'mediator-js', 'prime']
                         }
                     ],
 
-                    optimize: 'none',
+                    optimize: 'uglify2',
                     preserveLicenseComments: false
                 }
             }
         }
     });
 
-    grunt.registerTask('default', ['handlebars:templates', 'requirejs:build', 'clean:build', 'uglify:build', 'sass:build']);
+    grunt.registerTask('default', ['handlebars:templates', 'requirejs:build', 'clean:build', 'sass:build']);
 
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
