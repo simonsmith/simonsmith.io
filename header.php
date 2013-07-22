@@ -7,11 +7,12 @@
     <head>
         <title>
             <? page_title(); ?>
-      	</title>
+        </title>
         <meta charset="utf-8">
         <meta name="description" content="<?= get_bloginfo('description', 'display') ?>">
         <meta name="viewport" content="width=device-width">
         <script src="<?= $script_path->getPath() ?>/lib/modernizr.js"></script>
+        <script>document.cookie='resolution='+screen.width+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>f
         <script>
             var require = {
                 baseUrl: '<?= $script_path->getPath() ?>/',
@@ -23,18 +24,12 @@
             }
         </script>
         <script src="<?= $script_path->getPath() ?>/components/requirejs/require.js" data-main="<?= $script_path->getPath() ?>/main.js"></script>
+        <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/site.css">
     </head>
     <body <? body_class(); ?>>
         <!--[if lt IE 8]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-        <nav class="visuallyhidden">
-            <ul>
-                <li><a href="#content">Skip to content</a></li>
-                <li><a href="#nav">Skip to nav</a></li>
-            </ul>
-        </nav>
 
         <div class="layout-container js-container cf">
 
@@ -44,7 +39,7 @@
                     <p class="logo-description">$ Front-end developer</p>
                 </a>
 
-                <nav class="nav" id="nav" role="navigation">
+                <div class="nav" id="nav" role="navigation">
                     <p class="visuallyhidden">Site navigation</p>
                     <div class="js-nav-container">
                         <?
@@ -52,7 +47,7 @@
                             wp_nav_menu($nav_options);
                         ?>
                     </div>
-                </nav>
+                </div>
             </header>
 
             <main role="main">
