@@ -12,7 +12,7 @@
         <meta name="description" content="<?= get_bloginfo('description', 'display') ?>">
         <meta name="viewport" content="width=device-width">
         <script src="<?= $script_path->getPath() ?>/lib/modernizr.js"></script>
-        <script>document.cookie='resolution='+screen.width+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>f
+        <script>document.cookie='resolution='+screen.width+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
         <script>
             var require = {
                 baseUrl: '<?= $script_path->getPath() ?>/',
