@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         sass: {
             dev: {
                 options: {
-                    style: 'expanded'
+                    outputStyle: 'expanded'
                 },
                 files: {
                     'assets/css/site.css': 'assets/sass/site.scss'
