@@ -24,7 +24,6 @@
   "gitHead": "dd670c4c50ef69c1f69310548bfd43e5e138e4d1",
   "readmeFilename": "README.md",
   "dependencies": {
-    "grunt": "~0.4.1",
-    "prime": "~0.1.0"
+    "grunt": "~0.4.1"
   }
 }
