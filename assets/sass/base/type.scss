@@ -1,5 +1,5 @@
 * {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 html {
@@ -15,7 +15,7 @@ a {
     color: $link;
     border-bottom: 1px dotted;
     text-decoration: none;
-    @include transition(color .2s);
+    transition: color .2s;
 
     &:hover {
         color: lighten($link, 15%);
@@ -41,7 +41,7 @@ a {
 h2, h3, h4, .hdr {
     line-height: 1.2;
     font-weight: normal;
-    @include text-shadow(1px 1px 1px rgba(0,0,0,.3));
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
 .hdr-section {

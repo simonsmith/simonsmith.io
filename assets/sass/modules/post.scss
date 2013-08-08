@@ -1,7 +1,7 @@
 .post-footer {
     margin-top: px(40);
     background-color: $off-white;
-    @include border-radius(px(5));
+    border-radius: 5px;
     padding: px(10);
 
     > p {

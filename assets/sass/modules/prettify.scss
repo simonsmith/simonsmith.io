@@ -44,7 +44,7 @@ ol.linenums li {
 }
 
 .prettyprint {
-    @include border-radius(5px);
+    border-radius: 5px;
     font-family: Monaco, 'Courier New', Courier;
     display: block;
     width: auto;

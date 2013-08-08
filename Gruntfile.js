@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -10,7 +12,15 @@ module.exports = function(grunt) {
 
             sass: {
                 files: 'assets/sass/**/*.scss',
-                tasks: ['sass:dev']
+                tasks: ['sass', 'autoprefixer']
+            }
+        },
+
+        autoprefixer: {
+            build: {
+                files: {
+                    'assets/css/site.css': ['assets/css/site.css']
+                }
             }
         },
 
@@ -22,13 +32,13 @@ module.exports = function(grunt) {
                 files: {
                     'assets/css/site.css': 'assets/sass/site.scss'
                 }
-            },
+            }
+        },
+
+        cssmin: {
             build: {
-                options: {
-                    style: 'compressed'
-                },
                 files: {
-                    'assets/css/site.css': 'assets/sass/site.scss'
+                    'assets/css/site.css': 'assets/css/site.css'
                 }
             }
         },
@@ -83,11 +93,13 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', ['handlebars:templates', 'requirejs:build', 'clean:build', 'sass:build']);
 
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
-    grunt.loadNpmTasks('grunt-contrib-handlebars');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.registerTask('default', [
+        'handlebars:templates',
+        'requirejs',
+        'clean',
+        'sass',
+        'autoprefixer',
+        'cssmin'
+    ]);
 };
