@@ -61,7 +61,7 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            build: ['assets/scripts.dist/components/!(require)']
+            build: ['assets/scripts.dist/components/!(require|jquery)']
         },
 
         requirejs: {
@@ -75,7 +75,8 @@ module.exports = function(grunt) {
 
                     modules: [
                         {
-                            name: 'main'
+                            name: 'main',
+                            exclude: ['jquery', 'zepto']
                         },
                         {
                             name: 'mobile'

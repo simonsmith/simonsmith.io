@@ -3,6 +3,7 @@ require.config({
         'handlebars':  'components/handlebars/handlebars.runtime',
         'mediator-js': 'components/mediator-js/index',
         'zepto':       'lib/zepto/zepto',
+        'jquery':      'components/jquery/jquery',
         'deferred':    'lib/deferred'
     },
     map: {

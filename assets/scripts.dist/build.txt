@@ -1,9 +1,6 @@
 
 main.js
 ----------------
-lib/zepto/zepto.js
-lib/deferred.js
-lib/zepto/zepto-custom.js
 components/mediator-js/index.js
 modules/Storage.js
 components/google-code-prettify/src/prettify.js
