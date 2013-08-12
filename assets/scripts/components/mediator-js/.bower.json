@@ -1,0 +1,13 @@
+{
+  "name": "mediator-js",
+  "_cacheHeaders": {
+    "ETag": "\"4c595768d0c8350a631bb9cbbb932291\"",
+    "Content-Length": "11036",
+    "Content-Type": "text/plain; charset=utf-8",
+    "Content-Disposition": "inline"
+  },
+  "_release": "e-tag:4c595768d",
+  "main": "index.js",
+  "_source": "https://raw.github.com/ajacksified/Mediator.js/master/lib/mediator.js",
+  "_target": "*"
+}

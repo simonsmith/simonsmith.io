@@ -14,17 +14,18 @@
 
 		var pseudoEvents = {
 			once: function(eventName, fn){
-				var self = this;
-				return function one(){
+				var self = this,
+					wrapped = function(){
 					fn.apply(this, arguments);
-					self.off(eventName, one);
+					self.off(eventName, wrapped);
 				};
+				return wrapped;
 			}
 		};
 
 		var hideProperty = function(obj, prop){
 			// listeners not to be enumerable where supported
-			return obj[prop] = {}, prime.define(obj, prop, {enumerable: false}), obj[prop];
+			return obj[prop] = {}, prime.define(obj, prop, {enumerable: false, value:obj[prop]}), obj[prop];
 		};
 
 		var emitter = prime({
@@ -84,11 +85,12 @@
 				var listeners = this._listeners,
 					events,
 					k,
-					args;
+					args = slice.call(arguments, 1),
+					copy = {};
 
 				if (listeners && (events = listeners[event])){
-					args = (arguments.length > 1) ? slice.call(arguments, 1) : [];
-					for (k in events) events[k].apply(this, args);
+					for (k in events) copy[k] = events[k];
+					for (k in copy) copy[k].apply(this, args);
 				}
 
 				return this;
