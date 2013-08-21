@@ -13,7 +13,7 @@ define(function(require) {
             this.postList = $(postList);
             this.postListSelector = this.postList.selector;
 
-            this.offset = 5;
+            this.offset = 8;
             this.incrementBy = 5;
 
             this.loadBtn = $('<button></button>', {

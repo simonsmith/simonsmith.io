@@ -12,7 +12,7 @@
 
     $blog_posts = new WP_Query([
         'category_name' => 'blog',
-        'posts_per_page' => 5
+        'posts_per_page' => 8
     ]);
 
     while ($blog_posts->have_posts()) : $blog_posts->the_post();
