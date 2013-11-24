@@ -1,5 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Convergence);
+
 @import
     "imports/vars",
     "base/normalize",
     "base/helpers",
     "base/print";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    background-color: $off-white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $body-text;
+}
+
+.container {
+    margin: px(10);
+}
+
+// Logo
+.logo {
+    font-family: 'Convergence', sans-serif;
+    text-align: center;
+    text-transform: lowercase;
+
+    > p {
+        margin: 0;
+        display: inline-block;
+    }
+}
+
+.logo-title {
+    font-size: px(32);
+    font-weight: bold;
+}
+
+.logo-subtitle {
+    color: #777;
+}
+
+// Nav
+.site-nav-list {
+    list-style-type: none;
+    text-transform: lowercase;
+    text-align: center;
+    padding: 0;
+
+    > li {
+        display: inline-block;
+        margin-left: px(15);
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    a {
+        color: #555;
+    }
+}

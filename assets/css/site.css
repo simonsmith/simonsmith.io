@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Convergence);
+
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -562,4 +564,64 @@ table {
   h3 {
     page-break-after: avoid;
   }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  background-color: #f9f9f9;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+.container {
+  margin: 0.625rem;
+}
+
+.logo {
+  font-family: 'Convergence', sans-serif;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.logo > p {
+  margin: 0;
+  display: inline-block;
+}
+
+.logo-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo-subtitle {
+  color: #777777;
+}
+
+.site-nav-list {
+  list-style-type: none;
+  text-transform: lowercase;
+  text-align: center;
+  padding: 0;
+}
+
+.site-nav-list > li {
+  display: inline-block;
+  margin-left: 0.9375rem;
+}
+
+.site-nav-list > li:first-child {
+  margin-left: 0;
+}
+
+.site-nav-list a {
+  color: #555555;
 }
