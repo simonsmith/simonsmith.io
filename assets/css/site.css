@@ -577,17 +577,24 @@ html {
 }
 
 body {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
 }
 
-.container {
-  margin: 0.625rem;
+h1,
+h2,
+h3,
+h4,
+.logo {
+  font-family: 'Convergence', sans-serif;
+}
+
+.site-header {
+  margin: 0.625rem 0 0;
 }
 
 .logo {
-  font-family: 'Convergence', sans-serif;
   text-align: center;
   text-transform: lowercase;
 }
@@ -611,6 +618,7 @@ body {
   text-transform: lowercase;
   text-align: center;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .site-nav-list > li {
@@ -622,6 +630,30 @@ body {
   margin-left: 0;
 }
 
+.site-nav-list > .current:after {
+  text-align: center;
+  margin: 0.625rem auto 0;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
 .site-nav-list a {
   color: #555555;
+}
+
+.site-content {
+  background-color: white;
+  padding: 0.625rem;
+}
+
+.site-footer {
+  text-align: center;
+  color: #777777;
+  text-transform: lowercase;
+  font-size: 0.875rem;
 }

@@ -20,13 +20,16 @@ body {
     color: $body-text;
 }
 
-.container {
-    margin: px(10);
+h1, h2, h3, h4, .logo {
+    font-family: 'Convergence', sans-serif;
+}
+
+.site-header {
+    margin: px(10) 0 0;
 }
 
 // Logo
 .logo {
-    font-family: 'Convergence', sans-serif;
     text-align: center;
     text-transform: lowercase;
 
@@ -51,6 +54,7 @@ body {
     text-transform: lowercase;
     text-align: center;
     padding: 0;
+    margin-bottom: 0;
 
     > li {
         display: inline-block;
@@ -61,7 +65,33 @@ body {
         }
     }
 
+    > .current {
+        &:after {
+            text-align: center;
+            margin: px(10) auto 0;
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid #fff;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+    }
+
     a {
         color: #555;
     }
+}
+
+.site-content {
+    background-color: #fff;
+    padding: px(10);
+}
+
+.site-footer {
+    text-align: center;
+    color: #777;
+    text-transform: lowercase;
+    font-size: px(14);
 }
