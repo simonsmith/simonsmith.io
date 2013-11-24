@@ -1,0 +1,26 @@
+{
+  "name": "simonsmith",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simonsmith/blinkdesign.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/simonsmith/blinkdesign/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-notify": "~0.2.16",
+    "grunt-sass": "~0.8.1",
+    "load-grunt-tasks": "~0.2.0",
+    "grunt-autoprefixer": "~0.4.1"
+  }
+}
