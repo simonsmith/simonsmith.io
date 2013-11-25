@@ -1,4 +1,4 @@
 kint
 templates/cache
 /node_modules
-static
+assets/css
