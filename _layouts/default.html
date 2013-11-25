@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head>
+        <title>{{ page.title }} &ndash; simonsmith.io &ndash; Portfolio and blog of a London based front-end web developer</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/assets/css/site.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <header class="site-header" role="banner">
+                <a href="#" class="logo">
+                    <p class="logo-title">Simon Smith</p>
+                    <p class="logo-subtitle">Front-end developer</p>
+                </a>
+                <nav class="site-nav" role="navigation">
+                    <p class="visuallyhidden">Site navigation</p>
+                    <ul class="site-nav-list">
+                        {% include nav.html %}
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="page">
+                <div class="container">
+                    <div class="site-content">
+                        {{ content }}
+                    </div>
+                    <div class="aside">
+                        <div class="intro">
+                            <p>Hi. I build things with HTML5, CSS3, JavaScript and mobile first responsive design</p>
+                            <p>This is my home on the internet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="site-footer" role="contentinfo">
+                <p>Simon Smith {{ site.time | date:"%Y" }} - View the sauce <a href="https://github.com/simonsmith/simonsmith.io">on GitHub</a></p>
+            </footer>
+        </div>
+
+    </body>
+</html>
