@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Site logo
+   ========================================================================== */
+
+.Logo {
+    display: inline-block;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: inherit;
+}
+
+.Logo-title {
+    font-size: px(26);
+    font-weight: bold;
+}
+
+.Logo-subtitle {
+    color: #777;
+    font-size: px(14);
+}
+
+.Logo-subtitle, .Logo-title {
+    margin: 0;
+    display: inline-block;
+}

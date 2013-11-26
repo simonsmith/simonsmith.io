@@ -1,1 +1,9 @@
-exclude: ['node_modules', 'Gruntfile.js', 'package.json', 'sass']
+exclude: [
+  'node_modules',
+  'Gruntfile.js',
+  'package.json',
+  'sass',
+  'sass-compiled.css',
+  'bower_components'
+  ]
+permalink: /:year/:title.html

@@ -1,0 +1,4 @@
+{% assign sitePages = site.pages | sort:"name" %}
+{% for sitePage in sitePages %}
+    <li class="Nav-listItem{% if page.url == sitePage.url %} is-current{% endif %}"><a href="{% if sitePage.url == '/index.html' %}/{% else %}{{ sitePage.url | remove: '.html' }}{% endif %}">{{ sitePage.title }}</a></li>
+{% endfor %}

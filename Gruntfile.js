@@ -5,16 +5,28 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            sass: {
+            css: {
                 files: 'assets/sass/**/*.scss',
-                tasks: ['sass', 'autoprefixer']
+                tasks: ['sass:dev', 'concat:css', 'autoprefixer']
             }
         },
 
         autoprefixer: {
             build: {
                 files: {
-                    'assets/css/site.css': ['assets/css/site.css']
+                    'assets/css/main.css': ['assets/css/main.css']
+                }
+            }
+        },
+
+        concat: {
+            css: {
+                files: {
+                    'assets/css/main.css': [
+                        'bower_components/normalize-css/normalize.css',
+                        'bower_components/suit-utils-**/*.css',
+                        'assets/css/sass-compiled.css'
+                    ]
                 }
             }
         },
@@ -25,15 +37,15 @@ module.exports = function(grunt) {
                     outputStyle: 'expanded'
                 },
                 files: {
-                    'assets/css/site.css': 'assets/sass/site.scss'
+                    'assets/css/sass-compiled.css': ['assets/sass/main.scss']
                 }
             }
         }
     });
 
-
     grunt.registerTask('default', [
-        'sass',
+        'sass:dev',
+        'concat:css',
         'autoprefixer'
     ]);
 };

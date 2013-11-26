@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Main navigation
+   ========================================================================== */
+
+.Nav {
+    text-transform: lowercase;
+
+    &.Nav--horizontal {
+        .Nav-listItem {
+            display: inline-block;
+            margin-left: px(15);
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.Nav-listItem {
+    &.is-current {
+        > a {
+            color: #8d22bc;
+        }
+
+        &:after {
+            text-align: center;
+            margin: 0 auto;
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-width: 0 6px 6px;
+            border-color: transparent transparent #eee;
+            border-style: solid;
+        }
+    }
+
+    > a {
+        color: #555;
+        text-decoration: none;
+        display: block;
+        padding-bottom: 10px;
+
+        &:hover {
+            color: #691887;
+        }
+    }
+}

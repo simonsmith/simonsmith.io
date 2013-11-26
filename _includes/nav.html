@@ -1,4 +1,0 @@
-{% assign sitePages = site.pages | sort:"name" %}
-{% for sitePage in sitePages %}
-    <li{% if page.url == sitePage.url %} class="current"{% endif %}><a href="{{ sitePage.url }}">{{ sitePage.title }}</a></li>
-{% endfor %}

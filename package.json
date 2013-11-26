@@ -21,6 +21,7 @@
     "grunt-notify": "~0.2.16",
     "grunt-sass": "~0.8.1",
     "load-grunt-tasks": "~0.2.0",
-    "grunt-autoprefixer": "~0.4.1"
+    "grunt-autoprefixer": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0"
   }
 }

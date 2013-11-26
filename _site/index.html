@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" class="no-js">
     <head>
-        <title>{{ page.title }} &ndash; simonsmith.io &ndash; Portfolio and blog of a London based front-end web developer</title>
+        <title>Blog &ndash; simonsmith.io &ndash; Portfolio and blog of a London based front-end web developer</title>
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
@@ -17,7 +17,17 @@
             <nav class="Nav Nav--horizontal" role="navigation">
                 <p class="u-isHiddenVisually">Site navigation</p>
                 <ul class="Nav-list u-listUnstyled">
-                    {% include nav-item.html %}
+                    
+
+    <li class="Nav-listItem is-current"><a href="/">Blog</a></li>
+
+    <li class="Nav-listItem"><a href="/projects">Projects</a></li>
+
+    <li class="Nav-listItem"><a href="/cv">CV</a></li>
+
+    <li class="Nav-listItem"><a href="/who">Who</a></li>
+
+
                 </ul>
             </nav>
         </header>
@@ -25,7 +35,22 @@
         <div class="Main">
             <div class="Main-container">
                 <div class="Main-content">
-                    {{ content }}
+                    <h1 class="u-hdrLead">Blog</h1>
+
+<ul>
+    
+    <li class="Post Post--listItem">
+        <h2 class="Post-title"><a href="/2013/just-another-post-here.html">Just another post here</a></h2>
+        <time class="Post-date">11 November 2013</time>
+    </li>
+    
+    <li class="Post Post--listItem">
+        <h2 class="Post-title"><a href="/2013/this-is-a-test-post.html">This is a test post</a></h2>
+        <time class="Post-date">10 October 2013</time>
+    </li>
+    
+</ul>
+
                 </div>
                 <div class="Main-aside">
                     <p>Some side content</p>
@@ -34,7 +59,7 @@
         </div>
 
         <footer class="Footer u-bdrFullTop u-textCenter" role="contentinfo">
-            <p>Simon Smith {{ site.time | date:"%Y" }} &bull; Built with <a href="http://jekyllrb.com">Jekyll</a> wearing a <a href="https://github.com/suitcss">Suit</a> &bull; View the sauce <a href="https://github.com/simonsmith/simonsmith.io">on GitHub</a></p>
+            <p>Simon Smith 2013 &bull; Built with <a href="http://jekyllrb.com">Jekyll</a> wearing a <a href="https://github.com/suitcss">Suit</a> &bull; View the sauce <a href="https://github.com/simonsmith/simonsmith.io">on GitHub</a></p>
         </footer>
 
     </body>

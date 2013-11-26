@@ -15,12 +15,6 @@ $gray-lighter:           #eee;
 $off-black:              #111;
 $off-white:              #f8f8f8;
 
-// Breakpoints
-//$large-phone:            40em;
-//$tablet:                 48em;
-//$desktop:                61.875em;
-//$fixed:                  1140px;
-
 @function px($num) {
     @return ($num / $base-font-size) + $unit-type;
 }
