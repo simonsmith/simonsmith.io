@@ -4,6 +4,7 @@ exclude: [
   'package.json',
   'sass',
   'sass-compiled.css',
-  'bower_components'
+  'bower_components',
+  'README.md'
   ]
 permalink: /:year/:title.html
