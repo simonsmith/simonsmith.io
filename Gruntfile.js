@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         autoprefixer: {
             build: {
                 files: {
-                    'assets/css/main.css': ['assets/css/main.css']
+                    'assets/css/site.css': ['assets/css/site.css']
                 }
             }
         },
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         concat: {
             css: {
                 files: {
-                    'assets/css/main.css': [
+                    'assets/css/site.css': [
                         'bower_components/normalize-css/normalize.css',
                         'bower_components/suit-utils-**/*.css',
                         'assets/css/sass-compiled.css'
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
                     outputStyle: 'expanded'
                 },
                 files: {
-                    'assets/css/sass-compiled.css': ['assets/sass/main.scss']
+                    'assets/css/sass-compiled.css': ['assets/sass/site.scss']
                 }
             }
         }
@@ -47,5 +47,9 @@ module.exports = function(grunt) {
         'sass:dev',
         'concat:css',
         'autoprefixer'
+    ]);
+
+    grunt.registerTask('build', [
+
     ]);
 };
