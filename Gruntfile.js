@@ -7,26 +7,28 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: 'assets/sass/**/*.scss',
-                tasks: ['sass:dev', 'concat:css', 'autoprefixer']
+                tasks: ['sass:dev', 'autoprefixer', 'cssmin']
             }
         },
 
         autoprefixer: {
             build: {
-                files: {
-                    'assets/css/site.css': ['assets/css/site.css']
-                }
+                dest: 'assets/css/site.css',
+                src: [
+                    'bower_components/normalize-css/normalize.css',
+                    'bower_components/suit-utils-**/*.css',
+                    'assets/css/sass-compiled.css'
+                ]
             }
         },
 
-        concat: {
-            css: {
+        cssmin: {
+            build: {
+                options: {
+                    keepSpecialComments: 0
+                },
                 files: {
-                    'assets/css/site.css': [
-                        'bower_components/normalize-css/normalize.css',
-                        'bower_components/suit-utils-**/*.css',
-                        'assets/css/sass-compiled.css'
-                    ]
+                    'assets/css/site.css': 'assets/css/site.css'
                 }
             }
         },
@@ -45,8 +47,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'sass:dev',
-        'concat:css',
-        'autoprefixer'
+        'autoprefixer',
+        'cssmin'
     ]);
 
     grunt.registerTask('build', [
