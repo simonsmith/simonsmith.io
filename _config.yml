@@ -2,6 +2,7 @@ exclude: [
   'node_modules',
   'Gruntfile.js',
   'package.json',
+  'bower.json',
   'sass',
   'sass-compiled.css',
   'bower_components',
