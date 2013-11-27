@@ -3,11 +3,15 @@
    ========================================================================== */
 
 .Footer {
-    color: #777;
+    color: #888;
     text-transform: lowercase;
     font-size: px(14);
 
     a {
         color: #333;
     }
+}
+
+.Footer--border {
+    border-top: 1px solid $full-width-border;
 }
