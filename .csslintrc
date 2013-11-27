@@ -8,5 +8,7 @@
     "unique-headings": false,
     "outline-none": false,
     "unqualified-attributes": false,
-    "display-property-grouping": false
+    "display-property-grouping": false,
+    "floats": false,
+    "font-sizes": false
 }
