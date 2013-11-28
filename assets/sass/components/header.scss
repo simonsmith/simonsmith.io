@@ -2,14 +2,16 @@
    Site header
    ========================================================================== */
 
-.Header {
-    margin: px(10) 0 0;
+.SiteHeader {
+    margin: px(15) 0 0;
 }
 
-.Header--border {
+.SiteHeader--border {
     border-bottom: 1px solid $full-width-border;
 }
 
-.Header-wrapLogo {
-    margin-bottom: px(10);
+/* Logo component layout
+   ========================================================================== */
+.SiteHeader-wrapLogo {
+    margin-bottom: px(15);
 }
