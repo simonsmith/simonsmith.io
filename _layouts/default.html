@@ -32,8 +32,21 @@
             </div>
         </div>
 
-        <footer class="Footer Footer--border u-textCenter" role="contentinfo">
-            <p>Simon Smith {{ site.time | date:"%Y" }} &bull; Built with <a href="http://jekyllrb.com">Jekyll</a> wearing a <a href="https://github.com/suitcss">Suit</a> &bull; View the sauce <a href="https://github.com/simonsmith/simonsmith.io">on GitHub</a></p>
+        <footer class="SiteFooter SiteFooter--border" role="contentinfo">
+            <div class="Container">
+                <div class="SiteFooter-wrapProfile">
+                    <div class="Profile Profile--left u-cf">
+                        <div class="Profile-img">
+                            <img class="u-roundedFifty u-imgBdr" src="/assets/images/me.jpg" alt="">
+                        </div>
+                        <div class="Profile-text">
+                            <p>My name is Simon. I build things with HTML5, CSS3, JavaScript and mobile first responsive design</p>
+                            <p>I also drink <a href="http://www.teapigs.co.uk">tea</a></p>
+                        </div>
+                    </div>
+                </div>
+            <p class="SiteFooter-copy u-textCenter">Simon Smith {{ site.time | date:"%Y" }} &bull; Built with <a href="http://jekyllrb.com">Jekyll</a> wearing a <a href="https://github.com/suitcss">Suit</a> &bull; View the sauce <a href="https://github.com/simonsmith/simonsmith.io">on GitHub</a></p>
+            </div>
         </footer>
     </body>
 </html>
