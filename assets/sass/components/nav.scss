@@ -4,15 +4,15 @@
 
 .Nav {
     text-transform: lowercase;
+}
 
-    &.Nav--horizontal {
-        .Nav-listItem {
-            display: inline-block;
-            margin-left: px(15);
+.Nav-list--horizontal {
+    .Nav-listItem {
+        display: inline-block;
+        margin-left: px(15);
 
-            &:first-child {
-                margin-left: 0;
-            }
+        &:first-child {
+            margin-left: 0;
         }
     }
 }
