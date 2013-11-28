@@ -1,4 +1,9 @@
-{% assign sitePages = site.pages | sort:"name" %}
-{% for sitePage in sitePages %}
-    <li class="Nav-listItem{% if page.url == sitePage.url %} is-current{% endif %}"><a href="{% if sitePage.url == '/index.html' %}/{% else %}{{ sitePage.url | remove: '.html' }}{% endif %}">{{ sitePage.title }}</a></li>
+{% for navItem in site.data.navigation %}
+    {% assign current = false %}
+    {% if page.url == navItem.urlToMatch or page.isPost and navItem.layout != post %}
+        {% assign current = 'is-current' %}
+    {% endif %}
+    <li class="Nav-listItem {{ current }}">
+        <a href="{{ navItem.url }}">{{ navItem.text }}</a>
+    </li>
 {% endfor %}

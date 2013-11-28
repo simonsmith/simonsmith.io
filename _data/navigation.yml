@@ -1,0 +1,13 @@
+- text: Blog
+  url: /
+  urlToMatch: /index.html
+  layout: post
+- text: Projects
+  url: /projects
+  urlToMatch: /projects.html
+- text: CV
+  url: /cv
+  urlToMatch: /cv.html
+- text: Contact
+  url: /contact
+  urlToMatch: /contact.html
