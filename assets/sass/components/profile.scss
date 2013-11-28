@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Profile
+   ========================================================================== */
+
+.Profile {
+    text-align: center;
+    line-height: 1.4;
+}
+
+.Profile-img {
+    display: block;
+}
+
+@media (min-width: 26.5625em) {
+
+    .Profile--left {
+        text-align: left;
+
+        .Profile-img {
+            float: left;
+        }
+
+        .Profile-text {
+            margin-left: px(110);
+        }
+    }
+
+}
+

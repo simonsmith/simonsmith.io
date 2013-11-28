@@ -1,7 +1,12 @@
 /* ==========================================================================
-   Main content area
+   Misc utils
    ========================================================================== */
 
-.Main {
-    background-color: #f9f9f9;
+.u-roundedFifty {
+    border-radius: 50%;
+}
+
+.u-imgBdr {
+    border: 1px solid #ddd;
+    padding: px(2);
 }

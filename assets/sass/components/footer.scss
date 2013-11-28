@@ -2,16 +2,39 @@
    Site footer
    ========================================================================== */
 
-.Footer {
-    color: #888;
-    text-transform: lowercase;
+.SiteFooter {
+    color: #999;
     font-size: px(14);
+    margin-bottom: px(20);
 
     a {
-        color: #333;
+        color: #444;
+
+        &:hover {
+            color: #111;
+        }
     }
 }
 
-.Footer--border {
+.SiteFooter-copy {
+    text-transform: lowercase;
+}
+
+.SiteFooter--border {
     border-top: 1px solid $full-width-border;
+}
+
+/* Profile component layout
+   ========================================================================== */
+
+.SiteFooter-wrapProfile {
+    margin: px(20) auto px(35);
+}
+
+@media (min-width: 50em) {
+
+    .SiteFooter-wrapProfile {
+        width: 70%;
+    }
+
 }
