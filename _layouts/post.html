@@ -3,10 +3,10 @@ layout: default
 isPost: true
 ---
 
-<div class="Post Post--single">
+<div class="Post Post--full">
     <header class="Post-header">
-        <h1 class="Post-title u-hdrLead">{{ page.title }}</h1>
-        <time class="Post-date">{{ page.date }}</time>
+        <h1 class="Post-title">{{ page.title }}</h1>
+        <time class="Post-date">{{ page.date | date:'%m %B %Y' }}</time>
     </header>
     <div class="Post-content">
         {{ content }}
