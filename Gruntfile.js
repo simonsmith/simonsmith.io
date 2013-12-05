@@ -16,6 +16,7 @@ module.exports = function(grunt) {
                 dest: 'assets/css/site.css',
                 src: [
                     'bower_components/normalize-css/normalize.css',
+                    'bower_components/syntax.css/syntax.css',
                     'bower_components/suit-**/*.css',
                     'assets/css/sass-compiled.css'
                 ]
