@@ -20,8 +20,41 @@ Quisque leo dolor, gravida et malesuada vel, elementum at quam. Mauris et felis 
 > Quisque euismod rhoncus arcu, quis consequat enim rhoncus in. [Pellentesque vel luctus neque](http://google.co.uk).
 
 Quisque leo dolor, gravida et malesuada vel, elementum at quam. Mauris et felis volutpat, adipiscing arcu aliquam, pulvinar lorem. Curabitur ut venenatis mi. Nam id metus lorem. Nam ullamcorper orci purus, at condimentum ipsum accumsan ut.
-Quisque leo dolor, gravida et malesuada vel, elementum at quam. Mauris et felis volutpat, adipiscing arcu aliquam, pulvinar lorem. Curabitur ut venenatis mi. Nam id metus lorem. Nam ullamcorper orci purus, at condimentum ipsum accumsan ut.
 
+{% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
+
+{% highlight js %}
+instance.triggerEvent('herotabs.show', 2); // Use an index
+instance.triggerEvent('herotabs.show', $('.a-single-tab')); // Or a jQuery object
+
+function getUserType(event, data) {
+    if (data.UserRole) {
+        $scope.user.type = data.UserRole.toLowerCase();
+    }
+}
+{% endhighlight %}
+
+{% highlight html linenos %}
+<div class="Post Post--full">
+    <header class="Post-header u-marginB30">
+        <h1 class="Post-title">{{ page.title }}</h1>
+        <time class="Post-date">{{ page.date | date:'%m %B %Y' }}</time>
+    </header>
+    <div class="Post-content">
+        {{ content }}
+    </div>
+</div>
+{% endhighlight %}
+
+Quisque leo dolor, gravida et malesuada vel, elementum at quam. Mauris et felis volutpat, adipiscing arcu aliquam, pulvinar lorem. Curabitur ut venenatis mi. Nam id metus lorem. Nam ullamcorper orci purus, at condimentum ipsum accumsan ut.
 Quisque leo dolor, gravida et malesuada vel, elementum at quam. Mauris et felis volutpat, adipiscing arcu aliquam, pulvinar lorem. Curabitur ut venenatis mi. Nam id metus lorem. Nam ullamcorper orci purus, at condimentum ipsum accumsan ut.
 
 ## Time for a list

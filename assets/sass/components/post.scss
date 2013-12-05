@@ -2,11 +2,6 @@
 
 }
 
-.Post-header--border {
-    padding-bottom: px(20);
-    border-bottom: 1px solid $full-width-border;
-}
-
 .Post-title {
     margin-top: 0;
     margin-bottom: px(5);
@@ -14,4 +9,14 @@
 
 .Post-date {
     color: #888;
+}
+
+.Post-content {
+    li {
+        margin-bottom: px(5);
+    }
+
+    a {
+        border-bottom: 1px dotted;
+    }
 }

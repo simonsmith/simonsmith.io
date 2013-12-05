@@ -9,17 +9,17 @@ html {
 body {
     background-color: #fff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    color: #444;
 }
 
 h1, h2, h3, h4 {
     font-family: "Signika Negative", sans-serif;
     font-weight: 300;
-    color: #000;
+    color: #222;
 }
 
 p {
-    line-height: 20px;
+    line-height: 22px;
 }
 
 h1 {
@@ -28,5 +28,18 @@ h1 {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: $link;
+    transition: color .2s ease;
+
+    &:hover {
+        color: lighten($link, 15%);
+    }
+}
+
+blockquote {
+    border-left: 8px solid #ccc;
+    padding-left: px(10);
+    color: #888;
+    margin-bottom: px(30);
+    margin-top: px(30);
 }

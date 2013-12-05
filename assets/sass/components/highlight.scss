@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Overrides for code highlighting
+   ========================================================================== */
+
+.highlight {
+    border: 1px solid #ddd;
+    margin: px(15) 0;
+    padding: px(10);
+    overflow: auto;
+    width: auto;
+    border-radius: 5px;
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+
+    pre {
+        font-size: px(14);
+        display: block;
+        white-space: pre;
+        word-wrap: normal;
+        margin: 0;
+    }
+}
