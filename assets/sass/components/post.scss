@@ -2,6 +2,11 @@
 
 }
 
+.Post-header--border {
+    padding-bottom: px(20);
+    border-bottom: 1px solid $full-width-border;
+}
+
 .Post-title {
     margin-top: 0;
     margin-bottom: px(5);
