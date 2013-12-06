@@ -14,16 +14,28 @@ body {
 
 h1, h2, h3, h4 {
     font-family: "Signika Negative", sans-serif;
-    font-weight: 300;
+    color: #444;
+}
+
+h1 {
+    font-size: px(32);
     color: #222;
+}
+
+h2 {
+    font-size: px(28);
+}
+
+h3 {
+    font-size: px(24);
+}
+
+h4 {
+    font-size: px(20);
 }
 
 p {
     line-height: 22px;
-}
-
-h1 {
-    font-weight: 400;
 }
 
 a {

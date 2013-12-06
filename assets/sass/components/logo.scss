@@ -4,7 +4,6 @@
 
 .Logo {
     display: inline-block;
-
     text-transform: lowercase;
     text-decoration: none;
     color: inherit;
@@ -12,7 +11,8 @@
 
 .Logo-title {
     font-size: px(26);
-    font-weight: bold;
+    font-weight: 300;
+    font-family: "Signika Negative", sans-serif;
 }
 
 .Logo-subtitle {
