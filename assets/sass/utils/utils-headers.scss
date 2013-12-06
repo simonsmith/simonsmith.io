@@ -2,7 +2,10 @@
    Page headers
    ========================================================================== */
 
-/* Primary header on a page/section */
-.u-hdrLead {
-    margin-top: 0;
+.u-hdrThin {
+    font-weight: 300;
+}
+
+.u-hdrSmall {
+    font-size: px(26);
 }
