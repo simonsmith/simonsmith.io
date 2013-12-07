@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+.Figure {
+    text-align: center;
+}
+
+.Figure--vSpaceLrg {
+    margin-top: px(30);
+    margin-bottom: px(30);
+}
+
+.Figure-img {
+    display: inline-block;
+    border: 1px solid #ddd;
+}
+
+.Figure-caption {
+    color: #888;
+    margin: px(10);
+}
