@@ -38,6 +38,10 @@ p {
     line-height: 22px;
 }
 
+img {
+    max-width: 100%;
+}
+
 a {
     text-decoration: none;
     color: $link;
