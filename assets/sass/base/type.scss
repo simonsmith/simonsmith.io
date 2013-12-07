@@ -13,13 +13,14 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: "Signika Negative", sans-serif;
     color: #444;
+    font-weight: 400;
 }
 
 h1 {
     font-size: px(32);
     color: #222;
+    font-weight: 500;
 }
 
 h2 {
@@ -34,7 +35,7 @@ h4 {
     font-size: px(20);
 }
 
-p, li {
+p {
     line-height: 22px;
 }
 

@@ -333,8 +333,6 @@ I hope that sheds some light on some of the benefits RequireJS brings, and how t
 *   [Build tool for Grunt JS][22]
 *   [Addy Osmani&#8217;s post on modular JS][2]
 
-&nbsp;
-
 *Thanks to [@jrburke][23] for feedback on this post*
 
  [1]: http://requirejs.org/

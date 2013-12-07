@@ -1,5 +1,9 @@
-.Post {
+/* ==========================================================================
+   Post
+   ========================================================================== */
 
+.Post--listItem {
+    margin-bottom: px(30);
 }
 
 .Post-title {
@@ -11,9 +15,14 @@
     color: #888;
 }
 
+.Post-header {
+    margin-bottom: px(35);
+}
+
 .Post-content {
     li {
         margin-bottom: px(5);
+        line-height: 22px;
     }
 
     a {
