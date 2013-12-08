@@ -1,3 +1,9 @@
+/* ==========================================================================
+   Type and other default styling
+   ========================================================================== */
+
+$bodyColor: #444;
+
 * {
     box-sizing: border-box;
 }
@@ -9,11 +15,11 @@ html {
 body {
     background-color: #fff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #444;
+    color: $bodyColor;
 }
 
 h1, h2, h3, h4 {
-    color: #444;
+    color: $bodyColor;
     font-weight: 400;
 }
 
@@ -44,6 +50,8 @@ img {
 }
 
 a {
+    $link: #6790ce;
+
     text-decoration: none;
     color: $link;
     transition: color .2s ease;
