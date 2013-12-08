@@ -14,3 +14,14 @@
         margin-left: 0;
     }
 }
+
+.u-dlInline {
+    dt, dd {
+        display: inline-block;
+    }
+
+    dd, dt {
+        margin-left: 0;
+        margin-right: px(5);
+    }
+}

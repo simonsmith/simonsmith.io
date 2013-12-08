@@ -3,4 +3,37 @@ layout: default
 title: 'CV'
 ---
 
-<h1 class="u-marginTn">{{ page.title }}</h1>
+<div class="hresume">
+
+    <h1 class="u-marginTn">{{ page.title }}</h1>
+
+    <h2 class="u-isHiddenVisually">Profile</h2>
+    <p class="u-leadText summary">I've been building websites professionally for over six years and I make things happen with HTML5, CSS3, JavaScript and mobile first responsive design.</p>
+
+    <h2>Employment</h2>
+
+    {% for job in site.data.jobs %}
+    <div class="Job Job--listItem entry vcalendar" id="{{ job.id }}">
+        <header class="Job-header">
+            <h3 class="Job-title fn org">{{ job.title }}</h3>
+            <a class="Job-url company-url location" href="http://{{ job.url }}">{{ job.url }}</a>
+            <dl class="Job-dates u-dlInline vevent">
+                <dt class="u-isHiddenVisually">From</dt>
+                <dd><time class="dtstart">{{ job.from }}</time></dd>
+                <dt class="u-textLowercase">To</dt>
+                <dd>
+                    {% if job.to == false %}
+                        Present
+                    {% else %}
+                        <time class="dtend">{{ job.to }}</time>
+                    {% endif %}
+                </dd>
+            </dl>
+        </header>
+        <div class="Job-summary summary">
+            {{ job.text | markdownify }}
+        </div>
+    </div>
+    {% endfor %}
+
+</div>

@@ -1,0 +1,33 @@
+- title: Universal Music (Contract)
+  url: universalmusic.com
+  id: universal
+  from: August 2012
+  to: false
+  text: |
+    Working on an internal AngularJS single page application. Using Bootstrap 3, Grunt and Git.
+
+- title: Immediate Media
+  url: immediatemedia.co.uk
+  id: im
+  from: October 2012
+  to: August 2013
+  text: |
+    Worked on a mobile-first responsive TV listings grid for Radio Times using Twitter's [Flight JS library](http://twitter.github.com/flight/), [Handlebars](http://handlebarsjs.com/), [Jasmine](http://pivotal.github.io/jasmine/) and Sass.
+
+    Ran workshops with other members of the UI team on topics such as [RequireJS](http://requirejs.org), [SMACSS](http://smacss.com/) and jQuery plugin development
+
+    Implemented Bootstrap 3 and modular HTML/CSS workflows on a new responsive website for [You &amp; Your Wedding](http://www.youandyourwedding.co.uk/venues).
+
+- title: QMetric
+  url: qmetric.co.uk
+  id: qmetric
+  from: December 2011
+  to: October 2012
+  text: |
+    Worked on [www.policyexpert.co.uk](http://www.policyexpert.co.uk) and an internal Back Office Ajax application.
+
+    Used HTML5, CSS3 (via LESS), Twitter bootstrap and Mootools
+
+    Led development on a mobile first, responsive design and rebuild of [the Policy Expert site](http://www.policyexpert.co.uk). Also running on Wordpress
+
+    Launched responsive version of the [QMetric company website](http://qmetric.co.uk). Source on [GitHub](https://github.com/qmetric/qmg-website)
