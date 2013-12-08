@@ -1,13 +1,14 @@
-
-$img-path:                '../images/';
-
-// Fonts
-$base-font-size:          16;
-$unit-type:               0rem;
+/* ==========================================================================
+   Global variables - Specific vars scoped to individual components
+   ========================================================================== */
 
 // Colors
 $fullWidthBorder:      #dadada;
 
+// Font sizing
+// Converts px value to rem
+$base-font-size: 16;
+$unit-type: 0rem;
 @function px($num) {
     @return ($num / $base-font-size) + $unit-type;
 }
