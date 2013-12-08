@@ -6,14 +6,7 @@ $base-font-size:          16;
 $unit-type:               0rem;
 
 // Colors
-$full-width-border:      #dadada;
-$link:                   #6790ce;
-$gray:                   #666;
-$gray-mid-light:         #777;
-$gray-light:             #999;
-$gray-lighter:           #eee;
-$off-black:              #111;
-$off-white:              #f8f8f8;
+$fullWidthBorder:      #dadada;
 
 @function px($num) {
     @return ($num / $base-font-size) + $unit-type;
