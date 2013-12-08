@@ -8,7 +8,7 @@ title: 'Blog'
 <ul class="u-listUnstyled">
     {% for post in site.posts %}
     <li class="Post Post--listItem">
-        <h2 class="Post-title Post-title--smaller"><a class="u-linkDark u-linkUnderline" href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2 class="Post-title Post-title--smaller"><a class="u-linkDark" href="{{ post.url }}">{{ post.title }}</a></h2>
         <time class="Post-date">{{ post.date | date:'%m %B %Y' }}</time>
     </li>
     {% endfor %}
