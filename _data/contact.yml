@@ -1,0 +1,16 @@
+- type: Email
+  url: mailto:me@simonsmith.io
+  text: me@simonsmith.io
+- type: Twitter
+  url: http://twitter.com/blinkdesign
+  text: '@blinkdesign'
+- type: GitHub
+  url: https://github.com/simonsmith
+  text: simonsmith
+- type: Stack Overflow
+  url: http://stackoverflow.com/users/617615/simon-smith
+  text: Simon Smith
+- type: LinkedIn
+  url: http://uk.linkedin.com/in/blinkdesign
+  text: Simon Smith
+

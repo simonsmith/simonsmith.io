@@ -1,5 +1,15 @@
 ---
 layout: default
 title: 'Contact'
-name: 'contact'
 ---
+
+<h1>{{ page.title }}</h1>
+
+<p>Talk to me</p>
+
+<dl class="Contact u-dlUnstyled">
+    {% for contact in site.data.contact %}
+        <dt class="Contact-type">{{ contact.type }}</dt>
+        <dd class="Contact-linkWrap"><a class="Contact-link" href="{{ contact.url }}">{{ contact.text }}</a></dd>
+    {% endfor %}
+</dl>
