@@ -1,7 +1,7 @@
 - title: Universal Music (Contract)
   url: universalmusic.com
   id: universal
-  from: August 2012
+  from: August 2013
   to: false
   text: |
     Working on an internal AngularJS single page application. Using Bootstrap 3, Grunt and Git.
@@ -31,3 +31,67 @@
     Led development on a mobile first, responsive design and rebuild of [the Policy Expert site](http://www.policyexpert.co.uk). Also running on Wordpress
 
     Launched responsive version of the [QMetric company website](http://qmetric.co.uk). Source on [GitHub](https://github.com/qmetric/qmg-website)
+
+- title: BBC Worldwide
+  url: bbcworldwide.com
+  id: bbc
+  from: August 2009
+  to: December 2011
+  text: |
+    Led UI development on [the new Radio Times](http://radiotimes.com).
+
+    Used the latest and greatest front-end tech on a major BBC site. (HTML5, CSS3, Modernizr, MooTools)
+
+    Providing feedback to PM, Product Owner and design agency regarding user experience best practices and accessibility guidelines.
+
+    Worked with another front-end developer to architect a [new Top Gear homepage](http://topgear.com), news article page and car model section. Created clean, semantic code and took care to ensure the user experience was acceptable on multiple browsers, environments and languages.
+
+    Maintained front-end code on [GoodFood](http://www.bbcgoodfood.com/) and [Gardener's World](http://www.gardenersworld.com/)
+
+- title: SAS Design
+  url: saslondon.com
+  id: sas
+  from: April 2009
+  to: June 2009
+  text: |
+    Worked from Photoshop design mock-ups to create static web pages using valid, standards based code which performed in various browser environments.
+
+- title: De-construct
+  url: de-construct.com
+  id: deconstruct
+  from: March 2009
+  to: April 2009
+  text: |
+    Constructed a mini site based on existing designs using front-end technologies.
+
+- title: DGTL
+  url: dgtl.net
+  id: dgtl
+  from: November 2008
+  to: March 2009
+  text: |
+   Responsible for all front-end code on [www.pentland.com](http://www.pentland.com/) and exact duplication of site designs were required in various browser environments.
+
+- title: Focus
+  url: focusintegrated.co.uk
+  id: focus
+  from: October 2008
+  to: November 2008
+  text: |
+    Several small sites required development from Photoshop designs into fully working web pages
+
+- title: AKQA
+  url: akqa.com
+  id: akqa
+  from: June 2008
+  to: September 2008
+  text: |
+    Responsible for front-end development and bug fixing on [www.sainsburys.co.uk](http://www.sainsburys.co.uk) whilst working in a small project team.
+
+- title: AAT
+  url: aat.org
+  id: aat
+  from: June 2007
+  to: June 2008
+  text: |
+    Part of the front-end development team working in a Java environment. Working closely with project managers and back-end developers to create web applications on the VYRE Unify CMS.
