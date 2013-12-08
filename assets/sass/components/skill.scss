@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Skills
+   ========================================================================== */
+
+.Skill {
+    list-style-type: none;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: px(3) px(6);
+    border-radius: 3px;
+}
+
+.Skill--inline {
+    margin-bottom: px(5);
+    display: inline-block;
+    margin-right: px(5);
+}

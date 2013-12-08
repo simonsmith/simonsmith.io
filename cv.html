@@ -10,7 +10,7 @@ title: 'CV'
     <h2 class="u-isHiddenVisually">Profile</h2>
     <p class="u-leadText summary">I've been building websites professionally for over six years and I make things happen with HTML5, CSS3, JavaScript and mobile first responsive design.</p>
 
-    <h2>Employment</h2>
+    <h2 id="employment">Employment</h2>
 
     {% for job in site.data.jobs %}
     <div class="Job Job--listItem entry vcalendar" id="{{ job.id }}">
@@ -36,4 +36,23 @@ title: 'CV'
     </div>
     {% endfor %}
 
+    <h2 id="skills">Skills</h2>
+    <ul class="u-listUnstyled">
+        {% for skill in site.data.skills %}
+            <li class="Skill Skill--inline">{{ skill.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2 id="additional">Additional Information</h2>
+
+    <p>Creating, owning and maintaining a hugely popular gaming community - <a href="http://www.interlopers.net">www.interlopers.net</a>. The site receives thousands of page visits per day and has an expanding community of nearly 10,000 members.</p>
+    <p>Started in 2004, the site has grown considerably and I am responsible for all front-end code on the site. Working closely with a PHP developer has allowed various web applications
+        to be built that have been received well by the user base.</p>
+    <p>I have begun re-writing the entire site using the <a href="http://laravel.com">Laravel framework</a>. A preview is visible at <a href="http://stage.interlopers.net">stage.interlopers.net</a>.</p>
+    <p>I acted as a reviewer for <a href="https://twitter.com/tbrd">Tom Hamshere</a>'s book on <a href="http://goo.gl/DznlPd">Twitter's Flight library</a>. This involved communicating with the book editors and suggesting edits and code changes.</p>
+
+    <h2 id="interests">Interests</h2>
+
+    <p>I play drums in <a href="http://fashodacrisis.com">a loud rock band</a>. We've completed three tours of Eastern Europe and released multiple CDs independently.</p>
+    <p>I've also had the remarkable experience of <a href="http://www.flickr.com/photos/simonblink24/sets/72157625051285708/">visiting Chernobyl in September 2010</a> and returning radiation free! A bit different to ‘Badminton, socialising and reading blogs’ usually found here!</p>
 </div>
