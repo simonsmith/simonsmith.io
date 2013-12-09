@@ -1,5 +1,5 @@
 {% for navItem in site.data.navigation %}
-    {% assign current = false %}
+    {% assign current = '' %}
     {% if page.url == navItem.urlToMatch or page.isPost and navItem.layout != post %}
         {% assign current = 'is-current' %}
     {% endif %}
