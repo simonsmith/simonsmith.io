@@ -3,6 +3,7 @@ title: Modular HTML components with RequireJS
 author: Simon
 layout: post
 permalink: /modular-html-components-with-requirejs/
+type: post
 ---
 [RequireJS][1] is great, and if you are using or planning on using RequireJS for managing JavaScript then you&#8217;ll really notice the benefits.
 

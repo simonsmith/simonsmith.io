@@ -1,6 +1,6 @@
 {% for navItem in site.data.navigation %}
     {% assign current = '' %}
-    {% if page.url == navItem.urlToMatch or page.isPost and navItem.layout != post %}
+    {% if page.url == navItem.urlToMatch or page.type == navItem.type %}
         {% assign current = 'is-current' %}
     {% endif %}
     <li class="Nav-listItem {{ current }}">

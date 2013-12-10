@@ -3,6 +3,7 @@ title: Decoupling with custom jQuery events
 author: Simon
 layout: post
 permalink: /decoupling-with-custom-jquery-events/
+type: post
 ---
 While the concept of [custom events in jQuery][1] may not be a new one, I tend to only see them used amongst plugins, mainly to keep their events namespaced for fear of collusion with other events.
 

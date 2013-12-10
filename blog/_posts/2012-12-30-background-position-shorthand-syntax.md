@@ -3,6 +3,7 @@ title: 'Background Position: Shorthand Syntax'
 author: Simon
 layout: post
 permalink: /background-position-shorthand-syntax/
+type: post
 ---
 Whilst it&#8217;s easy to be swept up in the flashy world of animations and transitions, CSS3 also offers more subtle improvements to other parts of the specification. One of those is the background-position property, which now allows greater control over the offsets of an image.
 

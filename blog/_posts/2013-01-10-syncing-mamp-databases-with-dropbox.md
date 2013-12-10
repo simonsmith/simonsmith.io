@@ -3,6 +3,7 @@ title: Syncing MAMP databases with Dropbox
 author: Simon
 layout: post
 permalink: /syncing-mamp-databases-with-dropbox/
+type: post
 ---
 Just a simple tip on how to use a symlink to sync your MAMP databases into your Dropbox. This makes working on dynamic sites a breeze when moving between different computers.
 

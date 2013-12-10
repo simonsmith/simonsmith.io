@@ -3,6 +3,7 @@ title: CSS inherit property
 author: Simon
 layout: post
 permalink: /css-inherit-property/
+type: post
 ---
 The CSS `inherit` property is one of those basic things that tends to get overlooked for some of the more glitzy CSS3 effects, but I just wanted to show a quick example of a common use that might help your day to day CSS antics.
 

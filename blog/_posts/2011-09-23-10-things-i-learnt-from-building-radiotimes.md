@@ -3,6 +3,7 @@ title: 10 things I learnt from building radiotimes.com
 author: Simon
 layout: post
 permalink: /10-things-i-learnt-from-building-radiotimes/
+type: post
 ---
 Unless you&#8217;re incredibly uncool then you&#8217;ll no doubt be aware of [the shiny new Radio Times website][1] that was released a couple of weeks ago. I had quite a lot to do with the front-end side of things on that site so I thought I&#8217;d write a post about various things I learnt, and also things I already knew that were just re-enforced.
 

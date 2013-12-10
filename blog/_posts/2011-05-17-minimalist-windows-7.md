@@ -3,8 +3,7 @@ title: Minimalist Windows 7
 author: Simon
 layout: post
 permalink: /minimalist-windows-7/
-attachments:
-  - '[]'
+type: post
 ---
 After a recent PC upgrade I decided that I was sick of staring at the Windows 7 Aero theme.
 

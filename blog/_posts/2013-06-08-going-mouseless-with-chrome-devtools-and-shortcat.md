@@ -3,6 +3,7 @@ title: Going mouseless with Chrome DevTools and Shortcat
 author: Simon
 layout: post
 permalink: /going-mouseless-with-chrome-devtools-and-shortcat/
+type: post
 ---
 Today I found a [great Mac app called Shortcat][1]. The idea is it taps into the Accessibility API available to all apps and lets you hit a hotkey to select parts of the app.
 

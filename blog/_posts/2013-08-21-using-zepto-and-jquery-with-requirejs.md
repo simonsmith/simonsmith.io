@@ -3,6 +3,7 @@ title: Using Zepto and jQuery with RequireJS
 author: Simon
 layout: post
 permalink: /using-zepto-and-jquery-with-requirejs/
+type: post
 ---
 On a site I&#8217;m currently developing I started to realise just how much JS was being downloaded by the user. One of the quickest wins to be made in this scenario is to reduce the overhead of any JS libraries that are being used.
 

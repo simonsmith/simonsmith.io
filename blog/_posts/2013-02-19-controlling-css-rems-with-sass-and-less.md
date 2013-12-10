@@ -3,6 +3,7 @@ title: Controlling CSS rems with Sass and LESS (sort of)
 author: Simon
 layout: post
 permalink: /controlling-css-rems-with-sass-and-less/
+type: post
 ---
 Everyone knows that `ems` are great for responsive design. All that relative sizing juiciness goes hand in with flexible layouts but some of the annoyances make reaching for pixels the more favourable option.
 
