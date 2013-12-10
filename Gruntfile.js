@@ -13,13 +13,8 @@ module.exports = function(grunt) {
 
         autoprefixer: {
             build: {
-                dest: 'assets/css/site.css',
-                src: [
-                    'bower_components/normalize-css/normalize.css',
-                    'bower_components/syntax.css/syntax.css',
-                    'bower_components/suit-**/*.css',
-                    'assets/css/sass-compiled.css'
-                ]
+                src: 'assets/css/site.css',
+                dest: 'assets/css/site.css'
             }
         },
 
@@ -29,7 +24,12 @@ module.exports = function(grunt) {
                     keepSpecialComments: 0
                 },
                 files: {
-                    'assets/css/site.css': 'assets/css/site.css'
+                    'assets/css/site.css': [
+                        'bower_components/normalize-css/normalize.css',
+                        'bower_components/syntax.css/syntax.css',
+                        'bower_components/suit-**/*.css',
+                        'assets/css/sass-compiled.css'
+                    ]
                 }
             }
         },
