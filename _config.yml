@@ -8,8 +8,10 @@ exclude: [
   'bower_components',
   'README.md'
   ]
+
 permalink: /:year/:title.html
 ftp_host: simonsmith.io
 ftp_dir: /public_html/new
 ftp_passive: false
+ftp_username: 'simon'
 markdown: rdiscount
