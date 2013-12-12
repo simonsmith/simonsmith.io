@@ -5,7 +5,7 @@ permalink: /project/radiotimes/
 type: project
 intro: The most popular source for TV and Radio. Re-built using HTML5
 projectUrl: radiotimes.com
-bannerPrefix: rt
+imgPrefix: rt
 ---
 
 Working on the re-build of the Radio Times website has been one of my more rewarding projects. Assuming a lead UI developer role has allowed me to select numerous modern techniques that are not often seen on a BBC branded site.

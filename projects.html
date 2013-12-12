@@ -4,3 +4,12 @@ title: 'Projects'
 ---
 
 <h1 class="u-marginTn">{{ page.title }}</h1>
+
+<ul>
+    {% for post in site.categories.projects %}
+    <li class="Post Post--listItem">
+        <h2 class="Post-title Post-title--smaller"><a class="u-linkDark" href="{{ post.url }}">{{ post.title }}</a></h2>
+    </li>
+    {% endfor %}
+</ul>
+
