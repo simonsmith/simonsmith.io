@@ -7,7 +7,7 @@
 }
 
 .Post-title {
-    margin-bottom: px(5);
+    margin-bottom: px(10);
 }
 
 .Post-title--smaller {
@@ -34,10 +34,22 @@
     margin-bottom: px(35);
 }
 
-.Post-mainImg {
+.Post-img {
     display: block;
-    margin: px(20) 0;
     border: 1px solid #aaa;
+}
+
+.Post-img--banner {
+    margin: px(20) 0;
+}
+
+.Post--snippet {
+    margin-bottom: px(25);
+
+    .Post-img--preview {
+        float: left;
+        margin-right: px(20);
+    }
 }
 
 .Post-content {
@@ -49,4 +61,23 @@
     a {
         border-bottom: 1px dotted;
     }
+}
+
+@media (min-width: 56.25em) {
+
+    .v1-Post {
+        &.Post--snippet {
+            float: left;
+            width: 45%;
+
+            &:nth-child(even) {
+                margin-left: 10%;
+            }
+
+            &:nth-child(odd) {
+                clear: left;
+            }
+        }
+    }
+
 }
