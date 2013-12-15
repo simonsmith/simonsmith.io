@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: 'assets/sass/**/*.scss',
-                tasks: ['sass:dev', 'autoprefixer', 'csslint']
+                tasks: ['sass:dev', 'autoprefixer']
             },
             html: {
                 files: [
@@ -56,13 +56,6 @@ module.exports = function(grunt) {
             }
         },
 
-        csslint: {
-            options: {
-                csslintrc: '.csslintrc'
-            },
-            src: 'assets/css/site.css'
-        },
-
         sass: {
             dev: {
                 options: {
@@ -77,8 +70,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('css', [
         'sass:dev',
-        'autoprefixer',
-        'csslint'
+        'autoprefixer'
     ]);
 
     grunt.registerTask('default', [
