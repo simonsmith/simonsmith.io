@@ -24,8 +24,9 @@
      */
 
     a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
+    a[href^="#"]:after,
+    .Logo:after {
+        content: "" !important;
     }
 
     pre,
@@ -61,5 +62,10 @@
     h2,
     h3 {
         page-break-after: avoid;
+    }
+
+    .Profile,
+    .Nav {
+        display: none;
     }
 }

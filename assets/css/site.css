@@ -1179,8 +1179,8 @@ blockquote {
     content: " (" attr(href) ")"; }
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-  a[href^="javascript:"]:after, a[href^="#"]:after {
-    content: ""; }
+  a[href^="javascript:"]:after, a[href^="#"]:after, .Logo:after {
+    content: "" !important; }
   pre, blockquote {
     border: 1px solid #999999;
     page-break-inside: avoid; }
@@ -1195,7 +1195,9 @@ blockquote {
     orphans: 3;
     widows: 3; }
   h2, h3 {
-    page-break-after: avoid; } }
+    page-break-after: avoid; }
+  .Profile, .Nav {
+    display: none; } }
 
 /* ==========================================================================
    Container
