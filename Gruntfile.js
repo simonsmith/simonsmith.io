@@ -7,7 +7,18 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: 'assets/sass/**/*.scss',
-                tasks: ['sass:dev', 'autoprefixer', 'csslint', 'cssmin']
+                tasks: ['sass:dev', 'autoprefixer', 'csslint']
+            },
+            html: {
+                files: [
+                    '_layouts/*.html',
+                    '_includes/*.html',
+                    '_data/*.yml',
+                    'blog/_posts/*.md',
+                    'projects/_posts/*.md',
+                    './*.html'
+                ],
+                tasks: ['jekyll:build']
             }
         },
 
@@ -15,6 +26,17 @@ module.exports = function(grunt) {
             build: {
                 src: 'assets/css/site.css',
                 dest: 'assets/css/site.css'
+            }
+        },
+
+        jekyll: {
+            server: {
+                options: {
+                    serve: true
+                }
+            },
+            build: {
+                // Use defaults
             }
         },
 
@@ -53,14 +75,14 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', [
+    grunt.registerTask('css', [
         'sass:dev',
         'autoprefixer',
-        'csslint',
-        'cssmin'
+        'csslint'
     ]);
 
-    grunt.registerTask('build', [
-
+    grunt.registerTask('default', [
+        'css',
+        'jekyll:build'
     ]);
 };
