@@ -1,7 +1,6 @@
-kint
 _drafts
-templates/cache
 /node_modules
-assets/css
+assets/css/sass-compiled.css
 bower_components
 _site
+.ftppass

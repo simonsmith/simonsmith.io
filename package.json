@@ -24,6 +24,8 @@
     "grunt-autoprefixer": "~0.4.1",
     "grunt-contrib-csslint": "~0.1.2",
     "grunt-contrib-cssmin": "~0.7.0",
-    "grunt-jekyll": "~0.4.1"
+    "grunt-jekyll": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-ftp-deploy": "~0.1.1"
   }
 }
