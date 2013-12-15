@@ -1325,6 +1325,8 @@ blockquote {
   .Post--snippet .Post-img--preview {
     float: left;
     margin-right: 1.25rem; }
+  .Post--snippet .Post-intro {
+    margin-left: 7.5rem; }
 
 .Post-content li {
   margin-bottom: 0.3125rem;
