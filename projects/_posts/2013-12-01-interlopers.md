@@ -14,4 +14,4 @@ I have been responsible for front-end development, content writing, community ma
 
 The site continues to receive a large slice of traffic and is highly regarded in the level design community as a source of information. In fact, many of the members have gone on to have professional careers in game development.
 
-Future tasks include a complete responsive re-write which is currently under way and [can even be previewed](http://dev.interlopers.net/).
+Future tasks include a complete responsive re-write using the [Laravel](http://laravel.com/) framework which is currently under way and [can even be previewed](http://stage.interlopers.net/).
