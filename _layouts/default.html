@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="description" content="Portfolio and blog of a London based front-end web developer">
         <meta name="viewport" content="width=device-width">
-        <link href="/assets/css/site.css" rel="stylesheet">
+        <link href="/assets/css/site.css?v={{ site.time | date:"%Y%M%S" }}" rel="stylesheet">
     </head>
     <body>
         <header class="SiteHeader SiteHeader--border u-textCenter" role="banner">
@@ -39,5 +39,19 @@
             <p class="SiteFooter-copy u-textCenter">Simon Smith {{ site.time | date:"%Y" }} &bull; Built with <a class="u-linkDark u-linkUnderline" href="http://jekyllrb.com">Jekyll</a> wearing a <a class="u-linkDark u-linkUnderline" href="https://github.com/suitcss">Suit</a> &bull; View the sauce <a class="u-linkDark u-linkUnderline" href="https://github.com/simonsmith/simonsmith.io">on GitHub</a></p>
             </div>
         </footer>
+
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-6798894-3']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
     </body>
 </html>
