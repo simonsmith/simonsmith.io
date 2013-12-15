@@ -84,7 +84,8 @@ module.exports = function(grunt) {
                     authKey: 'me'
                 },
                 src: './_site',
-                dest: '/public_html'
+                dest: '/public_html',
+                exclusions: ['./_site/assets/images/uploads']
             }
         }
     });
