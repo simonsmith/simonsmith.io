@@ -46,7 +46,8 @@ module.exports = function(grunt) {
         jekyll: {
             server: {
                 options: {
-                    serve: true
+                    serve: true,
+                    drafts: true
                 }
             },
             build: {
