@@ -146,7 +146,7 @@ As an aside, if you don&#8217;t have Modernizr you can perform a simple check fo
 
 {% highlight js %}if ('sessionStorage' in window) {  }{% endhighlight %}
 
-If we put our little shim together with the storage wrapper then it makes for nice little utility to carry round to different projects. [Check this gist for a full example][3]. As you can probably see, it would be trivial to swap out `sessionStorage` for `localStorage`.
+If we put our little shim together with the storage wrapper then it makes for nice little utility to carry round to different projects. [Check this repo for a full example][3]. As you can probably see, it would be trivial to swap out `sessionStorage` for `localStorage`.
 
 If you&#8217;re also in need of JSON support then look no further than [Crockford&#8217;s json2.js library][4].
 
@@ -160,8 +160,8 @@ That&#8217;s it. A pretty simple example but I think a lot of sites can benefit 
 Go forth and cache.
 
  [1]: https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Storage
- [2]: https://github.com/simonsmith/simonsmith.io/blob/master/assets/scripts/modules/PageController.js#L53
- [3]: https://gist.github.com/simonsmith/5501430
+ [2]: https://github.com/simonsmith/simonsmith.io/blob/wp-theme/assets/scripts/modules/PageController.js#L53
+ [3]: https://github.com/simonsmith/storage-wrap
  [4]: https://github.com/douglascrockford/JSON-js
  [5]: https://github.com/mkuklis/depot.js
  [6]: http://amplifyjs.com/api/store/
