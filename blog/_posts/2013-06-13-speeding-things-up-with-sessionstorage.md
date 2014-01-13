@@ -70,6 +70,8 @@ A way to alleviate the pain is to create a small wrapper object that will sit i
     }
 };{% endhighlight %}
 
+> I needed the above for a work project, so have since turned it into it's own mini-library - [Storage wrap](https://github.com/simonsmith/storage-wrap)
+
 You&#8217;ll notice that the API is exactly the same. It&#8217;s a very simple wrapper and will merely get rid of the hassle of using `JSON.parse` or `JSON.stringify`. We&#8217;ll look at handling browsers that don&#8217;t support `sessionStorage` in a bit.
 
 ## Saving Ajax responses
