@@ -16,10 +16,11 @@ module.exports = function(grunt) {
                     'assets/css/*.css',
                     '_data/*.yml',
                     'blog/_posts/*.md',
+                    'blog/_drafts/*.md',
                     'projects/_posts/*.md',
                     './*.html'
                 ],
-                tasks: ['jekyll:build']
+                tasks: ['jekyll:dev']
             }
         },
 
@@ -50,13 +51,18 @@ module.exports = function(grunt) {
                     drafts: true
                 }
             },
-            build: {
+            dev: {
+                options: {
+                    drafts: true
+                }
+            },
+            prod: {
                 // Use defaults
             }
         },
 
         cssmin: {
-            build: {
+            prod: {
                 options: {
                     keepSpecialComments: 0
                 },
@@ -99,8 +105,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'css',
-        'jekyll:build',
-        'cssmin:build',
+        'jekyll:prod',
+        'cssmin:prod',
         'ftp-deploy'
     ]);
 };
