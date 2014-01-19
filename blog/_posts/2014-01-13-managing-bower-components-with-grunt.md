@@ -25,7 +25,7 @@ If you then needed to update jQuery to the latest version all it would require i
 
 ## Bower?
 
-It's hard not to have heard of Bower by now, so for brevity I'll drop a quote from their documentation:
+It's hard not to have heard of [Bower](http://bower.io/) by now, so for brevity I'll drop a quote from their documentation:
 
 > Bower is a package manager for the web. It offers a generic, unopinionated solution to the problem of front-end package management. Bower runs over Git, and is package-agnostic. A packaged  component can be made up of any type of asset, and use any type of transport
 
@@ -35,7 +35,7 @@ If you're unfamiliar then there is a nice post [on the Treehouse blog](http://bl
 
 The best place to start is by creating a fresh `bower.json` file. This will keep track of the dependencies that your project requires and also their versions.
 
-If you've used NPM and `package.json` then this will be familiar. You can do this manually or by running `bower init` on the command line, and walk through it in stages.
+If you've used [NPM[(https://npmjs.org/) and `package.json` then this will be familiar. You can do this manually or by running `bower init` on the command line, and walk through it in stages.
 
 I prefer to create a `scripts/vendor` directory and move dependencies from the `bower_components` directory to there. To demonstrate this I've created an example directory with three installed dependencies - React, Angular and jQuery.
 
@@ -46,7 +46,7 @@ I prefer to create a `scripts/vendor` directory and move dependencies from the `
 
 ## Bringing in the Grunt
 
-There are two ways to use Grunt in this situation. The easiest is to use one of the many [Bower plugins](http://gruntjs.com/plugins) available. These will typically handle the Bower install/update for you and then copy the files across to a directory of your choosing.
+There are two ways to use Grunt in this situation. The easiest is to use one of the many Bower plugins found in the [Grunt plugins directory](http://gruntjs.com/plugins). These will typically handle the Bower install/update for you and then copy the files across to a directory of your choosing.
 
 The second is to use a task just to do the Bower install and then use [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat). This not only allows you to move files to the vendor directory as before but also makes it easy to move multiple files into one.
 
@@ -116,7 +116,7 @@ concat: {
 
 I like the idea of breaking up each library into a sub-task. It seems unnecessary at this point but if Angular or jQuery plugins are added at a later point it makes it easier to maintain. Choice is yours.
 
-Finally tie them together with `registerTask`
+Finally tie them together with `registerTask`:
 
 {% highlight js %}
 grunt.registerTask('bower', [
@@ -127,7 +127,7 @@ grunt.registerTask('bower', [
 
     grunt bower
 
-Now that the concat task is being used you could compose your own jQuery UI build
+Now that the concat task is being used you could compose your own jQuery UI build:
 
 {% highlight js %}
 'PIM.Web/Content/app/js/vendor/jquery/jquery-ui.js': [
@@ -138,7 +138,7 @@ Now that the concat task is being used you could compose your own jQuery UI buil
 ]
 {% endhighlight %}
 
-Or in the case of [SuitCSS](https://github.com/suitcss) it installs each component into a folder prefixed with suit, so `suit-utils-display`, `suit-grid` etc. These can be gathered up into a single CSS file with the concat task
+Or in the case of [SuitCSS](https://github.com/suitcss) it installs each component into a folder prefixed with suit, so `suit-utils-display`, `suit-grid` etc. These can be gathered up into a single CSS file with the concat task:
 
 {% highlight js %}
 'styles/vendor/suit.css': ['bower_components/suit-**/*.css']
