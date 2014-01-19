@@ -35,7 +35,7 @@ If you're unfamiliar then there is a nice post [on the Treehouse blog](http://bl
 
 The best place to start is by creating a fresh `bower.json` file. This will keep track of the dependencies that your project requires and also their versions.
 
-If you've used [NPM[(https://npmjs.org/) and `package.json` then this will be familiar. You can do this manually or by running `bower init` on the command line, and walk through it in stages.
+If you've used [NPM](https://npmjs.org/) and `package.json` then this will be familiar. You can do this manually or by running `bower init` on the command line, and walk through it in stages.
 
 I prefer to create a `scripts/vendor` directory and move dependencies from the `bower_components` directory to there. To demonstrate this I've created an example directory with three installed dependencies - React, Angular and jQuery.
 
