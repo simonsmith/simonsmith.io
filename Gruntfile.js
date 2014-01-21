@@ -103,10 +103,14 @@ module.exports = function(grunt) {
         'concat:css'
     ]);
 
-    grunt.registerTask('default', [
+    grunt.registerTask('deploy', [
+        'build',
+        'ftp-deploy'
+    ]);
+
+    grunt.registerTask('build', [
         'css',
         'jekyll:prod',
-        'cssmin:prod',
-        'ftp-deploy'
+        'cssmin:prod'
     ]);
 };
