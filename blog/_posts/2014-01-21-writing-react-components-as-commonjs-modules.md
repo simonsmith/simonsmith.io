@@ -202,4 +202,4 @@ I'm a massive fan of AMD and [RequireJS](http://requirejs.org) but haven't tried
 
 ## Wrapping up
 
-The example code used in this post can be found in [this GitHub repository]. Feel free to drop me [a tweet](http://twitter.com/blinkdesign) with any feedback/corrections.
+The example code used in this post can be found in [this GitHub repository](https://github.com/simonsmith/react-commonjs-example). Feel free to drop me [a tweet](http://twitter.com/blinkdesign) with any feedback/corrections.
