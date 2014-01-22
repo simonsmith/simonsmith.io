@@ -29,7 +29,7 @@ React.DOM.div( {className:"Module"},
 )
 {% endhighlight %}
 
-A JSX transformer ships with React that can be dropped straight into the browser. This makes prototyping simpler but is also an overheard that **should not** be used in production.
+A JSX transformer ships with React that can be dropped straight into the browser. This makes prototyping simpler but is also an overhead that **should not** be used in production.
 
 Seeing as a compile step is required to use CommonJS modules in the browser, it also makes sense to drop in an extra step to compile the JSX. Grunt will be handling both of these steps.
 
