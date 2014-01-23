@@ -4,6 +4,10 @@
 - name: Sass
 - name: LESS
 - name: Grunt
+- name: Jasmine
+- name: Mocha
+- name: Flight
+- name: Bower
 - name: jQuery
 - name: AngularJS
 - name: Git
