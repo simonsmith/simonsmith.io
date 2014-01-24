@@ -4,7 +4,7 @@
   from: August 2013
   to: false
   text: |
-    Working on an internal AngularJS single page application. Built to allow users in Japan manage Universal's music catalogue. Uses Bootstrap 3, Grunt, Sass and managed with Git.
+    Working on an internal responsive AngularJS single page application. Built to allow users in Japan manage Universal's music catalogue. Uses Bootstrap 3, Grunt, Sass and managed with Git.
 
 - title: Immediate Media
   url: immediatemedia.co.uk
