@@ -1,4 +1,14 @@
+- title: BBC (Contract)
+  role: JavaScript Developer
+  url: bbc.co.uk
+  id: bbc
+  from: February 2014
+  to: false
+  text: |
+    Working on a client-side MVC application for BBC News.
+
 - title: Universal Music (Contract)
+  role: Senior UI Developer
   url: universalmusic.com
   id: universal
   from: August 2013
@@ -13,6 +23,7 @@
     Git was the VCS and I adopted a branching and rebasing workflow to add new features.
 
 - title: Immediate Media
+  role: Senior UI Developer
   url: immediatemedia.co.uk
   id: im
   from: October 2012
@@ -29,6 +40,7 @@
     Implemented Bootstrap 3 and modular HTML/CSS workflows on a new responsive website for [You &amp; Your Wedding](http://www.youandyourwedding.co.uk/venues).
 
 - title: QMetric
+  role: Senior UI Developer
   url: qmetric.co.uk
   id: qmetric
   from: December 2011
@@ -45,6 +57,7 @@
     Launched responsive version of the [QMetric company website](http://qmetric.co.uk). Source on [GitHub](https://github.com/qmetric/qmg-website)
 
 - title: BBC Worldwide
+  role: Lead UI Developer
   url: bbcworldwide.com
   id: bbc
   from: August 2009
@@ -59,6 +72,7 @@
     Maintained front-end code on [GoodFood](http://www.bbcgoodfood.com/) and [Gardener's World](http://www.gardenersworld.com/)
 
 - title: SAS Design
+  role: UI Developer
   url: saslondon.com
   id: sas
   from: April 2009
@@ -67,6 +81,7 @@
     Worked from Photoshop design mock-ups to create static web pages using valid, standards based code which performed in various browser environments.
 
 - title: De-construct
+  role: UI Developer
   url: de-construct.com
   id: deconstruct
   from: March 2009
@@ -75,6 +90,7 @@
     Constructed a mini site based on existing designs using front-end technologies.
 
 - title: DGTL
+  role: UI Developer
   url: dgtl.net
   id: dgtl
   from: November 2008
@@ -83,6 +99,7 @@
    Responsible for all front-end code on [www.pentland.com](http://www.pentland.com/) and exact duplication of site designs were required in various browser environments.
 
 - title: Focus
+  role: UI Developer
   url: focusintegrated.co.uk
   id: focus
   from: October 2008
@@ -91,6 +108,7 @@
     Several small sites required development from Photoshop designs into fully working web pages
 
 - title: AKQA
+  role: UI Developer
   url: akqa.com
   id: akqa
   from: June 2008
@@ -99,6 +117,7 @@
     Responsible for front-end development and bug fixing on [www.sainsburys.co.uk](http://www.sainsburys.co.uk) whilst working in a small project team.
 
 - title: AAT
+  role: UI Developer
   url: aat.org
   id: aat
   from: June 2007

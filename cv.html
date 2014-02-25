@@ -15,7 +15,7 @@ title: 'CV'
     {% for job in site.data.jobs %}
     <div class="Job Job--listItem entry vcalendar" id="{{ job.id }}">
         <header class="Job-header">
-            <h3 class="Job-title fn org">{{ job.title }}</h3>
+            <h3 class="Job-title fn org">{{ job.title }} <small class="Job-role">{{ job.role }}</small></h3>
             <a class="Job-url company-url location" href="http://{{ job.url }}">{{ job.url }}</a>
             <dl class="Job-dates u-dlInline vevent">
                 <dt class="u-isHiddenVisually">From</dt>
