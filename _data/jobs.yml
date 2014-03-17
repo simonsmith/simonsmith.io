@@ -5,7 +5,14 @@
   from: February 2014
   to: false
   text: |
-    Working on a client-side MVC application for BBC News.
+    Working on a client-side Angular application to allow journalists to update news content from various devices.
+
+    Writing unit tests and using the Karma test runner to run them against PhantomJS.
+
+    Developing and maintaining an internal BBC Bootstrap which extends Twitter Bootstrap and has a variety of custom
+    [SuitCSS](https://github.com/suitcss/suit) components.
+
+    Collaborating with other developers using [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html).
 
 - title: Universal Music (Contract)
   role: Senior UI Developer
