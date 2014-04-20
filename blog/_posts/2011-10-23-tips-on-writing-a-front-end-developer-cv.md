@@ -41,9 +41,9 @@ Ah, the skills list. A place to spit out every single acronym and buzz word that
 
 Limit it to the core skills that you actually use. And for god&#8217;s sake don&#8217;t list every application you&#8217;ve ever opened. I can safely assume you are competent with an IDE and Microsoft Word.
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/uploads/2011/10/Screen-shot-2011-10-20-at-23.55.22.png">
-    <figcaption class="Figure-caption">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/uploads/2011/10/Screen-shot-2011-10-20-at-23.55.22.png">
+    <figcaption class="Post-imgCaption">
         One of my favourite &#8216;kitchen sink&#8217; lists
     </figcaption>
 </figure>

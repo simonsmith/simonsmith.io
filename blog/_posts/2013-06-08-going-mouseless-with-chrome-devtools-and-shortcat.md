@@ -13,11 +13,11 @@ If you open Shortcat and hit `.` it will reveal all available shortcuts in the a
 
 With excitement I opened Chrome and found only a few shortcuts
 
-<figure class="Figure">
-    <a class="Figure-link js-imgPop" href="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-18.44.27.png">
-        <img class="Figure-img" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-18.44.27.png">
+<figure class="Post-imgContainer">
+    <a class="Post-imgLink js-imgPop" href="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-18.44.27.png">
+        <img class="Post-imgElem" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-18.44.27.png">
     </a>
-    <figcaption class="Figure-caption">
+    <figcaption class="Post-imgCaption">
         Boo :(
     </figcaption>
 </figure>
@@ -26,11 +26,11 @@ Good, but not great. However, [according to the documentation][2] we can force C
 
     open -a "/Applications/Google Chrome.app" --args --force-renderer-accessibility
 
-<figure class="Figure">
-    <a class="Figure-link js-imgPop" href="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-18.46.14.png">
-        <img class="Figure-img" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-18.46.14.png">
+<figure class="Post-imgContainer">
+    <a class="Post-imgLink js-imgPop" href="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-18.46.14.png">
+        <img class="Post-imgElem" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-18.46.14.png">
     </a>
-    <figcaption class="Figure-caption">
+    <figcaption class="Post-imgCaption">
         Cooking with gas!
     </figcaption>
 </figure>
@@ -43,9 +43,9 @@ Now that Chrome is playing nice with Shortcat we can pop open the DevTools and s
 
 For example, start typing &#8216;elements&#8217;, &#8216;console&#8217; or even the id of an element to position focus on that part of the window. It&#8217;s worth noting that if you hold `Ctrl` when pressing `Enter` then it will trigger the context menu usually found with a right click. Really handy.
 
-<figure class="Figure">
-    <a class="Figure-link js-imgPop" href="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-19.25.40.png">
-        <img class="Figure-img" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-19.25.40.png">
+<figure class="Post-imgContainer">
+    <a class="Post-imgLink js-imgPop" href="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-19.25.40.png">
+        <img class="Post-imgElem" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-08-at-19.25.40.png">
     </a>
 </figure>
 

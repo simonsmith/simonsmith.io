@@ -39,9 +39,9 @@ If you've used [NPM](https://npmjs.org/) and `package.json` then this will be fa
 
 I prefer to create a `scripts/vendor` directory and move dependencies from the `bower_components` directory to there. To demonstrate this I've created an example directory with three installed dependencies - React, Angular and jQuery.
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/posts/managing-bower/initial-dir.png">
-    <figcaption class="Figure-caption">We're certainly not going to want all these files</figcaption>
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/posts/managing-bower/initial-dir.png">
+    <figcaption class="Post-imgCaption">We're certainly not going to want all these files</figcaption>
 </figure>
 
 ## Bringing in the Grunt
@@ -80,8 +80,8 @@ bowercopy: {
 
 The `srcPrefix` and `destPrefix` options are a nice touch and keep the file paths simple. When `grunt bowercopy` is run it will create the specified files inside the `vendor` folder.
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/posts/managing-bower/dir-after-bower-copy.png">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/posts/managing-bower/dir-after-bower-copy.png">
 </figure>
 
 If nothing more is required then great, you're pretty much done here. The only place I could see a shortcoming with this task was not tapping into some of the more advanced file path matching that is usually allowed with the `files` object in Grunt. Matching `*.js` is a good example.

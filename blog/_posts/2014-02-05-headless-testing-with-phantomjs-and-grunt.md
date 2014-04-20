@@ -56,8 +56,8 @@ describe('Simple object', function() {
 
 It's often good practice to keep the specs separate to the actual code that is being tested. For the purpose of this post the specs will be listed under a `test` directory and the source code in `scripts` but you can use whatever suits best.
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/posts/headless-testing/simple-dir-structure.png">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/posts/headless-testing/simple-dir-structure.png">
 </figure>
 
 ## Wiring up the Grunt task
@@ -79,8 +79,8 @@ jasmine: {
 
 If all goes well we should see a message confirming the tests have passed
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/posts/headless-testing/simple-test-result.png">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/posts/headless-testing/simple-test-result.png">
 </figure>
 
 At this moment in time, 100% code coverage!
@@ -177,14 +177,14 @@ In this case it's very simple (`<div class="my-element"></div>`) but for more co
 
 Once again we'll follow the practice of separating code and tests but this time also create a sub-directory for the HTML fixtures. You may need to adjust the fixtures path as I have done in the above example.
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/posts/headless-testing/jquery-plugin-dir.png">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/posts/headless-testing/jquery-plugin-dir.png">
 </figure>
 
 And hopefully the tests will pass
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/posts/headless-testing/plugin-passed.png">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/posts/headless-testing/plugin-passed.png">
 </figure>
 
 And there you have the very basics of testing a plugin.

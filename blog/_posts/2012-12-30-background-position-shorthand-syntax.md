@@ -13,16 +13,16 @@ Considering the flexibility [that the position property][1] affords us, it wou
 
 Most developers will be familiar with setting the offsets of their background images from the *top left* of an element:
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/uploads/2012/08/bgp-100-50-300x216.png">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/uploads/2012/08/bgp-100-50-300x216.png">
 </figure>
 
 {% highlight css %}
 background-position: 100% 50%;
 {% endhighlight %}
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/uploads/2012/08/bgp-10px-10px-300x216.jpg">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/uploads/2012/08/bgp-10px-10px-300x216.jpg">
 </figure>
 
 {% highlight css %}
@@ -35,8 +35,8 @@ But what happens when the design requires the image to remain 20px from the righ
 
 One approach requires upfront knowledge of the image dimensions and those of the element to which it is being applied:
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/uploads/2012/08/bgp-right-20px-bottom-20px-300x216.jpg">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/uploads/2012/08/bgp-right-20px-bottom-20px-300x216.jpg">
 </figure>
 
 {% highlight css %}
@@ -51,8 +51,8 @@ This is a fairly hideous solution and makes assumptions that our element and ima
 
 In today&#8217;s responsive world, this simply won&#8217;t fly. So what about percentage measurements? Again this requires more maths and more importantly, the spacing will vary on flexible elements:
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/uploads/2012/08/flexible-fail.jpg">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/uploads/2012/08/flexible-fail.jpg">
 </figure>
 
 {% highlight css %}

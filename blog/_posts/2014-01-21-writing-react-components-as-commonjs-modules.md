@@ -44,8 +44,8 @@ A few things will be needed from NPM before any fun can start.
 
 As well as the above node modules, a place for the React components and compiled JS file will be needed. I tend to favour a `react_components` directory (similar to Bower) for the former.
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/posts/react-with-commonjs/initial-dir.png">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/posts/react-with-commonjs/initial-dir.png">
 </figure>
 
 ## Defining components

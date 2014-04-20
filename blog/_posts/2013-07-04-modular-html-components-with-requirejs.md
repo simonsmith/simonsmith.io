@@ -111,15 +111,15 @@ So, where are we at the moment?
 
 We have jQuery and Handlebars required in our `main.js` file and the file structure looks a little like this:
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-23-at-13.03.33.png">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-23-at-13.03.33.png">
 </figure>
 
 And if we load the page our two core or main modules should be fetched.
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-23-at-12.16.51.png">
-    <figcaption class="Figure-caption">Great. Now our page has its core modules ready for use.</figcaption>
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-23-at-12.16.51.png">
+    <figcaption class="Post-imgCaption">Great. Now our page has its core modules ready for use.</figcaption>
 </figure>
 
 ## Creating an HTML module
@@ -200,9 +200,9 @@ Now if we simply place that code in a script element beneath the carousel HTML m
 
 But we actually get a console error:
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-24-at-10.18.42.png">
-    <figcaption class="Figure-caption">Hmm, it seems that jQuery can&#8217;t be found.</figcaption>
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-24-at-10.18.42.png">
+    <figcaption class="Post-imgCaption">Hmm, it seems that jQuery can&#8217;t be found.</figcaption>
 </figure>
 
 If you remember from earlier, we told RequireJS where to find our version of jQuery by using the paths configuration option. In this case RequireJS has attempted to load jQuery and our Carousel module <em>before</em> the <code>main.js</code> file has loaded. This means that the config options have not been read yet and therefore an error is shown.
@@ -227,8 +227,8 @@ I usually create a directory called page to serve this purpose, but really the n
 
 Now the directory structure is looking a little like this:
 
-<figure class="Figure">
-    <img class="Figure-img" src="/assets/images/uploads/2013/07/Screen-Shot-2013-07-04-at-21.49.42.png">
+<figure class="Post-imgContainer">
+    <img class="Post-imgElem" src="/assets/images/uploads/2013/07/Screen-Shot-2013-07-04-at-21.49.42.png">
 </figure>
 
 By dropping the code into `carousel.js` (lowercase to signify the difference) the HTML page can simply `require` that file:
