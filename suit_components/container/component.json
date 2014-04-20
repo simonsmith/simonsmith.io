@@ -1,3 +1,6 @@
 {
+  "dependencies": {
+    "simonsmith/suitcss-utils-space": "*"
+  },
   "styles": ["container.css"]
 }

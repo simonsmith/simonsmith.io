@@ -1,0 +1,15 @@
+{
+  "local": [
+    "base",
+    "print",
+    "container",
+    "contact",
+    "header",
+    "content",
+    "post",
+    "nav",
+    "logo",
+    "utils-link"
+  ],
+  "paths": ["../"]
+}

@@ -1,5 +1,6 @@
 /**
- * Base styles
+ * Styles applied to whole site
+ * Should just target elements and other global states
  */
 
 :root {

@@ -1,5 +1,5 @@
 {
   "name": "simonsmith.io",
   "paths": ["suit_components"],
-  "local": ["base"]
+  "local": ["init"]
 }

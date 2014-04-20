@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "suitcss/utils-state": "*",
+    "simonsmith/suitcss-utils-list": "*"
+  },
+  "styles": ["nav.css"]
+}

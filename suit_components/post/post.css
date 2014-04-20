@@ -1,0 +1,57 @@
+/** @define Post */
+
+:root {
+  var-alt-color-Post: #888;
+}
+
+.Post {}
+
+.Post--headline {
+  margin-bottom: 1.875rem;
+}
+
+.Post-title {
+  margin-bottom: .625rem;
+}
+
+.Post-date {
+  color: var(alt-color-Post);
+}
+
+.Post-url {
+  font-weight: bold;
+  margin: .3125rem 0 .625rem;
+}
+
+.Post-intro {
+  color: var(alt-color-Post);
+  margin: 0 0 .625rem;
+}
+
+.Post-header {
+  margin-bottom: 2.1875rem;
+}
+
+.Post-content li {
+  margin-bottom: .3125rem;
+  line-height: 22px;
+}
+
+.Post-content a {
+  border-bottom: 1px dotted;
+}
+
+@media (min-width: 45.625em) {
+  .Post--snippet {
+    float: left;
+    width: 45%;
+  }
+
+  .Post--snippet:nth-child(even) {
+    margin-left: 10%;
+  }
+
+  .Post--snippet:nth-child(odd) {
+    clear: left;
+  }
+}

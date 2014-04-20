@@ -1,0 +1,27 @@
+/** @define Logo */
+
+:root {
+  var-subtitle-color-Logo: #777;
+}
+
+.Logo {
+  display: inline-block;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: inherit;
+}
+
+.Logo-title {
+  font-size: 1.625rem;
+  font-weight: 300;
+}
+
+.Logo-subtitle {
+  color: var(subtitle-color-Logo);
+  font-size: .875rem;
+}
+
+.Logo-subtitle, .Logo-title {
+  margin: 0;
+  display: inline-block;
+}

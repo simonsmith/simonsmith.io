@@ -3,12 +3,12 @@ layout: default
 title: 'Blog'
 ---
 
-<h1 class="u-marginTn">{{ page.title }}</h1>
+<h1 class="u-mtZ">{{ page.title }}</h1>
 
 <ul class="u-listUnstyled">
     {% for post in site.categories.blog %}
-    <li class="Post Post--listItem">
-        <h2 class="Post-title Post-title--smaller"><a class="u-linkDark" href="{{ post.url }}">{{ post.title }}</a></h2>
+    <li class="Post Post--headline">
+        <h2 class="Post-title"><a class="u-linkMuted" href="{{ post.url }}">{{ post.title }}</a></h2>
         <time class="Post-date">{{ post.date | date:'%d %B %Y' }}</time>
     </li>
     {% endfor %}

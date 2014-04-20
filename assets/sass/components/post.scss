@@ -50,7 +50,7 @@
         float: left;
         margin-right: px(20);
     }
-    
+
     .Post-intro {
         margin-left: px(120);
     }
@@ -70,18 +70,7 @@
 @media (min-width: 45.625em) {
 
     .v1-Post {
-        &.Post--snippet {
-            float: left;
-            width: 45%;
-
-            &:nth-child(even) {
-                margin-left: 10%;
-            }
-
-            &:nth-child(odd) {
-                clear: left;
-            }
-        }
+        &.
     }
 
 }

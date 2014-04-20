@@ -7,10 +7,10 @@ title: 'Projects'
 
 <ul class="u-listUnstyled u-cf">
     {% for post in site.categories.projects %}
-    <li class="Post Post--snippet v1-Post u-cf">
+    <li class="Post Post--snippet u-cf">
         <h2 class="Post-title u-marginTn"><a class="u-linkDark" href="{{ post.url }}">{{ post.title }}</a></h2>
         <a href="{{ post.url }}">
-            <img class="Post-img Post-img--preview" width="100" height="100" src="/assets/images/projects/{{ post.imgPrefix }}-small.jpg" alt="{{ post.title }}">
+            <img class="FeatureImg FeatureImg--preview" width="100" height="100" src="/assets/images/projects/{{ post.imgPrefix }}-small.jpg" alt="{{ post.title }}">
         </a>
         <p class="Post-intro">{{ post.intro }}</p>
     </li>

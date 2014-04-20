@@ -22,6 +22,6 @@
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-jekyll": "~0.4.1",
     "grunt-ftp-deploy": "~0.1.1",
-    "grunt-suitcss": "^0.2.4"
+    "grunt-suitcss": "^0.2.6"
   }
 }

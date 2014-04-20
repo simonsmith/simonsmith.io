@@ -3,11 +3,7 @@
     "necolas/normalize.css": "*",
     "simonsmith/syntax.css": "*"
   },
-  "local": [
-    "print",
-    "container",
-    "contact",
-    "content"
-  ],
-  "paths": ["../"]
+  "styles": [
+    "global.css"
+  ]
 }
