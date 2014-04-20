@@ -4,7 +4,7 @@
     "simonsmith/syntax.css": "*"
   },
   "local": [
-    "print-custom",
+    "print",
     "container",
     "contact",
     "content"

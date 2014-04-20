@@ -935,39 +935,12 @@ th {
   }
 }
 
-/**
- * Classes to add spacing. Useful for vertical spacing
- */
-
-/**
- * padding
- */
-
-.u-pV30 {
-  padding-top: 1.875rem !important;
-  padding-bottom: 1.875rem !important;
-}
-
-/**
- * margin
- */
-
-.u-mV30 {
-  margin-top: 1.875rem !important;
-  margin-bottom: 1.875rem !important;
-}
-
 /** @define Container */
 
 .Container {
   margin: 0 auto;
   width: 95%;
   max-width: 860px;
-}
-
-.Container--verticalSpace {
-  padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
 }
 
 @media (min-width: 37.5em) {
