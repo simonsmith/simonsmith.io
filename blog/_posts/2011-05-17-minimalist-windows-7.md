@@ -13,7 +13,7 @@ To my delight, all that is needed is a bit of patience and some spare time to ma
 
 Try and tell me you *don’t* want this in your life:
 
-<figure class="Figure Figure--vSpaceLrg">
+<figure class="Figure">
     <a class="Figure-link js-imgPop" href="/assets/images/uploads/2011/08/wallpaper1.jpg">
         <img class="Figure-img" src="/assets/images/uploads/2011/08/wallpaper1-1024x576.jpg">
     </a>
@@ -43,13 +43,13 @@ One thing I noticed here is that the Simple Dark theme has a slight bug that see
 
 Here are the settings I used for the RocketDock setup pictured:
 
-<figure class="Figure Figure--vSpaceLrg">
+<figure class="Figure">
     <a class="Figure-link js-imgPop" href="/assets/images/uploads/2011/08/dock-settings1.jpg">
         <img class="Figure-img" src="/assets/images/uploads/2011/08/dock-settings1.jpg">
     </a>
 </figure>
 
-<figure class="Figure Figure--vSpaceLrg">
+<figure class="Figure">
     <img class="Figure-img" src="/assets/images/uploads/2011/08/dock-settings2.jpg">
 </figure>
 

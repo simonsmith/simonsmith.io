@@ -100,7 +100,7 @@ However, you might find that some modules *do* need to initialise here as they a
 This is functionally the same as the following:
 
 {% highlight js %}define(['jquery', 'handlebars', 'domready', 'modules/Navigation'], function($, Handlebars, domReady, Nav) {
-    // etc    
+    // etc
 });{% endhighlight %}
 
 I prefer the sugar syntax when requiring multiple modules and interacting with them. It makes for a nicer read and also doesn&#8217;t rely on exact argument order in the callback. However, it&#8217;s totally up to you.
@@ -111,13 +111,13 @@ So, where are we at the moment?
 
 We have jQuery and Handlebars required in our `main.js` file and the file structure looks a little like this:
 
-<figure class="Figure Figure--vSpaceLrg">
+<figure class="Figure">
     <img class="Figure-img" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-23-at-13.03.33.png">
 </figure>
 
 And if we load the page our two core or main modules should be fetched.
 
-<figure class="Figure Figure--vSpaceLrg">
+<figure class="Figure">
     <img class="Figure-img" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-23-at-12.16.51.png">
     <figcaption class="Figure-caption">Great. Now our page has its core modules ready for use.</figcaption>
 </figure>
@@ -200,7 +200,7 @@ Now if we simply place that code in a script element beneath the carousel HTML m
 
 But we actually get a console error:
 
-<figure class="Figure Figure--vSpaceLrg">
+<figure class="Figure">
     <img class="Figure-img" src="/assets/images/uploads/2013/06/Screen-Shot-2013-06-24-at-10.18.42.png">
     <figcaption class="Figure-caption">Hmm, it seems that jQuery can&#8217;t be found.</figcaption>
 </figure>
@@ -227,7 +227,7 @@ I usually create a directory called page to serve this purpose, but really the n
 
 Now the directory structure is looking a little like this:
 
-<figure class="Figure Figure--vSpaceLrg">
+<figure class="Figure">
     <img class="Figure-img" src="/assets/images/uploads/2013/07/Screen-Shot-2013-07-04-at-21.49.42.png">
 </figure>
 

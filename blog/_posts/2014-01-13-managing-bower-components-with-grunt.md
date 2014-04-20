@@ -39,7 +39,7 @@ If you've used [NPM](https://npmjs.org/) and `package.json` then this will be fa
 
 I prefer to create a `scripts/vendor` directory and move dependencies from the `bower_components` directory to there. To demonstrate this I've created an example directory with three installed dependencies - React, Angular and jQuery.
 
-<figure class="Figure Figure--vSpaceLrg">
+<figure class="Figure">
     <img class="Figure-img" src="/assets/images/posts/managing-bower/initial-dir.png">
     <figcaption class="Figure-caption">We're certainly not going to want all these files</figcaption>
 </figure>
@@ -80,7 +80,7 @@ bowercopy: {
 
 The `srcPrefix` and `destPrefix` options are a nice touch and keep the file paths simple. When `grunt bowercopy` is run it will create the specified files inside the `vendor` folder.
 
-<figure class="Figure Figure--vSpaceLrg">
+<figure class="Figure">
     <img class="Figure-img" src="/assets/images/posts/managing-bower/dir-after-bower-copy.png">
 </figure>
 
