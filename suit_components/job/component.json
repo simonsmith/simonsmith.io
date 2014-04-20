@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "suitcss/utils-state": "*",
+    "simonsmith/suitcss-utils-text": "*",
+    "simonsmith/suitcss-utils-list": "~0.2.0"
+  },
+  "styles": ["job.css"]
+}

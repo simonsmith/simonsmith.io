@@ -1,0 +1,12 @@
+/** @define Avatar */
+
+:root {
+  --border-color-Avatar: #ddd;
+}
+
+.Avatar {
+  border-radius: 50%;
+  border: 1px solid var(--border-color-Avatar);
+  padding: .125rem;
+  display: inline-block;
+}

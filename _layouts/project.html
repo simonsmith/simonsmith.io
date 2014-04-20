@@ -3,13 +3,18 @@ layout: default
 ---
 
 <div class="Post Post--full">
-    <header class="Post-header u-marginBn">
-        <h1 class="Post-title u-marginTn">{{ page.title }}</h1>
-        <a class="Post-url" href="http://{{ page.projectUrl }}">{{ page.projectUrl }}</a>
-        <p class="Post-intro">{{ page.intro }}</p>
-    </header>
-    <img class="Post-img Post-img--banner" src="/assets/images/projects/{{ page.imgPrefix }}-banner.jpg" alt="{{ page.title }}">
-    <div class="Post-content">
-        {{ content }}
-    </div>
+  <header class="Post-header u-mbZ">
+    <h1 class="Post-title u-mtZ">{{ page.title }}</h1>
+    <a class="Post-url" href="http://{{ page.projectUrl }}">
+      {{ page.projectUrl }}
+    </a>
+    <p class="Post-intro">{{ page.intro }}</p>
+  </header>
+  <img class="FeatureImg FeatureImg--banner"
+       src="/assets/images/projects/{{ page.imgPrefix }}-banner.jpg"
+       alt="{{ page.title }}">
+
+  <div class="Post-content">
+    {{ content }}
+  </div>
 </div>

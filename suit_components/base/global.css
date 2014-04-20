@@ -1,0 +1,76 @@
+/**
+ * Styles applied to whole site
+ * Should just target elements and other global states
+ */
+
+:root {
+  --link-color-base: #2224ce;
+  --link-hover-base: #2b7de1;
+  --background-color-body-base: #fff;
+  --color-body-base: #000;
+  --color-quote-base: #888;
+  --border-color-quote-base: #ccc;
+  --h1-color-base: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  background-color: var(--background-color-body-base);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--color-body-base);
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--h1-color-base);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  line-height: 22px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color-base);
+  transition: color .2s ease;
+}
+
+a:hover {
+  color: var(--link-hover-base);
+}
+
+blockquote {
+  border-left: 8px solid var(--border-color-quote-base);
+  padding-left: .625rem;
+  color: var(--color-quote-base);
+  margin-bottom: 1.875rem;
+  margin-top: 1.875rem;
+}

@@ -1,0 +1,14 @@
+/* Link utilities
+   ========================================================================== */
+
+.u-linkMuted {
+    color: #555;
+}
+
+.u-linkMuted:hover {
+  color: #111;
+}
+
+.u-linkUnderline {
+    border-bottom: 1px dotted;
+}

@@ -3,11 +3,13 @@ layout: default
 title: 'Contact'
 ---
 
-<h1 class="u-marginTn">{{ page.title }}</h1>
+<h1 class="u-mtZ">{{ page.title }}</h1>
 
 <dl class="Contact u-dlUnstyled">
-    {% for contact in site.data.contact %}
-        <dt class="Contact-type">{{ contact.type }}</dt>
-        <dd class="Contact-linkWrap"><a class="Contact-link" href="{{ contact.url }}">{{ contact.text }}</a></dd>
-    {% endfor %}
+  {% for contact in site.data.contact %}
+  <dt class="Contact-type">{{ contact.type }}</dt>
+  <dd class="Contact-linkWrap">
+    <a class="Contact-link" href="{{ contact.url }}"> {{ contact.text }}</a>
+  </dd>
+  {% endfor %}
 </dl>
