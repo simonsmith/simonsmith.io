@@ -1,0 +1,4 @@
+{
+  "styles": ["print-custom.css"],
+  "local": ["print"]
+}

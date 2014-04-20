@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "necolas/normalize.css": "*",
+    "simonsmith/syntax.css": "*"
+  },
+  "local": [
+    "print-custom",
+    "container",
+    "contact",
+    "content"
+  ],
+  "paths": ["../"]
+}

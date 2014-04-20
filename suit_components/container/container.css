@@ -1,0 +1,13 @@
+/** @define Container */
+
+.Container {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 860px;
+}
+
+@media (min-width: 37.5em) {
+  .Container {
+    width: 80%;
+  }
+}
