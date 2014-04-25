@@ -4,8 +4,8 @@
  */
 
 :root {
-  var-link-color-base: #6790ce;
-  var-link-hover-base: #a1bae1;
+  --link-color-base: #6790ce;
+  --link-hover-base: #a1bae1;
 }
 
 * {
@@ -54,12 +54,12 @@ img {
 
 a {
   text-decoration: none;
-  color: var(link-color-base);
+  color: var(--link-color-base);
   transition: color .2s ease;
 }
 
 a:hover {
-  color: var(link-hover-base);
+  color: var(--link-hover-base);
 }
 
 blockquote {

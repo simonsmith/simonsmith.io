@@ -1,7 +1,7 @@
 /** @define Logo */
 
 :root {
-  var-subtitle-color-Logo: #777;
+  --subtitle-color-Logo: #777;
 }
 
 .Logo {
@@ -17,7 +17,7 @@
 }
 
 .Logo-subtitle {
-  color: var(subtitle-color-Logo);
+  color: var(--subtitle-color-Logo);
   font-size: .875rem;
 }
 

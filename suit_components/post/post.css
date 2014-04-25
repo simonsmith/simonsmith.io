@@ -1,7 +1,7 @@
 /** @define Post */
 
 :root {
-  var-alt-color-Post: #888;
+  --alt-color-Post: #888;
 }
 
 .Post {}
@@ -15,7 +15,7 @@
 }
 
 .Post-date {
-  color: var(alt-color-Post);
+  color: var(--alt-color-Post);
 }
 
 .Post-url {
@@ -24,7 +24,7 @@
 }
 
 .Post-intro {
-  color: var(alt-color-Post);
+  color: var(--alt-color-Post);
   margin: 0 0 .625rem;
 }
 

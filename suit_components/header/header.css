@@ -1,12 +1,12 @@
 /** @define SiteHeader */
 
 :root {
-  var-border-color-SiteHeader: #dadada;
+  --border-color-SiteHeader: #dadada;
 }
 
 .SiteHeader {
   margin: .9375rem 0 0;
-  border-bottom: 1px solid var(border-color-SiteHeader);
+  border-bottom: 1px solid var(--border-color-SiteHeader);
 }
 
 /* Logo component layout
