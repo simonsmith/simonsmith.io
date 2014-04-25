@@ -15,6 +15,10 @@ module.exports = function(grunt) {
     'ftp-deploy'
   ]);
 
+	grunt.registerTask('serve', [
+		'jekyll:server'	
+	]);
+
   grunt.registerTask('build', [
     'css',
     'jekyll:prod',
