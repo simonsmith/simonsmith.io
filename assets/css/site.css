@@ -1095,80 +1095,6 @@ th.u-isShown {
 }
 
 /**
- * Styles applied to whole site
- * Should just target elements and other global states
- */
-
-
-
-* {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 1rem;
-}
-
-body {
-  background-color: #fff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #444;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 400;
-}
-
-h1 {
-  font-size: 2rem;
-  color: #222;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 1.75rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-}
-
-p {
-  line-height: 22px;
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: #6790ce;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
-}
-
-a:hover {
-  color: #a1bae1;
-}
-
-blockquote {
-  border-left: 8px solid #ccc;
-  padding-left: .625rem;
-  color: #888;
-  margin-bottom: 1.875rem;
-  margin-top: 1.875rem;
-}
-
-/**
 * Print
 */
 
@@ -1248,6 +1174,80 @@ blockquote {
   }
 }
 
+/**
+ * Styles applied to whole site
+ * Should just target elements and other global states
+ */
+
+
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #222;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  line-height: 22px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #6790ce;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+a:hover {
+  color: #a1bae1;
+}
+
+blockquote {
+  border-left: 8px solid #ccc;
+  padding-left: .625rem;
+  color: #888;
+  margin-bottom: 1.875rem;
+  margin-top: 1.875rem;
+}
+
 /** @define Container */
 
 .Container {
@@ -1292,6 +1292,42 @@ blockquote {
 
 .SiteHeader-wrapLogo {
   margin-bottom: .9375rem;
+}
+
+/** @define SiteFooter */
+
+
+
+.SiteFooter {
+  color: #999;
+  border-top: 1px solid #dadada;
+  font-size: .875rem;
+  margin-bottom: 1.25rem;
+}
+
+.SiteFooter-link {
+  color: #444;
+}
+
+.SiteFooter-link:hover {
+  color: #111;
+}
+
+.SiteFooter-copy {
+  text-transform: lowercase;
+}
+
+/* Profile component layout
+   ========================================================================== */
+
+.SiteFooter-wrapProfile {
+  margin: 1.25rem auto 2.1875rem;
+}
+
+@media (min-width: 50em) {
+  .SiteFooter-wrapProfile {
+    width: 70%;
+  }
 }
 
 /** @define SiteContent */

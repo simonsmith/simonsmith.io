@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "suitcss/utils-text": "*"
+  },
+  "styles": ["footer.css"]
+}
