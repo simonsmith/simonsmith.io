@@ -1021,6 +1021,77 @@ th {
 }
 
 /**
+ * Contain floats
+ *
+ * Make an element expand to contain floated children.
+ * Uses pseudo-elements (micro clearfix).
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of the
+ *    element.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.u-cf:before,
+.u-cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.u-cf:after {
+  clear: both;
+}
+
+/**
+ * New block formatting context
+ *
+ * This affords some useful properties to the element. It won't wrap under
+ * floats. Will also contain any floated children.
+
+ * N.B. This will clip overflow. Use the alternative method below if this is
+ * problematic.
+ */
+
+.u-nbfc {
+  overflow: hidden !important;
+}
+
+/**
+ * New block formatting context (alternative)
+ *
+ * Alternative method when overflow must not be clipped.
+ *
+ * 1. Create a new block formatting context (NBFC).
+ * 2. Avoid shrink-wrap behaviour of table-cell.
+ *
+ * N.B. This breaks down in some browsers when elements within this element
+ * exceed its width.
+ */
+
+.u-nbfcAlt {
+  display: table-cell !important;
+  /* 1 */
+  width: 10000px !important;
+  /* 2 */
+}
+
+/**
+ * Floats
+ */
+
+.u-pullLeft {
+  float: left !important;
+}
+
+.u-pullRight {
+  float: right !important;
+}
+
+/**
  * Indicate that interaction will result in an (in)action.
  */
 
@@ -1092,6 +1163,80 @@ th.u-isShown {
 
 .u-isVisible {
   visibility: visible !important;
+}
+
+/**
+ * Styles applied to whole site
+ * Should just target elements and other global states
+ */
+
+
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #222;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  line-height: 22px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #6790ce;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+a:hover {
+  color: #a1bae1;
+}
+
+blockquote {
+  border-left: 8px solid #ccc;
+  padding-left: .625rem;
+  color: #888;
+  margin-bottom: 1.875rem;
+  margin-top: 1.875rem;
 }
 
 /**
@@ -1174,80 +1319,6 @@ th.u-isShown {
   }
 }
 
-/**
- * Styles applied to whole site
- * Should just target elements and other global states
- */
-
-
-
-* {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 1rem;
-}
-
-body {
-  background-color: #fff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #444;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 400;
-}
-
-h1 {
-  font-size: 2rem;
-  color: #222;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 1.75rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-}
-
-p {
-  line-height: 22px;
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: #6790ce;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
-}
-
-a:hover {
-  color: #a1bae1;
-}
-
-blockquote {
-  border-left: 8px solid #ccc;
-  padding-left: .625rem;
-  color: #888;
-  margin-bottom: 1.875rem;
-  margin-top: 1.875rem;
-}
-
 /** @define Container */
 
 .Container {
@@ -1294,6 +1365,21 @@ blockquote {
   margin-bottom: .9375rem;
 }
 
+/* Link utilities
+   ========================================================================== */
+
+.u-linkMuted {
+  color: #555;
+}
+
+.u-linkMuted:hover {
+  color: #111;
+}
+
+.u-linkUnderline {
+  border-bottom: 1px dotted;
+}
+
 /** @define SiteFooter */
 
 
@@ -1303,14 +1389,6 @@ blockquote {
   border-top: 1px solid #dadada;
   font-size: .875rem;
   margin-bottom: 1.25rem;
-}
-
-.SiteFooter-link {
-  color: #444;
-}
-
-.SiteFooter-link:hover {
-  color: #111;
 }
 
 .SiteFooter-copy {
@@ -1328,6 +1406,43 @@ blockquote {
   .SiteFooter-wrapProfile {
     width: 70%;
   }
+}
+
+/** @define Profile */
+
+.Profile {
+  text-align: center;
+  line-height: 1.4;
+}
+
+.Profile-avatarWrap {
+  text-align: center;
+}
+
+@media (min-width: 31.25em) {
+  .Profile--alignLeft {
+    text-align: left;
+  }
+
+  .Profile--alignLeft .Profile-avatarWrap {
+    float: left;
+    margin-top: .625rem;
+  }
+
+  .Profile--alignLeft .Profile-text {
+    margin-left: 6.875rem;
+  }
+}
+
+/** @define Avatar */
+
+
+
+.Avatar {
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  padding: .125rem;
+  display: inline-block;
 }
 
 /** @define SiteContent */
@@ -1463,19 +1578,4 @@ blockquote {
 .Logo-title {
   margin: 0;
   display: inline-block;
-}
-
-/* Link utilities
-   ========================================================================== */
-
-.u-linkMuted {
-  color: #555;
-}
-
-.u-linkMuted:hover {
-  color: #111;
-}
-
-.u-linkUnderline {
-  border-bottom: 1px dotted;
 }

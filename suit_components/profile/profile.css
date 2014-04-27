@@ -1,0 +1,26 @@
+/** @define Profile */
+
+.Profile {
+  text-align: center;
+  line-height: 1.4;
+}
+
+.Profile-avatarWrap {
+  text-align: center;
+}
+
+@media (min-width: 31.25em) {
+
+  .Profile--alignLeft {
+    text-align: left;
+  }
+
+  .Profile--alignLeft .Profile-avatarWrap {
+    float: left;
+    margin-top: .625rem;
+  }
+
+  .Profile--alignLeft .Profile-text {
+    margin-left: 6.875rem;
+  }
+}
