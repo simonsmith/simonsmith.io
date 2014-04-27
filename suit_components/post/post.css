@@ -10,6 +10,10 @@
   margin-bottom: 1.875rem;
 }
 
+.Post--snippet {
+  margin-bottom: 1.5625rem;
+}
+
 .Post-title {
   margin-bottom: .625rem;
 }
@@ -21,15 +25,32 @@
 .Post-url {
   font-weight: bold;
   margin: .3125rem 0 .625rem;
+  display: block;
 }
 
 .Post-intro {
   color: var(--alt-color-Post);
   margin: 0 0 .625rem;
+  font-style: italic;
 }
 
 .Post-header {
   margin-bottom: 2.1875rem;
+}
+
+.Post-imgContainer {
+  text-align: center;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.Post-imgElem {
+  border: 1px solid #555;
+  display: inline-block;
+}
+
+.Post-imgLink {
+  border: none !important;
 }
 
 .Post-content li {
@@ -39,6 +60,11 @@
 
 .Post-content a {
   border-bottom: 1px dotted;
+}
+
+.Post-featureImgWrap {
+  float: left;
+  margin-right: 1.125rem;
 }
 
 @media (min-width: 45.625em) {

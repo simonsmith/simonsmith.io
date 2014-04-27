@@ -1445,6 +1445,56 @@ blockquote {
   display: inline-block;
 }
 
+/* Overrides for code highlighting
+   ========================================================================== */
+
+.highlight code {
+  border: 0;
+  padding: 0;
+}
+
+pre {
+  display: block;
+  white-space: pre;
+  word-wrap: normal;
+  margin: .9375 0;
+  overflow: auto;
+  width: auto;
+  border-radius: 5px;
+}
+
+code,
+pre {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  font-size: .875rem;
+  padding: .625rem;
+}
+
+pre code {
+  border: 0;
+}
+
+code {
+  padding: 0;
+}
+
+p code {
+  padding: 0 2px;
+}
+
+/** @define FeatureImg */
+
+.FeatureImg {
+  display: block;
+  border: 1px solid #aaa;
+}
+
+.FeatureImg--banner {
+  margin: 1.25rem 0;
+}
+
 /** @define SiteContent */
 
 .SiteContent {
@@ -1459,6 +1509,10 @@ blockquote {
   margin-bottom: 1.875rem;
 }
 
+.Post--snippet {
+  margin-bottom: 1.5625rem;
+}
+
 .Post-title {
   margin-bottom: .625rem;
 }
@@ -1470,15 +1524,32 @@ blockquote {
 .Post-url {
   font-weight: bold;
   margin: .3125rem 0 .625rem;
+  display: block;
 }
 
 .Post-intro {
   color: #888;
   margin: 0 0 .625rem;
+  font-style: italic;
 }
 
 .Post-header {
   margin-bottom: 2.1875rem;
+}
+
+.Post-imgContainer {
+  text-align: center;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.Post-imgElem {
+  border: 1px solid #555;
+  display: inline-block;
+}
+
+.Post-imgLink {
+  border: none !important;
 }
 
 .Post-content li {
@@ -1488,6 +1559,11 @@ blockquote {
 
 .Post-content a {
   border-bottom: 1px dotted;
+}
+
+.Post-featureImgWrap {
+  float: left;
+  margin-right: 1.125rem;
 }
 
 @media (min-width: 45.625em) {
