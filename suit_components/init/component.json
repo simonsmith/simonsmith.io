@@ -16,7 +16,8 @@
     "post",
     "nav",
     "logo",
-    "utils-link"
+    "utils-link",
+    "utils-text"
   ],
   "paths": ["../"]
 }

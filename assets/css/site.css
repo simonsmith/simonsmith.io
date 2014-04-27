@@ -1444,6 +1444,17 @@ blockquote {
   }
 }
 
+/** @define Avatar */
+
+
+
+.Avatar {
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  padding: .125rem;
+  display: inline-block;
+}
+
 /** @define Profile */
 
 .Profile {
@@ -1468,17 +1479,6 @@ blockquote {
   .Profile--alignLeft .Profile-text {
     margin-left: 6.875rem;
   }
-}
-
-/** @define Avatar */
-
-
-
-.Avatar {
-  border-radius: 50%;
-  border: 1px solid #ddd;
-  padding: .125rem;
-  display: inline-block;
 }
 
 /* Overrides for code highlighting
@@ -1520,17 +1520,6 @@ p code {
   padding: 0 2px;
 }
 
-/** @define FeatureImg */
-
-.FeatureImg {
-  display: block;
-  border: 1px solid #aaa;
-}
-
-.FeatureImg--banner {
-  margin: 1.25rem 0;
-}
-
 /** @define Job */
 
 
@@ -1560,6 +1549,17 @@ p code {
 .Job-dates,
 .Job-url {
   font-size: .875rem;
+}
+
+/** @define FeatureImg */
+
+.FeatureImg {
+  display: block;
+  border: 1px solid #aaa;
+}
+
+.FeatureImg--banner {
+  margin: 1.25rem 0;
 }
 
 /** @define Skill */
@@ -1739,4 +1739,11 @@ p code {
 .Logo-title {
   margin: 0;
   display: inline-block;
+}
+
+/* Text utils unique to the site
+   ========================================================================== */
+
+.u-textLead {
+  font-size: 1.25rem;
 }
