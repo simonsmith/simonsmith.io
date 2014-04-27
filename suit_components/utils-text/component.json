@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "simonsmith/suitcss-utils-text": "*"
+  },
+  "styles": ["text.css"]
+}

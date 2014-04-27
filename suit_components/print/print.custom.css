@@ -1,0 +1,11 @@
+/**
+* Print Custom
+* Overrides default print stylesheet with site specific styles
+*/
+
+@media print {
+  .Profile,
+  .Nav {
+    display: none;
+  }
+}

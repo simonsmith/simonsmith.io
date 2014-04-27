@@ -1,0 +1,60 @@
+/**
+* base
+*/
+:root {
+  --link-color-base: var(--color-blue);
+  --link-hover-base: var(--color-light-blue);
+  --color-body-base: var(--color-charcoal);
+}
+
+/**
+ * site content
+ */
+:root {
+  --background-color-SiteContent: var(--color-faint-gray);
+}
+
+/**
+ * site header
+ */
+:root {
+  --border-color-SiteHeader: var(--color-border-gray);
+}
+
+/**
+ * site footer
+ */
+:root {
+  --border-color-SiteFooter: var(--color-border-gray);
+}
+
+/**
+ * job
+ */
+:root {
+  --color-role-Job: var(--color-medium-gray);
+  --color-dates-Job: var(--color-medium-gray);
+}
+
+/**
+ * logo
+ */
+:root {
+  --subtitle-color-Logo: var(--color-medium-gray);
+}
+
+/**
+ * nav
+ */
+:root {
+  --border-color-Nav: var(--color-border-gray);
+  --highlight-Nav: var(--color-purple);
+  --highlight-hover-Nav: var(--color-light-purple);
+}
+
+/**
+ * post
+ */
+:root {
+  --alt-color-Post: var(--color-medium-gray);
+}

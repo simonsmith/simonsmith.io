@@ -3,9 +3,10 @@ exclude: [
   'Gruntfile.js',
   'package.json',
   'bower.json',
-  'sass',
-  'sass-compiled.css',
   'bower_components',
+  'suit_components',
+  'components',
+  'component.json',
   'README.md'
   ]
 

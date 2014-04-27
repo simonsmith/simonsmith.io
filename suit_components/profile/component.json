@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "suitcss/utils-layout": "*"
+  },
+  "locals": ["utils-link"],
+  "styles": ["profile.css"]
+}

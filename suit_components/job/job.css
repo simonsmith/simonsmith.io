@@ -1,0 +1,33 @@
+/** @define Job */
+
+:root {
+  --color-role-Job: #000;
+  --color-dates-Job: #000;
+}
+
+.Job {
+  margin-bottom: 1.875rem;
+}
+
+.Job-header {
+  margin-bottom: 1.25rem;
+}
+
+.Job-role {
+  color: var(--color-role-Job);
+}
+
+.Job-title {
+  margin: 0 0 .3125rem;
+}
+
+.Job-dates {
+  margin: .3125rem 0 0;
+  color: var(--color-dates-Job);
+  font-style: italic;
+}
+
+.Job-dates,
+.Job-url {
+  font-size: .875rem;
+}

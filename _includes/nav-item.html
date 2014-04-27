@@ -4,6 +4,6 @@
         {% assign current = 'is-current' %}
     {% endif %}
     <li class="Nav-listItem {{ current }}">
-        <a href="{{ navItem.url }}">{{ navItem.text }}</a>
+        <a class="u-linkMuted" href="{{ navItem.url }}">{{ navItem.text }}</a>
     </li>
 {% endfor %}

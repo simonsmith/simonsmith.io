@@ -1,0 +1,50 @@
+/** @define Nav */
+
+:root {
+  --highlight-Nav: #444;
+  --highlight-hover-Nav: #888;
+  --border-color-Nav: #000;
+}
+
+.Nav {
+  text-transform: lowercase;
+}
+
+.Nav-list {
+  margin: 0;
+}
+
+.Nav-listItem {
+  display: inline-block;
+  margin-left: .9375rem;
+}
+
+.Nav-listItem:first-child {
+  margin-left: 0;
+}
+
+.Nav-listItem > a {
+  display: block;
+  padding-bottom: .625rem;
+  text-decoration: none;
+}
+
+.Nav-listItem.is-current > a {
+  color: var(--highlight-Nav);
+}
+
+.Nav-listItem > a:hover {
+color: var(--highlight-hover-Nav);
+}
+
+.Nav-listItem.is-current::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  border-width: 0 6px 6px;
+  border-color: transparent transparent var(--border-color-Nav);
+  border-style: solid;
+  text-align: center;
+  content: "";
+}

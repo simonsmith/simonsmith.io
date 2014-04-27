@@ -1,0 +1,26 @@
+{
+  "local": [
+    "base",
+    "print",
+    "container",
+    "contact",
+    "header",
+    "footer",
+    "profile",
+    "avatar",
+    "highlight",
+    "feature-img",
+    "job",
+    "skill",
+    "content",
+    "post",
+    "nav",
+    "logo",
+
+    "utils-link",
+    "utils-text",
+
+    "theme"
+  ],
+  "paths": ["../"]
+}
