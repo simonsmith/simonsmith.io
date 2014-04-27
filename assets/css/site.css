@@ -926,6 +926,17 @@ th {
   margin-left: 0;
 }
 
+/**
+ * Display definition lists inline
+ */
+
+.u-dlInline dt,
+.u-dlInline dd {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 3px;
+}
+
 /* Standard lists
    ========================================================================== */
 
@@ -1163,6 +1174,31 @@ th.u-isShown {
 
 .u-isVisible {
   visibility: visible !important;
+}
+
+/**
+ * utils-text
+ * In addition to those found in suitcss/utils-text
+ */
+
+.u-textLower {
+  text-transform: lowercase;
+}
+
+.u-textUpper {
+  text-transform: uppercase;
+}
+
+/**
+* Image replacement
+*/
+
+.u-textHide {
+  font: "0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 /**
@@ -1493,6 +1529,55 @@ p code {
 
 .FeatureImg--banner {
   margin: 1.25rem 0;
+}
+
+/** @define Job */
+
+
+
+.Job {
+  margin-bottom: 1.875rem;
+}
+
+.Job-header {
+  margin-bottom: 1.25rem;
+}
+
+.Job-role {
+  color: #888;
+}
+
+.Job-title {
+  margin: 0 0 .3125rem;
+}
+
+.Job-dates {
+  margin: .3125rem 0 0;
+  color: #888;
+  font-style: italic;
+}
+
+.Job-dates,
+.Job-url {
+  font-size: .875rem;
+}
+
+/** @define Skill */
+
+
+
+.Skill {
+  list-style-type: none;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  padding: .1875rem .375rem;
+  border-radius: 3px;
+}
+
+.Skill--inline {
+  margin-bottom: .3125rem;
+  display: inline-block;
+  margin-right: .3125rem;
 }
 
 /** @define SiteContent */

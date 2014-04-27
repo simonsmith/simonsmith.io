@@ -1,0 +1,20 @@
+/** @define Skill */
+
+:root {
+  --background-color-Skill: #eee;
+  --border-color-Skill: #ccc;
+}
+
+.Skill {
+  list-style-type: none;
+  border: 1px solid var(--border-color-Skill);
+  background-color: var(--background-color-Skill);
+  padding: .1875rem .375rem;
+  border-radius: 3px;
+}
+
+.Skill--inline {
+  margin-bottom: .3125rem;
+  display: inline-block;
+  margin-right: .3125rem;
+}
