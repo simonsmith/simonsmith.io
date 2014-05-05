@@ -2,5 +2,9 @@
   "dependencies": {
     "suitcss/utils-text": "*"
   },
-  "styles": ["header.css"]
+  "styles": ["header.css"],
+  "local": [
+    "nav",
+    "logo"
+  ]
 }

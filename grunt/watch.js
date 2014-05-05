@@ -2,10 +2,7 @@ module.exports = function(grunt) {
   grunt.config('watch', {
     css: {
       files: 'suit_components/**/*.*',
-      tasks: ['css'],
-      options: {
-        spawn: false
-      }
+      tasks: ['css']
     },
     html: {
       files: [

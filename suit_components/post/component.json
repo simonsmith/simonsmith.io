@@ -1,3 +1,7 @@
 {
-  "styles": ["post.css"]
+  "styles": ["post.css"],
+  "local": [
+    "feature-img",
+    "highlight"
+  ]
 }

@@ -7,7 +7,8 @@ exclude: [
   'suit_components',
   'components',
   'component.json',
-  'README.md'
+  'README.md',
+  'grunt'
   ]
 
 permalink: /:year/:title.html

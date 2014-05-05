@@ -2,6 +2,10 @@
   "dependencies": {
     "suitcss/utils-text": "*"
   },
-  "locals": ["utils-link"],
+  "locals": [
+    "profile",
+    "container",
+    "utils-link"
+  ],
   "styles": ["footer.css"]
 }

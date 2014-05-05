@@ -10,20 +10,7 @@
     <link href="/assets/css/site.css?v={{ site.time | date:"%Y%M%S" }}" rel="stylesheet">
   </head>
   <body>
-  <header class="SiteHeader u-textCenter" role="banner">
-    <div class="SiteHeader-wrapLogo">
-      <a class="Logo" href="/">
-        <p class="Logo-title">Simon Smith</p>
-        <p class="Logo-subtitle">Front-end developer</p>
-      </a>
-    </div>
-    <nav class="Nav" role="navigation">
-      <p class="u-isHiddenVisually">Site navigation</p>
-      <ul class="Nav-list u-listUnstyled">
-        {% include nav-item.html %}
-      </ul>
-    </nav>
-  </header>
+  {% include header.html %}
 
   <main role="main">
     <div class="SiteContent">
@@ -33,18 +20,7 @@
     </div>
   </main>
 
-  <footer class="SiteFooter" role="contentinfo">
-    <div class="Container u-pVZ">
-      <div class="SiteFooter-wrapProfile">
-        {% include profile.html %}
-      </div>
-      <p class="SiteFooter-copy u-textCenter">Simon Smith {{ site.time | date:"%Y" }} &bull; Built with
-        <a class="SiteFooter-link u-linkMuted u-linkUnderline" href="http://jekyllrb.com">Jekyll</a> wearing a
-        <a class="SiteFooter-link u-linkMuted u-linkUnderline" href="https://github.com/suitcss">Suit</a> &bull; View the sauce
-        <a class="SiteFooter-link u-linkMuted u-linkUnderline" href="https://github.com/simonsmith/simonsmith.io">on GitHub</a>
-      </p>
-    </div>
-  </footer>
+  {% include footer.html %}
 
   <script>
     var _gaq = _gaq || [];

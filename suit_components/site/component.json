@@ -1,0 +1,14 @@
+{
+  "local": [
+    "base",
+    "print",
+    "header",
+    "footer",
+    "content",
+    "cv",
+    "contact",
+    "post",
+    "theme"
+  ],
+  "paths": ["../"]
+}

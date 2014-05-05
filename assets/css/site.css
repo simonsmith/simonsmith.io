@@ -812,6 +812,271 @@ th {
   color: #009999;
 }
 
+/*! suit-utils-text v0.3.0 | MIT License | github.com/suitcss */
+
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
+
+.u-textBreak {
+  word-wrap: break-word !important;
+}
+
+/**
+ * Horizontal text alignment
+ */
+
+.u-textCenter {
+  text-align: center !important;
+}
+
+.u-textLeft {
+  text-align: left !important;
+}
+
+.u-textRight {
+  text-align: right !important;
+}
+
+/**
+ * Inherit the ancestor's text color.
+ */
+
+.u-textInheritColor {
+  color: inherit !important;
+}
+
+/**
+ * Prevent whitespace wrapping
+ */
+
+.u-textNoWrap {
+  white-space: nowrap !important;
+}
+
+/**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+.u-textTruncate {
+  max-width: 100%;
+  /* 1 */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+  /* 2 */
+}
+
+/**
+ * Indicate that interaction will result in an (in)action.
+ */
+
+.u-isActionable {
+  cursor: pointer !important;
+}
+
+.u-isDisabled {
+  cursor: default !important;
+}
+
+.u-isDraggable {
+  cursor: move !important;
+}
+
+/**
+ * Completely remove from the flow and screen readers.
+ */
+
+.u-isHidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/**
+ * Display a hidden-by-default element.
+ */
+
+.u-isShown {
+  display: block !important;
+  visibility: visible !important;
+}
+
+table.u-isShown {
+  display: table !important;
+}
+
+tr.u-isShown,
+tr.u-isShown {
+  display: table-row !important;
+}
+
+td.u-isShown,
+th.u-isShown {
+  display: table-cell !important;
+}
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+
+.u-isHiddenVisually {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}
+
+/**
+ * Control visibility without affecting flow.
+ */
+
+.u-isInvisible {
+  visibility: hidden !important;
+}
+
+.u-isVisible {
+  visibility: visible !important;
+}
+
+/**
+ * utils-list
+ */
+
+/* Definition lists
+   ========================================================================== */
+
+/**
+ * Remove default styling
+ */
+
+.u-dlUnstyled > dd {
+  margin-left: 0;
+}
+
+/**
+ * Display definition lists inline
+ */
+
+.u-dlInline dt,
+.u-dlInline dd {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 3px;
+}
+
+/* Standard lists
+   ========================================================================== */
+
+/**
+ * Remove default styling
+ */
+
+.u-listUnstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+/**
+ * Display list items inline
+ **/
+
+.u-listInline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+
+.u-listInline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+/**
+ * Contain floats
+ *
+ * Make an element expand to contain floated children.
+ * Uses pseudo-elements (micro clearfix).
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of the
+ *    element.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.u-cf:before,
+.u-cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.u-cf:after {
+  clear: both;
+}
+
+/**
+ * New block formatting context
+ *
+ * This affords some useful properties to the element. It won't wrap under
+ * floats. Will also contain any floated children.
+
+ * N.B. This will clip overflow. Use the alternative method below if this is
+ * problematic.
+ */
+
+.u-nbfc {
+  overflow: hidden !important;
+}
+
+/**
+ * New block formatting context (alternative)
+ *
+ * Alternative method when overflow must not be clipped.
+ *
+ * 1. Create a new block formatting context (NBFC).
+ * 2. Avoid shrink-wrap behaviour of table-cell.
+ *
+ * N.B. This breaks down in some browsers when elements within this element
+ * exceed its width.
+ */
+
+.u-nbfcAlt {
+  display: table-cell !important;
+  /* 1 */
+  width: 10000px !important;
+  /* 2 */
+}
+
+/**
+ * Floats
+ */
+
+.u-pullLeft {
+  float: left !important;
+}
+
+.u-pullRight {
+  float: right !important;
+}
+
 /* ==========================================================================
    Spacing utilities
    ========================================================================== */
@@ -909,271 +1174,6 @@ th {
 .u-pVZ {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-}
-
-/**
- * utils-list
- */
-
-/* Definition lists
-   ========================================================================== */
-
-/**
- * Remove default styling
- */
-
-.u-dlUnstyled > dd {
-  margin-left: 0;
-}
-
-/**
- * Display definition lists inline
- */
-
-.u-dlInline dt,
-.u-dlInline dd {
-  display: inline-block;
-  margin-left: 0;
-  margin-right: 3px;
-}
-
-/* Standard lists
-   ========================================================================== */
-
-/**
- * Remove default styling
- */
-
-.u-listUnstyled {
-  padding-left: 0;
-  list-style: none;
-}
-
-/**
- * Display list items inline
- **/
-
-.u-listInline {
-  padding-left: 0;
-  margin-left: -5px;
-  list-style: none;
-}
-
-.u-listInline > li {
-  display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
-/*! suit-utils-text v0.3.0 | MIT License | github.com/suitcss */
-
-/**
- * Word breaking
- *
- * Break strings when their length exceeds the width of their container.
- */
-
-.u-textBreak {
-  word-wrap: break-word !important;
-}
-
-/**
- * Horizontal text alignment
- */
-
-.u-textCenter {
-  text-align: center !important;
-}
-
-.u-textLeft {
-  text-align: left !important;
-}
-
-.u-textRight {
-  text-align: right !important;
-}
-
-/**
- * Inherit the ancestor's text color.
- */
-
-.u-textInheritColor {
-  color: inherit !important;
-}
-
-/**
- * Prevent whitespace wrapping
- */
-
-.u-textNoWrap {
-  white-space: nowrap !important;
-}
-
-/**
- * Text truncation
- *
- * Prevent text from wrapping onto multiple lines, and truncate with an
- * ellipsis.
- *
- * 1. Ensure that the node has a maximum width after which truncation can
- *    occur.
- * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
- *    nodes.
- */
-
-.u-textTruncate {
-  max-width: 100%;
-  /* 1 */
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  word-wrap: normal !important;
-  /* 2 */
-}
-
-/**
- * Contain floats
- *
- * Make an element expand to contain floated children.
- * Uses pseudo-elements (micro clearfix).
- *
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of the
- *    element.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.u-cf:before,
-.u-cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.u-cf:after {
-  clear: both;
-}
-
-/**
- * New block formatting context
- *
- * This affords some useful properties to the element. It won't wrap under
- * floats. Will also contain any floated children.
-
- * N.B. This will clip overflow. Use the alternative method below if this is
- * problematic.
- */
-
-.u-nbfc {
-  overflow: hidden !important;
-}
-
-/**
- * New block formatting context (alternative)
- *
- * Alternative method when overflow must not be clipped.
- *
- * 1. Create a new block formatting context (NBFC).
- * 2. Avoid shrink-wrap behaviour of table-cell.
- *
- * N.B. This breaks down in some browsers when elements within this element
- * exceed its width.
- */
-
-.u-nbfcAlt {
-  display: table-cell !important;
-  /* 1 */
-  width: 10000px !important;
-  /* 2 */
-}
-
-/**
- * Floats
- */
-
-.u-pullLeft {
-  float: left !important;
-}
-
-.u-pullRight {
-  float: right !important;
-}
-
-/**
- * Indicate that interaction will result in an (in)action.
- */
-
-.u-isActionable {
-  cursor: pointer !important;
-}
-
-.u-isDisabled {
-  cursor: default !important;
-}
-
-.u-isDraggable {
-  cursor: move !important;
-}
-
-/**
- * Completely remove from the flow and screen readers.
- */
-
-.u-isHidden {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-/**
- * Display a hidden-by-default element.
- */
-
-.u-isShown {
-  display: block !important;
-  visibility: visible !important;
-}
-
-table.u-isShown {
-  display: table !important;
-}
-
-tr.u-isShown,
-tr.u-isShown {
-  display: table-row !important;
-}
-
-td.u-isShown,
-th.u-isShown {
-  display: table-cell !important;
-}
-
-/**
- * Completely remove from the flow but leave available to screen readers.
- */
-
-.u-isHiddenVisually {
-  position: absolute !important;
-  overflow: hidden !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-}
-
-/**
- * Control visibility without affecting flow.
- */
-
-.u-isInvisible {
-  visibility: hidden !important;
-}
-
-.u-isVisible {
-  visibility: visible !important;
 }
 
 /**
@@ -1355,34 +1355,93 @@ blockquote {
   }
 }
 
-/** @define Container */
+/** @define Logo */
 
-.Container {
+
+
+.Logo {
+  display: inline-block;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: inherit;
+}
+
+.Logo-title {
+  font-size: 1.625rem;
+  font-weight: 300;
+}
+
+.Logo-subtitle {
+  color: #888;
+  font-size: .875rem;
+}
+
+.Logo-subtitle,
+.Logo-title {
+  margin: 0;
+  display: inline-block;
+}
+
+/* Link utilities
+   ========================================================================== */
+
+.u-linkMuted {
+  color: #555;
+}
+
+.u-linkMuted:hover {
+  color: #111;
+}
+
+.u-linkUnderline {
+  border-bottom: 1px dotted;
+}
+
+/** @define Nav */
+
+
+
+.Nav {
+  text-transform: lowercase;
+}
+
+.Nav-list {
+  margin: 0;
+}
+
+.Nav-listItem {
+  display: inline-block;
+  margin-left: .9375rem;
+}
+
+.Nav-listItem:first-child {
+  margin-left: 0;
+}
+
+.Nav-listItem > a {
+  display: block;
+  padding-bottom: .625rem;
+  text-decoration: none;
+}
+
+.Nav-listItem.is-current > a {
+  color: #8d22bc;
+}
+
+.Nav-listItem > a:hover {
+  color: #691887;
+}
+
+.Nav-listItem.is-current::after {
+  display: block;
+  width: 0;
+  height: 0;
   margin: 0 auto;
-  width: 95%;
-  max-width: 860px;
-  padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
-}
-
-@media (min-width: 37.5em) {
-  .Container {
-    width: 80%;
-  }
-}
-
-/** @define Contact */
-
-.Contact-type {
-  font-size: 1.75rem;
-}
-
-.Contact-linkWrap {
-  margin-bottom: 1.25rem;
-}
-
-.Contact-link {
-  font-size: 1.125rem;
+  border-width: 0 6px 6px;
+  border-color: transparent transparent #dadada;
+  border-style: solid;
+  text-align: center;
+  content: "";
 }
 
 /** @define SiteHeader */
@@ -1401,19 +1460,57 @@ blockquote {
   margin-bottom: .9375rem;
 }
 
-/* Link utilities
-   ========================================================================== */
+/** @define Avatar */
 
-.u-linkMuted {
-  color: #555;
+
+
+.Avatar {
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  padding: .125rem;
+  display: inline-block;
 }
 
-.u-linkMuted:hover {
-  color: #111;
+/** @define Profile */
+
+.Profile {
+  text-align: center;
+  line-height: 1.4;
 }
 
-.u-linkUnderline {
-  border-bottom: 1px dotted;
+.Profile-avatarWrap {
+  text-align: center;
+}
+
+@media (min-width: 31.25em) {
+  .Profile--alignLeft {
+    text-align: left;
+  }
+
+  .Profile--alignLeft .Profile-avatarWrap {
+    float: left;
+    margin-top: .625rem;
+  }
+
+  .Profile--alignLeft .Profile-text {
+    margin-left: 6.875rem;
+  }
+}
+
+/** @define Container */
+
+.Container {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 860px;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+
+@media (min-width: 37.5em) {
+  .Container {
+    width: 80%;
+  }
 }
 
 /** @define SiteFooter */
@@ -1444,91 +1541,12 @@ blockquote {
   }
 }
 
-/** @define Profile */
-
-.Profile {
-  text-align: center;
-  line-height: 1.4;
-}
-
-.Profile-avatarWrap {
-  text-align: center;
-}
-
-@media (min-width: 31.25em) {
-  .Profile--alignLeft {
-    text-align: left;
-  }
-
-  .Profile--alignLeft .Profile-avatarWrap {
-    float: left;
-    margin-top: .625rem;
-  }
-
-  .Profile--alignLeft .Profile-text {
-    margin-left: 6.875rem;
-  }
-}
-
-/** @define Avatar */
+/** @define SiteContent */
 
 
 
-.Avatar {
-  border-radius: 50%;
-  border: 1px solid #ddd;
-  padding: .125rem;
-  display: inline-block;
-}
-
-/* Overrides for code highlighting
-   ========================================================================== */
-
-.highlight code {
-  border: 0;
-  padding: 0;
-}
-
-pre {
-  display: block;
-  white-space: pre;
-  word-wrap: normal;
-  margin: .9375 0;
-  overflow: auto;
-  width: auto;
-  border-radius: 5px;
-}
-
-code,
-pre {
-  font-family: Monaco, Consolas, "Lucida Console", monospace;
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
-  font-size: .875rem;
-  padding: .625rem;
-}
-
-pre code {
-  border: 0;
-}
-
-code {
-  padding: 0;
-}
-
-p code {
-  padding: 0 2px;
-}
-
-/** @define FeatureImg */
-
-.FeatureImg {
-  display: block;
-  border: 1px solid #aaa;
-}
-
-.FeatureImg--banner {
-  margin: 1.25rem 0;
+.SiteContent {
+  background-color: #f9f9f9;
 }
 
 /** @define Job */
@@ -1580,12 +1598,75 @@ p code {
   margin-right: .3125rem;
 }
 
-/** @define SiteContent */
+/* Text utils unique to the site
+   ========================================================================== */
 
+.u-textLead {
+  font-size: 1.25rem;
+}
 
+/** @define Contact */
 
-.SiteContent {
-  background-color: #f9f9f9;
+.Contact-type {
+  font-size: 1.75rem;
+}
+
+.Contact-linkWrap {
+  margin-bottom: 1.25rem;
+}
+
+.Contact-link {
+  font-size: 1.125rem;
+}
+
+/** @define FeatureImg */
+
+.FeatureImg {
+  display: block;
+  border: 1px solid #aaa;
+}
+
+.FeatureImg--banner {
+  margin: 1.25rem 0;
+}
+
+/* Overrides for code highlighting
+   ========================================================================== */
+
+.highlight code {
+  border: 0;
+  padding: 0;
+}
+
+pre {
+  display: block;
+  white-space: pre;
+  word-wrap: normal;
+  margin: .9375 0;
+  overflow: auto;
+  width: auto;
+  border-radius: 5px;
+}
+
+code,
+pre {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  font-size: .875rem;
+  padding: .625rem;
+}
+
+pre code {
+  border: 0;
+}
+
+code {
+  padding: 0;
+}
+
+p code {
+  padding: 0 2px;
 }
 
 /** @define Post */
@@ -1666,87 +1747,6 @@ p code {
   .Post--snippet:nth-child(odd) {
     clear: left;
   }
-}
-
-/** @define Nav */
-
-
-
-.Nav {
-  text-transform: lowercase;
-}
-
-.Nav-list {
-  margin: 0;
-}
-
-.Nav-listItem {
-  display: inline-block;
-  margin-left: .9375rem;
-}
-
-.Nav-listItem:first-child {
-  margin-left: 0;
-}
-
-.Nav-listItem > a {
-  display: block;
-  padding-bottom: .625rem;
-  text-decoration: none;
-}
-
-.Nav-listItem.is-current > a {
-  color: #8d22bc;
-}
-
-.Nav-listItem > a:hover {
-  color: #691887;
-}
-
-.Nav-listItem.is-current::after {
-  display: block;
-  width: 0;
-  height: 0;
-  margin: 0 auto;
-  border-width: 0 6px 6px;
-  border-color: transparent transparent #dadada;
-  border-style: solid;
-  text-align: center;
-  content: "";
-}
-
-/** @define Logo */
-
-
-
-.Logo {
-  display: inline-block;
-  text-transform: lowercase;
-  text-decoration: none;
-  color: inherit;
-}
-
-.Logo-title {
-  font-size: 1.625rem;
-  font-weight: 300;
-}
-
-.Logo-subtitle {
-  color: #888;
-  font-size: .875rem;
-}
-
-.Logo-subtitle,
-.Logo-title {
-  margin: 0;
-  display: inline-block;
-}
-
-/* Text utils unique to the site
-   ========================================================================== */
-
-.u-textLead {
-  font-size: 1.25rem;
 }
 
 /**

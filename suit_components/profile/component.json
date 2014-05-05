@@ -2,6 +2,9 @@
   "dependencies": {
     "suitcss/utils-layout": "*"
   },
-  "locals": ["utils-link"],
+  "locals": [
+    "avatar",
+    "utils-link"
+  ],
   "styles": ["profile.css"]
 }

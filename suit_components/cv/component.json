@@ -1,10 +1,12 @@
 {
   "dependencies": {
     "suitcss/utils-state": "*",
+    "simonsmith/suitcss-utils-text": "*",
     "simonsmith/suitcss-utils-list": "*"
   },
-  "styles": ["nav.css"],
   "local": [
-    "utils-link"
+    "job",
+    "skill",
+    "utils-text"
   ]
 }
