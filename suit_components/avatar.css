@@ -7,7 +7,7 @@
 .Avatar {
   border-radius: 50%;
   border: 1px solid var(--border-color-Avatar);
-  padding: .125rem;
+  padding: calc(2 / 16 + 0rem);
   display: inline-block;
   width: 90px;
 }
