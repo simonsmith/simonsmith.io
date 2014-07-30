@@ -1,0 +1,26 @@
+/** @define Profile */
+
+@css {
+  @import './avatar';
+}
+
+Profile-background-color = #fff
+
+@require './functions'
+@require './theme'
+
+.Profile {}
+
+.Profile
+  > p
+    margin: 0
+
+.Profile-wrapAvatar
+  text-align: center
+
+.Profile-text
+  font-size: rem(14)
+
+@media (--md-viewport)
+  .Profile
+    padding: rem(10)

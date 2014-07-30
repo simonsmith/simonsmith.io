@@ -1,0 +1,25 @@
+/** @define Header */
+
+@css {
+  @import './nav';
+  @import './logo';
+}
+
+Header-border-color = #eee
+
+@require './functions'
+@require './theme'
+
+.Header
+  border-bottom: 1px solid Header-border-color
+  padding-bottom: rem(10)
+
+.Header-wrapLogo
+  margin-bottom: rem(10)
+
+@media (--md-viewport)
+  .Header
+    padding-bottom: 0
+
+  .Header-wrapLogo
+    margin-bottom: 0

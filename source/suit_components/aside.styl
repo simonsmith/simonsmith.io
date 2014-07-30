@@ -1,0 +1,30 @@
+/** @define Aside */
+
+@css {
+  @import './profile';
+}
+
+Aside-background-color = #fff
+Aside-border-color =     #ddd
+Aside-border-radius = 5px
+
+@require './functions'
+@require './theme'
+
+.Aside {}
+
+.Aside--roundBtm
+  border-bottom-left-radius: Aside-border-radius
+  border-bottom-right-radius: Aside-border-radius
+
+.Aside-item--shiftUp
+  margin-top: -1px
+
+.Aside--item--innerPadTop
+  padding-top: rem(15)
+
+@media (--md-viewport)
+  .Aside
+    background-color: Aside-background-color
+    border: 1px solid Aside-border-color
+    border-top: 0

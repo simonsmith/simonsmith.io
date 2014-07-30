@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= current_page.data.title || 'Blog' %> &ndash; simonsmith.io &ndash; Portfolio and blog of a London based front-end web developer</title>
+    <%= stylesheet_link_tag 'site' %>
+  </head>
+  <body>
+      <%= partial 'header' %>
+      <main class="Container" role="main">
+        <div class="Grid Grid--withGutter u-cf">
+          <div class="Grid-cell u-md-size9of12 u-floatRight">
+            <div class="Content">
+              <h1><%= lorem.sentence %></h1>
+              <p><%= lorem.paragraph %></p>
+              <p><%= lorem.paragraph %></p>
+              <p><%= lorem.paragraph %></p>
+            </div>
+          </div>
+          <div class="Grid-cell u-md-size3of12 u-floatLeft">
+            <div class="Aside Aside--roundBtm">
+              <div class="Aside-item Aside-item--shiftUp Aside--item--innerPadTop">
+                <%= partial 'profile' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+  </body>
+</html>

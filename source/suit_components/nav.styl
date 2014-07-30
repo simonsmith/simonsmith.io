@@ -1,0 +1,29 @@
+/** @define Nav */
+
+@require './functions'
+
+@css {
+  @import 'suitcss-utils-display';
+  @import 'suit-utils-list';
+}
+
+.Nav
+  text-align: center
+  text-transform: lowercase
+
+.Nav-list
+  margin: 0
+
+.Nav-item
+  display: inline-block
+  margin-right: rem(10)
+
+  &:last-child
+    margin-right: 0
+
+  > a
+    color: inherit
+
+@media (--md-viewport)
+  .Nav
+    text-align: right

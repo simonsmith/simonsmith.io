@@ -1,9 +1,0 @@
-/** @define SiteContent */
-
-:root {
-  --background-color-SiteContent: #fff;
-}
-
-.SiteContent {
-  background-color: var(--background-color-SiteContent);
-}

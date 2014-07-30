@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "necolas/normalize.css": "*",
-    "simonsmith/syntax.css": "*"
-  },
-  "styles": [
-    "global.css"
-  ]
-}

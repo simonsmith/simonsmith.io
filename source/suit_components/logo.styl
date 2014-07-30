@@ -1,0 +1,32 @@
+/** @define Logo */
+
+Logo-background-color = #fff
+Logo-border-color =     #ddd
+
+@require './functions'
+@require './theme'
+
+.Logo
+  text-align: center
+  display: block
+  color: inherit
+  font-family: 'Yanone Kaffeesatz', 'sans-serif'
+
+.Logo-title
+  font-size: rem(32)
+  margin: 0
+
+.Logo-subtitle
+  margin: 0
+  font-size: rem(18)
+  text-transform: lowercase
+
+@media (--md-viewport)
+  .Logo
+    background-color: Logo-background-color
+    border-right: 1px solid Logo-border-color
+    border-left: 1px solid Logo-border-color
+    padding: rem(5)
+
+  .Logo-subtitle, .Logo-title
+    display: inline-block
