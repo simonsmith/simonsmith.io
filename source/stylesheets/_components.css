@@ -2276,7 +2276,7 @@ img {
   }
 }
 
-/** @define Container */
+/** @define Container; use strict */
 
 /**
  * Contain floats
@@ -2355,9 +2355,9 @@ img {
   max-width: 980px;
 }
 
-/** @define Header */
+/** @define Header; use strict */
 
-/** @define Nav */
+/** @define Nav; use strict */
 
 /**
  * Display-type utilities
@@ -2495,7 +2495,7 @@ img {
   }
 }
 
-/** @define Logo */
+/** @define Logo; use strict */
 
 .Logo {
   text-align: center;
@@ -2548,11 +2548,11 @@ img {
   }
 }
 
-/** @define Aside */
+/** @define Aside; use strict */
 
-/** @define Profile */
+/** @define Profile; use strict */
 
-/** @define Avatar */
+/** @define Avatar; use strict */
 
 /**
  * Image utilties
