@@ -7,15 +7,18 @@
   </head>
   <body>
       <%= partial 'header' %>
-      <main class="Container" role="main">
+      <main class="Container Container--main" role="main">
         <div class="Grid Grid--withGutter u-cf">
           <div class="Grid-cell u-md-size9of12 u-floatRight">
-            <div class="Content">
               <h1><%= lorem.sentence %></h1>
               <p><%= lorem.paragraph %></p>
               <p><%= lorem.paragraph %></p>
               <p><%= lorem.paragraph %></p>
-            </div>
+              <p><%= lorem.paragraph %></p>
+              <p><%= lorem.paragraph %></p>
+              <p><%= lorem.paragraph %></p>
+              <p><%= lorem.paragraph %></p>
+              <p><%= lorem.paragraph %></p>
           </div>
           <div class="Grid-cell u-md-size3of12 u-floatLeft">
             <div class="Aside Aside--roundBtm">
@@ -26,5 +29,6 @@
           </div>
         </div>
       </main>
+      <%= partial 'footer' %>
   </body>
 </html>
