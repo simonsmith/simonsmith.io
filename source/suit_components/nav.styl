@@ -1,11 +1,12 @@
 /** @define Nav; use strict */
 
-@require "./functions"
-
 @css {
   @import "suitcss-utils-display";
   @import "suit-utils-list";
+  @import "./utils/link";
 }
+
+@require "./functions"
 
 .Nav
   text-align: center
@@ -20,9 +21,6 @@
 
   &:last-child
     margin-right: 0
-
-  > a
-    color: inherit
 
 @media (--md-viewport)
   .Nav

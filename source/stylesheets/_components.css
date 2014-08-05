@@ -2471,6 +2471,21 @@ img {
   padding-left: 5px;
 }
 
+/* Link utilities
+   ========================================================================== */
+
+.u-linkMuted {
+  color: #444;
+}
+
+.u-linkMuted:hover {
+  color: #888;
+}
+
+.u-linkUnderline {
+  border-bottom: 1px dotted;
+}
+
 .Nav {
   text-align: center;
   text-transform: lowercase;
@@ -2487,10 +2502,6 @@ img {
 
 .Nav-item:last-child {
   margin-right: 0;
-}
-
-.Nav-item > a {
-  color: inherit;
 }
 
 @media (min-width: 49.375em) {
@@ -2637,21 +2648,6 @@ img {
 }
 
 /** @define Footer; use strict */
-
-/* Link utilities
-   ========================================================================== */
-
-.u-linkMuted {
-  color: #444;
-}
-
-.u-linkMuted:hover {
-  color: #ac6cae;
-}
-
-.u-linkUnderline {
-  border-bottom: 1px dotted;
-}
 
 .Footer {
   border-top: 1px solid #eee;
