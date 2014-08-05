@@ -2256,7 +2256,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   color: #444;
 }
 
@@ -2505,7 +2505,7 @@ img {
   text-align: center;
   display: block;
   color: inherit;
-  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-family: "Yanone Kaffeesatz", "sans-serif";
 }
 
 .Logo-title {
