@@ -1,13 +1,15 @@
 /* Link utilities
    ========================================================================== */
 
-link-muted-color = #555
+@require './theme'
+
+link-muted-color = color-charcoal
 
 .u-linkMuted
   color: link-muted-color
 
   &:hover
-    color: darken(link-muted-color, 50%)
+    color: color-pink
 
 .u-linkUnderline {
   border-bottom: 1px dotted;

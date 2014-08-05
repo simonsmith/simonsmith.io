@@ -2642,11 +2642,11 @@ img {
    ========================================================================== */
 
 .u-linkMuted {
-  color: #555;
+  color: #444;
 }
 
 .u-linkMuted:hover {
-  color: #2a2a2a;
+  color: #ac6cae;
 }
 
 .u-linkUnderline {
