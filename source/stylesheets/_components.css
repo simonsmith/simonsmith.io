@@ -2579,6 +2579,7 @@ img {
 
 .Avatar {
   border: 1px solid #ccc;
+  background-color: #fff;
   padding: 0.125rem;
   width: 90px;
   display: inline-block;
