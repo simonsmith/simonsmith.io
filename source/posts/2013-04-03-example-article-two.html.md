@@ -1,6 +1,6 @@
 ---
-title: Example Article
-date: 2012-01-01
+title: Example Article Two
+date: 2013-04-03
 ---
 
 This is an example article. You probably want to delete it and write your own articles!

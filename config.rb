@@ -7,6 +7,7 @@
 activate :blog do |blog|
   blog.permalink = "{title}.html"
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
+  blog.layout = "blog"
 end
 
 page "/feed.xml", layout: false
@@ -21,7 +22,7 @@ ignore 'suit_components/*'
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
 
-activate :syntax, :line_numbers => true
+activate :syntax, :line_numbers => false
 activate :directory_indexes
 
 # Build-specific configuration

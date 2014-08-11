@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Open+Sans:400italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Open+Sans:400italic,400,600,700,300);
 
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 
@@ -2231,6 +2231,35 @@ table {
 }
 
 /**
+ * Highlight
+ */
+
+.highlight {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 25px 0;
+  overflow: auto;
+  display: block;
+}
+
+.highlight > table {
+  width: 100%;
+}
+
+.lineno {
+  color: #aaa;
+}
+
+pre {
+  display: block;
+  white-space: pre;
+  word-wrap: normal;
+  overflow: auto;
+  width: auto;
+}
+
+/**
  * Base styles
  */
 
@@ -2261,7 +2290,6 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: #ac6cae;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
@@ -2274,6 +2302,31 @@ a:hover {
 img {
   max-width: 100%;
   height: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #222;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 400;
+  color: #111;
 }
 
 /** @define Container; use strict */
@@ -2484,6 +2537,11 @@ img {
 
 .u-linkUnderline {
   border-bottom: 1px dotted;
+  text-decoration: none;
+}
+
+.u-linkNoDecoration {
+  text-decoration: none;
 }
 
 .Nav {
@@ -2504,6 +2562,10 @@ img {
   margin-right: 0;
 }
 
+.Nav-link {
+  text-decoration: none;
+}
+
 @media (min-width: 49.375em) {
   .Nav {
     text-align: right;
@@ -2515,6 +2577,7 @@ img {
 .Logo {
   text-align: center;
   display: block;
+  text-decoration: none;
   color: inherit;
   font-family: "Yanone Kaffeesatz", "sans-serif";
 }
@@ -2599,6 +2662,10 @@ img {
 
 .Profile-text {
   font-size: 0.875rem;
+}
+
+.Profile-link {
+  text-decoration: none;
 }
 
 @media (min-width: 30.625em) {
