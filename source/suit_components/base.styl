@@ -13,11 +13,13 @@
   @custom-media --lg-viewport (min-width: 72.1875em);
 }
 
-base-link-color =           #069
-base-link-color-hover =     base-link-color
-base-color =                inherit
-base-font-family =          sans-serif
-base-font-size =            1rem
+base-link-color =               #069
+base-link-color-hover =         base-link-color
+base-color =                    inherit
+base-font-family =              sans-serif
+base-font-size =                1rem
+base-blockquote-color =         inherit
+base-blockquote-border-color =  inherit
 
 @require "./functions"
 @require "./theme"
@@ -62,3 +64,10 @@ h4
 h2, h3, h4
   font-weight 400
   color #111
+
+blockquote {
+  border-left 5px solid base-blockquote-border-color
+  padding-left rem(10)
+  color base-blockquote-color
+  margin rem(20) 0 rem(20) rem(20)
+}
