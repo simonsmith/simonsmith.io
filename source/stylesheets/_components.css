@@ -2420,6 +2420,20 @@ blockquote {
   padding-bottom: 2.5rem;
 }
 
+/** @define Entry; use strict */
+
+.Entry-header {
+  margin-bottom: 1.5625rem;
+}
+
+.Entry-title {
+  margin-bottom: 0.3125rem;
+}
+
+.Entry-date {
+  color: #888;
+}
+
 /** @define Header; use strict */
 
 /** @define Nav; use strict */
