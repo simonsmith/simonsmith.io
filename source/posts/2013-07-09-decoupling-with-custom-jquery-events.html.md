@@ -34,6 +34,7 @@ This means just handling anything relating to the event (`preventDefault` or `st
 
 ``` js
 var doc = $(document);
+
 $('.add-items').on('click', function(event) {
   doc.trigger('addItem', [$(this)]);
   event.preventDefault();

@@ -3,11 +3,16 @@ pageable: true
 per_page: 10
 ---
 
+<h1>Blog</h1>
+
+<ul class="EntryList u-listUnstyled">
 <% blog.articles[0...20].each do |article| %>
-  <article>
-    <h1>
-      <a href="<%= article.url %>"><%= article.title %></a>
-      <time><%= article.date.strftime('%b %e %Y') %></time>
-    </h1>
-  </article>
+  <li class="EntryList-item">
+    <div class="Entry">
+      <h2 class="Entry-title">
+        <a class="u-linkMuted u-linkNoDecoration" href="<%= article.url %>"><%= article.title %></a></h2>
+        <time class="Entry-date"><%= article.date.strftime('%B %e %Y') %></time>
+    </div>
+  </li>
 <% end %>
+</ul>

@@ -2422,6 +2422,26 @@ blockquote {
 
 /** @define Entry; use strict */
 
+/* Link utilities
+   ========================================================================== */
+
+.u-linkMuted {
+  color: #444;
+}
+
+.u-linkMuted:hover {
+  color: #888;
+}
+
+.u-linkUnderline {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+}
+
+.u-linkNoDecoration {
+  text-decoration: none;
+}
+
 .Entry-header {
   margin-bottom: 1.5625rem;
 }
@@ -2432,6 +2452,66 @@ blockquote {
 
 .Entry-date {
   color: #888;
+}
+
+/** @define EntryList; use strict */
+
+/**
+ * utils-list
+ */
+
+/* Definition lists
+   ========================================================================== */
+
+/**
+ * Remove default styling
+ */
+
+.u-dlUnstyled > dd {
+  margin-left: 0;
+}
+
+/**
+ * Display definition lists inline
+ */
+
+.u-dlInline dt,
+.u-dlInline dd {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 3px;
+}
+
+/* Standard lists
+   ========================================================================== */
+
+/**
+ * Remove default styling
+ */
+
+.u-listUnstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+/**
+ * Display list items inline
+ **/
+
+.u-listInline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+
+.u-listInline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.EntryList-item {
+  margin-bottom: 0.625rem;
 }
 
 /** @define Header; use strict */
@@ -2490,80 +2570,6 @@ blockquote {
 
 .u-tableRow {
   display: table-row !important;
-}
-
-/**
- * utils-list
- */
-
-/* Definition lists
-   ========================================================================== */
-
-/**
- * Remove default styling
- */
-
-.u-dlUnstyled > dd {
-  margin-left: 0;
-}
-
-/**
- * Display definition lists inline
- */
-
-.u-dlInline dt,
-.u-dlInline dd {
-  display: inline-block;
-  margin-left: 0;
-  margin-right: 3px;
-}
-
-/* Standard lists
-   ========================================================================== */
-
-/**
- * Remove default styling
- */
-
-.u-listUnstyled {
-  padding-left: 0;
-  list-style: none;
-}
-
-/**
- * Display list items inline
- **/
-
-.u-listInline {
-  padding-left: 0;
-  margin-left: -5px;
-  list-style: none;
-}
-
-.u-listInline > li {
-  display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
-/* Link utilities
-   ========================================================================== */
-
-.u-linkMuted {
-  color: #444;
-}
-
-.u-linkMuted:hover {
-  color: #888;
-}
-
-.u-linkUnderline {
-  border-bottom: 1px dotted;
-  text-decoration: none;
-}
-
-.u-linkNoDecoration {
-  text-decoration: none;
 }
 
 .Nav {
