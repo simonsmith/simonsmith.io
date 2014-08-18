@@ -1,8 +1,12 @@
 <nav class="Nav" role="navigation">
   <p class="u-hiddenVisually">Site navigation</p>
   <ul class="Nav-list u-listUnstyled">
-    <li class="Nav-item"><a class="Nav-link u-linkMuted" href="#">Blog</a></li>
-    <li class="Nav-item"><a class="Nav-link u-linkMuted" href="#">Projects</a></li>
+    <li class="Nav-item <%= nav_active('/') %>">
+      <%= link_to 'Blog', '/', class: 'Nav-link u-linkMuted' %>
+    </li>
+    <li class="Nav-item <%= nav_active('/projects/') %>">
+      <%= link_to 'Projects', '/projects', class: 'Nav-link u-linkMuted' %>
+    </li>
     <li class="Nav-item"><a class="Nav-link u-linkMuted" href="#">CV</a></li>
     <li class="Nav-item"><a class="Nav-link u-linkMuted" href="#">Contact</a></li>
   </ul>

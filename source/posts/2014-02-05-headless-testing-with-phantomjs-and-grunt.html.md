@@ -1,6 +1,7 @@
 ---
 title: Headless testing with Jasmine, PhantomJS and Grunt
 date: 2014-02-05
+type: post
 ---
 
 It's hard to find a good excuse _not_ to test your JavaScript these days. Previously it was a pain to write unit tests. One had to wire up an HTML spec runner page, include various dependencies and then manually refresh the page to see the test results. Whilst this was bearable it certainly made automation a pain.

@@ -2607,6 +2607,11 @@ code {
   margin-right: 0;
 }
 
+.Nav-item.is-active .Nav-link {
+  font-weight: bold;
+  color: #547bce;
+}
+
 .Nav-link {
   text-decoration: none;
 }

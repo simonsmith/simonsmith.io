@@ -42,3 +42,9 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+helpers do
+  def nav_active(url)
+    'is-active' if current_page.url == url || current_page.data.type == 'post' && url == '/'
+  end
+end
