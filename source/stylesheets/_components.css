@@ -2454,6 +2454,16 @@ blockquote {
   color: #888;
 }
 
+.Entry-wrapImg {
+  text-align: center;
+  margin: 1.25rem 0;
+}
+
+.Entry-img {
+  border: 1px solid #aaa;
+  display: inline-block;
+}
+
 /** @define EntryList; use strict */
 
 /**
@@ -2727,7 +2737,7 @@ blockquote {
   margin-top: -1px;
 }
 
-.Aside--item--innerPadTop {
+.Aside-item--innerPadTop {
   padding-top: 1.875rem;
 }
 

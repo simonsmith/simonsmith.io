@@ -4,8 +4,17 @@
       <h1 class="Entry-title"><%= current_article.title %></h1>
       <time class="Entry-date"><%= current_article.date.strftime('%B %e %Y') %></time>
     </header>
-    <div class="Entry-body">
+    <div class="Entry-body js-entry-body">
       <%= yield %>
     </div>
   </div>
+
+  <% content_for :scripts do %>
+    $('.js-entry-body img').each(function(img) {
+      var $this = $(this);
+      $this.addClass('Entry-img');
+      $(this).wrap('<figure class="Entry-wrapImg"></figure>');
+    });
+  <% end %>
 <% end %>
+

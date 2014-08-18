@@ -6,21 +6,27 @@
     <%= stylesheet_link_tag 'site' %>
   </head>
   <body>
-      <%= partial 'header' %>
-      <main class="Container Container--main" role="main">
-        <div class="Grid Grid--withGutter u-cf">
-          <div class="Grid-cell u-md-size9of12 u-floatRight">
-              <%= yield %>
-          </div>
-          <div class="Grid-cell u-md-size3of12 u-floatLeft">
-            <div class="Aside Aside--roundBtm">
-              <div class="Aside-item Aside-item--shiftUp Aside--item--innerPadTop">
-                <%= partial 'profile' %>
-              </div>
+    <%= partial 'header' %>
+    <main class="Container Container--main" role="main">
+      <div class="Grid Grid--withGutter u-cf">
+        <div class="Grid-cell u-md-size9of12 u-floatRight">
+            <%= yield %>
+        </div>
+        <div class="Grid-cell u-md-size3of12 u-floatLeft">
+          <div class="Aside Aside--roundBtm">
+            <div class="Aside-item Aside-item--shiftUp Aside-item--innerPadTop">
+              <%= partial 'profile' %>
             </div>
           </div>
         </div>
-      </main>
-      <%= partial 'footer' %>
+      </div>
+    </main>
+    <%= partial 'footer' %>
   </body>
+  <%= javascript_include_tag 'all' %>
+  <% if content_for? :scripts %>
+    <script>
+      <%= yield_content :scripts %>
+    </script>
+  <% end %>
 </html>
