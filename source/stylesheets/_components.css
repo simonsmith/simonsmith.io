@@ -2260,6 +2260,22 @@ pre {
   margin: 0;
 }
 
+/** @define Icon; use strict */
+
+.Icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+  background: transparent;
+}
+
+.Icon--link {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAbwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFKSURBVDiNhZKxaoJBEIS/WdGAhUUgKNgJqSwtJNgkdVIbfIG8RAp7W99BQdv4FBYJiJVg4wtIChuRTbMXjqh/DrbZvZm9uRm5O/8dSVXgBbgHtsDC3b8BcPfCAjqSNpI8qx3Qc/diAqAraZ9AZjaWtM1IakXgpqSVpKOkOVCOfimRAAO7olnAjbu/uXvd3V/d/RiST5IWcbV1aXNb0jLTezKzEVCJeVnSLl7QL9J8kLRORMAQKJnZLHoboHoRbGYToB79R0mfQMPMpgHeA51fF8KqBJ4CDUlfwFPM78xskoG72WKqyWczmwElYJj9wTrknIETQT/zNVlVMbORpFNGtATaFz6d99g+/jMw4BZ4AFqAruSFQWzYAqXMqnmEaAU0CwJHLfkqaRtx3V3TfEYQLL0MlGqTrCoqpWdIqgHPoXcDfLj74VLU8/MDuDpfRK1TjFsAAAAASUVORK5CYIIa536dc772610dff519fe797fc100cc9f");
+}
+
 /**
  * Base styles
  */
@@ -2461,6 +2477,22 @@ code {
   color: #888;
 }
 
+.Entry-body h2,
+.Entry-body h3,
+.Entry-body h4,
+.Entry-body h5,
+.Entry-body h6 {
+  position: relative;
+}
+
+.Entry-body h2:hover .Entry-anchor,
+.Entry-body h3:hover .Entry-anchor,
+.Entry-body h4:hover .Entry-anchor,
+.Entry-body h5:hover .Entry-anchor,
+.Entry-body h6:hover .Entry-anchor {
+  display: block;
+}
+
 .Entry-wrapImg {
   text-align: center;
   margin: 1.25rem 0;
@@ -2469,6 +2501,14 @@ code {
 .Entry-img {
   border: 1px solid #aaa;
   display: inline-block;
+}
+
+.Entry-anchor {
+  display: none;
+  margin-left: -25px;
+  padding-right: 30px;
+  bottom: 8px;
+  position: absolute;
 }
 
 /** @define EntryList; use strict */

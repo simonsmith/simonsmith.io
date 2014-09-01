@@ -34,8 +34,10 @@ Foo.prototype.sayHi = function() {
 
 When an instance of `Foo` is created it can be used to say hi:
 
-  var foo = new Foo('Simon');
-  foo.sayHi(); // Simon says hi!
+``` js
+var foo = new Foo('Simon');
+foo.sayHi(); // Simon says hi!
+```
 
 It would be nice to verify that this worked, so using Jasmine we'll write a simple spec for it.
 

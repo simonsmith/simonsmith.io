@@ -16,6 +16,13 @@
 .Entry-date
   color #888
 
+.Entry-body
+  h2, h3, h4, h5, h6
+    position relative
+
+    &:hover .Entry-anchor
+      display: block
+
 .Entry-wrapImg
   text-align center
   margin rem(20) 0
@@ -23,3 +30,10 @@
 .Entry-img
   border 1px solid #aaa
   display: inline-block
+
+.Entry-anchor
+  display none
+  margin-left -25px
+  padding-right 30px
+  bottom 8px
+  position absolute

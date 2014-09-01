@@ -10,11 +10,7 @@
   </div>
 
   <% content_for :scripts do %>
-    $('.js-entry-body img').each(function(img) {
-      var $this = $(this);
-      $this.addClass('Entry-img');
-      $(this).wrap('<figure class="Entry-wrapImg"></figure>');
-    });
+    <%= javascript_include_tag 'post' %>
   <% end %>
 <% end %>
 

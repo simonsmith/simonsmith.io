@@ -26,8 +26,6 @@
   </body>
   <%= javascript_include_tag 'all' %>
   <% if content_for? :scripts %>
-    <script>
-      <%= yield_content :scripts %>
-    </script>
+    <%= yield_content :scripts %>
   <% end %>
 </html>
