@@ -47,4 +47,8 @@ helpers do
   def nav_active(url)
     'is-active' if current_page.url == url || current_page.data.type == 'post' && url == '/'
   end
+
+  def markdown(text)
+    Tilt['markdown'].new { text }.render
+  end
 end
