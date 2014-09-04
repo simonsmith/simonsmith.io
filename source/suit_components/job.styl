@@ -1,0 +1,33 @@
+/** @define Job; use strict */
+
+@css {
+  @import "./utils/space";
+  @import "./utils/text";
+}
+
+@require './functions'
+@require './theme'
+
+.Job
+  border-bottom 1px dotted #bbb
+
+  &:last-of-type
+    border-bottom none
+
+.Job-header
+  margin-bottom rem(20)
+
+.Job-role
+  color #888
+
+.Job-title
+  margin 0 0 rem(5)
+
+.Job-dates
+  margin rem(5) 0 0
+  color #888
+  font-style italic
+
+.Job-dates,
+.Job-url
+  font-size rem(14)

@@ -1,0 +1,35 @@
+/**
+ * Spacing utilities
+ *
+ * Used to override styles on components without need for
+ * additional modifier classes
+ *
+ * Usage:
+ *  <div class="u-mbZ"> // margin-bottom: 0
+ *  <div class="u-mt20"> // margin-top: 20px
+ *  <div class="u-m25"> // margin: 25px
+ */
+
+properties = {
+  m: margin,
+  p: padding,
+  mt: margin-top,
+  mr: margin-right,
+  mb: margin-bottom,
+  ml: margin-left,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left
+}
+sizes = 5,10,15,20,30
+
+for size in sizes
+  val = (size)px
+  for keyword, property in properties
+    .u-{keyword}{size}
+      {property} val !important
+
+for keyword, property in properties
+  .u-{keyword}Z
+    {property} 0 !important

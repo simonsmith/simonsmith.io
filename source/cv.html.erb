@@ -9,7 +9,7 @@
   <h2 id="employment">Employment</h2>
 
   <% data.jobs.each do |job| %>
-    <div class="Job entry vcalendar" id="<%= job.id %>">
+    <div class="Job u-mb20 u-pb20 entry vcalendar" id="<%= job.id %>">
       <header class="Job-header">
         <h3 class="Job-title fn org"><%= job.title %>
           <small class="Job-role"><%= job.role %></small>
@@ -41,7 +41,7 @@
   <h2 id="skills">Skills</h2>
   <ul class="u-listUnstyled">
     <% data.skills.each do |skill| %>
-      <li class="Skill"><%= skill.name %></li>
+      <li class="Skill u-inlineBlock"><%= skill.name %></li>
     <% end %>
   </ul>
 
