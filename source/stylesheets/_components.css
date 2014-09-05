@@ -501,11 +501,11 @@ table {
  */
 
 .Grid--withGutter {
-  margin: 0 -10px;
+  margin: 0 -12.5px;
 }
 
 .Grid--withGutter > .Grid-cell {
-  padding: 0 10px;
+  padding: 0 12.5px;
 }
 
 /* Grid cell
@@ -2280,12 +2280,6 @@ pre {
  * Base styles
  */
 
-/**
- * Set media queries here for the SUIT grid
- * Components can use these to react to grid changes, otherwise
- * they set their own breakpoints based on the content
- */
-
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2507,8 +2501,8 @@ code {
 
 .Entry-anchor {
   display: none;
-  margin-left: -25px;
-  padding-right: 30px;
+  margin-left: -18px;
+  padding-right: 20px;
   bottom: 3px;
   position: absolute;
 }
@@ -3224,3 +3218,14 @@ code {
   font-size: 0.8125rem;
   color: #aaa;
 }
+
+/**
+ * Custom properties specifically for overriding SUIT components
+ */
+
+/**
+ * Set media queries here for the SUIT grid
+ * Components can use these to react to grid changes, otherwise
+ * they set their own breakpoints based on the content
+ */
+
