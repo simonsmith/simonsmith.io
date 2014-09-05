@@ -1,4 +1,5 @@
-- title: Shopa (Contract)
+- title: Shopa
+  contract: true
   role: Front end Developer
   url: shopa.com
   id: shopa
@@ -13,7 +14,8 @@
 
     Built a new grid to support wider devices when viewing pages showing many products.
 
-- title: BBC (Contract)
+- title: BBC
+  contract: true
   role: JavaScript Developer
   url: bbc.co.uk
   id: bbc
@@ -29,7 +31,8 @@
 
     Collaborated with other developers using [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html).
 
-- title: Universal Music (Contract)
+- title: Universal Music
+  contract: true
   role: Senior UI Developer
   url: universalmusic.com
   id: universal

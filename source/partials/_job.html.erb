@@ -1,6 +1,7 @@
 <div class="Job entry vcalendar" id="<%= job.id %>">
   <header class="Job-header">
-    <h3 class="Job-title fn org"><%= job.title %>
+    <h3 class="Job-title fn org">
+      <%= job.title %> <% if job.contract %>(Contract)<% end %>
       <small class="Job-role"><%= job.role %></small>
     </h3>
     <a class="Job-url company-url location" href="http://<%= job.url %>">
