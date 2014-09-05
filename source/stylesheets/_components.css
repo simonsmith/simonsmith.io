@@ -2307,13 +2307,15 @@ body {
 }
 
 a {
-  color: #ac6cae;
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
+  color: #0071ac;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 a:hover {
-  color: #036;
+  color: #ac6cae;
+  text-decoration: underline;
 }
 
 img {
@@ -2462,7 +2464,7 @@ code {
 }
 
 .u-linkNoDecoration {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .Entry-header {
@@ -2667,7 +2669,6 @@ code {
 .Logo {
   text-align: center;
   display: block;
-  text-decoration: none;
   color: inherit;
   font-family: "Yanone Kaffeesatz", "sans-serif";
 }

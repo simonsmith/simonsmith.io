@@ -3,7 +3,7 @@
   <ul class="Contact-list u-listUnstyled">
     <% data.contact.each do |contact| %>
       <li class="Contact-item">
-        <a class="u-linkNoDecoration" href="<%= contact.url %>"><%= contact.text %></a>
+        <a class="u-linkNoDecoration u-linkMuted" href="<%= contact.url %>"><%= contact.text %></a>
       </li>
     <% end %>
   </ul>
