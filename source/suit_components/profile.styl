@@ -18,20 +18,22 @@ Profile-background-color = #fff
 .Profile-wrapAvatar
   text-align center
 
+.Profile-body
+  text-align center
+
 .Profile-text
   font-size rem(14)
 
-.Profile-link
-  text-decoration none
+  &:last-of-type
+    margin-bottom 0
 
 @media (min-width 30.625em)
   .Profile-wrapAvatar
-    display inline-block
-    margin-right rem(10)
+    float left
+    margin-right rem(15)
 
   .Profile-body
     text-align left
-    display inline-block
 
 @media (--md-viewport)
   .Profile
@@ -39,3 +41,4 @@ Profile-background-color = #fff
 
   .Profile-wrapAvatar
     margin-right 0
+    float none

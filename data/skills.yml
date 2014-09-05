@@ -7,10 +7,11 @@
 - name: Jasmine
 - name: Mocha
 - name: Flight
-- name: Bower
 - name: jQuery
 - name: AngularJS
 - name: Git
-- name: Node.js
+- name: React JS
+- name: SUIT CSS
+- name: Gulp
+- name: Node
 - name: Responsive design
-- name: Mootools

@@ -28,7 +28,7 @@ for size in sizes
   val = (size)px
   for keyword, property in properties
     .u-{keyword}{size}
-      {property} val !important
+      {property} (val / 16)rem !important
 
 for keyword, property in properties
   .u-{keyword}Z
