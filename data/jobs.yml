@@ -1,18 +1,33 @@
+- title: Shopa (Contract)
+  role: Front end Developer
+  url: shopa.com
+  id: shopa
+  from: June 2014
+  to: false
+  text: |
+    Maintained and developed new features and components for the [shopa website](http://shopa.com), which is primarily a Rails application.
+
+    Converted the front end components from Sass to Stylus and setup tooling with Gulp to provide pre-processing for [SUIT CSS](http://suitcss.github.io/), as seen in [this example repository](https://github.com/simonsmith/suitcss-with-stylus/).
+
+    Implemented Bower and npm to install all front end assets upon deployment of the application.
+
+    Built a new grid to support wider devices when viewing pages showing many products.
+
 - title: BBC (Contract)
   role: JavaScript Developer
   url: bbc.co.uk
   id: bbc
   from: February 2014
-  to: false
+  to: June 2014
   text: |
-    Working on a client-side Angular application to allow journalists to update news content from various devices.
+    Worked on a client-side Angular JS application to allow journalists to update news content from various devices.
 
-    Writing unit tests and using the Karma test runner to run them against PhantomJS.
+    Wrote unit tests and used the Karma test runner to run them against PhantomJS.
 
-    Developing and maintaining an internal BBC Bootstrap which extends Twitter Bootstrap and has a variety of custom
-    [SuitCSS](https://github.com/suitcss/suit) components.
+    Developed and maintained an internal BBC Bootstrap which extends Twitter Bootstrap and has a variety of custom
+    [SUIT CSS](http://suitcss.github.io/) components.
 
-    Collaborating with other developers using [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html).
+    Collaborated with other developers using [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html).
 
 - title: Universal Music (Contract)
   role: Senior UI Developer
