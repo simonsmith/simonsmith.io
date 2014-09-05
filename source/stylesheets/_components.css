@@ -3162,14 +3162,6 @@ code {
   padding-left: 0 !important;
 }
 
-.Job {
-  border-bottom: 1px dotted #bbb;
-}
-
-.Job:last-of-type {
-  border-bottom: none;
-}
-
 .Job-header {
   margin-bottom: 1.25rem;
 }
