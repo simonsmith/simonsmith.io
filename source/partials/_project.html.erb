@@ -1,0 +1,16 @@
+<div class="Project u-cf" id="<%= project.id %>">
+  <h2 class="Project-title"><%= project.title %></h2>
+  <div class="u-textCenter">
+    <picture>
+      <source media="(min-width: 49.375em)"
+              srcset="<%= image_path "projects/interlopers/#{project.id}-lg.gif" %>">
+      <source media="(min-width: 31.25em)"
+              srcset="<%= image_path "projects/interlopers/#{project.id}-md.gif" %>">
+      <source srcset="<%= image_path "projects/interlopers/#{project.id}-sm.gif" %>">
+      <img src="<%= image_path "projects/interlopers/#{project.id}-sm.gif" %>">
+    </picture>
+  </div>
+  <div class="Project-body">
+    <%= markdown project.text %>
+  </div>
+</div>

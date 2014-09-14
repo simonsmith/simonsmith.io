@@ -1,0 +1,5 @@
+<h1>Projects</h1>
+
+<% data.projects.each do |project| %>
+  <%= partial 'project', locals: {project: project} %>
+<% end %>
