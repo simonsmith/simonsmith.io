@@ -3,6 +3,7 @@
 @css {
   @import "suitcss-utils-layout";
   @import "suitcss-utils-text";
+  @import "suitcss-utils-display";
 }
 
 @require "./theme"
@@ -10,3 +11,18 @@
 
 .Project-title
   margin-top 0
+  margin-bottom 0
+
+.Project-header
+  position relative
+  margin-bottom rem(20)
+
+.Project-img
+  display inline-block
+  border 1px solid #555
+
+@media (--sm-viewport)
+  .Project-url
+    position absolute
+    right 0
+    top rem(10)

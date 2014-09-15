@@ -3203,6 +3203,25 @@ code {
 
 .Project-title {
   margin-top: 0;
+  margin-bottom: 0;
+}
+
+.Project-header {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.Project-img {
+  display: inline-block;
+  border: 1px solid #555;
+}
+
+@media (min-width: 36.25em) {
+  .Project-url {
+    position: absolute;
+    right: 0;
+    top: 0.625rem;
+  }
 }
 
 /** @define Footer; use strict */

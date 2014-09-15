@@ -1,6 +1,7 @@
 - title: Interlopers
   id: interlopers
+  url: interlopers.net
   text: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed nibh et magna rutrum cursus.
+    Interlopers was started in 2004 out of my frustration at the lack of a decent community and resource to contribute to. It has grown to become one of the leading level design communities for Half-Life 2 and other Source powered games.
 
-    Nulla eget augue facilisis, pharetra lacus a, mollis justo. Fusce cursus ligula vitae molestie tempor. Duis eget urna ultrices, rutrum libero vel, mollis velit. Maecenas elementum arcu eget egestas ullamcorper.
+    I have been responsible for front-end development, content writing, community management and other general tasks. The site is written in PHP and is heavily integrated into [phpBB](http://www.phpbb.com/).

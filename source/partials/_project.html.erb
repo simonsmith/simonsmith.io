@@ -1,15 +1,22 @@
+<%
+   img_path = "projects/#{project.id}"
+   ext = '.png'
+%>
 <div class="Project u-cf" id="<%= project.id %>">
-  <h2 class="Project-title"><%= project.title %></h2>
-  <div class="u-textCenter">
+  <div class="Project-header">
+    <h2 class="Project-title"><%= project.title %></h2>
+    <a class="Project-url" href="http://<%= project.url %>">Visit website</a>
+  </div>
+    <a class="u-block u-textCenter" href="http://<%= project.url %>">
     <picture>
       <source media="(min-width: 49.375em)"
-              srcset="<%= image_path "projects/interlopers/#{project.id}-lg.gif" %>">
+              srcset="<%= image_path "#{img_path}/lg#{ext}" %>, <%= image_path "#{img_path}/lg@2x#{ext}" %> 2x">
       <source media="(min-width: 31.25em)"
-              srcset="<%= image_path "projects/interlopers/#{project.id}-md.gif" %>">
-      <source srcset="<%= image_path "projects/interlopers/#{project.id}-sm.gif" %>">
-      <img src="<%= image_path "projects/interlopers/#{project.id}-sm.gif" %>">
+              srcset="<%= image_path "#{img_path}/md#{ext}" %>, <%= image_path "#{img_path}/md@2x#{ext}" %> 2x">
+      <source srcset="<%= image_path "#{img_path}/sm#{ext}" %>, <%= image_path "#{img_path}/sm@2x#{ext}" %> 2x">
+      <img class="Project-img" src="<%= image_path "#{img_path}/sm#{ext}" %>">
     </picture>
-  </div>
+   </a>
   <div class="Project-body">
     <%= markdown project.text %>
   </div>
