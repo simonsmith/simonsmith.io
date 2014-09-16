@@ -1,7 +1,5 @@
-<%
-   img_path = "projects/#{project.id}"
-   ext = '.png'
-%>
+<% path = "projects/#{project.id}/%{filename}.png" %>
+
 <div class="Project u-cf" id="<%= project.id %>">
   <div class="Project-header">
     <h2 class="Project-title"><%= project.title %></h2>
@@ -10,11 +8,13 @@
     <a class="u-block u-textCenter" href="http://<%= project.url %>">
     <picture>
       <source media="(min-width: 49.375em)"
-              srcset="<%= image_path "#{img_path}/lg#{ext}" %>, <%= image_path "#{img_path}/lg@2x#{ext}" %> 2x">
+              srcset="<%= image_path path % {filename: 'lg'} %> 730w, <%= image_path path % {filename: 'lg@2x'} %> 1440w">
       <source media="(min-width: 31.25em)"
-              srcset="<%= image_path "#{img_path}/md#{ext}" %>, <%= image_path "#{img_path}/md@2x#{ext}" %> 2x">
-      <source srcset="<%= image_path "#{img_path}/sm#{ext}" %>, <%= image_path "#{img_path}/sm@2x#{ext}" %> 2x">
-      <img class="Project-img" src="<%= image_path "#{img_path}/sm#{ext}" %>">
+              srcset="<%= image_path path % {filename: 'md'} %> 500w, <%= image_path path % {filename: 'md@2x'} %> 1000w"
+              sizes="500px">
+      <source srcset="<%= image_path path % {filename: 'sm'} %> 200w, <%= image_path path % {filename: 'sm@2x'} %> 400w"
+              sizes="200px">
+      <img class="Project-img" src="<%= image_path path % {filename: 'sm'} %>">
     </picture>
    </a>
   <div class="Project-body">
