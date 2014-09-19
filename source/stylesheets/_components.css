@@ -3213,7 +3213,7 @@ code {
 
 .Project-img {
   display: inline-block;
-  border: 1px solid #555;
+  border: 1px solid #aaa;
 }
 
 @media (min-width: 36.25em) {

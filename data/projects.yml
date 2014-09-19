@@ -1,3 +1,14 @@
+- title: Shopa
+  id: shopa
+  url: shopa.com
+  text: |
+    Shopa is a startup in East London, building an online social marketplace
+
+    I have primarily worked on improving the architecture of the site, as well as adding new front-end features. Notable additions:
+
+    * Move to [SUIT CSS with Stylus](https://github.com/simonsmith/suitcss-with-stylus/) and re-factor the site to be more component based
+    * Structure the JavaScript with [Flight](http://flightjs.github.io/) and [Webpack](http://webpack.github.io/)
+    * Add [gulp](gulpjs.com) into the Rails pipeline to build SUIT and Flight components
 - title: Interlopers
   id: interlopers
   url: interlopers.net
