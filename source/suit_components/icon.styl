@@ -1,13 +1,85 @@
 /** @define Icon; use strict */
 
-.Icon
+@font-face
+  font-family "Flaticon"
+  src url("/fonts/flaticon.woff") format("woff")
+  font-weight normal
+  font-style normal
+
+/*
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 20px;
+}
+
+.flaticon-close13:before {
+  content: "\e000";
+}
+
+.flaticon-github7:before {
+  content: "\e001";
+}
+
+.flaticon-social19:before {
+  content: "\e002";
+}
+*/
+
+.Icon:before
+  font-family "Flaticon"
   display inline-block
   vertical-align middle
   font-style normal
   background transparent
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 
-.Icon--link
-  width 16px
-  height 16px
-  line-height 16px
-  background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAbwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFKSURBVDiNhZKxaoJBEIS/WdGAhUUgKNgJqSwtJNgkdVIbfIG8RAp7W99BQdv4FBYJiJVg4wtIChuRTbMXjqh/DrbZvZm9uRm5O/8dSVXgBbgHtsDC3b8BcPfCAjqSNpI8qx3Qc/diAqAraZ9AZjaWtM1IakXgpqSVpKOkOVCOfimRAAO7olnAjbu/uXvd3V/d/RiST5IWcbV1aXNb0jLTezKzEVCJeVnSLl7QL9J8kLRORMAQKJnZLHoboHoRbGYToB79R0mfQMPMpgHeA51fF8KqBJ4CDUlfwFPM78xskoG72WKqyWczmwElYJj9wTrknIETQT/zNVlVMbORpFNGtATaFz6d99g+/jMw4BZ4AFqAruSFQWzYAqXMqnmEaAU0CwJHLfkqaRtx3V3TfEYQLL0MlGqTrCoqpWdIqgHPoXcDfLj74VLU8/MDuDpfRK1TjFsAAAAASUVORK5CYIIa536dc772610dff519fe797fc100cc9f')
+.Icon--link:before
+  content "\e002"
+
+.Icon--github:before
+  content "\e001"
+
+.Icon--twitter:before
+  content "\e003"
+
+.Icon--email:before
+  content "\e000"
+
+.Icon--xxs
+  font-size 10px !important
+  line-height 10px
+
+.Icon--xs
+  font-size 12px !important
+  line-height 12px
+
+.Icon--sm
+  font-size 14px !important
+  line-height: 14px
+
+.Icon--md
+  font-size 16px !important
+  line-height: 16px
+
+.Icon--lg
+  font-size 18px !important
+  line-height: 16px
+
+.Icon--xlg
+  font-size 20px !important
+  line-height 20px
+
+.Icon--xxlg
+  font-size 28px !important
+  line-height 28px

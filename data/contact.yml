@@ -1,6 +1,9 @@
 - url: mailto:me@simonsmith.io
   text: me@simonsmith.io
+  icon: Icon--email Icon--xs
 - url: http://twitter.com/blinkdesign
   text: '@blinkdesign'
+  icon: Icon--twitter Icon--lg
 - url: https://github.com/simonsmith
   text: github
+  icon: Icon--github Icon--lg

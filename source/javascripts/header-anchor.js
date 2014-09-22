@@ -7,7 +7,7 @@ $('.js-entry-body')
       href: '#' + $header.attr('id')
     });
     var $icon = $('<span></span>', {
-      class: 'Icon Icon--link'
+      class: 'Icon Icon--link Icon--lg'
     });
 
     $anchor.append($icon);

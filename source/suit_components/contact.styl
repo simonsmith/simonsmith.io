@@ -1,8 +1,9 @@
-/** @define Contact; use strict */
+/** @define Contact */
 
 @css {
   @import "./utils/text";
   @import "./utils/link";
+  @import "./utils/space";
   @import "suit-utils-list";
 }
 
@@ -10,8 +11,8 @@
 @require "./functions"
 
 .Contact
-  margin 0
-  text-align center
+  margin auto
+  width 60%
   font-size rem(14)
 
 .Contact-list
@@ -19,8 +20,23 @@
 
 .Contact-header
   font-size rem(18)
+  text-align center
   margin-top 0
   margin-bottom rem(10)
 
 .Contact-item
   margin-bottom rem(5)
+
+  .Icon
+    margin-right rem(3)
+
+@media (min-width 30.625em)
+  .Contact
+    width 80%
+
+  .Contact-header
+    text-align left
+
+@media (min-width 30.625em)
+  .Contact
+    width auto
