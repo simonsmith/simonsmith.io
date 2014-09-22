@@ -2866,6 +2866,10 @@ code {
   text-transform: lowercase;
 }
 
+.u-textLead {
+  font-size: 1.25rem;
+}
+
 .Contact {
   margin: 0;
   text-align: center;
