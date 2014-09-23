@@ -3337,6 +3337,7 @@ code {
 .Project-img {
   display: inline-block;
   border: 1px solid #aaa;
+  height: 200px;
 }
 
 @media (min-width: 36.25em) {
