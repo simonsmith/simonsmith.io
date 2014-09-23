@@ -3340,6 +3340,12 @@ code {
   height: 200px;
 }
 
+@media (min-width: 30em) {
+  .Project-img {
+    height: auto;
+  }
+}
+
 @media (min-width: 36.25em) {
   .Project-url {
     position: absolute;
