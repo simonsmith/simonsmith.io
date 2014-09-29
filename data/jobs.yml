@@ -12,6 +12,8 @@
 
     Implemented Bower and npm to install all front end assets upon deployment of the application.
 
+    Re-factored unstructured jQuery into Flight JS components
+
     Built a new grid to support wider devices when viewing pages showing many products.
 
 - title: BBC
