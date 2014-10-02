@@ -44,3 +44,10 @@
     Interlopers was started in 2004 out of my frustration at the lack of a decent community and resource to contribute to. It has grown to become one of the leading level design communities for Half-Life 2 and other Source powered games.
 
     I have been responsible for front-end development, content writing, community management and other general tasks. The site is written in PHP and is heavily integrated into [phpBB](http://www.phpbb.com/).
+- title: Radio Times
+  id: rt
+  url: radiotimes.com
+  text: |
+    Led UI development on the re-build of the Radio Times website at BBC worldwide and later maintained it again whilst at Immediate Media.
+
+    Starting over on the new site allowed use of various modern development practices at the time, such as parts of HTML5 and CSS3. The TV and Radio listings page was built with a collection of modular MooTools classes to power the navigation of the grid.
