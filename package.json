@@ -24,8 +24,8 @@
     "suit-utils-list": "^0.3.2",
     "suitcss-components-grid": "^2.0.1",
     "suitcss-utils-display": "^0.4.1",
+    "suitcss-utils-before": "^0.3.1",
     "suitcss-utils-layout": "^0.4.1",
-    "suitcss-utils-offset": "^0.5.0",
     "suitcss-utils-size": "^0.7.1",
     "suitcss-utils-text": "^0.4.1"
   }
