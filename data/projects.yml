@@ -9,13 +9,6 @@
     * Move to [SUIT CSS with Stylus](https://github.com/simonsmith/suitcss-with-stylus/) and re-factor the site to be more component based
     * Structure the JavaScript with [Flight](http://flightjs.github.io/) and [Webpack](http://webpack.github.io/)
     * Add [gulp](gulpjs.com) into the Rails pipeline to build SUIT and Flight components
-- title: Interlopers
-  id: interlopers
-  url: interlopers.net
-  text: |
-    Interlopers was started in 2004 out of my frustration at the lack of a decent community and resource to contribute to. It has grown to become one of the leading level design communities for Half-Life 2 and other Source powered games.
-
-    I have been responsible for front-end development, content writing, community management and other general tasks. The site is written in PHP and is heavily integrated into [phpBB](http://www.phpbb.com/).
 - title: You & Your Wedding
   id: yayw
   url: youandyourwedding.co.uk/venues
@@ -44,3 +37,10 @@
     [RequireJS](http://requirejs.org) was used on this project, not only for the ease of code organisation but also to conditionally load assets based on the device size such as the Google map on larger devices only. This helped with performance and usability.
 
     The source of the site [is also viewable on GitHub](https://github.com/qmetric/qmg-website).
+- title: Interlopers
+  id: interlopers
+  url: interlopers.net
+  text: |
+    Interlopers was started in 2004 out of my frustration at the lack of a decent community and resource to contribute to. It has grown to become one of the leading level design communities for Half-Life 2 and other Source powered games.
+
+    I have been responsible for front-end development, content writing, community management and other general tasks. The site is written in PHP and is heavily integrated into [phpBB](http://www.phpbb.com/).
