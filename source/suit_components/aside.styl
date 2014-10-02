@@ -5,26 +5,22 @@
   @import "./contact";
 }
 
-Aside-background-color = #fff
-Aside-border-color =     #ddd
-Aside-border-radius = 5px
-
 @require "./functions"
 @require "./theme"
 
 .Aside {}
 
 .Aside--roundBtm
-  border-bottom-left-radius Aside-border-radius
-  border-bottom-right-radius Aside-border-radius
+  border-bottom-left-radius 5px
+  border-bottom-right-radius @border-bottom-left-radius
 
 .Aside-item--shiftUp
   margin-top -1px
 
 @media (--md-viewport)
   .Aside
-    background-color Aside-background-color
-    border 1px solid Aside-border-color
+    background-color color-gray-faint
+    border 1px solid color-gray-lighter
     border-top 0
 
     .Aside--item--innerPadTop

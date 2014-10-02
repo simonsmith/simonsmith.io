@@ -2,36 +2,28 @@
  * Base styles
  */
 
-base-link-color =               #069
-base-link-color-hover =         base-link-color
-base-color =                    inherit
-base-font-family =              sans-serif
-base-font-size =                1rem
-base-blockquote-color =         inherit
-base-blockquote-border-color =  inherit
-
 @require "./functions"
 @require "./theme"
 
 html
   box-sizing border-box
-  font-size base-font-size
+  font-size 1rem
 
 // http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *, *::before, *::after
   box-sizing inherit
 
 body
-  font-family base-font-family
-  color base-color
+  font-family font-family
+  color color-charcoal
 
 a
-  color base-link-color
+  color color-blue
   text-decoration none
   transition color .15s ease
 
   &:hover
-    color base-link-color-hover
+    color color-pink
     text-decoration underline
 
 img
@@ -57,9 +49,9 @@ h2, h3, h4
   color #111
 
 blockquote
-  border-left 5px solid base-blockquote-border-color
+  border-left 5px solid color-gray-lighter
   padding-left rem(10)
-  color base-blockquote-color
+  color color-gray-light
   margin rem(20) 0 rem(20) rem(20)
 
 
