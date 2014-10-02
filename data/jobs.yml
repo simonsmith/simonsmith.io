@@ -6,13 +6,13 @@
   from: June 2014
   to: false
   text: |
-    Maintained and developed new features and components for the [shopa website](http://shopa.com), which is primarily a Rails application.
+    Maintained and developed new features and components for the [Shopa website](http://shopa.com), which is primarily a Rails application.
 
     Converted the front end components from Sass to Stylus and setup tooling with Gulp to provide pre-processing for [SUIT CSS](http://suitcss.github.io/), as seen in [this example repository](https://github.com/simonsmith/suitcss-with-stylus/).
 
-    Implemented Bower and npm to install all front end assets upon deployment of the application.
+    Performed code reviews for new features via pull requests.
 
-    Re-factored unstructured jQuery into Flight JS components
+    Re-factored unstructured jQuery into [Flight](https://github.com/flightjs/flight) components.
 
     Built a new grid to support wider devices when viewing pages showing many products.
 
