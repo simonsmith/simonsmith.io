@@ -9,15 +9,20 @@
     * Move to [SUIT CSS with Stylus](https://github.com/simonsmith/suitcss-with-stylus/) and re-factor the site to be more component based
     * Structure the JavaScript with [Flight](http://flightjs.github.io/) and [Webpack](http://webpack.github.io/)
     * Add [gulp](gulpjs.com) into the Rails pipeline to build SUIT and Flight components
-- title: You & Your Wedding
-  id: yayw
-  url: youandyourwedding.co.uk/venues
+- title: Radio Times
+  id: rt
+  url: radiotimes.com
   text: |
-    One of the first projects at [Immediate Media](http://www.immediate.co.uk/) to be have a mobile first responsive design.
+    Led UI development on the re-build of the Radio Times website at BBC worldwide and later maintained it again whilst at Immediate Media.
 
-    I came into the project early on and was tasked with re-factoring the front-end and setting a good foundation for the site.
+    Starting over on the new site allowed use of various modern development practices at the time, such as parts of HTML5 and CSS3. The TV and Radio listings page was built with a collection of modular MooTools classes to power the navigation of the grid.
+- title: Top Gear
+  id: tg
+  url: topgear.com
+  text: |
+    One of my main tasks on the Top Gear site was a complete re-build of the home page, as well as implementing a new global header and footer onto all other sections. I worked [with another UI developer](http://www.alecrust.com/) to completely architect the front-end code from scratch.
 
-    Working with another front-end developer, we structured a modular front-end, broken up into various Sass files that allowed easy re-use of code across the site. I also structured and wrote a lot of the JS, making use of the [Primish](https://github.com/DimitarChristoff/primish) library
+    As well as this project I was also responsible for maintaining the Top Gear WordPress blogs, which largely involved integrating new design features.
 - title: Policy Expert
   id: pe
   url: policyexpert.co.uk
@@ -37,6 +42,15 @@
     [RequireJS](http://requirejs.org) was used on this project, not only for the ease of code organisation but also to conditionally load assets based on the device size such as the Google map on larger devices only. This helped with performance and usability.
 
     The source of the site [is also viewable on GitHub](https://github.com/qmetric/qmg-website).
+- title: You & Your Wedding
+  id: yayw
+  url: youandyourwedding.co.uk/venues
+  text: |
+    One of the first projects at [Immediate Media](http://www.immediate.co.uk/) to be have a mobile first responsive design.
+
+    I came into the project early on and was tasked with re-factoring the front-end and setting a good foundation for the site.
+
+    Working with another front-end developer, we structured a modular front-end, broken up into various Sass files that allowed easy re-use of code across the site. I also structured and wrote a lot of the JS, making use of the [Primish](https://github.com/DimitarChristoff/primish) library
 - title: Interlopers
   id: interlopers
   url: interlopers.net
@@ -44,10 +58,3 @@
     Interlopers was started in 2004 out of my frustration at the lack of a decent community and resource to contribute to. It has grown to become one of the leading level design communities for Half-Life 2 and other Source powered games.
 
     I have been responsible for front-end development, content writing, community management and other general tasks. The site is written in PHP and is heavily integrated into [phpBB](http://www.phpbb.com/).
-- title: Radio Times
-  id: rt
-  url: radiotimes.com
-  text: |
-    Led UI development on the re-build of the Radio Times website at BBC worldwide and later maintained it again whilst at Immediate Media.
-
-    Starting over on the new site allowed use of various modern development practices at the time, such as parts of HTML5 and CSS3. The TV and Radio listings page was built with a collection of modular MooTools classes to power the navigation of the grid.
