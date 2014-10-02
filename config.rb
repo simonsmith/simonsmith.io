@@ -25,6 +25,19 @@ set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true
 activate :syntax, :line_numbers => false
 activate :directory_indexes
 
+file = File.open(".ftp_password", "r")
+password = file.read
+file.close
+
+activate :deploy do |deploy|
+  deploy.method = :ftp
+  deploy.host = 'simonsmith.io'
+  deploy.path = '/public_html'
+  deploy.build_before = true
+  deploy.user = 'simon'
+  deploy.password = password
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
