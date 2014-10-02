@@ -8,7 +8,7 @@
 
     * Move to [SUIT CSS with Stylus](https://github.com/simonsmith/suitcss-with-stylus/) and re-factor the site to be more component based
     * Structure the JavaScript with [Flight](http://flightjs.github.io/) and [Webpack](http://webpack.github.io/)
-    * Add [gulp](gulpjs.com) into the Rails pipeline to build SUIT and Flight components
+    * Add [gulp](http://gulpjs.com) into the Rails pipeline to build SUIT and Flight components
 - title: Radio Times
   id: rt
   url: radiotimes.com
