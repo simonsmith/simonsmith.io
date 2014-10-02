@@ -1,7 +1,8 @@
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html
+Options +FollowSymLinks
+Options +Indexes
+RewriteBase /
+RewriteRule project\/[a-zA-Z0-9-]+ /projects [R=301,L]
 
 # Apache Server Configs v2.0.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
