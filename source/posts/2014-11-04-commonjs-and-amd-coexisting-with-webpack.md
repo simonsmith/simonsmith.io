@@ -19,7 +19,7 @@ Pete Hunt recently [gave a talk](https://www.youtube.com/watch?v=VkTCL6Nqm6Y) de
 
 ## A use case
 
-Twitter's Flight JS library is a good example of an AMD only library that (until recently) is published exclusively on Bower. Consequently the ecosystem of useful third party components are written and published in the same way.
+Twitter's [Flight JS](https://github.com/flightjs/flight) library is a good example of an AMD only library that (until recently) is published exclusively on Bower. Consequently the ecosystem of useful third party components are written and published in the same way.
 
 Recently I had a need for Flight but wanted to consume it in CommonJS land which would allow me to use various other useful modules from npm.
 
