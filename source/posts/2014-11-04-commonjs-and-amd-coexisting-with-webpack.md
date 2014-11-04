@@ -15,7 +15,7 @@ In this post we'll look at how CommonJS and AMD can live together in the same co
 
 When searching for an alternative to [Browserify](http://browserify.org/), I stumbled across [webpack](http://webpack.github.io). Not only does it allow seamless use of AMD and CommonJS (the bit we're interested in!) it also has some other excellent features, such as code splitting and bundling of other static assets like CSS and images.
 
-Pete Hunt recently [gave a talk](http://webpack.github.io) detailing how they use it at Instagram. Worth a watch.
+Pete Hunt recently [gave a talk](https://www.youtube.com/watch?v=VkTCL6Nqm6Y) detailing how they use it at Instagram. Worth a watch.
 
 ## A use case
 
