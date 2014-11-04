@@ -172,6 +172,8 @@ Now when `webpack` is run we should end up with `pageA.built.js`, `pageB.built.j
 <script src="pageA.js"></script>
 ```
 
+> webpack is smart enough to only move modules into the `shared.js` when necessary.
+
 ##  Example
 
 The above Flight examples can be found [in this repository](https://github.com/simonsmith/webpack-example). I've also included a React example with a JSX compiler plugin.
