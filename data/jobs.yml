@@ -6,15 +6,17 @@
   from: June 2014
   to: false
   text: |
-    Maintained and developed new features and components for the [Shopa website](http://shopa.com), which is primarily a Rails application.
+    Maintained and developed new features for the [Shopa website](http://shopa.com).
 
-    Converted the front end components from Sass to Stylus and setup tooling with Gulp to provide pre-processing for [SUIT CSS](http://suitcss.github.io/), as seen in [this example repository](https://github.com/simonsmith/suitcss-with-stylus/).
+    Re-factored various front end components from Sass to Stylus and setup tooling with Gulp to provide pre-processing for [SUIT CSS](http://suitcss.github.io/), as seen in [this example repository](https://github.com/simonsmith/suitcss-with-stylus/).
 
-    Performed code reviews for new features via pull requests.
+    Adopted [Flight](https://github.com/flightjs/flight) to structure the JavaScript across the site. Introduced [webpack](http://webpack.github.io/) to build Flight components that are written as CommonJS modules.
 
-    Re-factored unstructured jQuery into [Flight](https://github.com/flightjs/flight) components.
+    Added new JSON endpoints in Rails to support the front end.
 
-    Built a new grid to support wider devices when viewing pages showing many products.
+    Used Git and GitHub to version control and review code.
+
+    Built a new grid to support wider devices when viewing pages with many products.
 
 - title: BBC
   contract: true
@@ -43,11 +45,11 @@
   text: |
     Responsible for building an internal, responsive [AngularJS](http://angularjs.org/) single page application. Built to allow users in Japan manage Universal's music catalogue.
 
-    As well as building and maintaining the features of the application I also implemented the [Karma test runner](http://karma-runner.github.io/0.10/index.html) to allow automated unit testing of JS code.
+    Implemented the [Karma test runner](http://karma-runner.github.io/0.10/index.html) to allow automated unit testing of JS code.
 
     The look and feel was primarily handled by Bootstrap 3. Grunt was used for various automated tasks (JS uglifying, Sass compilation etc) with Bower as the package manager for third party libraries.
 
-    Git was the VCS and I adopted a branching and rebasing workflow to add new features.
+    Git was the chosen VCS, adopting a branching and rebasing workflow to add new features.
 
 - title: Immediate Media
   role: Senior UI Developer

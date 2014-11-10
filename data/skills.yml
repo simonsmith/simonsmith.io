@@ -1,17 +1,19 @@
+- name: JavaScript
 - name: HTML
 - name: CSS
-- name: JavaScript
-- name: Sass
-- name: LESS
-- name: Grunt
-- name: Jasmine
-- name: Mocha
+- name: Stylus
+- name: Gulp
+- name: webpack
+- name: SUIT CSS
 - name: Flight
+- name: Git
+- name: Sass
+- name: Responsive design
 - name: jQuery
 - name: AngularJS
-- name: Git
-- name: React JS
-- name: SUIT CSS
-- name: Gulp
+- name: Jasmine
+- name: LESS
+- name: Grunt
+- name: Mocha
+- name: React
 - name: Node
-- name: Responsive design
