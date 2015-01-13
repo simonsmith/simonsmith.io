@@ -6,17 +6,19 @@
   from: June 2014
   to: false
   text: |
-    Maintained and developed new features for the [Shopa website](http://shopa.com).
+    Re-built the Shopa website to match a new design and developed various modular components with [SUIT CSS](http://suitcss.github.io/).
 
-    Re-factored various front end components from Sass to Stylus and setup tooling with Gulp to provide pre-processing for [SUIT CSS](http://suitcss.github.io/), as seen in [this example repository](https://github.com/simonsmith/suitcss-with-stylus/).
+    Setup tooling with gulp to support building of SUIT components, JS modules and icon fonts.
 
-    Adopted [Flight](https://github.com/flightjs/flight) to structure the JavaScript across the site. Introduced [webpack](http://webpack.github.io/) to build Flight components that are written as CommonJS modules.
+    Adopted [Flight](https://github.com/flightjs/flight) to structure the JavaScript across the site,
+    building the components with [webpack](http://webpack.github.io/) and utilising various
+    ES6 features with [6to5](http://6to5.org).
 
-    Added new JSON endpoints in Rails to support the front end.
+    Worked remotely and on site, communicating with team members via [Slack](http://slack.com).
 
-    Used Git and GitHub to version control and review code.
+    Refactored Rails controllers to support front end requirements.
 
-    Built a new grid to support wider devices when viewing pages with many products.
+    Used Git for version control and GitHub for code reviews.
 
 - title: BBC
   contract: true
@@ -43,11 +45,13 @@
   from: August 2013
   to: February 2014
   text: |
-    Responsible for building an internal, responsive [AngularJS](http://angularjs.org/) single page application. Built to allow users in Japan manage Universal's music catalogue.
+    Responsible for building an internal, responsive [AngularJS](http://angularjs.org/) single page application.
+    Built to allow users in Japan manage Universal's music catalogue.
 
     Implemented the [Karma test runner](http://karma-runner.github.io/0.10/index.html) to allow automated unit testing of JS code.
 
-    The look and feel was primarily handled by Bootstrap 3. Grunt was used for various automated tasks (JS uglifying, Sass compilation etc) with Bower as the package manager for third party libraries.
+    The look and feel was primarily handled by Bootstrap 3. Grunt was used for various automated tasks (JS uglifying, Sass compilation etc)
+    with Bower as the package manager for third party libraries.
 
     Git was the chosen VCS, adopting a branching and rebasing workflow to add new features.
 
@@ -58,13 +62,15 @@
   from: October 2012
   to: August 2013
   text: |
-    Worked on a mobile-first responsive TV listings grid for Radio Times using Twitter's [Flight JS library](http://twitter.github.com/flight/), [Handlebars](http://handlebarsjs.com/), [Jasmine](http://pivotal.github.io/jasmine/) and Sass.
+    Worked on a mobile-first responsive TV listings grid for Radio Times using Twitter's [Flight JS library](http://twitter.github.com/flight/),
+    [Handlebars](http://handlebarsjs.com/), [Jasmine](http://pivotal.github.io/jasmine/) and Sass.
 
     Ran workshops with other members of the UI team on topics such as [RequireJS](http://requirejs.org), [SMACSS](http://smacss.com/) and jQuery plugin development
 
     Maintained the RadioTimes front-end. Re-factoring old code and developing new areas of the site.
 
-    Identified use of various carousel plugins across multiple sites. To solve problem this I developed and open-sourced [a jQuery plugin](https://github.com/simonsmith/jquery.herotabs) that could be used instead.
+    Identified use of various carousel plugins across multiple sites. To solve problem this I developed and open-sourced
+    [a jQuery plugin](https://github.com/simonsmith/jquery.herotabs) that could be used instead.
 
     Implemented Bootstrap 3 and modular HTML/CSS workflows on a new responsive website for [You &amp; Your Wedding](http://www.youandyourwedding.co.uk/venues).
 
@@ -81,7 +87,8 @@
 
     Led development on a mobile first, responsive design and rebuild of [the Policy Expert site](http://www.policyexpert.co.uk). Also running on Wordpress.
 
-    Wrote various MooTools classes and released them on GitHub - [MooTools DOBSelect](https://github.com/simonsmith/MooTools-DOBSelect), [MooTools ResponsiveTable](https://github.com/simonsmith/MooTools-ResponsiveTable) and [MooTools MqShowHide](https://github.com/simonsmith/MooTools-MqShowHide)
+    Wrote various MooTools classes and released them on GitHub - [MooTools DOBSelect](https://github.com/simonsmith/MooTools-DOBSelect),
+    [MooTools ResponsiveTable](https://github.com/simonsmith/MooTools-ResponsiveTable) and [MooTools MqShowHide](https://github.com/simonsmith/MooTools-MqShowHide)
 
     Launched responsive version of the [QMetric company website](http://qmetric.co.uk). Source on [GitHub](https://github.com/qmetric/qmg-website)
 
@@ -96,7 +103,9 @@
 
     Providing feedback to PM, Product Owner and design agency regarding user experience best practices and accessibility guidelines.
 
-    Worked with another front-end developer to architect a [new Top Gear homepage](http://topgear.com), news article page and car model section. Created clean, semantic code and took care to ensure the user experience was acceptable on multiple browsers, environments and languages.
+    Worked with another front-end developer to architect a [new Top Gear homepage](http://topgear.com),
+    news article page and car model section. Created clean, semantic code and took care to ensure the user experience was acceptable
+    on multiple browsers, environments and languages.
 
     Maintained front-end code on [GoodFood](http://www.bbcgoodfood.com/) and [Gardener's World](http://www.gardenersworld.com/)
 
@@ -125,7 +134,8 @@
   from: November 2008
   to: March 2009
   text: |
-   Responsible for all front-end code on [www.pentland.com](http://www.pentland.com/) and exact duplication of site designs were required in various browser environments.
+   Responsible for all front-end code on [www.pentland.com](http://www.pentland.com/) and exact duplication of site designs
+   were required in various browser environments.
 
 - title: Focus
   role: UI Developer
@@ -152,4 +162,5 @@
   from: June 2007
   to: June 2008
   text: |
-    Part of the front-end development team working in a Java environment. Working closely with project managers and back-end developers to create web applications on the VYRE Unify CMS.
+    Part of the front-end development team working in a Java environment. Working closely with project managers
+    and back-end developers to create web applications on the VYRE Unify CMS.

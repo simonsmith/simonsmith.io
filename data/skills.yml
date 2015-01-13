@@ -3,6 +3,8 @@
 - name: CSS
 - name: Stylus
 - name: Gulp
+- name: React
+- name: Node
 - name: webpack
 - name: SUIT CSS
 - name: Flight
@@ -15,5 +17,3 @@
 - name: LESS
 - name: Grunt
 - name: Mocha
-- name: React
-- name: Node
