@@ -4,11 +4,11 @@
   text: |
     Shopa is a startup in East London, building an online social marketplace
 
-    I primarily worked on improving the front-end architecture of the site, as well as adding new features. Notable additions:
+    I primarily worked on the front-end, including architecting and rebuilding the site to match a new design. This included:
 
-    * Move to [SUIT CSS with Stylus](https://github.com/simonsmith/suitcss-with-stylus/) and re-factor the site to be more component based
-    * Structure the JavaScript with [Flight](http://flightjs.github.io/) and [Webpack](http://webpack.github.io/)
-    * Add [gulp](http://gulpjs.com) into the Rails pipeline to build SUIT and Flight components
+    * Developing modular UI components with [SUIT CSS](http://suitcss.github.io/)
+    * Structuring the JavaScript with [Flight JS](http://flightjs.github.io/) and [webpack](http://webpack.github.io/)
+    * Adding [gulp](http://gulpjs.com) into the Rails pipeline to build SUIT and Flight components
 - title: Radio Times
   id: rt
   url: radiotimes.com
