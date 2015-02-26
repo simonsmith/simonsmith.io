@@ -4,7 +4,7 @@
   url: shopa.com
   id: shopa
   from: June 2014
-  to: false
+  to: Feb 2014
   text: |
     Re-built the Shopa website to match a new design and developed various modular components with [SUIT CSS](http://suitcss.github.io/).
 
