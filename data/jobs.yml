@@ -1,10 +1,24 @@
+- title: BBC
+  contract: true
+  role: Senior Front end Developer
+  url: bbc.co.uk
+  id: bbc
+  from: February 2015
+  to: false
+  text: |
+    Developing a new web product for BBC Three.
+
+    Using Node with [React](https://facebook.github.io/react/) and [Express JS](http://expressjs.com/) to serve pages isomorphically.
+
+    Creating reusable UI components with [SUIT CSS](http://suitcss.github.io/), Sass and [PostCSS](https://github.com/postcss/postcss).
+
 - title: Shopa
   contract: true
   role: Front end Developer
   url: shopa.com
   id: shopa
   from: June 2014
-  to: Feb 2014
+  to: February 2015
   text: |
     Re-built the Shopa website to match a new design and developed various modular components with [SUIT CSS](http://suitcss.github.io/).
 
