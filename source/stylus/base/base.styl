@@ -1,9 +1,14 @@
-/**
- * Base styles
- */
+@css {
+  @custom-media --sm-viewport (min-width: 36.25em);
+  @custom-media --md-viewport (min-width: 49.375em);
+  @custom-media --lg-viewport (min-width: 72.1875em);
+}
 
-@require "./functions"
-@require "./theme"
+@require "functions"
+@require "vars"
+
+:root
+  --Grid-gutter-size grid-gutter-width
 
 html
   box-sizing border-box
