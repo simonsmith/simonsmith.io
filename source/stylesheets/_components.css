@@ -1,3 +1,4 @@
+
 @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Open+Sans:400italic,400,600,700,300);
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 
@@ -1168,13 +1169,19 @@ pre {
   font-smoothing: antialiased;
 }
 .Icon--link:before {
-  content: "\e002";
+  content: "\e003";
 }
 .Icon--github:before {
   content: "\e001";
 }
 .Icon--twitter:before {
-  content: "\e003";
+  content: "\e005";
+}
+.Icon--instagram:before {
+  content: "\e002";
+}
+.Icon--linkedin:before {
+  content: "\e004";
 }
 .Icon--email:before {
   content: "\e000";
@@ -1816,7 +1823,8 @@ pre {
   margin-bottom: 0.625rem;
 }
 .Contact-item {
-  margin-bottom: 0.3125rem;
+  margin-bottom: 0.375rem;
+  text-transform: lowercase;
 }
 .Contact-item .Icon {
   margin-right: 0.1875rem;

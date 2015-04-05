@@ -4,7 +4,7 @@
     <% data.contact.each do |contact| %>
       <li class="Contact-item">
         <a class="u-linkNoDecoration u-linkMuted" href="<%= contact.url %>">
-          <i class="Icon <%= contact.icon %>"></i>
+          <i class="Icon Icon--lg <%= contact.icon %>"></i>
           <%= contact.text %>
         </a>
       </li>
