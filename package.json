@@ -18,8 +18,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.1",
     "postcss-bem-linter": "^0.2.0",
-    "postcss-import": "^5.1.0",
-    "require-dir": "^0.3.0"
+    "postcss-import": "^5.1.0"
   },
   "dependencies": {
     "normalize-css": "^2.3.1",
