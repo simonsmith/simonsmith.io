@@ -1,6 +1,6 @@
 <% content_for :title, 'CV' %>
 
-<div class="CV hresume">
+<div class="hresume">
   <h1>CV</h1>
 
   <h2 class="u-hiddenVisually">Profile</h2>
@@ -10,11 +10,13 @@
 
   <h2 id="employment">Employment</h2>
 
-  <% data.jobs.each do |job| %>
-    <div class="u-mb20 u-pb20">
+  <div class="JobList">
+    <% data.jobs.each do |job| %>
+    <div class="JobList-item">
       <%= partial 'job', locals: { job: job } %>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 
   <h2 id="skills">Skills</h2>
   <p>A selection of my recent experience in commercial and personal projects:</p>

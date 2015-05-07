@@ -2,8 +2,10 @@
 
 <h1>Projects</h1>
 
-<% data.projects.each do |project| %>
-  <div class="u-mb20">
-    <%= partial 'project', locals: {project: project} %>
-  </div>
-<% end %>
+<div class="ProjectList">
+  <% data.projects.each do |project| %>
+    <div class="ProjectList-item">
+      <%= partial 'project', locals: {project: project} %>
+    </div>
+  <% end %>
+</div>

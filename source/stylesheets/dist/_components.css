@@ -1777,6 +1777,12 @@ pre {
     border-top: 0;
   }
 }
+/** @define JobList */
+
+.JobList-item {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+}
 /** @define Job; weak */
 
 .Job-header {
@@ -1814,6 +1820,11 @@ pre {
   border-radius: 3px;
   margin-bottom: 0.3125rem;
   margin-right: 0.125rem;
+}
+/** @define ProjectList */
+
+.ProjectList-item {
+  margin-bottom: 1.25rem;
 }
 /** @define Project */
 
