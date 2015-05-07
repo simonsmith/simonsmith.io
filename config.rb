@@ -17,7 +17,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :partials_dir, 'partials'
 
-ignore 'stylus/*'
+ignore 'stylesheets/src/*'
 
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true
@@ -34,7 +34,7 @@ activate :deploy do |deploy|
   deploy.host = 'simonsmith.io'
   deploy.path = '/public_html'
   deploy.build_before = true
-  deploy.user = 'simon'
+  deploy.user = 'simonsmi'
   deploy.password = password
 end
 
