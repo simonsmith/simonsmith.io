@@ -1,0 +1,27 @@
+/** @define Header */
+
+@import "./nav";
+@import "./logo";
+
+:root {
+  --Header-borderColor: #eee;
+}
+
+.Header {
+  border-bottom: 1px solid var(--Header-borderColor);
+  padding-bottom: 10px;
+}
+
+.Header-wrapLogo {
+  margin-bottom: 10px;
+}
+
+@media (--md-viewport) {
+  .Header {
+    padding-bottom: 0;
+  }
+
+  .Header-wrapLogo {
+    margin-bottom: 0;
+  }
+}

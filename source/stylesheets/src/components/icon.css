@@ -1,0 +1,84 @@
+/** @define Icon */
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("/fonts/flaticon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Icon:before {
+  font-family: "Flaticon";
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+  background: transparent;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.Icon--link:before {
+  content: "\e003";
+}
+
+.Icon--github:before {
+  content: "\e001";
+}
+
+.Icon--twitter:before {
+  content: "\e005";
+}
+
+.Icon--instagram:before {
+  content: "\e002";
+}
+
+.Icon--linkedin:before {
+  content: "\e004";
+}
+
+.Icon--email:before {
+  content: "\e000";
+}
+
+.Icon--xxs {
+  font-size: 10px !important;
+  line-height: 10px;
+}
+
+.Icon--xs {
+  font-size: 12px !important;
+  line-height: 12px;
+}
+
+.Icon--sm {
+  font-size: 14px !important;
+  line-height: 14px;
+}
+
+.Icon--md {
+  font-size: 16px !important;
+  line-height: 16px;
+}
+
+.Icon--lg {
+  font-size: 18px !important;
+  line-height: 16px;
+}
+
+.Icon--xlg {
+  font-size: 20px !important;
+  line-height: 20px;
+}
+
+.Icon--xxlg {
+  font-size: 28px !important;
+  line-height: 28px;
+}

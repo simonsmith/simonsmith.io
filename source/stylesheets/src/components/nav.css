@@ -1,0 +1,37 @@
+/** @define Nav */
+
+@import "suitcss-utils-display";
+@import "suit-utils-list";
+@import "../utils/link";
+
+.Nav {
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.Nav-list {
+  margin: 0;
+}
+
+.Nav-item {
+  display: inline-block;
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.Nav-item.is-active .Nav-link{
+  color: #547BCE;
+}
+
+.Nav-link {
+  text-decoration: none;
+}
+
+@media (--md-viewport) {
+  .Nav {
+    text-align: right;
+  }
+}

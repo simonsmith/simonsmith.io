@@ -1,0 +1,12 @@
+/** @define Footer */
+
+@import "../utils/link";
+
+.Footer {
+  border-top: 1px solid #eee;
+}
+
+.Footer-text {
+  font-size: 13px;
+  color: #aaa;
+}

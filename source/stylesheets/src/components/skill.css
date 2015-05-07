@@ -1,0 +1,13 @@
+/** @define Skill */
+
+@import "suit-utils-list";
+@import "suitcss-utils-display";
+
+.Skill {
+  border: 1px solid #ccc;
+  background-color: #eee;
+  padding: 3px 6px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  margin-right: 2px;
+}

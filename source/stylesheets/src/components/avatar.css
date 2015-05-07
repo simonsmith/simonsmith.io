@@ -1,0 +1,11 @@
+/** @define Avatar */
+
+@import "../utils/img";
+
+.Avatar {
+  border: 1px solid var(--color-gray-lighter);
+  background-color: #fff;
+  padding: 2px;
+  width: 90px;
+  display: inline-block;
+}

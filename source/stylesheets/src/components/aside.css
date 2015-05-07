@@ -1,0 +1,21 @@
+/** @define Aside */
+
+@import "./profile";
+@import "./contact";
+
+.Aside--roundBtm {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.Aside-item--shiftUp {
+  margin-top: -1px;
+}
+
+@media (--md-viewport) {
+  .Aside {
+    background-color: var(--color-gray-faint);
+    border: 1px solid var(--color-gray-lighter);
+    border-top: 0;
+  }
+}

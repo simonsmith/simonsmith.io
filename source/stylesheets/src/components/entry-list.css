@@ -1,0 +1,7 @@
+/** @define EntryList */
+
+@import "suit-utils-list";
+
+.EntryList-item {
+  margin-bottom: 10px;
+}

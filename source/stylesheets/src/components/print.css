@@ -63,7 +63,7 @@
     }
 
     .Header-wrapNav, .Profile {
-      display none
+      display: none;
     }
 
 }

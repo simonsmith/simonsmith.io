@@ -1,0 +1,13 @@
+/** @define Container */
+
+@import "suitcss-utils-layout";
+
+.Container {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.Container--main {
+  padding-bottom: 40px;
+}

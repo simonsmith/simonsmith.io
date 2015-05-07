@@ -1,0 +1,18 @@
+/** @define utilities; weak */
+
+.u-linkMuted {
+  color: var(--link-muted-color);
+
+  &:hover {
+    color: var(--link-muted-color-hover);
+  }
+}
+
+.u-linkUnderline {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+}
+
+.u-linkNoDecoration {
+  text-decoration: none !important;
+}
