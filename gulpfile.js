@@ -51,3 +51,7 @@ gulp.task('postcss', function() {
 });
 
 gulp.task('css', ['lint', 'postcss']);
+gulp.task('default', ['css']);
+gulp.task('watch', function() {
+  gulp.watch('source/stylesheets/src/**/*.css', ['css']);
+});
