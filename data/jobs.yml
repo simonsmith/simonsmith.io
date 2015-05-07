@@ -10,7 +10,7 @@
 
     Using Node with [React](https://facebook.github.io/react/) and [Express JS](http://expressjs.com/) to serve pages isomorphically.
 
-    Creating reusable UI components with [SUIT CSS](http://suitcss.github.io/), Sass and [PostCSS](https://github.com/postcss/postcss).
+    Creating reusable UI components with [SUIT CSS](http://suitcss.github.io/) and [PostCSS](https://github.com/postcss/postcss).
 
 - title: Shopa
   contract: true
