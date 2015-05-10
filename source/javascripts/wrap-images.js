@@ -1,5 +1,5 @@
 !function() {
-  var $img = $('.js-entry-body img');
+  var $img = $('.js-entry-body p img');
   if (!$img.length) return;
 
   $img.each(function(img) {
