@@ -2,7 +2,6 @@
 title: Using webpack to build React components and their assets
 date: 2015-05-10
 type: post
-published: false
 ---
 
 I recently stumbled across [an excellent talk](https://www.youtube.com/watch?v=L8w3v9m6G04) by Nicolas Gallagher at dotCSS 2013 titled "Thinking beyond Scalable CSS" where he shed some light on how Twitter organise their UI components.
