@@ -4,7 +4,7 @@ date: 2015-05-10
 type: post
 ---
 
-I recently stumbled across [an excellent talk](https://www.youtube.com/watch?v=L8w3v9m6G04) by Nicolas Gallagher at dotCSS 2013 titled "Thinking beyond Scalable CSS" where he shed some light on how Twitter organise their UI components.
+I recently stumbled across [an excellent talk](https://www.youtube.com/watch?v=L8w3v9m6G04) by Nicolas Gallagher at dotCSS 2014 titled "Thinking beyond Scalable CSS" where he shed some light on how Twitter organise their UI components.
 
 I found two slides interesting in particular:
 
