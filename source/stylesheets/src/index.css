@@ -6,7 +6,7 @@
  */
 @import "suitcss-components-grid";
 @import "suitcss-utils-layout";
-@import "suitcss-utils-size/lib/size";
+@import "suitcss-utils-size/lib/size-sm";
 @import "suitcss-utils-size/lib/size-md";
 @import "suitcss-utils-before/lib/before-md";
 

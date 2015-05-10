@@ -9,10 +9,10 @@ I recently stumbled across [an excellent talk](https://www.youtube.com/watch?v=L
 I found two slides interesting in particular:
 
 <div class="Entry-wrapImg Grid">
-  <div class="Grid-cell u-md-size1of2">
+  <div class="Grid-cell u-sm-size1of2">
     <img class="Entry-img" src="./slide1.png">
   </div>
-  <div class="Grid-cell u-md-size1of2">
+  <div class="Grid-cell u-sm-size1of2">
     <img class="Entry-img" src="./slide2.png">
   </div>
 </div>
@@ -217,7 +217,23 @@ npm install postcss-loader
 **webpack.config.js**
 
 ``` js
-{ test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader') };
+// Only showing additions
+
+var atImport = require('postcss-import');
+
+module: {
+  loaders: [ { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader') }
+  ]
+}
+
+{
+  postcss: [
+    atImport({
+      path: ['node_modules', './src']
+    })
+    // Other PostCSS plugins
+  ]
+}
 ```
 
 With that in place the `import` statements from the JS files can move into the CSS:
