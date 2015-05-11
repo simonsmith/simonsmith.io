@@ -166,7 +166,7 @@ import './index.css';
 // ...rest of the component
 ```
 
-webpack will be smart enough to see if more than one component has requested the same stylesheet and ensure the order is correct with and without duplicates in the resulting `.css` file.
+webpack will be smart enough to see if more than one component has requested the same stylesheet and ensure the order is correct and without duplicates in the resulting `.css` file.
 
 ### Require all style dependencies in the top level component
 
