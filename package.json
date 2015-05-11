@@ -11,6 +11,7 @@
   "devDependencies": {
     "autoprefixer-core": "^5.1.11",
     "gulp": "^3.8.11",
+    "gulp-filter": "^2.0.2",
     "gulp-postcss": "^5.1.6",
     "gulp-rename": "^1.2.2",
     "postcss": "^4.1.9",
