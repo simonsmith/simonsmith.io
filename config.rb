@@ -25,9 +25,7 @@ set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true
 activate :syntax, :line_numbers => false
 activate :directory_indexes
 
-file = File.open(".ftp_password", "r")
-password = file.read
-file.close
+password = ENV["BLOG_PASSWORD"]
 
 activate :deploy do |deploy|
   deploy.method = :ftp
