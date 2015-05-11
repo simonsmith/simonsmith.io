@@ -3,12 +3,8 @@
 @import "./nav";
 @import "./logo";
 
-:root {
-  --Header-borderColor: #eee;
-}
-
 .Header {
-  border-bottom: 1px solid var(--Header-borderColor);
+  border-bottom: 1px solid var(--color-gray-lighter);
   padding-bottom: 10px;
 }
 

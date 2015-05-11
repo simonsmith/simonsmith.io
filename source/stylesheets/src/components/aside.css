@@ -3,7 +3,7 @@
 @import "./profile";
 @import "./contact";
 
-.Aside--roundBtm {
+.Aside {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
