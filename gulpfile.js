@@ -36,7 +36,7 @@ gulp.task('postcss', function() {
     .pipe(postcss([
       // Parse the nested rules first so bemLinter doesn't choke
       plugins.nested(),
-      plugins.bemLinter('suit'),
+      plugins.bemLinter(),
       plugins.logWarnings()
     ]))
     .pipe(filter(['index.css']))
