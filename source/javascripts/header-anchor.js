@@ -6,9 +6,7 @@ $('.js-entry-body')
       class: 'Entry-anchor',
       href: '#' + $header.attr('id')
     });
-    var $icon = $('<span></span>', {
-      class: 'Icon Icon--link Icon--lg'
-    });
+    var $icon = $('<svg class="Icon Icon--lg"><use xlink:href="#icon-link"></use></svg>');
 
     $anchor.append($icon);
     $header.prepend($anchor);

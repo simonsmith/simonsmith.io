@@ -1,8 +1,10 @@
-var gulp    = require('gulp');
-var postcss = require('gulp-postcss');
-var filter  = require('gulp-filter');
-var rename  = require('gulp-rename');
-var plugins = require('postcss-load-plugins')();
+var gulp     = require('gulp');
+var postcss  = require('gulp-postcss');
+var filter   = require('gulp-filter');
+var rename   = require('gulp-rename');
+var svgstore = require('gulp-svgstore');
+var svgmin   = require('gulp-svgmin');
+var plugins  = require('postcss-load-plugins')();
 
 var processors = [
   plugins.import(),
@@ -43,6 +45,17 @@ gulp.task('postcss', function() {
     .pipe(postcss(processors))
     .pipe(rename('_components.css'))
     .pipe(gulp.dest('source/stylesheets/dist'))
+});
+
+gulp.task('icons', function() {
+  return gulp.src(['source/svg/*.svg'])
+    .pipe(rename({ prefix: 'icon-' }))
+    .pipe(svgmin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('icons.svg'))
+    .pipe(gulp.dest('source/icons'));
 });
 
 gulp.task('css', ['postcss']);

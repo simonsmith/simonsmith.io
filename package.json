@@ -14,6 +14,8 @@
     "gulp-filter": "^2.0.2",
     "gulp-postcss": "^5.1.6",
     "gulp-rename": "^1.2.2",
+    "gulp-svgmin": "^1.1.2",
+    "gulp-svgstore": "^5.0.1",
     "postcss": "^4.1.9",
     "postcss-bem-linter": "necolas/postcss-bem-linter",
     "postcss-calc": "^4.0.1",

@@ -1,15 +1,15 @@
 - url: mailto:me@simonsmith.io
   text: me@simonsmith.io
-  icon: Icon--email
+  icon: email
 - url: http://twitter.com/blinkdesign
   text: '@blinkdesign'
-  icon: Icon--twitter
+  icon: twitter
 - url: https://github.com/simonsmith
   text: Github
-  icon: Icon--github
+  icon: github
 - url: https://instagram.com/blinkdesign
   text: Instagram
-  icon: Icon--instagram
+  icon: instagram
 - url: https://uk.linkedin.com/in/blinkdesign
   text: LinkedIn
-  icon: Icon--linkedin
+  icon: linkedin
