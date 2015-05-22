@@ -7,6 +7,9 @@
     <%= stylesheet_link_tag 'site' %>
   </head>
   <body>
+    <div class="u-hidden">
+      <%= partial 'icons/icons.svg' %>
+    </div>
     <header class="Header" role="banner">
       <div class="Container">
         <div class="Grid Grid--alignMiddle Grid--withGutter">
@@ -65,8 +68,5 @@
       ga('create', 'UA-6798894-3', 'auto');
       ga('send', 'pageview');
     </script>
-    <div class="u-hidden">
-      <%= partial 'icons/icons.svg' %>
-    </div>
   </body>
 </html>
