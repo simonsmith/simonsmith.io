@@ -17,7 +17,7 @@
     "gulp-svgmin": "^1.1.2",
     "gulp-svgstore": "^5.0.1",
     "postcss": "^4.1.9",
-    "postcss-bem-linter": "necolas/postcss-bem-linter",
+    "postcss-bem-linter": "0.3.0",
     "postcss-calc": "^4.0.1",
     "postcss-custom-media": "^3.0.0",
     "postcss-custom-properties": "^3.3.0",
@@ -25,6 +25,7 @@
     "postcss-load-plugins": "^1.0.1",
     "postcss-log-warnings": "^0.2.0",
     "postcss-nested": "^0.2.2",
+    "postcss-property-lookup": "^0.1.0",
     "postcss-pxtorem": "^2.0.1",
     "postcss-size": "^0.2.0"
   },

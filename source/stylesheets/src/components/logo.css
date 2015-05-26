@@ -24,7 +24,7 @@
   .Logo {
     background-color: var(--color-gray-faint);
     border-right: 1px solid var(--color-gray-lighter);
-    border-left: 1px solid var(--color-gray-lighter);
+    border-left: @border-right;
     padding: 5px;
   }
 

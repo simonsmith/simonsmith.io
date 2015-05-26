@@ -12,6 +12,7 @@ var processors = [
   plugins.calc(),
   plugins.size,
   plugins.customMedia(),
+  plugins.propertyLookup(),
   plugins.pxtorem({
     prop_white_list: [
       'font',
