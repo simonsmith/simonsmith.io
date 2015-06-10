@@ -18,16 +18,14 @@
   display: inline-block;
   border: 1px solid #aaa;
   height: 200px;
-}
 
-@media (min-width: 30em) {
-  .Project-img {
+  @media (min-width: 30em) {
     height: auto;
   }
 }
 
-@media (--sm-viewport) {
-  .Project-url {
+.Project-url {
+  @media (--sm-viewport) {
     position: absolute;
     right: 0;
     top: 10px;

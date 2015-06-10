@@ -9,6 +9,14 @@
   margin: auto;
   width: 60%;
   font-size: 14px;
+
+  @media (min-width: 30.625em) {
+     width: 80%;
+  }
+
+  @media (--md-viewport) {
+    width: auto;
+  }
 }
 
 .Contact-list {
@@ -20,6 +28,10 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
+
+  @media (min-width: 30.625em) {
+    text-align: left;
+  }
 }
 
 .Contact-item {
@@ -28,21 +40,5 @@
 
   .Icon {
     margin-right: 3px;
-  }
-}
-
-@media (min-width: 30.625em) {
-  .Contact {
-    width: 80%;
-  }
-
-  .Contact-header {
-    text-align: left;
-  }
-}
-
-@media (--md-viewport) {
-  .Contact {
-    width: auto;
   }
 }

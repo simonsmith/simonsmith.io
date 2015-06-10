@@ -7,6 +7,10 @@
 .Nav {
   text-align: center;
   text-transform: lowercase;
+
+  @media (--md-viewport) {
+    text-align: right;
+  }
 }
 
 .Nav-list {
@@ -28,10 +32,4 @@
 
 .Nav-link {
   text-decoration: none;
-}
-
-@media (--md-viewport) {
-  .Nav {
-    text-align: right;
-  }
 }

@@ -7,6 +7,13 @@
   display: block;
   color: inherit;
   font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  @media (--md-viewport) {
+    background-color: var(--color-gray-faint);
+    border-right: 1px solid var(--color-gray-lighter);
+    border-left: @border-right;
+    padding: 5px;
+  }
 }
 
 .Logo-title {
@@ -20,15 +27,8 @@
   text-transform: lowercase;
 }
 
-@media (--md-viewport) {
-  .Logo {
-    background-color: var(--color-gray-faint);
-    border-right: 1px solid var(--color-gray-lighter);
-    border-left: @border-right;
-    padding: 5px;
-  }
-
-  .Logo-subtitle, .Logo-title {
+.Logo-subtitle, .Logo-title {
+  @media (--md-viewport) {
     display: block;
   }
 }
