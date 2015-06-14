@@ -174,9 +174,9 @@ Great, our first test is passing.
 
 It's not uncommon to have a few methods attached to the React component and to need to test them. An example might be a method that performs some complex transforms on data sent in via the props.
 
-If you stick to stateless methods on your React components (a good pattern to [adhere to regardless](https://medium.com/javascript-scene/baby-s-first-reaction-2103348eccdd#13b0)) then it's an absolutely breeze to unit test them.
+If you stick to stateless methods on your React components (a good pattern to [adhere to regardless](https://medium.com/javascript-scene/baby-s-first-reaction-2103348eccdd#13b0)) then it's an absolute breeze to unit test them.
 
-You can reference any methods directly on the prototype of the component. Let's make sure the `stripParagraphTags` method is working correctly.
+You can reference any method directly on the prototype of the component. Let's make sure the `stripParagraphTags` method is working correctly.
 
 ``` js
 describe('stripParagraphTags method', function() {
