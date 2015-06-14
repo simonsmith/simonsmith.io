@@ -51,6 +51,10 @@ h4 {
 h2, h3, h4 {
   font-weight: 400;
   color: #111;
+
+  code {
+    color: #777;
+  }
 }
 
 blockquote {
