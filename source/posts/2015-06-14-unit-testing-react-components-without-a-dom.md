@@ -250,9 +250,12 @@ With that in mind we will write a spec to ensure each `<li>` contains a `Post` c
 
 ``` js
 import { expect } from 'chai';
-
+import React from 'react/addons';
 import PostList from '../../components/post-list.react';
+import Post from '../../components/post.react';
 import createComponent from '../util/create-component';
+
+const TestUtils = React.addons.TestUtils;
 
 describe('PostList component', function() {
   const postData = [
@@ -263,20 +266,21 @@ describe('PostList component', function() {
 
   it('should render a list of post components', function() {
     const postList = createComponent(PostList, { posts: postData });
-    const items = postList.props.children.filter(postListItem => postListItem.props.children.type.displayName === 'Post');
+    const items = postList.props.children.filter(postListItem => TestUtils.isElementOfType(postListItem.props.children, Post));
 
     expect(items.length).to.equal(postData.length);
   });
 });
+
 ```
 
 The line of interest here is where we check the child elements of `PostList`:
 
 ``` js
-const items = postList.props.children.filter(postListItem => postListItem.props.children.type.displayName === 'Post');
+const items = postList.props.children.filter(postListItem => TestUtils.isElementOfType(postListItem.props.children, Post));
 ```
 
-First we filter through the children of `PostList` (which are the `<li>` elements) and then within each of those we can check the child has a `displayName` of `Post`. If it is then the component is returned. Now the length of the `items` array should match the total items in the `postData` array.
+First we filter through the children of `PostList` (which are the `<li>` elements) and then within each of those we can check the child is type `Post`. If it is then the component is returned. Now the length of the `items` array should match the total items in the `postData` array.
 
 ``` bash
   PostList component
