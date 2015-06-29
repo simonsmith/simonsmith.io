@@ -1,8 +1,9 @@
 - name: JavaScript
 - name: HTML
 - name: CSS
+- name: PostCSS
 - name: Stylus
-- name: Gulp
+- name: gulp
 - name: React
 - name: Node
 - name: webpack
@@ -13,7 +14,4 @@
 - name: Responsive design
 - name: jQuery
 - name: AngularJS
-- name: Jasmine
-- name: LESS
-- name: Grunt
 - name: Mocha
