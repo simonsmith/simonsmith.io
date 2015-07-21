@@ -14,6 +14,6 @@
   }
 }
 
-.Aside-item--shiftUp {
+.Aside-item:first-of-type {
   margin-top: -1px;
 }
