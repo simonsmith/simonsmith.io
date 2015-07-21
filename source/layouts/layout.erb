@@ -59,7 +59,10 @@
         </div>
       </div>
     </footer>
-    <%= javascript_include_tag 'all' %>
+    <script>
+      window.$ = document.querySelectorAll.bind(document);
+      NodeList.prototype.__proto__ = Array.prototype;
+    </script>
     <% if content_for? :scripts %>
       <%= yield_content :scripts %>
     <% end %>
