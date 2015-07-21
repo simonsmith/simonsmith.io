@@ -1,13 +1,12 @@
-$('.js-entry-body')
-  .find('h2, h3, h4, h5, h6')
-  .each(function() {
-    var $header = $(this);
-    var $anchor = $('<a></a>', {
-      class: 'Entry-anchor',
-      href: '#' + $header.attr('id')
-    });
-    var $icon = $('<svg class="Icon Icon--lg"><use xlink:href="#icon-link"></use></svg>');
+!function() {
+  var entryBody = document.querySelector('.js-entry-body');
+  var headers = entryBody.querySelectorAll('h2, h3, h4, h5, h6');
+  headers.forEach(function(header) {
+    var anchor = document.createElement('a');
+    anchor.setAttribute('class', 'Entry-anchor');
+    anchor.setAttribute('href', '#' + header.getAttribute('id'));
+    anchor.innerHTML = '<svg class="Icon Icon--lg"><use xlink:href="#icon-link"></use></svg>';
 
-    $anchor.append($icon);
-    $header.prepend($anchor);
+    header.insertBefore(anchor, header.firstChild);
   });
+}();
