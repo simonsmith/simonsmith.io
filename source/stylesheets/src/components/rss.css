@@ -1,0 +1,13 @@
+/** @define Rss */
+
+@import "../utils/link";
+
+.Rss-icon {
+  fill: #f26522;
+}
+
+.Rss-text {
+  font-size: 15px;
+  vertical-align: middle;
+  margin-left: 2px;
+}

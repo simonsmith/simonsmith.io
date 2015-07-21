@@ -25,6 +25,10 @@ a {
   }
 }
 
+abbr[title] {
+  border-bottom: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
