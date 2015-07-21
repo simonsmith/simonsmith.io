@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= current_page.data.title || yield_content(:title) || 'Blog' %> &ndash; simonsmith.io &ndash; Portfolio and blog of a London based front-end web developer</title>
     <%= stylesheet_link_tag 'site' %>
+    <link rel="alternate" type="application/rss+xml" title="feed one" href="/feed.xml"/>
   </head>
   <body>
     <div class="u-hidden">
