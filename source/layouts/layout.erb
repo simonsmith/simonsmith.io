@@ -4,19 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= current_page.data.title || yield_content(:title) || 'Blog' %> &ndash; simonsmith.io &ndash; Portfolio and blog of a London based front-end web developer</title>
-    <%= stylesheet_link_tag 'site' %>
-    <link rel="alternate" type="application/rss+xml" title="simonsmith.io - blog RSS" href="/feed.xml"/>
-    <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
     <script>
       document.documentElement.className += ' wf-loading';
-      WebFontConfig = {
+      var WebFontConfig = {
         google: {
           families: ['Yanone Kaffeesatz', 'Open Sans:400italic,400,600,700,300'],
           classes: false,
           events: false
         }
       };
+      var ga = ga || function() {
+        (ga.q = ga.q || []).push(arguments);
+      };
+      ga.l = 1 * new Date();
+      ga('create', 'UA-6798894-3', 'auto');
+      ga('send', 'pageview');
     </script>
+    <style>
+      .wf-loading body, .wf-loading .Logo { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    </style>
+    <%= stylesheet_link_tag 'site' %>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="simonsmith.io - blog RSS" href="/feed.xml"/>
   </head>
   <body>
     <div class="u-hidden">
@@ -77,14 +87,5 @@
     <% if content_for? :scripts %>
       <%= yield_content :scripts %>
     <% end %>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-6798894-3', 'auto');
-      ga('send', 'pageview');
-    </script>
   </body>
 </html>
