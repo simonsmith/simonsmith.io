@@ -16,6 +16,11 @@
   }
 }
 
+/* postcss-bem-linter: ignore */
+.wf-loading .Logo {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .Logo-title {
   font-size: 32px;
   margin: 0;

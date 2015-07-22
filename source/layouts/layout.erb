@@ -6,6 +6,17 @@
     <title><%= current_page.data.title || yield_content(:title) || 'Blog' %> &ndash; simonsmith.io &ndash; Portfolio and blog of a London based front-end web developer</title>
     <%= stylesheet_link_tag 'site' %>
     <link rel="alternate" type="application/rss+xml" title="simonsmith.io - blog RSS" href="/feed.xml"/>
+    <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+      document.documentElement.className += ' wf-loading';
+      WebFontConfig = {
+        google: {
+          families: ['Yanone Kaffeesatz', 'Open Sans:400italic,400,600,700,300'],
+          classes: false,
+          events: false
+        }
+      };
+    </script>
   </head>
   <body>
     <div class="u-hidden">
