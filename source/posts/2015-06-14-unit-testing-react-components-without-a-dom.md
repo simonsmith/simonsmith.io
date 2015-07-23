@@ -156,7 +156,31 @@ it('should render a post title and content', function() {
 });
 ```
 
-To verify this we can run Mocha with [Babel](https://babeljs.io/) to take care of the ES6 compilation.
+This works fine for simple components but it can feel quite brittle to traverse heavily nested objects and select array elements this way.
+
+An alternative approach to this is to create the expected render method output in the test and then compare that with our component.
+
+``` js
+// The test will now require React
+import React from 'react';
+
+it('should render a post title and content', function() {
+  const expectedChildren = [
+      React.DOM.h2({ className: 'Post-header' }, 'Title'),
+      React.DOM.p({ className: 'Post-content'}, 'Content')
+  ];
+
+  expect(post.type).to.equal('div');
+  expect(post.props.className).to.contain('Post');
+  expect(post.props.children).to.deep.equal(expectedChildren);
+});
+```
+
+This works really nicely for more complicated components and makes tests much easier to read. Pick whatever method works for you.
+
+#### Running the tests
+
+To verify it all works we can run Mocha with [Babel](https://babeljs.io/) to take care of the ES6 compilation.
 
 ``` bash
 mocha test/components --compilers js:babel/register
