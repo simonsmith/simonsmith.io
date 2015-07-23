@@ -1,9 +1,5 @@
 <% path = "projects/#{project.id}/%{filename}.png" %>
 
-<% content_for :scripts do %>
-  <%= javascript_include_tag 'picturefill' %>
-<% end %>
-
 <div class="Project u-cf" id="<%= project.id %>">
   <div class="Project-header">
     <h2 class="Project-title"><%= project.title %></h2>

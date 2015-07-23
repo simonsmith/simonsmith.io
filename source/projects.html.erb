@@ -1,5 +1,9 @@
 <% content_for :title, 'Projects' %>
 
+<% content_for :scripts do %>
+  <%= javascript_include_tag 'picturefill' %>
+<% end %>
+
 <h1>Projects</h1>
 
 <div class="ProjectList">
