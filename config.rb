@@ -8,6 +8,9 @@ activate :blog do |blog|
   blog.permalink = "{title}.html"
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
   blog.layout = "blog"
+  blog.paginate = true
+  blog.page_link = "p{num}"
+  blog.per_page = 10
 end
 
 page "/feed.xml", layout: false
@@ -38,20 +41,9 @@ end
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
   activate :minify_css
-
-  # Minify Javascript on build
   activate :minify_javascript
-
-  # Enable cache buster
   activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
 end
 
 helpers do

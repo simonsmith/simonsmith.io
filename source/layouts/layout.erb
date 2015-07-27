@@ -30,6 +30,9 @@
     <script async src="//www.google-analytics.com/analytics.js"></script>
     <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
     <link rel="alternate" type="application/rss+xml" title="simonsmith.io - blog RSS" href="/feed.xml"/>
+    <% if content_for? :head %>
+      <%= yield_content :head %>
+    <% end %>
   </head>
   <body>
     <div hidden>

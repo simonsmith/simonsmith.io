@@ -1,0 +1,23 @@
+<% content_for :head do %>
+  <% if prev_page %>
+    <link rel="prev" href="<%= prev_page.url %>">
+  <% end %>
+  <% if next_page %>
+    <link rel="next" href="<%= next_page.url %>">
+  <% end %>
+<% end %>
+
+<ul class="Pagination u-listUnstyled">
+  <% if prev_page %>
+    <li class="Pagination-item">
+      <span aria-hidden="true">&laquo;</span>
+      <%= link_to 'Previous', prev_page.url, class: 'u-linkNoDecoration u-linkMuted', 'aria-label': 'Previous' %>
+    </li>
+  <% end %>
+  <% if next_page %>
+    <li class="Pagination-item">
+      <%= link_to 'Next', next_page.url, class: 'u-linkNoDecoration u-linkMuted', 'aria-label': 'Next' %>
+      <span aria-hidden="true">&raquo;</span>
+    </li>
+  <% end %>
+</ul>

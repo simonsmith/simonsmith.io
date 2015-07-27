@@ -1,0 +1,16 @@
+/** @define Pagination */
+
+@import "suit-utils-list";
+
+.Pagination {
+  margin: 0;
+  text-align: center;
+}
+
+.Pagination-item {
+  display: inline-block;
+
+  &:not(:only-child) {
+    margin-right: 5px;
+  }
+}

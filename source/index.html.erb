@@ -6,7 +6,7 @@ per_page: 10
 <h1>Blog</h1>
 
 <ul class="EntryList u-listUnstyled">
-<% blog.articles[0...20].each do |article| %>
+<% page_articles.each do |article| %>
   <li class="EntryList-item">
     <div class="Entry">
       <h2 class="Entry-title">
@@ -17,3 +17,7 @@ per_page: 10
   </li>
 <% end %>
 </ul>
+
+<nav class="u-mt40 u-mb20">
+  <%= partial 'pagination', locals: { next_page: next_page, prev_page: prev_page } %>
+</nav>
