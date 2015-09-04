@@ -35,7 +35,7 @@ activate :deploy do |deploy|
   deploy.host = 'simonsmith.io'
   deploy.path = '/public_html'
   deploy.build_before = true
-  deploy.user = 'simonsmi'
+  deploy.user = 'blogftp@simonsmith.io'
   deploy.password = password
 end
 
