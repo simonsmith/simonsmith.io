@@ -5,6 +5,7 @@ var rename   = require('gulp-rename');
 var svgstore = require('gulp-svgstore');
 var svgmin   = require('gulp-svgmin');
 var plugins  = require('postcss-load-plugins')();
+var autoprefixer = require('autoprefixer');
 
 var processors = [
   plugins.import(),
@@ -29,8 +30,8 @@ var processors = [
       'padding-left'
     ]
   }),
+  autoprefixer(),
   plugins.nested(),
-  plugins.autoprefixer(),
   plugins.logWarnings()
 ];
 
@@ -45,7 +46,7 @@ gulp.task('postcss', function() {
     .pipe(filter(['index.css']))
     .pipe(postcss(processors))
     .pipe(rename('_components.css'))
-    .pipe(gulp.dest('source/stylesheets/dist'))
+    .pipe(gulp.dest('source/stylesheets/dist'));
 });
 
 gulp.task('icons', function() {
