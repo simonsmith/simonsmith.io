@@ -60,32 +60,25 @@ And now you can test against it
 expect(component.props.className).to.equal('MyComponent');
 ```
 
-### Reusing the `shallowRenderer`
+### Reusing the `shallowRenderer` with `skin-deep`
 
-Once you start using shallow rendering there will be a need to create rendered versions of components in each test, so it makes sense to move the logic into a reusable module. I've found a `createComponent` function works nicely, but you're free to name this whatever you wish.
+Once you start using shallow rendering there will be a need to create rendered versions of components in each test,
+so it makes sense to move the logic into a reusable module.
 
-``` js
-import React from 'react/addons';
-const TestUtils = React.addons.TestUtils;
-
-export default createComponent;
-
-function createComponent(component, props, ...children) {
-  const shallowRenderer = TestUtils.createRenderer();
-  shallowRenderer.render(React.createElement(component, props, children.length > 1 ? children : children[0]));
-  return shallowRenderer.getRenderOutput();
-}
-```
-
-Also on GitHub [as a gist](https://gist.github.com/simonsmith/b478d6166acd57829d15).
-
-Now it can be used in your unit tests the same way as `React.createElement`.
+I used to use my own [`createComponent`](https://gist.github.com/simonsmith/b478d6166acd57829d15) function
+but recently I've switched to [skin-deep](https://github.com/glenjamin/skin-deep) as it provides the same functionality as well as some useful extras like accessing instance methods.
+I recommend you try it too.
 
 ``` js
-import createComponent from '../util/create-component';
+import React from 'react';
+import sd from 'skin-deep';
 
-component = createComponent(MyComponent, { className: 'MyComponent' }, 'some child text');
+const tree = sd.shallowRender(React.createElement(MyComponent, {}));
+const instance = tree.getMountedInstance();
+const vdom = tree.getRenderOutput();
 ```
+The `tree` object gives you access to various useful methods (check [the repository](https://github.com/glenjamin/skin-deep/blob/master/test/test.js) for more info) but the two I end up using most often
+are `getMountedInstance()` and `getRenderOutput()`. The former gives you access to the instance of the component including the state, props and methods whilst the latter gives you the output from the render method.
 
 ## Example: Testing a `Post` component
 
@@ -108,13 +101,20 @@ export default React.createClass({
     return html.replace(/<\/?p>/g, '');
   },
 
+  doSomethingOnClick(event) {
+    // Do something
+    event.preventDefault();
+  },
+
   render() {
     const content = this.stripParagraphTags(this.props.content);
 
-    return  div({ className: 'Post'},
-              h2({ className: 'Post-header' }, this.props.title),
+    return (
+            div({ className: 'Post'},
+              h2({ className: 'Post-header', onClick: this.doSomethingOnClick}, this.props.title),
               p({ className: 'Post-content'}, content)
-            );
+            )
+          );
   }
 });
 ```
@@ -127,15 +127,18 @@ First we'll set up some boilerplate before we start writing actual tests
 
 ``` js
 import { expect } from 'chai';
-
+import React from 'react';
 import Post from '../../components/post.react';
-import createComponent from '../util/create-component';
+import sd from 'skin-deep';
 
 describe('Post component', function() {
-  let post;
+  let vdom, instance;
 
   beforeEach(function() {
-    post = createComponent(Post, { title: 'Title', content: '<p>Content</p>'});
+    const tree = sd.shallowRender(React.createElement(Post, {title: 'Title', content: '<p>Content</p>'}));
+
+    instance = tree.getMountedInstance();
+    vdom = tree.getRenderOutput();
   });
 });
 ```
@@ -148,8 +151,8 @@ In this example the `children` property is an array that contains our title and 
 
 ``` js
 it('should render a post title and content', function() {
-  const postTitle = post.props.children[0];
-  const postContent = post.props.children[1];
+  const postTitle = vdom.props.children[0];
+  const postContent = vdom.props.children[1];
 
   expect(postTitle.props.children).to.equal('Title');
   expect(postContent.props.children).to.equal('Content');
@@ -158,59 +161,52 @@ it('should render a post title and content', function() {
 
 This works fine for simple components but it can feel quite brittle to traverse heavily nested objects and select array elements this way.
 
-An alternative approach to this is to create the expected render method output in the test and then compare that with our component.
+#### A better approach
+
+An alternative is to create the expected render method output in the test and then compare that with our component.
 
 ``` js
-// The test will now require React
-import React from 'react';
-
-it('should render a post title and content', function() {
+it('should render a post title and content (alternative method)', function() {
   const expectedChildren = [
-      React.DOM.h2({ className: 'Post-header' }, 'Title'),
-      React.DOM.p({ className: 'Post-content'}, 'Content')
+    React.DOM.h2({ className: 'Post-header', onClick: instance.doSomethingOnClick}, 'Title'),
+    React.DOM.p({ className: 'Post-content'}, 'Content')
   ];
 
-  expect(post.type).to.equal('div');
-  expect(post.props.className).to.contain('Post');
-  expect(post.props.children).to.deep.equal(expectedChildren);
+  expect(vdom.type).to.equal('div');
+  expect(vdom.props.className).to.contain('Post');
+  expect(vdom.props.children).to.deep.equal(expectedChildren);
 });
 ```
+### Testing instance methods
 
-This works really nicely for more complicated components and makes tests much easier to read. Pick whatever method works for you.
+You may have noticed the previous example referred to an `onClick` method:
 
-#### Running the tests
-
-To verify it all works we can run Mocha with [Babel](https://babeljs.io/) to take care of the ES6 compilation.
-
-``` bash
-mocha test/components --compilers js:babel/register
-
-  Post component
-    ✓ should render a post title and content
-
-
-  1 passing (12ms)
+``` js
+{onClick: instance.doSomethingOnClick}
 ```
 
-Great, our first test is passing.
+Here we use the `instance` that `skin-deep` provided for us to ensure we try to test against the same function that our React component uses.
 
-### Testing component methods
+It might be tempting to try and use something like `MyComponent.prototype.doSomethingOnClick` but this won't always work. This is due to components created
+with `createClass` having [their methods autobound](https://facebook.github.io/react/blog/2013/07/02/react-v0-4-autobind-by-default.html#whats-changing-in-v0.4) and therefore being different objects.
 
-It's not uncommon to have a few methods attached to the React component and to need to test them. An example might be a method that performs some complex transforms on data sent in via the props.
+> It's worth noting that components created with ES6 classes don't have the autobind feature so this may not be an issue, but I always find it cleaner to refer to the actual instance methods.
 
-If you stick to stateless methods on your React components (a good pattern to [adhere to regardless](https://medium.com/javascript-scene/baby-s-first-reaction-2103348eccdd#13b0)) then it's an absolute breeze to unit test them.
-
-You can reference any method directly on the prototype of the component. Let's make sure the `stripParagraphTags` method is working correctly.
+Methods can also be tested in isolation this way. Let's make sure the `stripParagraphTags` method is working correctly:
 
 ``` js
 describe('stripParagraphTags method', function() {
   it('should strip <p> tags', function() {
-    const strippedText = Post.prototype.stripParagraphTags('<p>Some text.</p> <p>More text.</p>');
+    const strippedText = instance.stripParagraphTags('<p>Some text.</p> <p>More text.</p>');
 
     expect(strippedText).to.equal('Some text. More text.');
   });
 });
 ```
+
+#### Running the tests
+
+To verify it all works we can run Mocha with [Babel](https://babeljs.io/) to take care of the ES6 compilation.
 
 ``` bash
   Post component
@@ -222,7 +218,7 @@ describe('stripParagraphTags method', function() {
   2 passing (29ms)
 ```
 
-Great.
+Great, our first test is passing.
 
 ## Rendering a list of Posts
 
@@ -277,7 +273,7 @@ import { expect } from 'chai';
 import React from 'react/addons';
 import PostList from '../../components/post-list.react';
 import Post from '../../components/post.react';
-import createComponent from '../util/create-component';
+import sd from 'skin-deep';
 
 const TestUtils = React.addons.TestUtils;
 
@@ -289,19 +285,19 @@ describe('PostList component', function() {
   ];
 
   it('should render a list of post components', function() {
-    const postList = createComponent(PostList, { posts: postData });
-    const items = postList.props.children.filter(postListItem => TestUtils.isElementOfType(postListItem.props.children, Post));
+    const tree = sd.shallowRender(React.createElement(PostList, {posts: postData}));
+    const vdom = tree.getRenderOutput();
+    const items = vdom.props.children.filter(postListItem => TestUtils.isElementOfType(postListItem.props.children, Post));
 
     expect(items.length).to.equal(postData.length);
   });
 });
-
 ```
 
 The line of interest here is where we check the child elements of `PostList`:
 
 ``` js
-const items = postList.props.children.filter(postListItem => TestUtils.isElementOfType(postListItem.props.children, Post));
+const items = vdom.props.children.filter(postListItem => TestUtils.isElementOfType(postListItem.props.children, Post));
 ```
 
 First we filter through the children of `PostList` (which are the `<li>` elements) and then within each of those we can check the child is type `Post`. If it is then the component is returned. Now the length of the `items` array should match the total items in the `postData` array.
