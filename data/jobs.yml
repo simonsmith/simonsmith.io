@@ -8,9 +8,14 @@
   text: |
     Developing a new web product for BBC Three.
 
-    Using Node with [React](https://facebook.github.io/react/) and [Express JS](http://expressjs.com/) to serve pages isomorphically.
+    Using Node with [React](https://facebook.github.io/react/) and [Express JS](http://expressjs.com/) to serve components on the client and server.
 
-    Creating reusable UI components with [SUIT CSS](http://suitcss.github.io/) and [PostCSS](https://github.com/postcss/postcss).
+    [Shallow rendering](http://simonsmith.io/unit-testing-react-components-without-a-dom/) React components to aid unit testing with Mocha and Chai.
+
+    Testing front end performance with Chrome Devtools and making
+    appropriate optimisations in [webpack](http://webpack.github.io/) such as bundle splitting and asynchronous module loading.
+
+    Writing reusable UI components with [SUIT CSS](http://suitcss.github.io/) and [PostCSS](https://github.com/postcss/postcss).
 
 - title: Shopa
   contract: true
