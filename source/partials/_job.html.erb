@@ -22,7 +22,9 @@
       </dd>
     </dl>
   </header>
-  <div class="Job-summary summary">
-    <%= markdown job.text %>
-  </div>
+  <% if job.text %>
+    <div class="Job-summary summary">
+      <%= markdown job.text %>
+    </div>
+  <% end %>
 </div>
