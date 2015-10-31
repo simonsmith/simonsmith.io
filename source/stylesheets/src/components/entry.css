@@ -1,6 +1,6 @@
 /** @define Entry; weak */
 
-@import "../utils/link";
+@import "utils/link";
 
 .Entry-header {
   margin-bottom: 25px;

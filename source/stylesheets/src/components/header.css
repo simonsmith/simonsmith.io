@@ -1,7 +1,7 @@
 /** @define Header */
 
-@import "./nav";
-@import "./logo";
+@import "nav";
+@import "logo";
 
 .Header {
   border-bottom: 1px solid var(--color-gray-lighter);

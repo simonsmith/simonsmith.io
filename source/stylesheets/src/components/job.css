@@ -1,7 +1,7 @@
 /** @define Job; weak */
 
-@import "../utils/space";
-@import "../utils/text";
+@import "utils/space";
+@import "utils/text";
 
 .Job-header {
   margin-bottom: 20px;

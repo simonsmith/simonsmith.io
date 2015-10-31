@@ -8,7 +8,9 @@ var plugins  = require('postcss-load-plugins')();
 var autoprefixer = require('autoprefixer');
 
 var processors = [
-  plugins.import(),
+  plugins.import({
+    path: 'source/stylesheets/src/'
+  }),
   plugins.customProperties(),
   plugins.calc(),
   plugins.size,

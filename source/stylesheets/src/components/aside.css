@@ -1,9 +1,9 @@
 /** @define Aside */
 
-@import "./profile";
-@import "./contact";
-@import "./rss";
-@import "../utils/space";
+@import "profile";
+@import "contact";
+@import "rss";
+@import "utils/space";
 @import "suitcss-utils-text";
 
 .Aside {
