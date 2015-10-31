@@ -1,5 +1,7 @@
 /** @define ProjectList */
 
+@import "project";
+
 .ProjectList-item {
   margin-bottom: 20px;
 }

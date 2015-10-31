@@ -21,15 +21,12 @@
 @import "components/highlight";
 @import "components/icon";
 @import "components/container";
-@import "components/entry";
 @import "components/entry-list";
 @import "components/header";
 @import "components/aside";
 @import "components/pagination";
 @import "components/joblist";
-@import "components/job";
 @import "components/skill";
 @import "components/projectlist";
-@import "components/project";
 @import "components/footer";
 @import "components/print";
