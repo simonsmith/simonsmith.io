@@ -3,6 +3,8 @@
 @import "./profile";
 @import "./contact";
 @import "./rss";
+@import "../utils/space";
+@import "suitcss-utils-text";
 
 .Aside {
   border-bottom-left-radius: 5px;
@@ -17,9 +19,4 @@
 
 .Aside-item:first-of-type {
   margin-top: -1px;
-}
-
-.Aside-wrapRss {
-  text-align: center;
-  margin-top: 10px;
 }
