@@ -25,8 +25,8 @@
 @import "components/header";
 @import "components/aside";
 @import "components/pagination";
-@import "components/joblist";
+@import "components/job-list";
 @import "components/skill";
-@import "components/projectlist";
+@import "components/project-list";
 @import "components/footer";
 @import "components/print";
