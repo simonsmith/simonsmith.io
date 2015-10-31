@@ -1,6 +1,7 @@
 /** @define Container */
 
 @import "suitcss-utils-layout";
+@import "../utils/flex";
 
 .Container {
   width: 95%;

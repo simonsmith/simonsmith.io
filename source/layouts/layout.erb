@@ -44,7 +44,7 @@
           <div class="Header-wrapLogo Grid-cell u-md-size3of12">
             <%= partial 'logo' %>
           </div>
-          <div class="Header-wrapNav Grid-cell u-md-size5of12 u-md-before4of12">
+          <div class="Header-wrapNav Grid-cell u-md-sizeFill">
             <%= partial 'nav' %>
           </div>
         </div>
@@ -52,10 +52,10 @@
     </header>
     <main class="Container Container--main" role="main">
       <div class="Grid Grid--withGutter u-cf">
-        <div class="Grid-cell u-md-size9of12 u-floatRight">
+        <div class="Grid-cell u-md-size9of12">
             <%= yield %>
         </div>
-        <div class="Grid-cell u-md-size3of12 u-floatLeft">
+        <div class="Grid-cell u-md-size3of12 u-md-flexOrderFirst">
           <div class="Aside">
             <div class="Aside-item u-pt30">
               <%= partial 'profile' %>
@@ -73,7 +73,7 @@
     <footer class="Footer" role="contentinfo">
       <div class="Container">
         <div class="Grid Grid--withGutter">
-          <div class="Grid-cell u-md-size9of12 u-md-before3of12">
+          <div class="Grid-cell u-md-before3of12">
             <p class="Footer-text">
               Simon Smith 2015 &bull; Built with
               <a class="u-linkMuted u-linkUnderline u-linkNoDecoration" href="http://middlemanapp.com/">Middleman</a> and
