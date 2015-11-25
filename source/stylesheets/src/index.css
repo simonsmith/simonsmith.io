@@ -7,6 +7,7 @@
 @import "suitcss-utils-layout";
 @import "suitcss-utils-size/lib/size-sm";
 @import "suitcss-utils-size/lib/size-md";
+@import "suitcss-utils-flex/lib/flex-md";
 @import "suitcss-utils-before/lib/before-md";
 
 /**
