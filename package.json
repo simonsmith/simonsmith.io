@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "css": "suitcss -c source/stylesheets/config.js source/stylesheets/src/index.css source/stylesheets/dist/build.css",
-    "watch": "npm run css -- -w -v"
+    "watch": "npm run css -- -w -v",
+    "build": "npm run css -- -m && bundle exec middleman build",
+    "deploy": "npm run css -- -m && bundle exec middleman deploy"
   },
   "author": "",
   "license": "MIT",

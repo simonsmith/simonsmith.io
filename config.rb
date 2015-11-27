@@ -21,6 +21,7 @@ set :images_dir, 'images'
 set :partials_dir, 'partials'
 
 ignore 'stylesheets/src/*'
+ignore 'stylesheets/config.js'
 
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true
