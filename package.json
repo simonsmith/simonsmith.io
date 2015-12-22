@@ -12,27 +12,27 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.1.1",
+    "autoprefixer": "^6.2.1",
     "gulp": "^3.9.0",
     "gulp-filter": "^3.0.1",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.5",
-    "postcss": "^5.0.12",
+    "postcss": "^5.0.13",
     "postcss-nested": "^1.0.0",
     "postcss-property-lookup": "^1.1.4",
     "postcss-size": "^1.0.0",
-    "suitcss-preprocessor": "^0.7.0"
+    "suitcss-preprocessor": "^0.8.0"
   },
   "dependencies": {
     "normalize.css": "^3.0.3",
     "suit-utils-list": "^0.4.1",
-    "suitcss-components-grid": "^3.0.0",
+    "suitcss-components-grid": "^3.0.1",
     "suitcss-utils-before": "^0.3.2",
     "suitcss-utils-display": "^1.0.0",
     "suitcss-utils-flex": "^0.3.1",
-    "suitcss-utils-size": "^1.0.0",
+    "suitcss-utils-size": "^1.0.1",
     "suitcss-utils-text": "^0.4.2"
   }
 }
