@@ -1,9 +1,9 @@
 <% path = "projects/#{project.id}/%{filename}.png" %>
 
 <div class="Project" id="<%= project.id %>">
-  <div class="Project-header">
+  <div class="Project-header u-sm-flex u-sm-flexJustifyBetween u-sm-flexAlignItemsCenter">
     <h2 class="Project-title"><%= project.title %></h2>
-    <a class="Project-url" href="http://<%= project.url %>">Visit website</a>
+    <a href="http://<%= project.url %>">Visit website</a>
   </div>
     <a class="u-block u-textCenter" href="http://<%= project.url %>">
     <picture>
