@@ -65,9 +65,7 @@ expect(component.props.className).to.equal('MyComponent');
 Once you start using shallow rendering there will be a need to create rendered versions of components in each test,
 so it makes sense to move the logic into a reusable module.
 
-I used to use my own [`createComponent`](https://gist.github.com/simonsmith/b478d6166acd57829d15) function
-but recently I've switched to [skin-deep](https://github.com/glenjamin/skin-deep) as it provides the same functionality as well as some useful extras like accessing instance methods.
-I recommend you try it too.
+[skin-deep](https://github.com/glenjamin/skin-deep) is an excellent library to help with this.
 
 ``` js
 import React from 'react';
@@ -77,17 +75,21 @@ const tree = sd.shallowRender(React.createElement(MyComponent, {}));
 const instance = tree.getMountedInstance();
 const vdom = tree.getRenderOutput();
 ```
-The `tree` object gives you access to various useful methods (check [the repository](https://github.com/glenjamin/skin-deep/blob/master/test/test.js) for more info) but the two I end up using most often
-are `getMountedInstance()` and `getRenderOutput()`. The former gives you access to the instance of the component including the state, props and methods whilst the latter gives you the output from the render method.
+
+The `tree` object gives you access to various useful methods (check [the
+documentation](https://github.com/glenjamin/skin-deep/blob/one-point-oh/README.md)
+for more info) which allow you to dig down into the tree of components and run
+assertions against things like text and props.
 
 ## Example: Testing a `Post` component
 
-Now that the basics have been explained let's work through a simple example of testing a fictional `Post` component. It will accept a title and content and ensure any paragraph tags on the content are stripped away:
+Now that the basics have been explained let's work through a simple example of testing a fictional `Post` component.
+It will accept a title and content and ensure any paragraph tags on the content are stripped away:
 
 ``` js
 import React from 'react';
 
-const { div, h2, p } = React.DOM;
+const {div, h2, p} = React.DOM;
 
 export default React.createClass({
   displayName: 'Post',
@@ -102,7 +104,7 @@ export default React.createClass({
   },
 
   doSomethingOnClick(event) {
-    // Do something
+    this.setState({isClicked: true});
     event.preventDefault();
   },
 
@@ -110,11 +112,11 @@ export default React.createClass({
     const content = this.stripParagraphTags(this.props.content);
 
     return (
-            div({ className: 'Post'},
-              h2({ className: 'Post-header', onClick: this.doSomethingOnClick}, this.props.title),
-              p({ className: 'Post-content'}, content)
-            )
-          );
+      div({className: 'Post'},
+        h2({className: 'Post-header', onClick: this.doSomethingOnClick}, this.props.title),
+        p({className: 'Post-content'}, content)
+      )
+    );
   }
 });
 ```
@@ -132,77 +134,90 @@ import Post from '../../components/post.react';
 import sd from 'skin-deep';
 
 describe('Post component', function() {
-  let vdom, instance;
+  let tree;
 
-  beforeEach(function() {
-    const tree = sd.shallowRender(React.createElement(Post, {title: 'Title', content: '<p>Content</p>'}));
-
-    instance = tree.getMountedInstance();
-    vdom = tree.getRenderOutput();
+  beforeEach(() => {
+    tree = sd.shallowRender(React.createElement(Post, {title: 'Title', content: '<p>Content</p>'}));
   });
 });
 ```
 
 This is all that is needed. Wonderfully simple.
 
-When we looked at the structure of the object returned from the shallow renderer you may have noticed the `children` property. This will contain any text, DOM elements or other React components that might make up the component being tested.
-
-In this example the `children` property is an array that contains our title and content, so we can simply check that our props are being rendered as expected.
+Now we can make use of skin-deep to query the render tree and ensure parts of
+our component have the text rendered as expected.
 
 ``` js
-it('should render a post title and content', function() {
-  const postTitle = vdom.props.children[0];
-  const postContent = vdom.props.children[1];
-
-  expect(postTitle.props.children).to.equal('Title');
-  expect(postContent.props.children).to.equal('Content');
+it('should render a post title and content', () => {
+  expect(tree.subTree('.Post-header').text()).to.equal('Title');
+  expect(tree.subTree('.Post-content').text()).to.equal('Content');
 });
 ```
 
 This works fine for simple components but it can feel quite brittle to traverse heavily nested objects and select array elements this way.
 
-#### A better approach
+### Testing component methods
 
-An alternative is to create the expected render method output in the test and then compare that with our component.
+It's not uncommon to have a few methods attached to the React component and to need to test them. An example might be a method that performs some complex transforms on data sent in via the props.
 
-``` js
-it('should render a post title and content (alternative method)', function() {
-  const expectedChildren = [
-    React.DOM.h2({ className: 'Post-header', onClick: instance.doSomethingOnClick}, 'Title'),
-    React.DOM.p({ className: 'Post-content'}, 'Content')
-  ];
+If you stick to [pure functions](http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/) on your React components then it's much easier to unit test them.
 
-  expect(vdom.type).to.equal('div');
-  expect(vdom.props.className).to.contain('Post');
-  expect(vdom.props.children).to.deep.equal(expectedChildren);
-});
-```
-### Testing instance methods
-
-You may have noticed the previous example referred to an `onClick` method:
+You can reference any method directly on the prototype of the component. Let's make sure the `stripParagraphTags` method is working correctly.
 
 ``` js
-{onClick: instance.doSomethingOnClick}
-```
-
-Here we use the `instance` that `skin-deep` provided for us to ensure we try to test against the same function that our React component uses.
-
-It might be tempting to try and use something like `MyComponent.prototype.doSomethingOnClick` but this won't always work. This is due to components created
-with `createClass` having [their methods autobound](https://facebook.github.io/react/blog/2013/07/02/react-v0-4-autobind-by-default.html#whats-changing-in-v0.4) and therefore being different objects.
-
-> It's worth noting that components created with ES6 classes don't have the autobind feature so this may not be an issue, but I always find it cleaner to refer to the actual instance methods.
-
-Methods can also be tested in isolation this way. Let's make sure the `stripParagraphTags` method is working correctly:
-
-``` js
-describe('stripParagraphTags method', function() {
-  it('should strip <p> tags', function() {
-    const strippedText = instance.stripParagraphTags('<p>Some text.</p> <p>More text.</p>');
+describe('stripParagraphTags method', () => {
+  it('should strip <p> tags', () => {
+    const strippedText = Post.prototype.stripParagraphTags('<p>Some text.</p> <p>More text.</p>');
 
     expect(strippedText).to.equal('Some text. More text.');
   });
 });
 ```
+
+If you cannot avoid a pure function and depend on things like `this.props`
+then it is possible to access the actual component instance instead.
+
+``` js
+const instance = tree.getMountedInstance();
+instance.stripParagraphTags('<p>Content</p>');
+```
+
+This will be correctly bound with the React component.
+
+It might be advisable to treat this as an anti-pattern though as it's not as robust as
+just testing a pure function. One way to avoid it is to pass the props required
+into the function, rather than relying on `this`:
+
+``` js
+this.someComponentMethod(this.props.text);
+```
+
+A good use for `getMountedInstance` is to allow access to the component state,
+which we will see an example of next.
+
+### Testing event handlers
+
+Event handlers can be tested in a similar way, but you will need to provide your
+own mocked event object if things like `preventDefault` are used. Let's test our
+`Post` click handler.
+
+``` js
+describe('doSomethingOnClick method', () => {
+  it('should modify the `isClicked` state property', () => {
+    const header = tree.subTree('.Post-header');
+
+    header.props.onClick({
+      preventDefault() {}
+    });
+
+    expect(tree.getMountedInstance().state).to.eql({isClicked: true});
+  });
+});
+```
+
+Here we are passing a very simple `event` mock that just has an empty function,
+but this could also be a good candidate for [Sinon JS](http://sinonjs.org/) if more complex assertion was
+needed.
 
 #### Running the tests
 
@@ -211,11 +226,13 @@ To verify it all works we can run Mocha with [Babel](https://babeljs.io/) to tak
 ``` bash
   Post component
     ✓ should render a post title and content
+    doSomethingOnClick method
+      ✓ should modify the `isClicked` state property
     stripParagraphTags method
       ✓ should strip <p> tags
 
 
-  2 passing (29ms)
+  3 passing (183ms)
 ```
 
 Great, our first test is passing.
@@ -236,21 +253,23 @@ Nothing too fancy here, just creating a new `Post` component for each item in th
 import React from 'react';
 import Post from './post.react';
 
-const { ul, li } = React.DOM;
+const {ul, li} = React.DOM;
 
 export default React.createClass({
   displayName: 'PostList',
 
   renderListItems(posts) {
-    return posts.map((post) => {
-            return li({ key: post.id, className: 'PostList-item' },
-              React.createElement(Post, { title: post.title, content: post.content })
-            );
-          });
+    return (
+      posts.map(post =>
+        li({key: post.id, className: 'PostList-item'},
+          React.createElement(Post, {title: post.title, content: post.content})
+        )
+      )
+    );
   },
 
   render() {
-    return ul({ className: 'PostList'}, this.renderListItems(this.props.posts));
+    return ul({className: 'PostList'}, this.renderListItems(this.props.posts));
   }
 });
 ```
@@ -270,37 +289,30 @@ With that in mind we will write a spec to ensure each `<li>` contains a `Post` c
 
 ``` js
 import { expect } from 'chai';
-import React from 'react/addons';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
 import PostList from '../../components/post-list.react';
 import Post from '../../components/post.react';
 import sd from 'skin-deep';
 
-const TestUtils = React.addons.TestUtils;
-
-describe('PostList component', function() {
+describe('PostList component', () => {
   const postData = [
     { id: 1, title: 'Title 1', content: '<p>Content 1</p>' },
     { id: 2, title: 'Title 2', content: '<p>Content 2</p>' },
     { id: 3, title: 'Title 3', content: '<p>Content 3</p>' }
   ];
 
-  it('should render a list of post components', function() {
+  it('should render a list of post components', () => {
     const tree = sd.shallowRender(React.createElement(PostList, {posts: postData}));
-    const vdom = tree.getRenderOutput();
-    const items = vdom.props.children.filter(postListItem => TestUtils.isElementOfType(postListItem.props.children, Post));
+    const items = tree.everySubTree('Post');
 
     expect(items.length).to.equal(postData.length);
   });
 });
 ```
 
-The line of interest here is where we check the child elements of `PostList`:
-
-``` js
-const items = vdom.props.children.filter(postListItem => TestUtils.isElementOfType(postListItem.props.children, Post));
-```
-
-First we filter through the children of `PostList` (which are the `<li>` elements) and then within each of those we can check the child is type `Post`. If it is then the component is returned. Now the length of the `items` array should match the total items in the `postData` array.
+Using `everySubTree` returns an array of all the `Post` components. Now the length of the `items` array
+should match the total items in the `postData` array.
 
 ``` bash
   PostList component
@@ -308,11 +320,13 @@ First we filter through the children of `PostList` (which are the `<li>` element
 
   Post component
     ✓ should render a post title and content
+    doSomethingOnClick method
+      ✓ should modify the `isClicked` state property
     stripParagraphTags method
       ✓ should strip <p> tags
 
 
-  3 passing (16ms)
+  4 passing (183ms)
 ```
 
 And it does! Perfect.
