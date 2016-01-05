@@ -4,6 +4,8 @@ date: 2015-06-14
 type: post
 ---
 
+* _**Update 04/01/16**_  _Added better examples of skin-deep usage_
+
 When unit testing React components the common approach has been to render them into a DOM (with [something like jsdom](https://github.com/jesstelford/react-testing-mocha-jsdom)) and run some assertions against them with the help of the [React TestUtils](https://facebook.github.io/react/docs/test-utils.html).
 
 This has changed in 0.13 where an early implementation of [shallow rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) is now ready to use.
@@ -153,8 +155,6 @@ it('should render a post title and content', () => {
   expect(tree.subTree('.Post-content').text()).to.equal('Content');
 });
 ```
-
-This works fine for simple components but it can feel quite brittle to traverse heavily nested objects and select array elements this way.
 
 ### Testing component methods
 
