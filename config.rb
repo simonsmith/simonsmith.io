@@ -10,7 +10,7 @@ activate :blog do |blog|
   blog.layout = "blog"
   blog.paginate = true
   blog.page_link = "p{num}"
-  blog.per_page = 10
+  blog.per_page = 15
 end
 
 page "/feed.xml", layout: false
