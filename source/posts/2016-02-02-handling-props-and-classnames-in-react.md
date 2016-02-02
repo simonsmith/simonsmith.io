@@ -193,7 +193,7 @@ React.createElement(Profile, {
 ```
 
 ``` html
-<div class="user_profile user_profile__large">simonsmith</div>
+<div class="user_profile user_profile__large is-admin">simonsmith</div>
 ```
 
 ## The final product
