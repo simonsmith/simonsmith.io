@@ -18,7 +18,7 @@ import React from 'react';
 
 const {div} = React.DOM;
 
-const Profile = props => div({}, this.props.username);
+const Profile = props => div({className: 'Profile Profile--large'}, props.username);
 
 export default Profile;
 ```
