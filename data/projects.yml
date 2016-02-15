@@ -4,57 +4,89 @@
   text: |
     Shopa is a startup in East London, building an online social marketplace
 
-    I primarily worked on the front-end, including architecting and rebuilding the site to match a new design. This included:
+    I primarily worked on the front-end, including architecting and rebuilding
+    the site to match a new design. This included:
 
     * Developing modular UI components with [SUIT CSS](http://suitcss.github.io/)
-    * Structuring the JavaScript with [Flight JS](http://flightjs.github.io/) and [webpack](http://webpack.github.io/)
-    * Adding [gulp](http://gulpjs.com) into the Rails pipeline to build SUIT and Flight components
+    * Structuring the JavaScript with [Flight JS](http://flightjs.github.io/) and
+    [webpack](http://webpack.github.io/)
+    * Adding [gulp](http://gulpjs.com) into the Rails pipeline to build SUIT and
+    Flight components
 - title: Radio Times
   id: rt
   url: radiotimes.com
   text: |
-    Led UI development on the re-build of the Radio Times website at BBC worldwide and later maintained it again whilst at Immediate Media.
+    Led UI development on the re-build of the Radio Times website at BBC
+    worldwide and later maintained it again whilst at Immediate Media.
 
-    Starting over on the new site allowed use of various modern development practices at the time, such as parts of HTML5 and CSS3. The TV and Radio listings page was built with a collection of modular MooTools classes to power the navigation of the grid.
+    Starting over on the new site allowed use of various modern development
+    practices at the time, such as parts of HTML5 and CSS3. The TV and Radio
+    listings page was built with a collection of modular MooTools classes to
+    power the navigation of the grid.
 - title: Top Gear
   id: tg
   url: topgear.com
   text: |
-    One of my main tasks on the Top Gear site was a complete re-build of the home page, as well as implementing a new global header and footer onto all other sections. I worked [with another UI developer](http://www.alecrust.com/) to completely architect the front-end code from scratch.
+    One of my main tasks on the Top Gear site was a complete re-build of the
+    home page, as well as implementing a new global header and footer onto all
+    other sections. I worked [with another UI
+    developer](http://www.alecrust.com/) to completely architect the front-end
+    code from scratch.
 
-    As well as this project I was also responsible for maintaining the Top Gear WordPress blogs, which largely involved integrating new design features.
+    As well as this project I was also responsible for maintaining the Top Gear
+    WordPress blogs, which largely involved integrating new design features.
 - title: Policy Expert
   id: pe
   url: policyexpert.co.uk
   text: |
     Policy Expert is an insurance product from [QMetric](http://qmetric.co.uk/)
 
-    It used a completely new design (sourced externally) developed with a mobile first responsive approach and used WordPress to power the content.
+    It used a completely new design (sourced externally) developed with a mobile
+    first responsive approach and used WordPress to power the content.
 
-    We chose to use [LESS](http://lesscss.org) and [RequireJS](http://requirejs.org) as the main technologies and implemented as much of [the SMACSS approach](http://smacss.com/) as possible.
-    The site uses a fluid layout and uses media queries to tweak content positioning at various screen sizes.
+    We chose to use [LESS](http://lesscss.org) and
+    [RequireJS](http://requirejs.org) as the main technologies and implemented
+    as much of [the SMACSS approach](http://smacss.com/) as possible.  The site
+    uses a fluid layout and uses media queries to tweak content positioning at
+    various screen sizes.
 - title: QMetric
   id: qm
   url: qmetric.co.uk
   text: |
-    The QMetric site was originally designed and built by an external agency. However, due to the lack of responsive design and out of date front-end practices, I rebuilt the site as a side project.
+    The QMetric site was originally designed and built by an external agency.
+    However, due to the lack of responsive design and out of date front-end
+    practices, I rebuilt the site as a side project.
 
-    [RequireJS](http://requirejs.org) was used on this project, not only for the ease of code organisation but also to conditionally load assets based on the device size such as the Google map on larger devices only. This helped with performance and usability.
+    [RequireJS](http://requirejs.org) was used on this project, not only for the
+    ease of code organisation but also to conditionally load assets based on the
+    device size such as the Google map on larger devices only. This helped with
+    performance and usability.
 
-    The source of the site [is also viewable on GitHub](https://github.com/qmetric/qmg-website).
+    The source of the site [is also viewable on
+    GitHub](https://github.com/qmetric/qmg-website).
 - title: You & Your Wedding
   id: yayw
   url: youandyourwedding.co.uk/venues
   text: |
-    One of the first projects at [Immediate Media](http://www.immediate.co.uk/) to be have a mobile first responsive design.
+    One of the first projects at [Immediate Media](http://www.immediate.co.uk/)
+    to be have a mobile first responsive design.
 
-    I came into the project early on and was tasked with re-factoring the front-end and setting a good foundation for the site.
+    I came into the project early on and was tasked with re-factoring the
+    front-end and setting a good foundation for the site.
 
-    Working with another front-end developer, we structured a modular front-end, broken up into various Sass files that allowed easy re-use of code across the site. I also structured and wrote a lot of the JS, making use of the [Primish](https://github.com/DimitarChristoff/primish) library
+    Working with another front-end developer, we structured a modular front-end,
+    broken up into various Sass files that allowed easy re-use of code across
+    the site. I also structured and wrote a lot of the JS, making use of the
+    [Primish](https://github.com/DimitarChristoff/primish) library
 - title: Interlopers
   id: interlopers
   url: interlopers.net
   text: |
-    Interlopers was started in 2004 out of my frustration at the lack of a decent community and resource to contribute to. It has grown to become one of the leading level design communities for Half-Life 2 and other Source powered games.
+    Interlopers was started in 2004 out of my frustration at the lack of a
+    decent community and resource to contribute to. It has grown to become one
+    of the leading level design communities for Half-Life 2 and other Source
+    powered games.
 
-    I have been responsible for front-end development, content writing, community management and other general tasks. The site is written in PHP and is heavily integrated into [phpBB](http://www.phpbb.com/).
+    I have been responsible for front-end development, content writing,
+    community management and other general tasks. The site is written in PHP and
+    is heavily integrated into [phpBB](http://www.phpbb.com/).
