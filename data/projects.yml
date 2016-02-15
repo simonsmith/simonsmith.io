@@ -1,8 +1,24 @@
+- title: SUIT CSS
+  id: suitcss
+  url: suitcss.github.io
+  text: |
+    SUIT is styling methodology for component-based UI development that was
+    created by [Nicolas Gallagher](http://nicolasgallagher.com/) and used at
+    Twitter.
+
+    I contribute as a core maintainer, triaging issues and working on new
+    features. Some notable additions include:
+
+    * Adding a cross browser tested [Flexbox utilty](https://github.com/suitcss/utils-flex)
+    * Re-factoring the existing [Grid component](https://github.com/suitcss/components-grid)
+      to use Flexbox
+    * Replacing Rework with PostCSS in the [SUIT CSS preprocessor](https://github.com/suitcss/preprocessor)
+      and adding additional features
 - title: Shopa
   id: shopa
   url: shopa.com
   text: |
-    Shopa is a startup in East London, building an online social marketplace
+    Shopa is a startup in East London, building an online social marketplace.
 
     I primarily worked on the front-end, including architecting and rebuilding
     the site to match a new design. This included:
@@ -39,7 +55,7 @@
   id: pe
   url: policyexpert.co.uk
   text: |
-    Policy Expert is an insurance product from [QMetric](http://qmetric.co.uk/)
+    Policy Expert is an insurance product from [QMetric](http://qmetric.co.uk/).
 
     It used a completely new design (sourced externally) developed with a mobile
     first responsive approach and used WordPress to power the content.
@@ -77,7 +93,7 @@
     Working with another front-end developer, we structured a modular front-end,
     broken up into various Sass files that allowed easy re-use of code across
     the site. I also structured and wrote a lot of the JS, making use of the
-    [Primish](https://github.com/DimitarChristoff/primish) library
+    [Primish](https://github.com/DimitarChristoff/primish) library.
 - title: Interlopers
   id: interlopers
   url: interlopers.net
