@@ -1,3 +1,19 @@
+- title: BBC Three
+  id: bbcthree
+  url: bbc.co.uk/bbcthree
+  text: |
+    BBC Three was moved from a television channel to an online proposition in
+    February 2016.
+
+    I worked on the front end with [React](https://facebook.github.io/react/),
+    [PostCSS](http://postcss.org/) and SUIT CSS and also the backend Express
+    powered Node application. Some notable contributions:
+
+    * Architecting a component based UI with React and SUIT CSS.
+    * Building and maintaining a component library for reuse with the BBC.
+    * Cross browser testing on a wide variety of devices.
+    * Unit testing React components with shallow rendering.
+    * Optimising script loading and various other performance tweaks.
 - title: SUIT CSS
   id: suitcss
   url: suitcss.github.io
