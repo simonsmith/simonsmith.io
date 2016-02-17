@@ -17,22 +17,22 @@
     "gulp-filter": "^3.0.1",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-svgmin": "^1.2.0",
+    "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^5.0.5",
     "postcss": "^5.0.13",
     "postcss-nested": "^1.0.0",
     "postcss-property-lookup": "^1.1.4",
     "postcss-size": "^1.0.0",
-    "suitcss-preprocessor": "^0.8.0"
+    "suitcss-preprocessor": "^1.0.1"
   },
   "dependencies": {
     "normalize.css": "^3.0.3",
     "suit-utils-list": "^0.4.1",
     "suitcss-components-grid": "^3.0.1",
-    "suitcss-utils-before": "^0.3.2",
+    "suitcss-utils-before": "^1.0.0",
     "suitcss-utils-display": "^1.0.0",
-    "suitcss-utils-flex": "^0.3.1",
+    "suitcss-utils-flex": "^1.1.1",
     "suitcss-utils-size": "^1.0.1",
-    "suitcss-utils-text": "^0.4.2"
+    "suitcss-utils-text": "^1.0.0"
   }
 }
