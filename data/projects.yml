@@ -11,7 +11,7 @@
     * Architecting a component based UI with [React](https://facebook.github.io/react/),
       [PostCSS](http://postcss.org/) and SUIT CSS.
     * Building and maintaining a component library for reuse within the BBC.
-    * Cross browser testing on a wide variety of devices.
+    * Cross browser testing on a wide variety of devices, including screen readers
     * Unit testing React components with shallow rendering.
     * Optimising script loading with [webpack](http://webpack.github.io/) and
       various other performance tweaks.
