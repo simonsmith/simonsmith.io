@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "postcss -c source/stylesheets/config.js source/stylesheets/src/index.css -o source/stylesheets/dist/build.css",
+    "css": "postcss -c config.js source/stylesheets/src/index.css -o source/stylesheets/dist/build.css",
     "minify": "cssnano source/stylesheets/dist/build.css source/stylesheets/dist/build.css --safe --no-autoprefixer",
     "watch": "npm run css -- -w",
     "lint": "stylelint source/stylesheets/src/**/*.css",
