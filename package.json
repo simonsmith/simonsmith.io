@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "css": "postcss -c source/stylesheets/config.js source/stylesheets/src/index.css -o source/stylesheets/dist/build.css",
+    "minify": "cssnano source/stylesheets/dist/build.css source/stylesheets/dist/build.css --safe --no-autoprefixer",
     "watch": "npm run css -- -w",
-    "build": "npm run css -- -m && bundle exec middleman build",
-    "deploy": "npm run css -- -m && bundle exec middleman deploy"
+    "build": "npm run css && npm run minify && bundle exec middleman build",
+    "deploy": "npm run build && bundle exec middleman deploy"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.2.1",
+    "cssnano-cli": "^1.0.3",
     "gulp": "^3.9.0",
     "gulp-filter": "^4.0.0",
     "gulp-postcss": "^6.0.1",
