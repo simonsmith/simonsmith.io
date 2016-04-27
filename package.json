@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "suitcss -c source/stylesheets/config.js source/stylesheets/src/index.css source/stylesheets/dist/build.css",
+    "css": "postcss -c source/stylesheets/config.js source/stylesheets/src/index.css -o source/stylesheets/dist/build.css",
     "watch": "npm run css -- -w -v",
     "build": "npm run css -- -m && bundle exec middleman build",
     "deploy": "npm run css -- -m && bundle exec middleman deploy"
@@ -14,25 +14,30 @@
   "devDependencies": {
     "autoprefixer": "^6.2.1",
     "gulp": "^3.9.0",
-    "gulp-filter": "^3.0.1",
+    "gulp-filter": "^4.0.0",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-svgmin": "^1.2.2",
-    "gulp-svgstore": "^5.0.5",
+    "gulp-svgstore": "^6.0.0",
     "postcss": "^5.0.13",
+    "postcss-calc": "^5.2.1",
+    "postcss-cli": "^2.5.2",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-import": "^8.1.0",
     "postcss-nested": "^1.0.0",
     "postcss-property-lookup": "^1.1.4",
-    "postcss-size": "^1.0.0",
-    "suitcss-preprocessor": "^1.0.1"
+    "postcss-reporter": "^1.3.3",
+    "postcss-size": "^1.0.0"
   },
   "dependencies": {
-    "normalize.css": "^3.0.3",
+    "normalize.css": "^4.1.1",
     "suit-utils-list": "^0.4.1",
     "suitcss-components-grid": "^3.0.1",
     "suitcss-utils-before": "^1.0.0",
     "suitcss-utils-display": "^1.0.0",
     "suitcss-utils-flex": "^1.1.1",
-    "suitcss-utils-size": "^1.0.1",
+    "suitcss-utils-size": "^1.1.0",
     "suitcss-utils-text": "^1.0.0"
   }
 }
