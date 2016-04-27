@@ -3,6 +3,7 @@
 .u-linkMuted {
   color: var(--link-muted-color);
 
+  /* postcss-bem-linter: ignore */
   &:hover {
     color: var(--link-muted-color-hover);
   }
