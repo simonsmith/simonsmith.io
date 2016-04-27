@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "css": "postcss -c source/stylesheets/config.js source/stylesheets/src/index.css -o source/stylesheets/dist/build.css",
-    "watch": "npm run css -- -w -v",
+    "watch": "npm run css -- -w",
     "build": "npm run css -- -m && bundle exec middleman build",
     "deploy": "npm run css -- -m && bundle exec middleman deploy"
   },
