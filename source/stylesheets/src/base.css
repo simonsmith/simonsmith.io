@@ -14,6 +14,13 @@ body {
   color: var(--color-charcoal);;
 }
 
+/**
+ * http://weblog.west-wind.com/posts/2016/Feb/15/Flexbox-Containers-PRE-tags-and-managing-Overflow
+ */
+.Grid-cell {
+  min-width: 0;
+}
+
 a {
   color: var(--color-blue);
   text-decoration: none;
