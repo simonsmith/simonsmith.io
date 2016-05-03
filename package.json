@@ -17,8 +17,6 @@
     "autoprefixer": "^6.2.1",
     "cssnano-cli": "^1.0.3",
     "gulp": "^3.9.0",
-    "gulp-filter": "^4.0.0",
-    "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^6.0.0",
