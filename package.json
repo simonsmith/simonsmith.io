@@ -33,7 +33,7 @@
     "postcss-reporter": "^1.3.3",
     "postcss-size": "^1.0.0",
     "stylelint": "^5.4.0",
-    "stylelint-config-suitcss": "^6.0.0",
+    "stylelint-config-suitcss": "^5.0.0",
     "stylelint-selector-bem-pattern": "^0.2.3"
   },
   "dependencies": {
