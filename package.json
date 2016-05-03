@@ -7,7 +7,7 @@
     "css": "postcss -c config.js source/stylesheets/src/index.css -o source/stylesheets/dist/build.css",
     "minify": "cssnano source/stylesheets/dist/build.css source/stylesheets/dist/build.css --safe --no-autoprefixer",
     "watch": "npm run css -- -w",
-    "lint": "stylelint source/stylesheets/src/**/*.css",
+    "lint": "stylelint 'source/stylesheets/src/**/*.css'",
     "build": "npm run lint && npm run css && npm run minify && bundle exec middleman build",
     "deploy": "npm run build && bundle exec middleman deploy"
   },
