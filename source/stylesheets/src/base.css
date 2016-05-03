@@ -34,6 +34,7 @@ a {
 
 abbr[title] {
   border-bottom: 0;
+  text-decoration: none;
 }
 
 img {
