@@ -4,19 +4,19 @@ html {
   font-size: 1rem;
 }
 
-/* http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
 body {
   font-family: var(--font-family);
-  color: var(--color-charcoal);;
+  color: var(--color-charcoal);
 }
 
 /**
- * http://weblog.west-wind.com/posts/2016/Feb/15/Flexbox-Containers-PRE-tags-and-managing-Overflow
+ * http://goo.gl/tYuTp3
  */
+
 .Grid-cell {
   min-width: 0;
 }
@@ -24,7 +24,7 @@ body {
 a {
   color: var(--color-blue);
   text-decoration: none;
-  transition: color .15s ease;
+  transition: color 0.15s ease;
 
   &:hover {
     color: var(--color-pink);
@@ -79,5 +79,5 @@ p code {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
   background-color: #f2f2f2;
   border: 1px solid #ddd;
-  font-size: .875rem;
+  font-size: 0.875rem;
 }

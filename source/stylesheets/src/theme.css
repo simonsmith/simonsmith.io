@@ -7,26 +7,29 @@
  */
 
 /* Grays */
+
 :root {
-  --color-charcoal:         #434;
-  --color-gray-faint:       #f4f4f4;
-  --color-gray:             #bbb;
-  --color-gray-light:       #888;
-  --color-gray-lighter:     #d6d6d6;
-  --link-muted-color:       var(--color-charcoal);
+  --color-charcoal: #434;
+  --color-gray-faint: #f4f4f4;
+  --color-gray: #bbb;
+  --color-gray-light: #888;
+  --color-gray-lighter: #d6d6d6;
+  --link-muted-color: var(--color-charcoal);
   --link-muted-color-hover: var(--color-gray-light);
 }
 
 /* Main colors */
+
 :root {
-  --color-blue:       #0071ac;
+  --color-blue: #0071ac;
   --color-light-blue: #0d85c1;
-  --color-pink:       #ac6cae;
+  --color-pink: #ac6cae;
 }
 
 /**
  * Fonts
  */
+
 :root {
   --font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -34,6 +37,7 @@
 /**
  * Grid
  */
+
 :root {
   --Grid-gutter-size: 25px;
 }
