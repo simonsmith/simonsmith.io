@@ -13,14 +13,6 @@ body {
   color: var(--color-charcoal);
 }
 
-/**
- * http://goo.gl/tYuTp3
- */
-
-.Grid-cell {
-  min-width: 0;
-}
-
 a {
   color: var(--color-blue);
   text-decoration: none;
