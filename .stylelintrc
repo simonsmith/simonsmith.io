@@ -2,7 +2,7 @@
   "plugins": ["stylelint-selector-bem-pattern"],
   "extends": "stylelint-config-suitcss",
   "rules": {
-    "selector-bem-pattern": {
+    "plugin/selector-bem-pattern": {
         "preset": "suit"
     },
     "rule-nested-empty-line-before": null,
