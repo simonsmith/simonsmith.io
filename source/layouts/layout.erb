@@ -4,31 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= current_page.data.title || yield_content(:title) || 'Blog' %> &ndash; simonsmith.io</title>
-    <script>
-      document.documentElement.className += ' wf-loading';
-      var WebFontConfig = {
-        google: {
-          families: ['Yanone Kaffeesatz', 'Open Sans:400italic,400,600,700,300'],
-          classes: false,
-          events: false
-        }
-      };
-      var ga = ga || function() {
-        (ga.q = ga.q || []).push(arguments);
-      };
-      ga.l = 1 * new Date();
-      ga('create', 'UA-6798894-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <style>
-      .wf-loading body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.4; letter-spacing: 0.4px;}
-      .wf-loading h1 {font-weight: 500;}
-      .wf-loading .Logo-subtitle, .wf-loading .Logo-title {visibility: hidden;}
-      .wf-loading .Logo-title {font-size: 26px;}
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Yanone+Kaffeesatz" rel="stylesheet">
     <%= stylesheet_link_tag 'site' %>
     <script async src="//www.google-analytics.com/analytics.js"></script>
-    <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
     <link rel="alternate" type="application/rss+xml" title="simonsmith.io - blog RSS" href="/feed.xml"/>
     <% if content_for? :head %>
       <%= yield_content :head %>
