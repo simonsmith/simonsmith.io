@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
   font-size: 1rem;
+  line-height: 1.35;
 }
 
 *, *::before, *::after {
