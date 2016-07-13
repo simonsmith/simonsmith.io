@@ -220,7 +220,7 @@ You may have noticed that in the last two examples you can't see any mention of
 
 Without trying we've written some point-free code!
 
-But really it's not something to worry about too much, but keeping it in mind
+It's not something to worry about too much, but keeping it in mind
 has helped me transform code like this:
 
 ```js
@@ -245,7 +245,7 @@ It's a useful guideline to follow.
 
 The last topic to look at is the concept of function purity. This is a function
 that doesn't depend on state outside of its scope, and doesn't modify it either.
-Its only juristriction is that of the arguments passed in, and even then it
+Its only jurisdiction is that of the arguments passed in, and even then it
 should never mutate this data, but return new versions.
 
 Not only does this make testing simpler (you can just pass different arguments
@@ -346,6 +346,7 @@ from some props. The use of `getOr` here allows us to set a default value if
 ```js
 const map = require('lodash/fp/map').convert({'cap': false});
 const join = require('lodash/fp/join');
+const flow = require('lodash/fp/flow');
 
 const toQueryString = flow(
   map((value, key) => {
@@ -408,12 +409,12 @@ const isApiFailure = flow(getResponseCode, negate(isEqual(200)));
 const getHtml = flow(getRoot, get('body'), JSON.parse, get('html'));
 
 function handleResponse(response) {
-    if (isApiFailure(response)) {
-        return logger(getResponseCode(response), getStatusMessage(response));
-    }
-    return {
-        html: getHtml(response)
-    };
+  if (isApiFailure(response)) {
+    return logger(getResponseCode(response), getStatusMessage(response));
+  }
+  return {
+    html: getHtml(response)
+  };
 }
 ```
 
