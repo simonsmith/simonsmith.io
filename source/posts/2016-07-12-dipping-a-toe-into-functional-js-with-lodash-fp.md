@@ -1,5 +1,5 @@
 ---
-title: Dipping a toe into functional JS with lodash-fp
+title: Dipping a toe into functional JS with lodash/fp
 date: 2016-07-12
 type: post
 published: true
@@ -10,7 +10,7 @@ manner. It requires a change of mind in how to approach problems, but I'd like
 to share some of the basics that I've learnt so far.
 
 I'll also take a look at how
-[lodash-fp](https://github.com/lodash/lodash/wiki/FP-Guide) makes functional
+[lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) makes functional
 code a pleasant experience.
 
 ## Why write functionally?
@@ -67,7 +67,7 @@ squareAll([1, 2, 3, 4]); // [1, 4, 9, 16]
 
 Okay, now we're talking!
 
-Using `lodash-fp` means the functions are curried for us by default, and the
+Using `lodash/fp` means the functions are curried for us by default, and the
 argument order is swapped around so it goes from the more familiar version of
 `map(array, function)` to `map(function, array)`. We also no longer deal with
 the `numbers` argument which is a concept known as point-free
@@ -105,7 +105,7 @@ const sayBye = greet('See ya');
 sayBye('John'); // See ya, John!;
 ```
 
-Here is how the [lodash-fp
+Here is how the [lodash/fp
 documentation](https://github.com/lodash/lodash/wiki/FP-Guide) describes itself:
 
 > The lodash/fp module promotes a more functional programming (FP) friendly style
@@ -130,7 +130,7 @@ function out of many smaller ones. The data goes in one end and flows (ah ha!)
 through each function until it comes out the other side. Each function in the
 chain passes its return value to the next.
 
-Let's see an example using lodash-fp:
+Let's see an example using lodash/fp:
 
 ```js
 const flow = require('lodash/fp/flow');
@@ -149,7 +149,7 @@ declaring what we want to happen, not how.
 
 ### How does currying help?
 
-Lodash-fp functions are auto-curried, so when given fewer arguments than
+lodash/fp functions are auto-curried, so when given fewer arguments than
 expected they give back a function. This works really well with `flow`:
 
 ```js
@@ -358,10 +358,10 @@ const toQueryString = flow(
 toQueryString({foo: 'bar', baz: 'moo'}) // foo=bar&baz=moo
 ```
 
-One thing that may cause some confusion when coming to `lodash-fp` from regular
+One thing that may cause some confusion when coming to `lodash/fp` from regular
 `lodash` is how the arguments are capped for certain functions. That means that
 whilst you may be used to accessing the `value` and `key` in `map` it will only
-provide you with `value` by default in `lodash-fp`.
+provide you with `value` by default in `lodash/fp`.
 
 In the above code I'm using `.convert` to change the behaviour and allowing
 `toQueryString` to work as expected.
