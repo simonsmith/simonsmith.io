@@ -6,6 +6,14 @@
     <title><%= current_page.data.title || yield_content(:title) || 'Blog' %> &ndash; simonsmith.io</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Yanone+Kaffeesatz" rel="stylesheet">
     <%= stylesheet_link_tag 'site' %>
+    <script>
+      var ga = ga || function() {
+        (ga.q = ga.q || []).push(arguments);
+      };
+      ga.l = 1 * new Date();
+      ga('create', 'UA-6798894-3', 'auto');
+      ga('send', 'pageview');
+    </script>
     <script async src="//www.google-analytics.com/analytics.js"></script>
     <link rel="alternate" type="application/rss+xml" title="simonsmith.io - blog RSS" href="/feed.xml"/>
     <% if content_for? :head %>
