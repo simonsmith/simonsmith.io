@@ -423,6 +423,25 @@ this way is simple to unit test, and in this example we pass a lot of the work
 to lodash and gain extra confidence knowing that it is already well tested and
 performant.
 
+## A note on Ramda
+
+The other well known alternative to lodash/fp is [Ramda](http://ramdajs.com/).
+It works in a similar way with auto-curried, data last functions. Why not
+advocate that as well? I've tried using it, and it's great but here are the
+reasons I stuck with lodash:
+
+* It's very easy to switch to lodash/fp gradually. The benefit of being able to
+switch from `lodash/assign` to `lodash/fp/assign` is enormous. It means you can
+start write functionally in areas of your code base without refactoring every
+module.
+
+* lodash/fp comes with [mappings to Ramda
+functions](https://github.com/lodash/lodash/blob/167ce9a1c17054074c6c47996600c1f7a8c11f12/fp/_mapping.js#L20),
+so there is no need to relearn the API immediately if you're a Ramda user.
+
+* Performance is a big concern for lodash, which gives confidence that you can
+use its functions quite liberally to achieve point-free code.
+
 ## Wrapping up
 
 Hopefully this has shed some light on how you can start implementing functional
