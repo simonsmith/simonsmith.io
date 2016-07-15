@@ -341,6 +341,28 @@ This is a pattern I find myself using often in React, grabbing the data you need
 from some props. The use of `getOr` here allows us to set a default value if
 `user.profile` is undefined.
 
+#### Without JSX
+
+If you're not using JSX you can take this a step further and flow the props
+directly into a factory function. Here's an example with one from `React.DOM`:
+
+```js
+const flow = require('lodash/fp/flow');
+const pick = require('lodash/fp/pick');
+const React = require('react');
+
+const {img} = React.DOM;
+
+const imgWithProps = flow(
+  pick(['src', 'alt', 'className']),
+  img
+);
+
+const Component = props => imgWithProps(props);
+```
+
+I've become quite fond of this pattern.
+
 ### Turning an object into query string parameters
 
 ```js
