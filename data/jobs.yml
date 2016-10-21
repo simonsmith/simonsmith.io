@@ -1,10 +1,19 @@
+- title: New Look
+  contract: true
+  role: Senior JavaScript Developer
+  url: newlook.co.uk
+  id: newlook
+  from: August 2016
+  text: |
+    Developing a new iOS and Android app with React Native and Node JS
+
 - title: BBC
   contract: true
   role: Senior Front end Developer
   url: bbc.co.uk
   id: bbc
   from: February 2015
-  to: false
+  to: August 2016
   text: |
     Developing a new web product for BBC Three.
 
