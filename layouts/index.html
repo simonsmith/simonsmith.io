@@ -1,0 +1,12 @@
+{{define "pageTitle"}}Blog{{end}}
+
+{{define "main"}}
+  <h1>Blog</h1>
+  {{range where .Paginator.Pages "Section" "blog"}}
+    <div>
+      <a href="{{.Permalink}}">{{.Title}}</a>
+      {{.Date.Format "January 2, 2006"}}
+    </div>
+  {{end}}
+  {{partial "pagination" .Paginator}}
+{{end}}

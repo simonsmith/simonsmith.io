@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="{{.Lang}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{block "pageTitle" .}}{{end}} {{htmlUnescape .Site.Title}}</title>
+  </head>
+  <body>
+    <div class="Container">
+      {{$node := .}}
+      <nav>
+          <ul>
+            <li>
+              <a
+                class="link{{if or .IsHome (eq .Section "blog")}} is-active{{end}}"
+                href="{{.Site.BaseURL}}">
+                Blog
+              </a>
+            </li>
+            {{range .Site.Menus.main}}
+            <li>
+              <a
+                class="link{{if $node.IsMenuCurrent "main" .}} is-active{{end}}"
+                href="{{.URL}}">
+                {{.Name}}
+              </a>
+            </li>
+            {{end}}
+          </ul>
+      </nav>
+      {{block "main" .}}{{end}}
+    </div>
+  </body>
+</html>

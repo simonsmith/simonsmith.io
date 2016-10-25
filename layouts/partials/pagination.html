@@ -1,0 +1,10 @@
+{{if gt .TotalPages 1}}
+  <div>
+    {{if .HasPrev}}
+      <a class="btn btn-default" href="{{.Prev.URL}}">Previous Page</a>
+    {{end}}
+    {{if .HasNext}}
+      <a class="btn btn-default" href="{{.Next.URL}}">Next Page</a>
+    {{end}}
+  </div>
+{{end}}
