@@ -1,8 +1,0 @@
-/** @define JobList */
-
-@import "job";
-
-.JobList-item {
-  margin-bottom: 20px;
-  padding-bottom: @margin-bottom;
-}
