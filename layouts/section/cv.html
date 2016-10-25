@@ -1,0 +1,58 @@
+{{define "pageTitle"}}CV{{end}}
+
+{{define "main"}}
+  <div class="hresume">
+    <h1>CV</h1>
+
+    <h2 class="u-hiddenVisually">Profile</h2>
+    <p class="u-textLead summary">I've been building websites professionally for
+      over nine years and I specialise in HTML, CSS and JavaScript. I'm passionate
+      about the latest web technologies and writing great code.</p>
+
+    <h2 id="employment">Employment</h2>
+
+    <ul class="u-listUnstyled">
+      {{range .Data.Pages}}
+        <li class="u-ml0 u-mb40">
+          {{partial "job" .}}
+        </li>
+      {{end}}
+    </ul>
+
+    <h2 id="skills">Skills</h2>
+    <p>A selection of my recent experience in commercial and personal projects:</p>
+
+    <ul class="u-flex u-flexWrap u-listUnstyled">
+      {{range .Site.Data.skills.Skills}}
+        <li class="Skill u-mr10 u-mb10">
+          {{.}}
+        </li>
+      {{end}}
+    </ul>
+
+    <h2 id="personal">Personal Projects</h2>
+
+    <p><a href="https://github.com/orgs/suitcss/people">Collaborating on SUITCSS</a>, an open-source project for best practices when writing and distributing UI components.</p>
+    <p>Contributing various <a href="https://github.com/postcss/postcss">PostCSS</a> plugins <a href="https://github.com/search?q=user%3Asimonsmith+postcss-">on Github</a>.</p>
+    <p>Maintaining <a href="http://simonsmith.io">a blog</a> on various technical topics, focused around front end development.</p>
+    <p>Creating, owning and maintaining a level design community -
+      <a href="http://www.interlopers.net">interlopers.net</a>. The site has
+      been running for over 10 years and is a recognised resource for Source engine
+      development.</p>
+    <p>Acted as a reviewer for <a href="https://twitter.com/tbrd">Tom Hamshere</a>'s
+      book on <a href="http://goo.gl/DznlPd">Twitter's Flight library</a>. This
+      involved communicating with the book editors and suggesting edits and code
+      changes.</p>
+
+    <h2 id="interests">Interests</h2>
+
+    <p>I play drums in <a href="http://fashodacrisis.com">a loud rock band</a>.
+      We've completed three tours of Eastern Europe and released multiple CDs
+      independently.</p>
+    <p>I had the remarkable experience of
+      <a href="http://www.flickr.com/photos/simonblink24/sets/72157625051285708/">
+        visiting Chernobyl in September 2010</a> and returning radiation free!</p>
+    <p>In 2012 I drove across California in a Mustang, visiting places such as Yosemite,
+      Death Valley and Silicon Valley. The latter included visits to the Github and Mozilla offices, because geek.</p>
+  </div>
+{{end}}

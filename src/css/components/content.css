@@ -1,0 +1,9 @@
+/* @define Content; weak */
+
+.Content {
+  padding-top: 15px;
+
+  @media (--sm-viewport) {
+    padding-top: 30px;
+  }
+}

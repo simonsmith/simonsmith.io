@@ -1,0 +1,17 @@
+/* @define Footer */
+
+.Footer {
+  font-size: 16px;
+  border-top: 1px solid #ddd;
+  color: #888;
+  margin-top: 50px;
+  padding: 20px 0;
+
+  @media (--md-viewport) {
+    margin-top: 80px;
+  }
+}
+
+.Footer-text {
+  margin-bottom: 5px;
+}

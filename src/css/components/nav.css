@@ -1,0 +1,24 @@
+/** @define Nav */
+
+.Nav-item {
+  margin-right: 20px;
+
+  @media (--sm-viewport) {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.Nav-link {
+  color: inherit;
+  text-decoration: none;
+
+  @media (--sm-viewport) {
+    display: block;
+  }
+
+  &.is-active {
+    color: var(--link-color);
+  }
+}

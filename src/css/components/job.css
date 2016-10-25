@@ -1,0 +1,31 @@
+/** @define Job */
+
+.Job-title {
+  margin-bottom: 10px;
+}
+
+.Job-role {
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.Job-url {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  display: block;
+}
+
+.Job-dates {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.Job-summary {
+  margin-top: 10px;
+
+  p {
+    margin-bottom: 12px;
+  }
+}

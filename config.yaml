@@ -1,0 +1,18 @@
+title: '&ndash; simonsmith.io'
+permalinks:
+  blog: /:slug
+pygmentsUseClasses: false
+pygmentsCodeFences: true
+PygmentsStyle: 'friendly'
+metaDataFormat: 'yaml'
+paginate: 16
+menu:
+  main:
+    - Name: "Projects"
+      Identifier: "projects"
+      URL: "/projects/"
+      weight: 1
+    - Name: "Contact"
+      Identifier: "contact"
+      URL: "/contact/"
+      weight: 2

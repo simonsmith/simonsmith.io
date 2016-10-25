@@ -1,0 +1,20 @@
+{{define "pageTitle"}}Contact{{end}}
+
+{{define "main"}}
+  <h1>Contact</h1>
+
+  <div class="Contact u-flex u-flexWrap">
+    <img
+      class="Contact-img"
+      src="https://avatars0.githubusercontent.com/u/360703?v=3&u=62fd9bf9542870cb403fea72d7724a7667ec02c7&s=400"
+      alt="Simon in a selfie with a great dog"
+      width="180"
+      height="180">
+    <ul class="Contact-list u-listUnstyled u-sm-flex u-sm-flexCol">
+      <li class="Contact-item"><a href="mailto:me@simonsmith.io">me@simonsmith.io</a></li>
+      <li class="Contact-item"><a href="https://github.com/simonsmith">github.com/simonsmith</a></li>
+      <li class="Contact-item"><a href="https://twitter.com/blinkdesign">twitter.com/blinkdesign</a></li>
+      <li class="Contact-item u-sm-flexExpandTop"><a href="{{"cv/" | relURL}}">View my online CV</a></li>
+    </ul>
+  </div>
+{{end}}

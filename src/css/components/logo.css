@@ -1,0 +1,9 @@
+/** @define Logo */
+
+.Logo {
+  font-family: "Slabo 27px", Georgia, Times, "Times New Roman", serif;
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 1px;
+  font-size: 1.6em;
+}

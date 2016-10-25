@@ -1,17 +1,18 @@
-- name: JavaScript
-- name: HTML
-- name: CSS
-- name: PostCSS
-- name: Stylus
-- name: gulp
-- name: React
-- name: Node
-- name: webpack
-- name: SUIT CSS
-- name: Flight
-- name: Git
-- name: Sass
-- name: Responsive design
-- name: jQuery
-- name: AngularJS
-- name: Mocha
+Skills:
+  - JavaScript
+  - HTML
+  - CSS
+  - PostCSS
+  - Redux
+  - gulp
+  - React Native
+  - React
+  - Node
+  - Jest
+  - webpack
+  - SUIT CSS
+  - Git
+  - Sass
+  - Responsive design
+  - jQuery
+  - Mocha

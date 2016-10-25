@@ -1,0 +1,23 @@
+/** @define PostList */
+
+@import "../utils/link.css";
+
+.PostList {
+  list-style-type: none;
+  margin: 0;
+}
+
+.PostList-item {
+  margin-left: 0;
+  margin-bottom: 20px;
+
+  @media (--md-viewport) {
+    margin-bottom: 15px;
+  }
+}
+
+.PostList-title {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}

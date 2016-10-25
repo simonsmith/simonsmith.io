@@ -1,0 +1,18 @@
+/** @define Header */
+
+.Header {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0 15px;
+
+  @media (--sm-viewport) {
+    padding: 15px 0 20px;
+  }
+}
+
+.Header-wrapLogo {
+  margin-bottom: 10px;
+
+  @media (--sm-viewport) {
+    margin-bottom: 0;
+  }
+}

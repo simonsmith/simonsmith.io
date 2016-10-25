@@ -1,0 +1,10 @@
+/* @define Pagination */
+
+.Pagination {
+  list-style-type: none;
+  margin: 40px 0 0;
+}
+
+.Pagination-item {
+  margin: 0 10px 0 0;
+}
