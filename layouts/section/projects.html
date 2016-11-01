@@ -1,0 +1,9 @@
+{{define "pageTitle"}}Projects{{end}}
+
+{{define "main"}}
+  <h1>Projects</h1>
+
+  {{range .Data.Pages}}
+    {{partial "project" .}}
+  {{end}}
+{{end}}

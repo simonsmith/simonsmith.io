@@ -1,0 +1,20 @@
+{{$imgPath := printf "/images/projects/%s/lg@2x.png" .Params.id}}
+
+<div class="Project" id="{{.Params.id}}">
+  <div class="Project-header">
+    <h2 class="Project-title">{{.Title}}</h2>
+    <a href="{{.Params.siteurl}}">Visit website</a>
+  </div>
+  <a
+    class="u-block"
+    href="{{.Params.siteurl}}"
+  >
+    <img
+      class="Project-img"
+      srcset="{{$imgPath}} 2x"
+      src="{{$imgPath}}">
+  </a>
+  <div class="Project-body">
+    {{.Content}}
+  </div>
+</div>
