@@ -9,8 +9,8 @@ I recently stumbled across [an excellent talk](https://www.youtube.com/watch?v=L
 I found two slides interesting in particular:
 
 <div class="u-flex">
-  <img src="/images/using-webpack-to-build-react-components-and-their-assets/slide1.png">
-  <img src="/images/using-webpack-to-build-react-components-and-their-assets/slide2.png">
+  <img src="/images/posts/using-webpack-to-build-react-components-and-their-assets/slide1.png">
+  <img src="/images/posts/using-webpack-to-build-react-components-and-their-assets/slide2.png">
 </div>
 
 I thought it might be interesting to apply a similar approach to organising [React](https://facebook.github.io/react/) components with [webpack](webpack.github.io).
@@ -264,7 +264,7 @@ The dependencies will now be resolved the same way as before.
 
 One slide from the talk demonstrated use of another PostCSS plugin - [postcss-bem-linter](https://github.com/necolas/postcss-bem-linter):
 
-![](/images/using-webpack-to-build-react-components-and-their-assets/slide3.png)
+![](/images/posts/using-webpack-to-build-react-components-and-their-assets/slide3.png)
 
 This checks that CSS components conform to predefined naming conventions and now that our webpack config is using PostCSS this can easily be dropped in:
 
