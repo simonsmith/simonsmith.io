@@ -7,9 +7,11 @@ metaDataFormat: 'yaml'
 paginate: 15
 menu:
   main:
-    - Name: "CV"
-      Identifier: "cv"
-      URL: "/cv/"
     - Name: "Projects"
       Identifier: "projects"
       URL: "/projects/"
+      weight: 1
+    - Name: "CV"
+      Identifier: "cv"
+      URL: "/cv/"
+      weight: 2
