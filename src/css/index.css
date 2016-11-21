@@ -10,6 +10,8 @@
 @import "./components/header.css";
 @import "./components/container.css";
 @import "./components/logo.css";
+@import "./components/footer.css";
+@import "./components/pagination.css";
 @import "./components/nav.css";
 @import "./components/content.css";
 @import "./components/postlist.css";

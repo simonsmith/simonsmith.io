@@ -1,10 +1,16 @@
-{{if gt .TotalPages 1}}
-  <div>
+{{if or (.HasPrev) (.HasNext) }}
+  <ul class="Pagination u-flex u-flexJustifyCenter">
     {{if .HasPrev}}
-      <a class="btn btn-default" href="{{.Prev.URL}}">Previous Page</a>
+      <li class="Pagination-item">
+        <span aria-hidden="true">&laquo;</span>
+        <a class="u-linkNoDecoration u-linkMuted" href="{{.Prev.URL | absURL}}">Previous</a>
+      </li>
     {{end}}
     {{if .HasNext}}
-      <a class="btn btn-default" href="{{.Next.URL}}">Next Page</a>
+      <li class="Pagination-item">
+        <a class="u-linkNoDecoration u-linkMuted" href="{{.Next.URL}}">Next</a>
+        <span aria-hidden="true">&raquo;</span>
+      </li>
     {{end}}
-  </div>
+  </ul>
 {{end}}

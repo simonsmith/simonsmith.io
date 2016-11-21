@@ -1646,6 +1646,7 @@ ul {
 body {
   font-family: 'Noto Serif', serif;
   color: rgba(0, 0, 0, 0.8);
+  min-height: 100vh;
 }
 
 blockquote {
@@ -1722,8 +1723,6 @@ main a:hover {
   padding: 10px 0 15px;
 }
 
-/* box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.25); */
-
 @media (min-width: 500px) {
 
   .Header {
@@ -1760,6 +1759,38 @@ main a:hover {
   color: inherit;
   letter-spacing: 1px;
   font-size: 1.6em;
+}
+
+/* @define Footer */
+
+.Footer {
+  font-size: 16px;
+  border-top: 1px solid #ddd;
+  color: #888;
+  margin-top: 50px;
+  padding: 20px 0;
+}
+
+@media (min-width: 780px) {
+
+  .Footer {
+    margin-top: 80px;
+  }
+}
+
+.Footer-text {
+  margin-bottom: 5px;
+}
+
+/* @define Pagination */
+
+.Pagination {
+  list-style-type: none;
+  margin: 40px 0 0;
+}
+
+.Pagination-item {
+  margin: 0 10px 0 0;
 }
 
 /** @define Nav */
@@ -1850,7 +1881,14 @@ main a:hover {
 
 .highlight, code {
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+@media (min-width: 500px) {
+
+  .highlight, code {
+    font-size: 16px;
+  }
 }
 
 .highlight {
