@@ -21,10 +21,13 @@ p {
   margin-bottom: 25px;
 
   code {
-    font-family: Monaco, Consolas, "Lucida Console", monospace;
-    font-size: 16px;
     color: black;
   }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 abbr[title] {
@@ -42,4 +45,32 @@ h2, h3, h4, h5, h6  {
 
 h1 {
   font-size: 1.8em;
+}
+
+main ol,
+main ul {
+  margin: 20px 0;
+}
+
+main ul {
+  list-style-type: disc;
+}
+
+main ol {
+  list-style-type: decimal;
+}
+
+main li {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+main a {
+  color: var(--Content-link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: color(var(--Content-link-color) a(80%));
+  }
 }

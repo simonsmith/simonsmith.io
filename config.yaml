@@ -1,8 +1,9 @@
 title: '&ndash; simonsmith.io'
 permalinks:
   blog: /:slug
-pygmentsUseClasses: true
+pygmentsUseClasses: false
 pygmentsCodeFences: true
+PygmentsStyle: 'friendly'
 metaDataFormat: 'yaml'
 paginate: 15
 menu:

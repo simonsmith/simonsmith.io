@@ -15,8 +15,6 @@
   },
   "dependencies": {
     "suitcss-base": "^2.0.0",
-    "suitcss-components-grid": "^3.0.3",
-    "suitcss-utils-flex": "^1.1.1",
-    "suitcss-utils-size": "^2.0.0"
+    "suitcss-utils-flex": "^1.1.1"
   }
 }

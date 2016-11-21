@@ -4,11 +4,11 @@
   <h1>Blog</h1>
   <ul class="PostList">
     {{range where .Paginator.Pages "Section" "blog"}}
-    <li class="PostList-item">
-        <a class="PostList-link" href="{{.Permalink}}">{{.Title}}</a>
-        <time class="PostList-time" datetime="{{.Date.Format "01-02-2006"}}">
-          {{.Date.Format "January 2, 2006"}}
-        </time>
+    <li class="PostList-item u-flex u-flexAlignItemsBaseline u-flexWrap">
+      <a class="PostList-title u-linkMuted" href="{{.Permalink}}">{{.Title}}</a>
+      <time class="PostList-date" datetime="{{.Date.Format "01-02-2006"}}">
+        {{.Date.Format "January 2, 2006"}}
+      </time>
     </li>
     {{end}}
   </ul>

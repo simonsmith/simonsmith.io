@@ -1,8 +1,9 @@
 @import "suitcss-base";
-@import "suitcss-components-grid";
-@import "suitcss-utils-size";
-@import "suitcss-utils-flex";
+@import "suitcss-utils-flex/lib/flex";
+@import "suitcss-utils-flex/lib/flex-sm";
+@import "suitcss-utils-flex/lib/flex-md";
 
+@import "./fonts.css";
 @import "./theme.css";
 @import "./global.css";
 
@@ -11,6 +12,8 @@
 @import "./components/logo.css";
 @import "./components/nav.css";
 @import "./components/content.css";
+@import "./components/postlist.css";
+@import "./components/highlight.css";
 
 @custom-media --sm-viewport (min-width: 500px);
 @custom-media --md-viewport (min-width: 780px);
