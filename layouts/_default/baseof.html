@@ -3,34 +3,43 @@
   <head>
     <meta charset="{{.Lang}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700|Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="/css/build.css">
     <title>{{block "pageTitle" .}}{{end}} {{htmlUnescape .Site.Title}}</title>
   </head>
   <body>
-    <div class="Container">
-      {{$node := .}}
-      <nav>
-          <ul>
-            <li>
+    <div class="Header">
+      <div class="Container u-sm-flex u-sm-flexJustifyBetween u-sm-flexAlignItemsBaseline">
+        <div class="Header-wrapLogo">
+          <a class="Logo" href="{{.Site.BaseURL}}">simonsmith.io</a>
+        </div>
+        {{$node := .}}
+        <nav class="Header-wrapNav">
+          <ul class="Nav u-flex">
+            <li class="Nav-item">
               <a
-                class="link{{if or .IsHome (eq .Section "blog")}} is-active{{end}}"
+                class="Nav-link{{if or .IsHome (eq .Section "blog")}} is-active{{end}}"
                 href="{{.Site.BaseURL}}">
                 Blog
               </a>
             </li>
             {{range .Site.Menus.main}}
-            <li>
+            <li class="Nav-item">
               <a
-                class="link{{if $node.IsMenuCurrent "main" .}} is-active{{end}}"
+                class="Nav-link{{if $node.IsMenuCurrent "main" .}} is-active{{end}}"
                 href="{{.URL}}">
                 {{.Name}}
               </a>
             </li>
             {{end}}
           </ul>
-      </nav>
-      {{block "main" .}}{{end}}
+        </nav>
+      </div>
+    </div>
+    <div class="Container">
+      <main class="Content">
+        {{block "main" .}}{{end}}
+      </main>
     </div>
   </body>
 </html>

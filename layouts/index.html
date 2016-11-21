@@ -2,11 +2,15 @@
 
 {{define "main"}}
   <h1>Blog</h1>
-  {{range where .Paginator.Pages "Section" "blog"}}
-    <div>
-      <a href="{{.Permalink}}">{{.Title}}</a>
-      {{.Date.Format "January 2, 2006"}}
-    </div>
-  {{end}}
+  <ul class="PostList">
+    {{range where .Paginator.Pages "Section" "blog"}}
+    <li class="PostList-item">
+        <a class="PostList-link" href="{{.Permalink}}">{{.Title}}</a>
+        <time class="PostList-time" datetime="{{.Date.Format "01-02-2006"}}">
+          {{.Date.Format "January 2, 2006"}}
+        </time>
+    </li>
+    {{end}}
+  </ul>
   {{partial "pagination" .Paginator}}
 {{end}}

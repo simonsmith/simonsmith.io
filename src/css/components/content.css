@@ -1,0 +1,37 @@
+/* @define Content; weak */
+
+:root {
+  --Content-link-color: rgba(65, 196, 111, 1);
+}
+
+.Content {
+  padding-top: 15px;
+
+  @media (--sm-viewport) {
+    padding-top: 30px;
+  }
+}
+
+.Content ol,
+.Content ul {
+  margin: 20px 0;
+}
+
+.Content ul {
+  list-style-type: disc;
+}
+
+.Content li {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.Content a {
+  color: var(--Content-link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: color(var(--Content-link-color) a(80%));
+  }
+}

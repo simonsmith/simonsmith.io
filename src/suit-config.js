@@ -1,5 +1,4 @@
 module.exports = {
-  encapsulate: true,
   use: [
     'postcss-nested',
     'postcss-size',
