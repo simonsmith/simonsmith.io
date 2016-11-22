@@ -7,7 +7,7 @@
     {{range $paginator.Pages}}
     <li class="PostList-item u-flex u-flexAlignItemsBaseline u-flexWrap">
       <a class="PostList-title u-linkMuted" href="{{.Permalink}}">{{.Title}}</a>
-      <time class="PostList-date" datetime="{{.Date.Format "01-02-2006"}}">
+      <time class="u-colorGrey5" datetime="{{.Date.Format "01-02-2006"}}">
         {{.Date.Format "January 2, 2006"}}
       </time>
     </li>

@@ -9,6 +9,7 @@
 
 @import "./utils/list.css";
 @import "./utils/space.css";
+@import "./utils/color.css";
 
 @import "./components/container.css";
 @import "./components/content.css";

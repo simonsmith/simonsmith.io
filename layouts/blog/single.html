@@ -3,6 +3,12 @@
 {{end}}
 
 {{define "main"}}
-  <h1>{{.Title}}</h1>
+  <div class="u-mb35">
+    <h1 class="u-mb10">{{.Title}}</h1>
+    <time class="u-colorGrey5" datetime="{{.Date.Format "01-02-2006"}}">
+      {{.Date.Format "January 2, 2006"}}
+    </time>
+  </div>
+
   {{.Content}}
 {{end}}

@@ -1752,14 +1752,32 @@ main a:hover {
   margin-bottom: 5px !important;
 }
 
+.u-mb10 {
+  margin-bottom: 10px !important;
+}
+
+.u-mb15 {
+  margin-bottom: 15px !important;
+}
+
 .u-mb30 {
   margin-bottom: 30px !important;
+}
+
+.u-mb35 {
+  margin-bottom: 35px !important;
 }
 
 @media (min-width: 500px) {
   .u-sm-mb50 {
     margin-bottom: 50px !important;
   }
+}
+
+/** @define utilities */
+
+.u-colorGrey5 {
+  color: rgba(0, 0, 0, .5);
 }
 
 /** @define Container */
@@ -1950,10 +1968,6 @@ main a:hover {
   font-size: 1.3rem;
   margin-bottom: 5px;
   margin-right: 10px;
-}
-
-.PostList-date {
-  color: rgba(0, 0, 0, .5);
 }
 
 /** @define Project */
