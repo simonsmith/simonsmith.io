@@ -1716,6 +1716,96 @@ main a:hover {
   color: rgba(65, 196, 111, 0.8);
 }
 
+/** @define utilities; weak */
+
+/**
+ * Remove default styling
+ */
+
+.u-listUnstyled {
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+  list-style: none !important;
+}
+
+/**
+ * @define utilities
+ *
+ * Used to override styles on components without need for
+ * additional modifier classes
+ *
+ * Usage:
+ *  <div class="u-mbZ"> // margin-bottom: 0
+ *  <div class="u-mt20"> // margin-top: 20px
+ *  <div class="u-m25"> // margin: 25px
+ */
+
+.u-m0 {
+  margin: 0 !important;
+}
+
+.u-ml0 {
+  margin-left: 0 !important;
+}
+
+.u-mb5 {
+  margin-bottom: 5px !important;
+}
+
+.u-mb30 {
+  margin-bottom: 30px !important;
+}
+
+@media (min-width: 500px) {
+  .u-sm-mb50 {
+    margin-bottom: 50px !important;
+  }
+}
+
+/** @define Container */
+
+.Container {
+  padding-right: 10px;
+  padding-left: 10px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* @define Content; weak */
+
+.Content {
+  padding-top: 15px;
+}
+
+@media (min-width: 500px) {
+
+  .Content {
+    padding-top: 30px;
+  }
+}
+
+/* @define Footer */
+
+.Footer {
+  font-size: 16px;
+  border-top: 1px solid #ddd;
+  color: #888;
+  margin-top: 50px;
+  padding: 20px 0;
+}
+
+@media (min-width: 780px) {
+
+  .Footer {
+    margin-top: 80px;
+  }
+}
+
+.Footer-text {
+  margin-bottom: 5px;
+}
+
 /** @define Header */
 
 .Header {
@@ -1741,14 +1831,31 @@ main a:hover {
   }
 }
 
-/** @define Container */
+.highlight, code {
+  font-family: Monaco, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-size: 14px;
+}
 
-.Container {
-  padding-right: 10px;
-  padding-left: 10px;
-  max-width: 860px;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 500px) {
+
+  .highlight, code {
+    font-size: 16px;
+  }
+}
+
+.highlight {
+  background-color: #f8f8f8 !important;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 25px 0;
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.highlight span {
+  border: 0 !important;
 }
 
 /** @define Logo */
@@ -1759,38 +1866,6 @@ main a:hover {
   color: inherit;
   letter-spacing: 1px;
   font-size: 1.6em;
-}
-
-/* @define Footer */
-
-.Footer {
-  font-size: 16px;
-  border-top: 1px solid #ddd;
-  color: #888;
-  margin-top: 50px;
-  padding: 20px 0;
-}
-
-@media (min-width: 780px) {
-
-  .Footer {
-    margin-top: 80px;
-  }
-}
-
-.Footer-text {
-  margin-bottom: 5px;
-}
-
-/* @define Pagination */
-
-.Pagination {
-  list-style-type: none;
-  margin: 40px 0 0;
-}
-
-.Pagination-item {
-  margin: 0 10px 0 0;
 }
 
 /** @define Nav */
@@ -1818,17 +1893,19 @@ main a:hover {
   }
 }
 
-/* @define Content; weak */
-
-.Content {
-  padding-top: 15px;
+.Nav-link.is-active {
+  color: rgba(65, 196, 111, 1);
 }
 
-@media (min-width: 500px) {
+/* @define Pagination */
 
-  .Content {
-    padding-top: 30px;
-  }
+.Pagination {
+  list-style-type: none;
+  margin: 40px 0 0;
+}
+
+.Pagination-item {
+  margin: 0 10px 0 0;
 }
 
 /** @define PostList */
@@ -1859,7 +1936,7 @@ main a:hover {
 
 .PostList-item {
   margin-left: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 780px) {
@@ -1870,39 +1947,29 @@ main a:hover {
 }
 
 .PostList-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 5px;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .PostList-date {
   color: rgba(0, 0, 0, .5);
 }
 
-.highlight, code {
-  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  font-size: 14px;
+/** @define Project */
+
+.Project-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: 15px;
 }
 
-@media (min-width: 500px) {
-
-  .highlight, code {
-    font-size: 16px;
-  }
+.Project-header {
+  margin-bottom: 15px;
 }
 
-.highlight {
-  background-color: #f8f8f8 !important;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  margin: 25px 0;
-  overflow: auto;
-  white-space: pre;
-  word-wrap: normal;
-}
-
-.highlight span {
-  border: 0 !important;
+.Project-img {
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, .2);
 }
 

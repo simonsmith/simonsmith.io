@@ -1,0 +1,19 @@
+/**
+ * @define utilities
+ *
+ * Used to override styles on components without need for
+ * additional modifier classes
+ *
+ * Usage:
+ *  <div class="u-mbZ"> // margin-bottom: 0
+ *  <div class="u-mt20"> // margin-top: 20px
+ *  <div class="u-m25"> // margin: 25px
+ */
+
+@generate-preset .u-m margin 0;
+@generate-preset .u-ml margin-left 0;
+@generate-preset .u-mb margin-bottom 5px 30px;
+
+@media (--sm-viewport) {
+  @generate-preset .u-sm-mb margin-bottom 50px;
+}

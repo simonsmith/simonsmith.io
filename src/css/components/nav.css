@@ -17,4 +17,8 @@
   @media (--sm-viewport) {
     display: block;
   }
+
+  &.is-active {
+    color: var(--link-color);
+  }
 }

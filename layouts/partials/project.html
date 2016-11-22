@@ -1,12 +1,12 @@
 {{$imgPath := printf "/images/projects/%s/lg@2x.png" .Params.id}}
 
 <div class="Project" id="{{.Params.id}}">
-  <div class="Project-header">
+  <div class="Project-header u-flex u-flexWrap u-flexJustifyBetween
+    u-sm-flexJustifyStart u-flexAlignItemsBaseline">
     <h2 class="Project-title">{{.Title}}</h2>
     <a href="{{.Params.siteurl}}">Visit website</a>
   </div>
   <a
-    class="u-block"
     href="{{.Params.siteurl}}"
   >
     <img

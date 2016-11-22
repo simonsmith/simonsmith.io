@@ -67,11 +67,11 @@ main li {
 }
 
 main a {
-  color: var(--Content-link-color);
+  color: var(--link-color);
   text-decoration: none;
   transition: color 0.2s ease;
 
   &:hover {
-    color: color(var(--Content-link-color) a(80%));
+    color: color(var(--link-color) a(80%));
   }
 }

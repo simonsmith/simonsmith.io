@@ -1,0 +1,16 @@
+/** @define Project */
+
+.Project-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: 15px;
+}
+
+.Project-header {
+  margin-bottom: 15px;
+}
+
+.Project-img {
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}

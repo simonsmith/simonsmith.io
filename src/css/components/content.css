@@ -1,9 +1,5 @@
 /* @define Content; weak */
 
-:root {
-  --Content-link-color: rgba(65, 196, 111, 1);
-}
-
 .Content {
   padding-top: 15px;
 

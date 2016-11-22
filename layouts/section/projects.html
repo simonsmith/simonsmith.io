@@ -3,7 +3,11 @@
 {{define "main"}}
   <h1>Projects</h1>
 
-  {{range .Data.Pages}}
-    {{partial "project" .}}
-  {{end}}
+  <ul class="u-listUnstyled">
+    {{range .Data.Pages}}
+      <li class="u-mb30 u-sm-mb50 u-ml0">
+        {{partial "project" .}}
+      </li>
+    {{end}}
+  </ul>
 {{end}}

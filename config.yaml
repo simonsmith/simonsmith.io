@@ -5,7 +5,7 @@ pygmentsUseClasses: false
 pygmentsCodeFences: true
 PygmentsStyle: 'friendly'
 metaDataFormat: 'yaml'
-paginate: 15
+paginate: 16
 menu:
   main:
     - Name: "Projects"

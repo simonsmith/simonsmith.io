@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "postcss-generate-preset": "^0.2.0",
     "postcss-nested": "^1.0.0",
     "postcss-size": "^1.0.0",
     "suitcss-preprocessor": "^3.0.0"
