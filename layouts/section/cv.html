@@ -6,14 +6,14 @@
 
     <h2 class="u-hiddenVisually">Profile</h2>
     <p class="u-textLead summary">I've been building websites professionally for
-      over eight years and I specialise in HTML, CSS and JavaScript. I'm passionate
+      over nine years and I specialise in HTML, CSS and JavaScript. I'm passionate
       about the latest web technologies and writing great code.</p>
 
     <h2 id="employment">Employment</h2>
 
-    <ul class="JobList u-listUnstyled">
+    <ul class="u-listUnstyled">
       {{range .Data.Pages}}
-        <li class="JobList-item u-ml0">
+        <li class="u-ml0 u-mb40">
           {{partial "job" .}}
         </li>
       {{end}}
@@ -22,9 +22,9 @@
     <h2 id="skills">Skills</h2>
     <p>A selection of my recent experience in commercial and personal projects:</p>
 
-    <ul>
+    <ul class="u-flex u-flexWrap u-listUnstyled">
       {{range .Site.Data.skills.Skills}}
-        <li>
+        <li class="Skill u-mr10 u-mb10">
           {{.}}
         </li>
       {{end}}
@@ -43,9 +43,6 @@
       book on <a href="http://goo.gl/DznlPd">Twitter's Flight library</a>. This
       involved communicating with the book editors and suggesting edits and code
       changes.</p>
-    <p>Created
-      <a href="https://github.com/simonsmith/jquery.herotabs">Herotabs</a>, a jQuery plugin that is useful for displaying different
-      types of content. It's fully accessible, unit tested and deployed on a few sites</p>
 
     <h2 id="interests">Interests</h2>
 

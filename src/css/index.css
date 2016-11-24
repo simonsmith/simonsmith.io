@@ -1,4 +1,5 @@
 @import "suitcss-base";
+@import "suitcss-utils-display";
 @import "suitcss-utils-flex/lib/flex";
 @import "suitcss-utils-flex/lib/flex-sm";
 @import "suitcss-utils-flex/lib/flex-md";
@@ -16,11 +17,13 @@
 @import "./components/footer.css";
 @import "./components/header.css";
 @import "./components/highlight.css";
+@import "./components/job.css";
 @import "./components/logo.css";
 @import "./components/nav.css";
 @import "./components/pagination.css";
 @import "./components/postlist.css";
 @import "./components/project.css";
+@import "./components/skill.css";
 
 @custom-media --sm-viewport (min-width: 500px);
 @custom-media --md-viewport (min-width: 780px);

@@ -4,23 +4,25 @@
       {{.Title}} {{if isset .Params "contract"}}(Contract){{end}}
       <span class="Job-role">{{.Params.role}}</span>
     </h3>
-    <a class="Job-url company-url location" href="http://{{.Params.siteurl}}">
-      {{.Params.siteurl}}
-    </a>
-    <dl class="Job-dates vevent">
-      <dt>From</dt>
-      <dd>
-        <time class="dtstart">{{.Params.from}}</time>
-      </dd>
-      <dt>To</dt>
-      <dd>
-        {{with .Params.to}}
+    <div class="u-flex u-flexWrap">
+      <a class="Job-url company-url location" href="http://{{.Params.siteurl}}">
+        {{.Params.siteurl}}
+      </a>
+      <dl class="Job-dates vevent u-dlInline">
+        <dt class="u-hiddenVisually">From</dt>
+        <dd>
+          <time class="dtstart">{{.Params.from}}</time>
+        </dd>
+        <dt>to</dt>
+        <dd>
+          {{with .Params.to}}
           <time class="dtend">{{.}}</time>
-        {{else}}
+          {{else}}
           Present
-        {{end}}
-      </dd>
-    </dl>
+          {{end}}
+        </dd>
+      </dl>
+    </div>
   </header>
   {{with .Content}}
     <div class="Job-summary summary">

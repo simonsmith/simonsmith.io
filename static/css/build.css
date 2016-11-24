@@ -504,6 +504,60 @@ ul {
   outline: none !important;
 }
 
+/**
+ * @define utilities
+ * Display-type utilities
+ */
+
+.u-block {
+  display: block !important;
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+
+.u-hiddenVisually {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+.u-inline {
+  display: inline !important;
+}
+
+/**
+ * 1. Fix for Firefox bug: an image styled `max-width:100%` within an
+ * inline-block will display at its default size, and not limit its width to
+ * 100% of an ancestral container.
+ */
+
+.u-inlineBlock {
+  display: inline-block !important;
+  max-width: 100%; /* 1 */
+}
+
+.u-table {
+  display: table !important;
+}
+
+.u-tableCell {
+  display: table-cell !important;
+}
+
+.u-tableRow {
+  display: table-row !important;
+}
+
 /** @define utilities */
 
 /* Applies to flex container
@@ -1728,6 +1782,20 @@ main a:hover {
   list-style: none !important;
 }
 
+/* Definition lists
+   ========================================================================== */
+
+/**
+ * Display definition lists inline
+ */
+
+.u-dlInline dt,
+.u-dlInline dd {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 2px;
+}
+
 /**
  * @define utilities
  *
@@ -1748,6 +1816,10 @@ main a:hover {
   margin-left: 0 !important;
 }
 
+.u-mr10 {
+  margin-right: 10px !important;
+}
+
 .u-mb5 {
   margin-bottom: 5px !important;
 }
@@ -1766,6 +1838,10 @@ main a:hover {
 
 .u-mb35 {
   margin-bottom: 35px !important;
+}
+
+.u-mb40 {
+  margin-bottom: 40px !important;
 }
 
 @media (min-width: 500px) {
@@ -1874,6 +1950,38 @@ main a:hover {
 
 .highlight span {
   border: 0 !important;
+}
+
+/** @define Job */
+
+.Job-title {
+  margin-bottom: 10px;
+}
+
+.Job-role {
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.Job-url {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  display: block;
+}
+
+.Job-dates {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.Job-summary {
+  margin-top: 10px;
+}
+
+.Job-summary p {
+  margin-bottom: 12px;
 }
 
 /** @define Logo */
@@ -1985,5 +2093,14 @@ main a:hover {
 .Project-img {
   margin-bottom: 20px;
   border: 1px solid rgba(0, 0, 0, .2);
+}
+
+/** @define Skill */
+
+.Skill {
+  background-color: #f2f2f2;
+  padding: 5px;
+  margin: 0;
+  border-radius: 4px;
 }
 
