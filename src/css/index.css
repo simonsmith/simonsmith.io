@@ -12,6 +12,7 @@
 @import "./utils/space.css";
 @import "./utils/color.css";
 
+@import "./components/contact.css";
 @import "./components/container.css";
 @import "./components/content.css";
 @import "./components/footer.css";

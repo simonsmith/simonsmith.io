@@ -12,7 +12,7 @@ menu:
       Identifier: "projects"
       URL: "/projects/"
       weight: 1
-    - Name: "CV"
-      Identifier: "cv"
-      URL: "/cv/"
+    - Name: "Contact"
+      Identifier: "contact"
+      URL: "/contact/"
       weight: 2
