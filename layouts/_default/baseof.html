@@ -19,7 +19,7 @@
     <header class="Header">
       <div class="Container u-sm-flex u-sm-flexJustifyBetween u-sm-flexAlignItemsBaseline">
         <div class="Header-wrapLogo">
-          <a class="Logo" href="{{.Site.BaseURL}}">simonsmith.io</a>
+          <a class="Logo" href="{{.Site.BaseURL | relURL}}">simonsmith.io</a>
         </div>
         {{$node := .}}
         <nav class="Header-wrapNav">
@@ -27,7 +27,7 @@
             <li class="Nav-item">
               <a
                 class="Nav-link{{if or .IsHome (eq .Section "blog")}} is-active{{end}}"
-                href="{{.Site.BaseURL}}">
+                href="{{.Site.BaseURL | relURL}}">
                 Blog
               </a>
             </li>
