@@ -42,7 +42,14 @@ A few things will be needed from NPM before any fun can start.
 
 As well as the above node modules, a place for the React components and compiled JS file will be needed. I tend to favour a `react_components` directory (similar to Bower) for the former.
 
-![](2014-01-21-writing-react-components-as-commonjs-modules/initial-dir.png)
+```bash
+├── Gruntfile.js
+├── index.html
+├── node_modules
+├── package.json
+├── react_components
+└── scripts
+```
 
 ## Defining components
 
@@ -146,9 +153,9 @@ By creating this level of abstraction it is trivial to require a few components 
 
 Making this modular approach so simple is one of my favourite parts of React.
 
-### SuitCSS
+### SUIT CSS
 
-The HTML class naming conventions I use come from [SuitCSS](https://github.com/suitcss/suit/blob/master/doc/README.md). The way components are handled there seem to complement React perfectly and I've found it very useful to keep the modular approach flowing through the CSS architecture.
+The HTML class naming conventions I use come from [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc/README.md). The way components are handled there seem to complement React perfectly and I've found it very useful to keep the modular approach flowing through the CSS architecture.
 
 ## Build step
 

@@ -290,7 +290,7 @@ describe('Profile component', () => {
 });
 ```
 
-```
+``` bash
 Profile component
     ✓ should have the correct props
     ✓ should allow default class names to be disabled

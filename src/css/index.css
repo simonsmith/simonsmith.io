@@ -1,5 +1,6 @@
 @import "suitcss-base";
 @import "suitcss-utils-display";
+@import "suitcss-utils-text";
 @import "suitcss-utils-flex/lib/flex";
 @import "suitcss-utils-flex/lib/flex-sm";
 @import "suitcss-utils-flex/lib/flex-md";

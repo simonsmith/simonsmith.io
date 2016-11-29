@@ -13,7 +13,9 @@ In this post I'll look at [Jasmine](http://pivotal.github.io/jasmine/) (one of t
 
 An understanding of Grunt is assumed. With that in mind the first thing to do is grab the [Jasmine plugin](https://github.com/gruntjs/grunt-contrib-jasmine)
 
-    npm install grunt-contrib-jasmine --save-dev
+```js
+npm install grunt-contrib-jasmine --save-dev
+```
 
 I'll also be using [Bower](http://bower.io) in this post, but if you don't mind fetching libraries manually then it won't be compulsory.
 
@@ -56,7 +58,12 @@ describe('Simple object', function() {
 
 It's often good practice to keep the specs separate to the actual code that is being tested. For the purpose of this post the specs will be listed under a `test` directory and the source code in `scripts` but you can use whatever suits best.
 
-![](2014-02-05-headless-testing-with-phantomjs-and-grunt/simple-dir-structure.png)
+```bash
+├── scripts
+│  └── simple-object.js
+└── test
+   └── simple-object.spec.js
+```
 
 ## Wiring up the Grunt task
 
@@ -73,11 +80,13 @@ jasmine: {
 }
 ```
 
-    grunt jasmine
+```js
+grunt jasmine
+```
 
 If all goes well we should see a message confirming the tests have passed
 
-![](2014-02-05-headless-testing-with-phantomjs-and-grunt/simple-test-result.png)
+![](/images/posts/headless-testing-with-phantomjs-and-grunt/simple-test-result.png)
 
 At this moment in time, 100% code coverage!
 
@@ -172,11 +181,20 @@ In this case it's very simple (`<div class="my-element"></div>`) but for more co
 
 Once again we'll follow the practice of separating code and tests but this time also create a sub-directory for the HTML fixtures. You may need to adjust the fixtures path as I have done in the above example.
 
-![](2014-02-05-headless-testing-with-phantomjs-and-grunt/jquery-plugin-dir.png)
+```bash
+├── scripts
+│  ├── jquery-plugin.js
+│  └── simple-object.js
+└── test
+   ├── fixtures
+   │  └── example.html
+   ├── jquery-plugin.spec.js
+   └── simple-object.spec.js
+```
 
 And hopefully the tests will pass
 
-![](2014-02-05-headless-testing-with-phantomjs-and-grunt/plugin-passed.png)
+![](/images/posts/headless-testing-with-phantomjs-and-grunt/plugin-passed.png)
 
 And there you have the very basics of testing a plugin.
 

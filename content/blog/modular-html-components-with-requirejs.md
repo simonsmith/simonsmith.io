@@ -117,11 +117,11 @@ So, where are we at the moment?
 
 We have jQuery and Handlebars required in our `main.js` file and the file structure looks a little like this:
 
-![](2013-07-04-modular-html-components-with-requirejs/Screen-Shot-2013-06-23-at-13.03.33.png)
+![](/images/posts/modular-html-components-with-requirejs/Screen-Shot-2013-06-23-at-13.03.33.png)
 
 And if we load the page our two core or main modules should be fetched.
 
-![](2013-07-04-modular-html-components-with-requirejs/Screen-Shot-2013-06-23-at-12.16.51.png)
+![](/images/posts/modular-html-components-with-requirejs/Screen-Shot-2013-06-23-at-12.16.51.png)
 
 ## Creating an HTML module
 
@@ -208,7 +208,7 @@ Now if we simply place that code in a script element beneath the carousel HTML m
 
 But we actually get a console error:
 
-![](2013-07-04-modular-html-components-with-requirejs/Screen-Shot-2013-06-24-at-10.18.42.png)
+![](/images/posts/modular-html-components-with-requirejs/Screen-Shot-2013-06-24-at-10.18.42.png)
 
 If you remember from earlier, we told RequireJS where to find our version of jQuery by using the paths configuration option. In this case RequireJS has attempted to load jQuery and our Carousel module <em>before</em> the <code>main.js</code> file has loaded. This means that the config options have not been read yet and therefore an error is shown.
 
@@ -234,7 +234,7 @@ I usually create a directory called page to serve this purpose, but really the n
 
 Now the directory structure is looking a little like this:
 
-![](2013-07-04-modular-html-components-with-requirejs/Screen-Shot-2013-07-04-at-21.49.42.png)
+![](/images/posts/modular-html-components-with-requirejs/Screen-Shot-2013-07-04-at-21.49.42.png)
 
 By dropping the code into `carousel.js` (lowercase to signify the difference) the HTML page can simply `require` that file:
 
@@ -303,19 +303,21 @@ Upon completion, r.js will output a summary of what files were built and what mo
 
 I find it useful to set up a build script early on in the process and run it occasionally to ensure everything is being included correctly:
 
-    scripts/main.js
-    ----------------
-    scripts/components/jquery/jquery.js
-    scripts/components/handlebars/handlebars.js
-    scripts/components/requirejs-domready/domReady.js
-    scripts/main.js
+```bash
+scripts/main.js
+----------------
+scripts/components/jquery/jquery.js
+scripts/components/handlebars/handlebars.js
+scripts/components/requirejs-domready/domReady.js
+scripts/main.js
 
-    scripts/page/carousel.js
-    ----------------
-    scripts/page/carousel.js
-    scripts/plugins/jquery.pluginA.js
-    scripts/plugins/jquery.pluginB.js
-    scripts/modules/Carousel.js
+scripts/page/carousel.js
+----------------
+scripts/page/carousel.js
+scripts/plugins/jquery.pluginA.js
+scripts/plugins/jquery.pluginB.js
+scripts/modules/Carousel.js
+```
 
 One thing to mention is that by breaking things up into modules of code (carousel.js, nav.js etc) there are going to be more HTTP requests made than if it was all in one file.
 

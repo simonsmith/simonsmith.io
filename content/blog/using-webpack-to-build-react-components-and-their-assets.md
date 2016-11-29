@@ -8,9 +8,13 @@ I recently stumbled across [an excellent talk](https://www.youtube.com/watch?v=L
 
 I found two slides interesting in particular:
 
-<div class="u-flex">
-  <img src="/images/posts/using-webpack-to-build-react-components-and-their-assets/slide1.png">
-  <img src="/images/posts/using-webpack-to-build-react-components-and-their-assets/slide2.png">
+<div class="u-sm-flex u-mb15">
+  <div>
+    <img src="/images/posts/using-webpack-to-build-react-components-and-their-assets/slide1.png">
+  </div>
+  <div>
+    <img src="/images/posts/using-webpack-to-build-react-components-and-their-assets/slide2.png">
+  </div>
 </div>
 
 I thought it might be interesting to apply a similar approach to organising [React](https://facebook.github.io/react/) components with [webpack](webpack.github.io).

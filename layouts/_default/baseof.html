@@ -59,5 +59,10 @@
         </p>
       </div>
     </footer>
+    <script>
+      window.$ = document.querySelectorAll.bind(document);
+      NodeList.prototype.__proto__ = Array.prototype;
+    </script>
+    {{block "scripts" .}}{{end}}
   </body>
 </html>

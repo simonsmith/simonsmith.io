@@ -11,7 +11,7 @@ Considering the flexibility [that the position property][1] affords us, it would
 
 Most developers will be familiar with setting the offsets of their background images from the *top left* of an element:
 
-![](2012-12-30-background-position-shorthand-syntax/bgp-100-50-300x216.png)
+![](/images/posts/background-position-shorthand-syntax/bgp-100-50-300x216.png)
 
 ``` css
 .element {
@@ -19,7 +19,7 @@ Most developers will be familiar with setting the offsets of their background im
 }
 ```
 
-![](2012-12-30-background-position-shorthand-syntax/bgp-10px-10px-300x216.jpg)
+![](/images/posts/background-position-shorthand-syntax/bgp-10px-10px-300x216.jpg)
 
 ``` css
 .element {
@@ -33,7 +33,7 @@ But what happens when the design requires the image to remain 20px from the righ
 
 One approach requires upfront knowledge of the image dimensions and those of the element to which it is being applied:
 
-![](2012-12-30-background-position-shorthand-syntax/bgp-right-20px-bottom-20px-300x216.jpg)
+![](/images/posts/background-position-shorthand-syntax/bgp-right-20px-bottom-20px-300x216.jpg)
 
 ``` css
 /*
@@ -49,7 +49,7 @@ This is a fairly hideous solution and makes assumptions that our element and ima
 
 In today&#8217;s responsive world, this simply won&#8217;t fly. So what about percentage measurements? Again this requires more maths and more importantly, the spacing will vary on flexible elements:
 
-![](2012-12-30-background-position-shorthand-syntax/flexible-fail.jpg)
+![](/images/posts/background-position-shorthand-syntax/flexible-fail.jpg)
 
 ``` css
 .element {

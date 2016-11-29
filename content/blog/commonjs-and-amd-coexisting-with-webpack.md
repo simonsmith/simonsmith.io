@@ -125,7 +125,14 @@ function componentB() {
 
 This time there will be two init files, `pageA.js` and `pageB.js` and I've organised them in a directory as shown:
 
-![](2014-11-04-commonjs-and-amd-coexisting-with-webpack/flight-components-dir.png)
+```bash
+flight_components
+├── componentA.js
+├── componentB.js
+└── init
+   ├── pageA.js
+   └── pageB.js
+```
 
 If I were to add these two init files to the `entry` object in our config then I would expect two built files `pageA.built.js` and `pageB.built.js`. Unfortunately both of these files would include the entire Flight library.
 

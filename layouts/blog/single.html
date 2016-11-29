@@ -2,6 +2,20 @@
   {{- .Title | markdownify -}}
 {{end}}
 
+{{define "scripts"}}
+  <script>
+    !function() {
+      var imgs = $('.Post p img');
+      if (!imgs.length) return;
+
+      imgs.forEach(function(img) {
+        var figure = '<figure class="u-textCenter u-mb20 u-mt20">' + img.outerHTML + '</figure>';
+        img.outerHTML = figure;
+      });
+    }();
+  </script>
+{{end}}
+
 {{define "main"}}
   <div class="u-mb35">
     <h1 class="u-mb10">{{.Title}}</h1>
@@ -10,5 +24,7 @@
     </time>
   </div>
 
-  {{.Content}}
+  <div class="Post">
+    {{.Content}}
+  </div>
 {{end}}

@@ -2,7 +2,7 @@
 title: CSS inherit property
 date: 2012-04-13
 ---
-/images/using-webpack-to-build-react-components-and-their-assets/slide1.png
+
 The CSS `inherit` property is one of those basic things that tends to get overlooked for some of the more glitzy CSS3 effects, but I just wanted to show a quick example of a common use that might help your day to day CSS antics.
 
 Essentially the inherit property forces a child element to use (or inherit) its parent properties on a specific value. You might think that this happens automatically but one common example where this isn&#8217;t applied is changing the colour of an `<a/>` element.

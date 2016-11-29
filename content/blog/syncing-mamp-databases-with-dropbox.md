@@ -13,13 +13,17 @@ First thing to do is move your mysql folder into Dropbox. It can be found at `/A
 
 Once that&#8217;s done pop open Terminal ([or iTerm 2 for extra winsauce][1]) and navigate to the db folder inside MAMP `/Applications/MAMP/db/`. From here run the following terminal command
 
-    ln -s ~/Dropbox/mysql mysql
+```bash
+ln -s ~/Dropbox/mysql mysql
+```
 
 That will now create a symlink to your Dropbox and everytime you make a database change it will be automatically synced.
 
 You can double check it was created successfully by running `ls -ll` in the same folder and you should see something like:
 
-    mysql -> /Users/your.name/Dropbox/mysql/
+```bash
+mysql -> /Users/your.name/Dropbox/mysql/
+```
 
 Simple
 
