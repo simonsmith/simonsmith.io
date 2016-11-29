@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build_css": "suitcss src/css/index.css static/css/build.css -c src/suit-config.js"
+    "build_css": "suitcss src/css/index.css static/css/build.css -c src/suit-config.js -L",
+    "build_css_min": "npm run build_css -- -m -L"
   },
   "author": "",
   "license": "MIT",

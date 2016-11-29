@@ -4,11 +4,11 @@ module.exports = {
     'postcss-size',
     'postcss-generate-preset',
   ],
-  stylelint: {
-    extends: 'stylelint-config-suitcss',
-    ignoreFiles: '**/normalize.css',
-    rules: {},
-  },
+  // stylelint: {
+  //   extends: 'stylelint-config-suitcss',
+  //   ignoreFiles: '**/normalize.css',
+  //   rules: {},
+  // },
   'postcss-generate-preset': {
     useImportant: true,
   },

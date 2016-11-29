@@ -50,9 +50,12 @@
       </div>
     </main>
     <footer class="Footer" role="contentinfo">
-      <div class="Container u-flex u-flexCol u-sm-flexRow u-sm-flexJustifyBetween">
-        <p class="Footer-text">Simon Smith <time datetime="{{.Now.Year}}">{{.Now.Year}}</time></p>
-        <p class="Footer-text">View the source <a
+      <div class="Container u-sm-flex u-sm-flexRow">
+        <p class="Footer-text u-mr20">Simon Smith <time datetime="{{.Now.Year}}">{{.Now.Year}}</time></p>
+        <p class="Footer-text">
+          <a class="u-linkMuted u-linkUnderline u-linkNoDecoration" href="/index.xml">RSS</a>
+        </p>
+        <p class="Footer-text u-sm-flexExpandLeft">View the source <a
             class="u-linkMuted u-linkUnderline u-linkNoDecoration"
             href="https://github.com/simonsmith/simonsmith.io">
             on GitHub</a>
