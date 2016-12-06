@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build_css": "suitcss src/css/index.css static/css/build.css -c src/suit-config.js -L",
-    "build_css_min": "npm run build_css -- -m -L"
+    "build_css_min": "suitcss src/css/index.css ../simonsmith.github.com/css/build.css -c src/suit-config.js -L -m"
   },
   "author": "",
   "license": "MIT",
