@@ -1,6 +1,7 @@
 @import "suitcss-base";
 @import "suitcss-utils-display";
 @import "suitcss-utils-text";
+@import "suitcss-components-flex-embed";
 @import "suitcss-utils-flex/lib/flex";
 @import "suitcss-utils-flex/lib/flex-sm";
 @import "suitcss-utils-flex/lib/flex-md";
@@ -26,6 +27,7 @@
 @import "./components/postlist.css";
 @import "./components/project.css";
 @import "./components/skill.css";
+@import "./components/video.css";
 
 @custom-media --sm-viewport (min-width: 500px);
 @custom-media --md-viewport (min-width: 780px);
