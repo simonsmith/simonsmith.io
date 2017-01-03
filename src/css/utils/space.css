@@ -12,7 +12,7 @@
 
 @generate-preset .u-m margin 0;
 @generate-preset .u-ml margin-left 0;
-@generate-preset .u-mt margin-top 20px;
+@generate-preset .u-mt margin-top 20px 40px;
 @generate-preset .u-mr margin-right 10px 20px;
 @generate-preset .u-mb margin-bottom 5px 10px 15px 20px 30px 35px 40px;
 
