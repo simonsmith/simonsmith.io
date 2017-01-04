@@ -14,6 +14,22 @@
       });
     }();
   </script>
+  <script>
+    !function() {
+      if (window.location.hostname == 'localhost') {return;}
+      window.disqus_config = function () {
+        this.page.url = 'https:{{.Permalink}}';
+        this.page.identifier = 'https:{{.Permalink}}';
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//simonsmithio.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    }()
+  </script>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 {{end}}
 
 {{define "main"}}
@@ -28,10 +44,15 @@
     {{.Content}}
   </div>
 
-  <div class="u-mt40 u-textCenter">
+  <div class="u-mt40 u-mb30">
     <a href="https://twitter.com/blinkdesign" data-size="large" class="twitter-follow-button" data-show-count="false">
       Follow @blinkdesign
     </a>
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
+
+  <div class="Comments">
+    <div id="disqus_thread"></div>
+  </div>
+
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {{end}}
