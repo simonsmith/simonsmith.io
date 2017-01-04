@@ -18,8 +18,8 @@
     !function() {
       if (window.location.hostname == 'localhost') {return;}
       window.disqus_config = function () {
-        this.page.url = 'https:{{.Permalink}}';
-        this.page.identifier = 'https:{{.Permalink}}';
+        this.page.url = '{{.Permalink}}';
+        this.page.identifier = '{{.Permalink}}';
       };
       (function() {
         var d = document, s = d.createElement('script');

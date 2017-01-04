@@ -1,4 +1,5 @@
 title: '&ndash; simonsmith.io'
+baseUrl: 'https://simonsmith.io/'
 permalinks:
   blog: /:slug
 pygmentsUseClasses: false
