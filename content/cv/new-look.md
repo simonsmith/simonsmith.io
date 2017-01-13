@@ -1,6 +1,7 @@
 ---
 contract: true
 from: August 2016
+to: February 2017
 id: newlook
 role: Senior JavaScript Developer
 siteurl: newlook.co.uk
