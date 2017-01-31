@@ -1,18 +1,21 @@
-Skills:
+Tools:
   - Babel
-  - CSS
-  - Functional JS
   - Git
-  - HTML
-  - JavaScript (ES6/7)
   - Jest
+  - Mocha
   - Node JS
-  - Object Oriented JS
   - PostCSS
-  - React
   - React Native
+  - React
   - Redux
-  - Responsive design
   - SUIT CSS
   - Sass
+  - jQuery
   - webpack
+Development:
+  - Accessibility
+  - CSS
+  - Component based UI
+  - JavaScript (Functional and OO)
+  - Progressive Enhancement
+  - Responsive design

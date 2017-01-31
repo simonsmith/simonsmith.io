@@ -20,19 +20,35 @@
     </ul>
 
     <h2 id="skills">Skills</h2>
-    <p>A selection of my recent experience in commercial and personal projects:</p>
+    <p>Used in commercial and personal projects:</p>
 
-    <ul class="u-flex u-flexWrap u-listUnstyled">
-      {{range .Site.Data.skills.Skills}}
-        <li class="Skill u-mr10 u-mb10">
-          {{.}}
-        </li>
-      {{end}}
-    </ul>
+    <div class="u-md-flex u-md-flexGrow1">
+      <div class="u-mr20">
+        <h3 class="u-mt0">Development</h3>
+        <ul class="u-flex u-flexWrap u-listUnstyled">
+          {{range .Site.Data.skills.Development}}
+          <li class="Skill u-mr10 u-mb10">
+            {{.}}
+          </li>
+          {{end}}
+        </ul>
+      </div>
+      <div>
+        <h3 class="u-mt0">Tools</h3>
+        <ul class="u-flex u-flexWrap u-listUnstyled">
+          {{range .Site.Data.skills.Tools}}
+          <li class="Skill u-mr10 u-mb10">
+            {{.}}
+          </li>
+          {{end}}
+        </ul>
+      </div>
+    </div>
+
 
     <h2 id="personal">Personal Projects</h2>
 
-    <p><a href="https://github.com/orgs/suitcss/people">Maintaining SUIT CSS</a>, an open-source project for best practices when writing and distributing UI components.</p>
+    <p>Project lead on <a href="https://github.com/orgs/suitcss/">SUIT CSS</a>, an open-source project for best practices when writing and distributing UI components.</p>
     <p>Contributing various <a href="https://github.com/postcss/postcss">PostCSS</a> plugins <a href="https://github.com/search?q=user%3Asimonsmith+postcss-">on Github</a>.</p>
     <p>Creating, owning and maintaining a level design community -
       <a href="http://www.interlopers.net">interlopers.net</a>. The site has
