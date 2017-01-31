@@ -1925,6 +1925,19 @@ main a:hover {
   color: rgba(65, 196, 111, 0.8);
 }
 
+@media print {
+  .Header,
+  .Footer {
+    display: none;
+  }
+
+  * {
+    font-style: normal !important;
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: */
+  }
+}
+
 /** @define utilities; weak */
 
 /**

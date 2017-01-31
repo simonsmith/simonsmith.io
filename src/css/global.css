@@ -77,3 +77,16 @@ main a {
     color: color(var(--link-color) a(80%));
   }
 }
+
+@media print {
+  .Header,
+  .Footer {
+    display: none;
+  }
+
+  * {
+    font-style: normal !important;
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: */
+  }
+}
