@@ -29,5 +29,7 @@
 @import "./components/skill.css";
 @import "./components/video.css";
 
+@import "./print.css";
+
 @custom-media --sm-viewport (min-width: 500px);
 @custom-media --md-viewport (min-width: 780px);

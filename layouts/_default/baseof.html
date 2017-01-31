@@ -16,7 +16,7 @@
     <script async src="//www.google-analytics.com/analytics.js"></script>
   </head>
   <body class="u-sm-flex u-sm-flexCol">
-    <header class="Header">
+    <header class="Header u-hiddenPrint">
       <div class="Container u-sm-flex u-sm-flexJustifyBetween u-sm-flexAlignItemsBaseline">
         <div class="Header-wrapLogo">
           <a class="Logo" href="{{.Site.BaseURL | relURL}}">simonsmith.io</a>
@@ -49,7 +49,7 @@
         {{block "main" .}}{{end}}
       </div>
     </main>
-    <footer class="Footer" role="contentinfo">
+    <footer class="Footer u-hiddenPrint" role="contentinfo">
       <div class="Container u-sm-flex u-sm-flexRow">
         <p class="Footer-text u-mr20">Simon Smith <time datetime="{{.Now.Year}}">{{.Now.Year}}</time></p>
         <p class="Footer-text">

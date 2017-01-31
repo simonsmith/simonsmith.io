@@ -1,0 +1,57 @@
+@media screen {
+  .u-hiddenScreen {
+    display: none;
+  }
+}
+
+@media print {
+  .u-hiddenPrint {
+    display: none !important;
+  }
+
+  .Container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .Cv-siteLink {
+    margin-top: -15px;
+    font-style: italic;
+  }
+
+  .Cv-wrapSkill {
+    display: block !important;
+  }
+
+  .Skill-list {
+    display: block !important;
+    list-style-type: disc !important;
+    margin-left: 20px;
+  }
+
+  .Skill--tools {
+    margin-top: 20px;
+  }
+
+  .Skill-item {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .Content {
+    padding: 10px 0;
+  }
+
+  .Job-role {
+    font-weight: normal !important;
+  }
+
+  * {
+    font-style: normal;
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}

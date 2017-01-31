@@ -1,8 +1,9 @@
 {{define "pageTitle"}}CV{{end}}
 
 {{define "main"}}
-  <div class="hresume">
-    <h1>CV</h1>
+  <div class="hresume Cv">
+    <h1>CV<span class="u-hiddenScreen"> - Simon Smith</span></h1>
+    <p class="u-hiddenScreen Cv-siteLink">https://simonsmith.io/cv</p>
 
     <h2 class="u-hiddenVisually">Profile</h2>
     <p class="u-textLead summary">I've been building websites professionally for
@@ -22,29 +23,28 @@
     <h2 id="skills">Skills</h2>
     <p>Used in commercial and personal projects:</p>
 
-    <div class="u-md-flex u-md-flexGrow1">
-      <div class="u-mr20">
-        <h3 class="u-mt0">Development</h3>
-        <ul class="u-flex u-flexWrap u-listUnstyled">
+    <div class="Cv-wrapSkill u-md-flex u-md-flexGrow1">
+      <div class="Skill">
+        <h3 class="Skill-header">Development</h3>
+        <ul class="Skill-list u-flex u-flexWrap u-listUnstyled">
           {{range .Site.Data.skills.Development}}
-          <li class="Skill u-mr10 u-mb10">
+          <li class="Skill-item">
             {{.}}
           </li>
           {{end}}
         </ul>
       </div>
-      <div>
-        <h3 class="u-mt0">Tools</h3>
-        <ul class="u-flex u-flexWrap u-listUnstyled">
+      <div class="Skill Skill--tools">
+        <h3 class="Skill-header">Tools</h3>
+        <ul class="Skill-list u-flex u-flexWrap u-listUnstyled">
           {{range .Site.Data.skills.Tools}}
-          <li class="Skill u-mr10 u-mb10">
+          <li class="Skill-item">
             {{.}}
           </li>
           {{end}}
         </ul>
       </div>
     </div>
-
 
     <h2 id="personal">Personal Projects</h2>
 

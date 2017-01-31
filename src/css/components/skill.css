@@ -1,9 +1,13 @@
 /** @define Skill */
 
+.Skill-header {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
 
-.Skill {
+.Skill-item {
   background-color: #f2f2f2;
   padding: 5px;
-  margin: 0;
+  margin: 0 10px 10px 0;
   border-radius: 4px;
 }
