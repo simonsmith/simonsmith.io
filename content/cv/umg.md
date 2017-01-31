@@ -17,9 +17,6 @@ Implemented the [Karma test
 runner](http://karma-runner.github.io/0.10/index.html) to allow automated
 unit testing of JS code.
 
-The look and feel was primarily handled by Bootstrap 3. Grunt was used for
+Built the UI with Bootstrap 3. Grunt was used for
 various automated tasks (JS uglifying, Sass compilation etc) with Bower as
 the package manager for third party libraries.
-
-Git was the chosen VCS, adopting a branching and rebasing workflow to add
-new features.

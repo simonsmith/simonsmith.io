@@ -18,6 +18,3 @@ PhantomJS.
 Developed and maintained an internal BBC Bootstrap which extends Twitter
 Bootstrap and has a variety of custom [SUIT CSS](http://suitcss.github.io/)
 components.
-
-Collaborated with other developers using [GitHub
-Flow](http://scottchacon.com/2011/08/31/github-flow.html).

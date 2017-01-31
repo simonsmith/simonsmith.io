@@ -1,6 +1,6 @@
 ---
 contract: true
-from: February 2015
+from: March 2015
 id: bbc-three
 role: Senior Front end Developer
 siteurl: bbc.co.uk/bbcthree

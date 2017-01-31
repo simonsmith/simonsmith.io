@@ -16,15 +16,3 @@ Twitter's [Flight JS library](http://twitter.github.com/flight/),
 Ran workshops with other members of the UI team on topics such as
 [RequireJS](http://requirejs.org), [SMACSS](http://smacss.com/) and jQuery
 plugin development
-
-Maintained the RadioTimes front-end. Re-factoring old code and developing
-new areas of the site.
-
-Identified use of various carousel plugins across multiple sites. To solve
-problem this I developed and open-sourced [a jQuery
-plugin](https://github.com/simonsmith/jquery.herotabs) that could be used
-instead.
-
-Implemented Bootstrap 3 and modular HTML/CSS workflows on a new responsive
-website for [You &amp; Your
-Wedding](http://www.youandyourwedding.co.uk/venues).

@@ -5,7 +5,7 @@ id: shopa
 role: Front end Developer
 siteurl: shopa.com
 title: Shopa
-to: February 2015
+to: March 2015
 weight: 2
 ---
 
@@ -20,9 +20,4 @@ across the site, building the components with
 [webpack](http://webpack.github.io/) and utilising various ES6 features with
 [6to5](http://6to5.org).
 
-Worked remotely and on site, communicating with team members via
-[Slack](http://slack.com).
-
 Refactored Rails controllers to support front end requirements.
-
-Used Git for version control and GitHub for code reviews.

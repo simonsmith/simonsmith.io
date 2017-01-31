@@ -15,10 +15,6 @@ Native](http://facebook.github.io/react-native/).
 Used [Redux](http://redux.js.org/) to store data from multiple
 API endpoints.
 
-Made use of [React Redux](https://github.com/reactjs/react-redux) and container
-components to pass data down the component tree. Keeping them separated this
-way greatly assisted unit testing.
-
 Unit tested React components and Redux reducers with
 [Jest](https://facebook.github.io/jest/)'s snapshot feature.
 
