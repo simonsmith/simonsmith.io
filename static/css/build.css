@@ -1869,7 +1869,10 @@ p {
 }
 
 p code {
-  color: black;
+  color: #555;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+  padding: 1px 3px;
 }
 
 img {
