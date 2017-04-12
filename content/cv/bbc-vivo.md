@@ -6,7 +6,7 @@ siteurl: bbc.co.uk
 id: bbc-vivo
 from: February 2014
 to: June 2014
-weight: 3
+weight: 300
 ---
 
 Worked on a client-side Angular JS application to allow journalists to

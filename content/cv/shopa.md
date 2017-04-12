@@ -6,7 +6,7 @@ role: Front end Developer
 siteurl: shopa.com
 title: Shopa
 to: March 2015
-weight: 2
+weight: 200
 ---
 
 Re-built the Shopa website to match a new design and developed various modular

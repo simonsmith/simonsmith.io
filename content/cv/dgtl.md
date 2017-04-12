@@ -6,5 +6,5 @@ role: UI Developer
 siteurl: dgtl.net
 title: DGTL
 to: March 2009
-weight: 10
+weight: 1000
 ---

@@ -5,7 +5,7 @@ role: Senior UI Developer
 siteurl: qmetric.co.uk
 title: QMetric
 to: October 2012
-weight: 6
+weight: 600
 ---
 
 Led development on a mobile first, responsive design and rebuild of [the

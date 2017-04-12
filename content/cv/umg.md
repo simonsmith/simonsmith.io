@@ -6,7 +6,7 @@ role: Senior UI Developer
 siteurl: universalmusic.com
 title: Universal Music
 to: February 2014
-weight: 4
+weight: 400
 ---
 
 Responsible for building an internal, responsive

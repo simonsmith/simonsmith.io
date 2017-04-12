@@ -5,7 +5,7 @@ role: Senior UI Developer
 siteurl: immediatemedia.co.uk
 title: Immediate Media
 to: August 2013
-weight: 6
+weight: 600
 ---
 
 Worked on a mobile-first responsive TV listings grid for Radio Times using

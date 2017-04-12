@@ -6,7 +6,7 @@ id: newlook
 role: Senior JavaScript Developer
 siteurl: newlook.co.uk
 title: New Look
-weight: 0
+weight: 99
 ---
 
 Developed an initial version of an iOS app with [React
