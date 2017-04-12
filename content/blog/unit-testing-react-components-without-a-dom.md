@@ -3,21 +3,37 @@ title: Unit testing React components without a DOM
 date: 2015-06-14
 ---
 
+* _**Update 12/04/17**_ Airbnb's [Enzyme library](http://airbnb.io/enzyme/)
+offers the best solution for shallow rendering
 * _**Update 04/01/16**_  _Added better examples of skin-deep usage_
 
-When unit testing React components the common approach has been to render them into a DOM (with [something like jsdom](https://github.com/jesstelford/react-testing-mocha-jsdom)) and run some assertions against them with the help of the [React TestUtils](https://facebook.github.io/react/docs/test-utils.html).
+When unit testing React components the common approach has been to render them
+into a DOM (with [something like
+jsdom](https://github.com/jesstelford/react-testing-mocha-jsdom)) and run some
+assertions against them with the help of the [React
+TestUtils](https://facebook.github.io/react/docs/test-utils.html).
 
-This has changed in 0.13 where an early implementation of [shallow rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) is now ready to use.
+This has changed in 0.13 where an early implementation of [shallow
+rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering)
+is now ready to use.
 
 ## Shallow rendering
 
-Instead of rendering into a DOM the idea of shallow rendering is to instantiate a component and get the result of its `render` method, which is a [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements). From here you can do things like check its props and children and verify it works as expected.
+Instead of rendering into a DOM the idea of shallow rendering is to instantiate
+a component and get the result of its `render` method, which is a
+[ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements).
+From here you can do things like check its props and children and verify it
+works as expected.
 
-As you can imagine this is much faster (and less hassle) and will be [the recommended way](https://discuss.reactjs.org/t/whats-the-prefered-way-to-test-react-js-components/26/2) to test components in the future.
+As you can imagine this is much faster (and less hassle) and will be [the
+recommended
+way](https://discuss.reactjs.org/t/whats-the-prefered-way-to-test-react-js-components/26/2)
+to test components in the future.
 
 ### How it works
 
-All you need to do is create an instance of the shallow renderer, render your component and then grab the output.
+All you need to do is create an instance of the shallow renderer, render your
+component and then grab the output.
 
 ``` js
 const React = require('react/addons');
@@ -29,7 +45,8 @@ shallowRenderer.render(React.createElement(MyComponent, { className: 'MyComponen
 const component = shallowRenderer.getRenderOutput();
 ```
 
-This gives you an object that represents your component and looks roughly like the below (I've omitted some properties for the sake of brevity)
+This gives you an object that represents your component and looks roughly like
+the below (I've omitted some properties for the sake of brevity)
 
 ``` json
 {
@@ -63,10 +80,14 @@ expect(component.props.className).to.equal('MyComponent');
 
 ### Reusing the `shallowRenderer` with `skin-deep`
 
-Once you start using shallow rendering there will be a need to create rendered versions of components in each test,
-so it makes sense to move the logic into a reusable module.
+Once you start using shallow rendering there will be a need to create rendered
+versions of components in each test, so it makes sense to move the logic into a
+reusable module.
 
-[skin-deep](https://github.com/glenjamin/skin-deep) is an excellent library to help with this.
+[skin-deep](https://github.com/glenjamin/skin-deep) is an excellent library to
+help with this.
+
+> I'd recommend that instead you try [Enzyme](http://airbnb.io/enzyme/).
 
 ``` js
 import React from 'react';
@@ -84,8 +105,9 @@ assertions against things like text and props.
 
 ## Example: Testing a `Post` component
 
-Now that the basics have been explained let's work through a simple example of testing a fictional `Post` component.
-It will accept a title and content and ensure any paragraph tags on the content are stripped away:
+Now that the basics have been explained let's work through a simple example of
+testing a fictional `Post` component. It will accept a title and content and
+ensure any paragraph tags on the content are stripped away:
 
 ``` js
 import React from 'react';
@@ -124,7 +146,9 @@ export default React.createClass({
 
 ### The `Post` component spec
 
-I've chosen to use [Chai](http://chaijs.com/) and [Mocha](http://mochajs.org/) for my unit tests, but you're free to use Jest, Jasmine or any other test runner and assertion library.
+I've chosen to use [Chai](http://chaijs.com/) and [Mocha](http://mochajs.org/)
+for my unit tests, but you're free to use Jest, Jasmine or any other test runner
+and assertion library.
 
 First we'll set up some boilerplate before we start writing actual tests
 
@@ -157,11 +181,16 @@ it('should render a post title and content', () => {
 
 ### Testing component methods
 
-It's not uncommon to have a few methods attached to the React component and to need to test them. An example might be a method that performs some complex transforms on data sent in via the props.
+It's not uncommon to have a few methods attached to the React component and to
+need to test them. An example might be a method that performs some complex
+transforms on data sent in via the props.
 
-If you stick to [pure functions](http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/) on your React components then it's much easier to unit test them.
+If you stick to [pure
+functions](http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/) on
+your React components then it's much easier to unit test them.
 
-You can reference any method directly on the prototype of the component. Let's make sure the `stripParagraphTags` method is working correctly.
+You can reference any method directly on the prototype of the component. Let's
+make sure the `stripParagraphTags` method is working correctly.
 
 ``` js
 describe('stripParagraphTags method', () => {
@@ -183,9 +212,9 @@ instance.stripParagraphTags('<p>Content</p>');
 
 This will be correctly bound with the React component.
 
-It might be advisable to treat this as an anti-pattern though as it's not as robust as
-just testing a pure function. One way to avoid it is to pass the props required
-into the function, rather than relying on `this`:
+It might be advisable to treat this as an anti-pattern though as it's not as
+robust as just testing a pure function. One way to avoid it is to pass the props
+required into the function, rather than relying on `this`:
 
 ``` js
 this.someComponentMethod(this.props.text);
@@ -215,12 +244,13 @@ describe('doSomethingOnClick method', () => {
 ```
 
 Here we are passing a very simple `event` mock that just has an empty function,
-but this could also be a good candidate for [Sinon JS](http://sinonjs.org/) if more complex assertion was
-needed.
+but this could also be a good candidate for [Sinon JS](http://sinonjs.org/) if
+more complex assertion was needed.
 
 #### Running the tests
 
-To verify it all works we can run Mocha with [Babel](https://babeljs.io/) to take care of the ES6 compilation.
+To verify it all works we can run Mocha with [Babel](https://babeljs.io/) to
+take care of the ES6 compilation.
 
 ``` bash
   Post component
@@ -238,15 +268,22 @@ Great, our first test is passing.
 
 ## Rendering a list of Posts
 
-Now that the `Post` component is rendering and passing the unit tests we recieve a requirement to render a list of them from a set of data and ensure that it works as expected.
+Now that the `Post` component is rendering and passing the unit tests we recieve
+a requirement to render a list of them from a set of data and ensure that it
+works as expected.
 
-To do this we'll reach for another React component called `PostList` and it will just be responsible for taking a set of data and rendering a `Post` for each item of data.
+To do this we'll reach for another React component called `PostList` and it will
+just be responsible for taking a set of data and rendering a `Post` for each
+item of data.
 
-> Keeping components separated like this is can allow reuse in different contexts and ensure components do one job well. Composition is encouraged and is one of Reacts' strengths.
+> Keeping components separated like this is can allow reuse in different
+> contexts and ensure components do one job well. Composition is encouraged and
+> is one of Reacts' strengths.
 
 ### The `PostList` component
 
-Nothing too fancy here, just creating a new `Post` component for each item in the `posts` data set that is passed in as a prop.
+Nothing too fancy here, just creating a new `Post` component for each item in
+the `posts` data set that is passed in as a prop.
 
 ``` js
 import React from 'react';
@@ -273,7 +310,9 @@ export default React.createClass({
 });
 ```
 
-In terms of what to test here it seems sensible to just make sure the `PostList` has rendered a `Post` for each data item. With the above code we could expect an HTML output like this:
+In terms of what to test here it seems sensible to just make sure the `PostList`
+has rendered a `Post` for each data item. With the above code we could expect an
+HTML output like this:
 
 ``` html
 <ul class="PostList">
@@ -284,7 +323,8 @@ In terms of what to test here it seems sensible to just make sure the `PostList`
 </ul>
 ```
 
-With that in mind we will write a spec to ensure each `<li>` contains a `Post` component and that the total matches the total set of posts in the data source.
+With that in mind we will write a spec to ensure each `<li>` contains a `Post`
+component and that the total matches the total set of posts in the data source.
 
 ``` js
 import { expect } from 'chai';
@@ -310,8 +350,9 @@ describe('PostList component', () => {
 });
 ```
 
-Using `everySubTree` returns an array of all the `Post` components. Now the length of the `items` array
-should match the total items in the `postData` array.
+Using `everySubTree` returns an array of all the `Post` components. Now the
+length of the `items` array should match the total items in the `postData`
+array.
 
 ``` bash
   PostList component
@@ -332,12 +373,24 @@ And it does! Perfect.
 
 ## Testing the actual rendering
 
-Areas of testing that this doesn't cover would be interactions with components (form fields, buttons etc) and visual rendering. I find this sort of acceptance testing is best left to tools like [Browserstack](https://www.browserstack.com) or [Sauce Labs](https://saucelabs.com) as they can test multiple devices and operating systems and will paint a more accurate picture of how your application behaves.
+Areas of testing that this doesn't cover would be interactions with components
+(form fields, buttons etc) and visual rendering. I find this sort of acceptance
+testing is best left to tools like [Browserstack](https://www.browserstack.com)
+or [Sauce Labs](https://saucelabs.com) as they can test multiple devices and
+operating systems and will paint a more accurate picture of how your application
+behaves.
 
-I've found unit testing with shallow rendering is best used to ensure the application data is passing through your components as intended but you can make them as granular as you like.
+I've found unit testing with shallow rendering is best used to ensure the
+application data is passing through your components as intended but you can make
+them as granular as you like.
 
 ## Conclusion and example code
 
-We've now written and unit tested two separate React components without even needing a DOM or web browser. Although it's still an experimental feature I would recommend trying it out and seeing how it fits in with your code base.
+We've now written and unit tested two separate React components without even
+needing a DOM or web browser. Although it's still an experimental feature I
+would recommend trying it out and seeing how it fits in with your code base.
 
-You can grab all the example code in [this repository on GitHub](https://github.com/simonsmith/react-component-unit-test) and find more information on [the React documentation page](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering).
+You can grab all the example code in [this repository on
+GitHub](https://github.com/simonsmith/react-component-unit-test) and find more
+information on [the React documentation
+page](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering).
