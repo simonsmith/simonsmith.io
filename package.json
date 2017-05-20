@@ -16,10 +16,10 @@
     "suitcss-preprocessor": "^3.0.0"
   },
   "dependencies": {
-    "suitcss-base": "^2.0.0",
+    "suitcss-base": "^3.0.0",
     "suitcss-components-flex-embed": "^2.0.4",
     "suitcss-utils-display": "^1.0.2",
-    "suitcss-utils-flex": "^1.1.1",
+    "suitcss-utils-flex": "^2.0.0",
     "suitcss-utils-text": "^1.0.0"
   }
 }

@@ -1,89 +1,90 @@
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
 
 /**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
 
 html {
-  font-family: sans-serif; /* 1 */
-  line-height: 1.15; /* 2 */
-  -ms-text-size-adjust: 100%; /* 3 */
-  -webkit-text-size-adjust: 100%; /* 3 */
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-/**
- * Remove the margin in all browsers (opinionated).
- */
-
-body {
-  margin: 0;
-}
-
-/* HTML5 display definitions
+/* Sections
    ========================================================================== */
 
 /**
  * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- * 2. Add the correct display in IE.
  */
 
 article,
 aside,
-details, /* 1 */
-figcaption,
-figure,
 footer,
 header,
-main, /* 2 */
-menu,
 nav,
-section,
-summary { /* 1 */
+section {
   display: block;
 }
 
 /**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
  * Add the correct display in IE 9-.
- */
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Add the correct display in IE 10-.
  * 1. Add the correct display in IE.
  */
 
-template, /* 1 */
-[hidden] {
-  display: none;
+figcaption,
+figure,
+main { /* 1 */
+  display: block;
 }
 
-/* Links
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
    ========================================================================== */
 
 /**
@@ -97,20 +98,7 @@ a {
 }
 
 /**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
- */
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * 1. Remove the bottom border in Firefox 39-.
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
@@ -139,21 +127,23 @@ strong {
 }
 
 /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
  * Add the correct font style in Android 4.3-.
  */
 
 dfn {
   font-style: italic;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /**
@@ -198,6 +188,24 @@ sup {
    ========================================================================== */
 
 /**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
  * Remove the border on images inside links in IE 10-.
  */
 
@@ -213,47 +221,11 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* Grouping content
-   ========================================================================== */
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct margin in IE 8.
- */
-
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
 /* Forms
    ========================================================================== */
 
 /**
- * 1. Change font properties to `inherit` in all browsers (opinionated).
- * 2. Remove the margin in Firefox and Safari.
+ * Remove the margin in Firefox and Safari.
  */
 
 button,
@@ -261,16 +233,7 @@ input,
 optgroup,
 select,
 textarea {
-  font: inherit; /* 1 */
-  margin: 0; /* 2 */
-}
-
-/**
- * Restore the font weight unset by the previous rule.
- */
-
-optgroup {
-  font-weight: bold;
+  margin: 0;
 }
 
 /**
@@ -330,16 +293,6 @@ button:-moz-focusring,
 }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
- */
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
@@ -353,6 +306,16 @@ legend {
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
   white-space: normal; /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
 }
 
 /**
@@ -394,21 +357,12 @@ textarea {
 }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
 
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
-}
-
-/**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
- */
-
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
 }
 
 /**
@@ -421,19 +375,71 @@ textarea {
   font: inherit; /* 2 */
 }
 
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
+}
+
 /**
  * A thin layer on top of normalize.css that provides a starting point more
  * suitable for web applications.
  */
 
 /**
- * Prevent margin and border from affecting element width.
+ * 1. Prevent padding and border from affecting element width
  * https://goo.gl/pYtbK7
- *
+ * 2. Change the default font family in all browsers
  */
 
 html {
-  box-sizing: border-box;
+  box-sizing: border-box; /* 1 */
+  font-family: sans-serif; /* 2 */
 }
 
 *,
@@ -446,6 +452,7 @@ html {
  * Removes the default spacing and border for appropriate elements.
  */
 
+body,
 blockquote,
 dl,
 dd,
@@ -502,6 +509,40 @@ ul {
 
 [tabindex="-1"]:focus {
   outline: none !important;
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * Change the font styles in all browsers.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
 
 /**
@@ -917,19 +958,6 @@ ul {
           align-content: space-around !important;
 }
 
-/**
- * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
- */
-
-/* postcss-bem-linter: ignore */
-
-.u-flex > *,
-.u-flexInline > * {
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1; /* 1 */
-}
-
 /* Applies to flex items
    ========================================================================== */
 
@@ -1051,6 +1079,47 @@ ul {
 }
 
 /**
+ * Specify the flex shrink factor, which determines how much the flex item will
+ * shrink relative to the rest of the flex items in the flex container.
+ */
+
+.u-flexShrink0 {
+  -webkit-flex-shrink: 0 !important;
+      -ms-flex-negative: 0 !important;
+          flex-shrink: 0 !important;
+}
+
+.u-flexShrink1 {
+  -webkit-flex-shrink: 1 !important;
+      -ms-flex-negative: 1 !important;
+          flex-shrink: 1 !important;
+}
+
+.u-flexShrink2 {
+  -webkit-flex-shrink: 2 !important;
+      -ms-flex-negative: 2 !important;
+          flex-shrink: 2 !important;
+}
+
+.u-flexShrink3 {
+  -webkit-flex-shrink: 3 !important;
+      -ms-flex-negative: 3 !important;
+          flex-shrink: 3 !important;
+}
+
+.u-flexShrink4 {
+  -webkit-flex-shrink: 4 !important;
+      -ms-flex-negative: 4 !important;
+          flex-shrink: 4 !important;
+}
+
+.u-flexShrink5 {
+  -webkit-flex-shrink: 5 !important;
+      -ms-flex-negative: 5 !important;
+          flex-shrink: 5 !important;
+}
+
+/**
  * Aligning with `auto` margins
  * http://www.w3.org/TR/css-flexbox-1/#auto-margins
  */
@@ -1073,6 +1142,77 @@ ul {
 
 .u-flexExpandBottom {
   margin-bottom: auto !important;
+}
+
+/**
+ * Basis
+ */
+
+.u-flexBasisAuto {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
+}
+
+.u-flexBasis0 {
+  -webkit-flex-basis: 0 !important;
+      -ms-flex-preferred-size: 0 !important;
+          flex-basis: 0 !important;
+}
+
+/*
+ * Shorthand
+ *
+ * Declares all values instead of keywords like 'initial' to work around IE10
+ * https://www.w3.org/TR/css-flexbox-1/#flex-common
+ *
+ * 1. Fixes issue in IE 10 where flex-basis is ignored - https://git.io/vllMt
+ *    This ensures it overrides flex-basis set in other utilities.
+ */
+
+/*
+ * Sizes the item based on the width/height properties
+ */
+
+.u-flexInitial {
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: 0 1 auto !important;
+      -ms-flex: 0 1 auto !important;
+          flex: 0 1 auto !important;
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important; /* 1 */
+}
+
+/*
+ * Sizes the item based on the width/height properties, but makes them fully
+ * flexible, so that they absorb any free space along the main axis.
+ */
+
+.u-flexAuto {
+  -webkit-box-flex: 1 !important;
+  -webkit-flex: 1 1 auto !important;
+      -ms-flex: 1 1 auto !important;
+          flex: 1 1 auto !important;
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important; /* 1 */
+}
+
+/*
+ * Sizes the item according to the width/height properties, but makes the flex
+ * item fully inflexible. Similar to initial, except that flex items are
+ * not allowed to shrink, even in overflow situations.
+ */
+
+.u-flexNone {
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: 0 0 auto !important;
+      -ms-flex: 0 0 auto !important;
+          flex: 0 0 auto !important;
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important; /* 1 */
 }
 
 /**
@@ -1286,19 +1426,6 @@ ul {
             align-content: space-around !important;
   }
 
-  /**
-   * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
-   */
-
-  /* postcss-bem-linter: ignore */
-
-  .u-sm-flex > *,
-  .u-sm-flexInline > * {
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1; /* 1 */
-  }
-
   /* Applies to flex items
      ======================================================================== */
 
@@ -1419,6 +1546,47 @@ ul {
   }
 
   /**
+   * Specify the flex shrink factor, which determines how much the flex item
+   * will shrink relative to the rest of the flex items in the flex container.
+   */
+
+  .u-sm-flexShrink0 {
+    -webkit-flex-shrink: 0 !important;
+        -ms-flex-negative: 0 !important;
+            flex-shrink: 0 !important;
+  }
+
+  .u-sm-flexShrink1 {
+    -webkit-flex-shrink: 1 !important;
+        -ms-flex-negative: 1 !important;
+            flex-shrink: 1 !important;
+  }
+
+  .u-sm-flexShrink2 {
+    -webkit-flex-shrink: 2 !important;
+        -ms-flex-negative: 2 !important;
+            flex-shrink: 2 !important;
+  }
+
+  .u-sm-flexShrink3 {
+    -webkit-flex-shrink: 3 !important;
+        -ms-flex-negative: 3 !important;
+            flex-shrink: 3 !important;
+  }
+
+  .u-sm-flexShrink4 {
+    -webkit-flex-shrink: 4 !important;
+        -ms-flex-negative: 4 !important;
+            flex-shrink: 4 !important;
+  }
+
+  .u-sm-flexShrink5 {
+    -webkit-flex-shrink: 5 !important;
+        -ms-flex-negative: 5 !important;
+            flex-shrink: 5 !important;
+  }
+
+  /**
    * Aligning with `auto` margins
    * http://www.w3.org/TR/css-flexbox-1/#auto-margins
    */
@@ -1441,6 +1609,77 @@ ul {
 
   .u-sm-flexExpandBottom {
     margin-bottom: auto !important;
+  }
+
+  /**
+   * Basis
+   */
+
+  .u-sm-flexBasisAuto {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
+  }
+
+  .u-sm-flexBasis0 {
+    -webkit-flex-basis: 0 !important;
+        -ms-flex-preferred-size: 0 !important;
+            flex-basis: 0 !important;
+  }
+
+  /*
+   * Shorthand
+   *
+   * Declares all values instead of keywords like 'initial' to work around IE10
+   * https://www.w3.org/TR/css-flexbox-1/#flex-common
+   *
+   * 1. Fixes issue in IE 10 where flex-basis is ignored - https://git.io/vllMt
+   *    This ensures it overrides flex-basis set in other utilities.
+   */
+
+  /*
+   * Sizes the item based on the width/height properties
+   */
+
+  .u-sm-flexInitial {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 1 auto !important;
+        -ms-flex: 0 1 auto !important;
+            flex: 0 1 auto !important;
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important; /* 1 */
+  }
+
+  /*
+   * Sizes the item based on the width/height properties, but makes them fully
+   * flexible, so that they absorb any free space along the main axis.
+   */
+
+  .u-sm-flexAuto {
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 1 auto !important;
+        -ms-flex: 1 1 auto !important;
+            flex: 1 1 auto !important;
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important; /* 1 */
+  }
+
+  /*
+   * Sizes the item according to the width/height properties, but makes the flex
+   * item fully inflexible. Similar to initial, except that flex items are
+   * not allowed to shrink, even in overflow situations.
+   */
+
+  .u-sm-flexNone {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 0 auto !important;
+        -ms-flex: 0 0 auto !important;
+            flex: 0 0 auto !important;
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important; /* 1 */
   }
 
 }
@@ -1656,19 +1895,6 @@ ul {
             align-content: space-around !important;
   }
 
-  /**
-   * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
-   */
-
-  /* postcss-bem-linter: ignore */
-
-  .u-md-flex > *,
-  .u-md-flexInline > * {
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1; /* 1 */
-  }
-
   /* Applies to flex items
      ======================================================================== */
 
@@ -1789,6 +2015,47 @@ ul {
   }
 
   /**
+   * Specify the flex shrink factor, which determines how much the flex item
+   * will shrink relative to the rest of the flex items in the flex container.
+   */
+
+  .u-md-flexShrink0 {
+    -webkit-flex-shrink: 0 !important;
+        -ms-flex-negative: 0 !important;
+            flex-shrink: 0 !important;
+  }
+
+  .u-md-flexShrink1 {
+    -webkit-flex-shrink: 1 !important;
+        -ms-flex-negative: 1 !important;
+            flex-shrink: 1 !important;
+  }
+
+  .u-md-flexShrink2 {
+    -webkit-flex-shrink: 2 !important;
+        -ms-flex-negative: 2 !important;
+            flex-shrink: 2 !important;
+  }
+
+  .u-md-flexShrink3 {
+    -webkit-flex-shrink: 3 !important;
+        -ms-flex-negative: 3 !important;
+            flex-shrink: 3 !important;
+  }
+
+  .u-md-flexShrink4 {
+    -webkit-flex-shrink: 4 !important;
+        -ms-flex-negative: 4 !important;
+            flex-shrink: 4 !important;
+  }
+
+  .u-md-flexShrink5 {
+    -webkit-flex-shrink: 5 !important;
+        -ms-flex-negative: 5 !important;
+            flex-shrink: 5 !important;
+  }
+
+  /**
    * Aligning with `auto` margins
    * http://www.w3.org/TR/css-flexbox-1/#auto-margins
    */
@@ -1811,6 +2078,77 @@ ul {
 
   .u-md-flexExpandBottom {
     margin-bottom: auto !important;
+  }
+
+  /**
+   * Basis
+   */
+
+  .u-md-flexBasisAuto {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
+  }
+
+  .u-md-flexBasis0 {
+    -webkit-flex-basis: 0 !important;
+        -ms-flex-preferred-size: 0 !important;
+            flex-basis: 0 !important;
+  }
+
+  /*
+   * Shorthand
+   *
+   * Declares all values instead of keywords like 'initial' to work around IE10
+   * https://www.w3.org/TR/css-flexbox-1/#flex-common
+   *
+   * 1. Fixes issue in IE 10 where flex-basis is ignored - https://git.io/vllMt
+   *    This ensures it overrides flex-basis set in other utilities.
+   */
+
+  /*
+   * Sizes the item based on the width/height properties
+   */
+
+  .u-md-flexInitial {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 1 auto !important;
+        -ms-flex: 0 1 auto !important;
+            flex: 0 1 auto !important;
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important; /* 1 */
+  }
+
+  /*
+   * Sizes the item based on the width/height properties, but makes them fully
+   * flexible, so that they absorb any free space along the main axis.
+   */
+
+  .u-md-flexAuto {
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 1 auto !important;
+        -ms-flex: 1 1 auto !important;
+            flex: 1 1 auto !important;
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important; /* 1 */
+  }
+
+  /*
+   * Sizes the item according to the width/height properties, but makes the flex
+   * item fully inflexible. Similar to initial, except that flex items are
+   * not allowed to shrink, even in overflow situations.
+   */
+
+  .u-md-flexNone {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 0 auto !important;
+        -ms-flex: 0 0 auto !important;
+            flex: 0 0 auto !important;
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important; /* 1 */
   }
 
 }
