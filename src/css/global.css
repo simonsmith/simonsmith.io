@@ -22,7 +22,7 @@ p {
   margin-bottom: 25px;
 
   code {
-    color: #555;
+    color: inherit;
     background-color: rgba(0, 0, 0, 0.04);
     border-radius: 2px;
     padding: 1px 3px;
