@@ -9,7 +9,7 @@ to: August 2016
 weight: 100
 ---
 
-Developing a new web product for BBC Three.
+Built a new web product for BBC Three.
 
 Using Node with [React](https://facebook.github.io/react/) and [Express
 JS](http://expressjs.com/) to serve components on the client and server.
