@@ -8,7 +8,7 @@ title: Olive Jar
 weight: 98
 ---
 
-Developing a school results web application for the Department of Education.
+Developing a school results web application for the Department for Education.
 
 Rewriting areas of the site to be component based (with SUIT CSS) to allow
 easier maintenance and reuse.
