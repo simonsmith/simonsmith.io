@@ -7,6 +7,3 @@ to: December 2011
 title: BBC Worldwide
 weight: 700
 ---
-
-Led UI development on [the new Radio Times](http://radiotimes.com) using an
-array of modern front-end technologies. (HTML5, CSS3, Modernizr, MooTools)
