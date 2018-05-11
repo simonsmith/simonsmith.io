@@ -2492,6 +2492,10 @@ main a:hover {
   word-wrap: normal;
 }
 
+.highlight pre {
+  background-color: transparent !important;
+}
+
 .highlight span {
   border: 0 !important;
 }

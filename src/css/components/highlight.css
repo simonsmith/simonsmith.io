@@ -17,6 +17,10 @@
   white-space: pre;
   word-wrap: normal;
 
+  pre {
+    background-color: transparent !important;
+  }
+
   span {
     border: 0 !important;
   }
