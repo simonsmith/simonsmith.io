@@ -51,7 +51,7 @@
     </main>
     <footer class="Footer u-hiddenPrint" role="contentinfo">
       <div class="Container u-sm-flex u-sm-flexRow">
-        <p class="Footer-text u-mr20">Simon Smith <time datetime="{{.Now.Year}}">{{.Now.Year}}</time></p>
+        <p class="Footer-text u-mr20">Simon Smith <time datetime="{{ now.Format "2006"}}">{{ now.Format "2006"}}</time></p>
         <p class="Footer-text">
           <a class="u-linkMuted u-linkUnderline u-linkNoDecoration" href="/index.xml">RSS</a>
         </p>
