@@ -2,7 +2,6 @@ Tools:
   - Babel
   - Git
   - Jest
-  - Mocha
   - Node JS
   - PostCSS
   - React Native
@@ -11,6 +10,7 @@ Tools:
   - SUIT CSS
   - Sass
   - jQuery
+  - VueJS
   - webpack
 Development:
   - Accessibility
