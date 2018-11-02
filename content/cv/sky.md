@@ -9,10 +9,10 @@ title: Sky
 weight: 96
 ---
 
-Helping lead a small team on the redesign of the existing Now TV React & Redux
+Helped lead a small team on the redesign of the existing Now TV React & Redux
 single page application.
 
-Writing, refactoring and testing dozens of new components, including best
+Wrote, refactored and tested dozens of new components, including best
 practices for styling in a large code base.
 
 Code reviews and pairing with other team members to learn and share knowledge.
