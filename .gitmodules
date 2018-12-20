@@ -1,3 +1,0 @@
-[submodule "blog/_drafts"]
-	path = blog/_drafts
-	url = git@github.com:simonsmith/draft-posts.git
