@@ -6038,7 +6038,10 @@ ul {
 }
 
 .Container {
-  max-width: 860px;
+  --Container-paddingValue: 1rem;
+  padding-left: var(--Container-paddingValue);
+  padding-right: var(--Container-paddingValue);
+  max-width: calc(800px + var(--Container-paddingValue) * 2);
 }
 
 @media (min-width: 576px) {
