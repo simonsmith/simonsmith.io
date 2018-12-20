@@ -1,0 +1,12 @@
+@import "suitcss-base";
+@import "tailwindcss/utilities";
+
+.transition-color {
+  transition-duration: .1s;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+}
+
+.Container {
+  max-width: 860px;
+}

@@ -1,0 +1,10 @@
+baseUrl= 'https://simonsmith.io/'
+languageCode = "en-gb"
+title = '&ndash; simonsmith.io'
+
+[permalinks]
+  blog = "/:slug"
+
+pygmentsUseClasses = false
+pygmentsCodeFences = true
+PygmentsStyle = 'friendly'

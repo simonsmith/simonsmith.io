@@ -330,7 +330,7 @@ component and that the total matches the total set of posts in the data source.
 import { expect } from 'chai';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
-import PostList from '../../components/post-list.react';
+import PostList from '../../components/PostList.react';
 import Post from '../../components/post.react';
 import sd from 'skin-deep';
 
