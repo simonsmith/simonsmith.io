@@ -1,6 +1,7 @@
 ---
 title: Writing React components as CommonJS modules
 date: 2014-01-21
+draft: true
 ---
 
 One of the libraries gaining interest at the moment is [Facebook's React JS library](http://facebook.github.io/react/index.html). It mainly concerns itself with "the V in MVC" and encourages developers to break their app into resuable, modular components. The Virtual DOM is a great feature on its own, and I encourage you to [investigate React](http://facebook.github.io/react/blog/2013/06/05/why-react.html) if you haven't yet.

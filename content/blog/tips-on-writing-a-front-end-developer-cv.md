@@ -1,6 +1,7 @@
 ---
 title: Tips on writing a front-end developer CV
 date: 2011-10-23
+draft: true
 ---
 
 For the last month or two we've been searching for a decent front-end developer to join the Radio Times ranks. My involvement in the project has been coming to a close for a while (due to [Radio Times no longer belonging to BBC Worldwide][1] any more) so finding a dedicated resource has been high on the &#8220;shit that needs to get done&#8221; list.

@@ -1,6 +1,7 @@
 ---
 date: 2017-01-03T20:16:03Z
 title: Things learned in 2016
+draft: true
 ---
 
 Last year it felt like the challenges of being a front end developer were always
