@@ -32,13 +32,13 @@
     </script>
     <script async src="//www.google-analyics.com/analytics.js"></script>
   </head>
-  <body class="font-serif text-lg">
+  <body class="font-serif text-lg text-black">
     <div class="Container mx-auto">
       <header role="banner">
-        <a href="{{.Site.BaseURL | relURL}}">simonsmith.io</a>
+        <a class="text-2xl no-underline text-grey-darkest" href="{{.Site.BaseURL | relURL}}">simonsmith.io</a>
       </header>
 
-      <main>
+      <main class="mt-12">
         {{ block "main" . }}{{ end }}
       </main>
 

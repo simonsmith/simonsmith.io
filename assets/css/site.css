@@ -12,5 +12,6 @@
 
   padding-left: var(--Container-paddingValue);
   padding-right: var(--Container-paddingValue);
+  padding-top: var(--Container-paddingValue);
   max-width: calc(800px + var(--Container-paddingValue) * 2);
 }

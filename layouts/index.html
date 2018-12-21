@@ -1,11 +1,11 @@
 {{ define "pageTitle" }}Posts{{ end }}
 
 {{ define "main" }}
-  <h1>Posts</h1>
+  <h1 class="visuallyhidden">Posts</h1>
   <ul>
     {{ range where .Pages "Section" "blog" }}
       <li>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <a class="text-green text-xl" href="{{ .Permalink }}">{{ .Title }}</a>
         <time datetime="{{ .Date.Format "01-02-2006" }}">
           {{ .Date.Format "Jan 2, 2006" }}
         </time>
