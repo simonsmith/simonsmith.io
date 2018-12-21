@@ -928,6 +928,7 @@ module.exports = {
 
   plugins: [
     require('tailwindcss-flexbox-order')(),
+    require('tailwindcss-visuallyhidden')(),
   ],
 
 
