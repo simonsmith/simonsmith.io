@@ -3,8 +3,7 @@
 {{ define "main" }}
   <h1>Posts</h1>
   <ul>
-    {{ $paginator := .Paginate (where .Site.Pages "Section" "blog") 16  }}
-    {{ range $paginator.Pages }}
+    {{ range where .Pages "Section" "blog" }}
       <li>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
         <time datetime="{{ .Date.Format "01-02-2006" }}">
