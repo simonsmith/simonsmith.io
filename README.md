@@ -1,3 +1,3 @@
 # simonsmith.io
 
-Personal website built with [Hugo](http://gohugo.io/) and [SUIT CSS](https://github.com/suitcss/suit)
+Personal website built with [Gatsby](https://www.gatsbyjs.org).
