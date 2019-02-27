@@ -1,25 +1,57 @@
 {
   "name": "simonsmith.io",
-  "version": "3.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build_css": "suitcss src/css/index.css static/css/build.css -c src/suit-config.js -L",
-    "build_css_min": "suitcss src/css/index.css ../simonsmith.github.com/css/build.css -c src/suit-config.js -L -m"
-  },
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "postcss-generate-preset": "^0.2.0",
-    "postcss-nested": "^1.0.0",
-    "postcss-size": "^1.0.0",
-    "suitcss-preprocessor": "^3.0.0"
-  },
+  "private": true,
+  "description": "Personal blog",
+  "version": "4.0.0",
+  "author": "Simon Smith",
   "dependencies": {
-    "suitcss-base": "^3.0.0",
-    "suitcss-components-flex-embed": "^2.0.4",
-    "suitcss-utils-display": "^1.0.2",
-    "suitcss-utils-flex": "^2.0.0",
-    "suitcss-utils-text": "^1.0.0"
+    "gatsby": "^2.1.10",
+    "gatsby-image": "^2.0.29",
+    "gatsby-plugin-manifest": "^2.0.18",
+    "gatsby-plugin-offline": "^2.0.24",
+    "gatsby-plugin-react-helmet": "^3.0.6",
+    "gatsby-plugin-sharp": "^2.0.21",
+    "gatsby-source-filesystem": "^2.0.20",
+    "gatsby-transformer-sharp": "^2.1.14",
+    "normalize.css": "^8.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "lint": "eslint .",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonsmith/simonsmith.io"
+  },
+  "bugs": {
+    "url": "https://github.com/simonsmith/simonsmith.io/issues"
+  },
+  "devDependencies": {
+    "@emotion/core": "^10.0.7",
+    "@emotion/styled": "^10.0.7",
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "gatsby-plugin-emotion": "^4.0.4",
+    "gatsby-remark-autolink-headers": "^2.0.14",
+    "gatsby-remark-images": "^3.0.5",
+    "gatsby-remark-prismjs": "^3.2.4",
+    "gatsby-remark-unwrap-images": "^1.0.1",
+    "gatsby-transformer-remark": "^2.2.5",
+    "prettier": "^1.16.4",
+    "prismjs": "^1.15.0"
   }
 }
