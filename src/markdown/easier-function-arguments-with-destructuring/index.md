@@ -74,4 +74,4 @@ That's it!
 
 ## Related
 
-* [Destructuring objects as function parameters in ES6]({{< ref "blog/destructuring-objects-as-function-parameters-in-es6.md" >}})
+* [Destructuring objects as function parameters in ES6](/destructuring-objects-as-function-parameters-in-es6)
