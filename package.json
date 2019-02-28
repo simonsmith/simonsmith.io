@@ -51,6 +51,7 @@
     "gatsby-remark-prismjs": "^3.2.4",
     "gatsby-remark-unwrap-images": "^1.0.1",
     "gatsby-transformer-remark": "^2.2.5",
+    "gatsby-transformer-yaml": "^2.1.8",
     "prettier": "^1.16.4",
     "prismjs": "^1.15.0"
   }

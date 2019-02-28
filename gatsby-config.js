@@ -28,6 +28,14 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-emotion',
+    'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/yaml`,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
