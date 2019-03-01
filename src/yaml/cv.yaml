@@ -1,27 +1,14 @@
 cv:
-  title: "CV"
-  intro: "I've been building websites professionally for over ten years and I
-  specialise in HTML, CSS and JavaScript. I'm passionate about the latest web
-  technologies and writing great code."
+  title: CV
+  intro: I've been building websites professionally for over ten years and I specialise in HTML, CSS and JavaScript. I'm passionate about the latest web technologies and writing great code.
   employment:
-    - company: 'Simba'
-      role: 'Lead Front End Engineer'
+    - company: Simba
+      role: Lead Front End Engineer
       website:
-        url: 'http://simbasleep.com/'
-        label: 'simbasleep.com'
-      start_date: 'May 2018'
-      end_date: 'Present'
-      description: "Used [VueJS](https://vuejs.org) (via [Nuxt](https://nuxtjs.org)) to build a new
-      Simba website that communicates with Shopify via the [Buy SDK](https://shopify.github.io/js-buy-sdk/).
+        url: http://simbasleep.com/
+        label: simbasleep.com
+      start_date: May 2018
+      end_date: Present
+      description: |
+        Used [VueJS](https://vuejs.org) (via [Nuxt](https://nuxtjs.org)) to build a new Simba website that communicates with Shopify via the [Buy SDK](https://shopify.github.io/js-buy-sdk/).
 
-      Built a NodeJS Express API to wrap the Shopify Buy SDK. This also involved
-      various non-trivial data transformations to provide sensible payloads for the
-      Nuxt application.
-
-      Led knowledge sharing sessions on various topics with junior members of the
-      team.
-
-      Carried out a round of performance focused improvements on the existing Shopify
-      site. This resulted in a 3 second load time on mobile, down from 30 seconds.
-
-      Assisted with interviewing and general hiring tasks."
