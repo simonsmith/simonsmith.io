@@ -13,7 +13,9 @@ export default function Layout({children}) {
           <Header />
         </Container>
       </div>
-      <Container>{children}</Container>
+      <div css={{flex: 1}}>
+        <Container>{children}</Container>
+      </div>
       <div css={styles.footer}>
         <Container wide>
           <footer>footer text</footer>
@@ -24,6 +26,12 @@ export default function Layout({children}) {
 }
 
 const styles = {
+  root: {
+    display: 'flex',
+    minHeight: '100vh',
+    flexDirection: 'column',
+  },
+
   header: {
     marginBottom: '3rem',
     borderBottom: '1px solid #eee',
