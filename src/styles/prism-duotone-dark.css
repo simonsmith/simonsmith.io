@@ -11,7 +11,7 @@ pre[class*='language-'] {
     'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
     'Courier New', Courier, monospace;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.375;
   direction: ltr;
   text-align: left;
