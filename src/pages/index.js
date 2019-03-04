@@ -10,9 +10,7 @@ export default function IndexPage({data}) {
   return (
     <Layout>
       <SEO title="Home" />
-      <div>
-        <PostList data={edges} />
-      </div>
+      <PostList data={edges} />
     </Layout>
   );
 }
