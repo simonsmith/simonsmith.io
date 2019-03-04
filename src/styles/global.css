@@ -65,8 +65,9 @@ pre {
 }
 
 blockquote {
-  color: #777;
-  border-left: 5px solid rgba(0, 0, 0, .3);
+  color: #555;
+  border-left: 8px solid rgba(0, 0, 0, .3);
+  font-style: italic;
   padding-left: 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
