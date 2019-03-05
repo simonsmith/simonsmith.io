@@ -10,13 +10,7 @@ export default function Nav() {
           <Link to="/">Blog</Link>
         </li>
         <li>
-          <a href="https://github.com/simonsmith">Github</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/blinkdesign">Twitter</a>
-        </li>
-        <li>
-          <a href="mailto:me@simonsmith.io">Email</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

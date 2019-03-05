@@ -4,14 +4,12 @@ import {graphql} from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import PostList from '../components/PostList';
-import Profile from '../components/Profile';
 
 export default function IndexPage({data}) {
   const {edges} = data.allMarkdownRemark;
   return (
     <Layout>
       <SEO title="Home" />
-      <Profile />
       <PostList data={edges} />
     </Layout>
   );

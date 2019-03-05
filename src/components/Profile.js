@@ -1,15 +1,12 @@
 import React from 'react';
 import me from '../images/me.jpg';
 
-export default function Profile() {
+export default function Profile({title, text}) {
   return (
     <div css={styles.root}>
       <div css={styles.content}>
-        <h2 css={styles.header}>Hello!</h2>
-        <p>
-          This site is where I write down all the bits and pieces I've learned
-          whilst working on professional projects and open source.
-        </p>
+        <h2 css={styles.header}>{title}</h2>
+        <p>{text}</p>
       </div>
       <img
         css={styles.img}
@@ -44,8 +41,9 @@ const styles = {
 
   img: {
     order: 1,
-    borderRadius: '50%',
-    width: 100,
-    height: 100,
+    border: '1px solid #ddd',
+    padding: 4,
+    height: 'auto',
+    maxWidth: 160,
   },
 };

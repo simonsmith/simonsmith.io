@@ -1,0 +1,15 @@
+contact:
+  profile:
+    title: About
+    text: >-
+      I've been building websites professionally for over a decade, specialising
+      in CSS, JavaScript and all the technologies that accompany them. This blog
+      is where you'll find some of the things I've learnt.
+  social:
+    - label: github.com/simonsmith
+      url: https://github.com/simonsmith
+    - label: twitter.com/blinkdesign
+      url: https://twitter.com/blinkdesign
+    - label: me@simonsmith.io
+      url: mailto:me@simonsmith.io
+
