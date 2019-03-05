@@ -9,6 +9,8 @@ cv:
         label: simbasleep.com
       start_date: May 2018
       end_date: Present
-      description: |
+      description: >
         Used [VueJS](https://vuejs.org) (via [Nuxt](https://nuxtjs.org)) to build a new Simba website that communicates with Shopify via the [Buy SDK](https://shopify.github.io/js-buy-sdk/).
+
+        Some other text here about what I did
 
