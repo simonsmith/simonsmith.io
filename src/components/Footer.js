@@ -5,8 +5,8 @@ export default function Footer() {
     <div css={styles.root}>
       <p>Simon Smith {new Date().getFullYear()}</p>
       <p>
-        Built with{' '}
-        <a href="https://github.com/simonsmith/simonsmith.io">Gatsby</a>
+        Source{' '}
+        <a href="https://github.com/simonsmith/simonsmith.io">on Github</a>
       </p>
     </div>
   );
