@@ -8,7 +8,6 @@ cv:
         role: Lead Front End Engineer
         website: simbasleep.com
         start_date: May 2018
-        end_date: Present
         notes:
           - Used [VueJS](https://vuejs.org) (via [Nuxt](https://nuxtjs.org)) to build a new Simba website that communicates with Shopify via the [Buy SDK](https://shopify.github.io/js-buy-sdk/).
           - Built a NodeJS Express API to wrap the Shopify Buy SDK. This also involved various non-trivial data transformations to provide sensible payloads for the Nuxt application.

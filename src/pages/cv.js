@@ -3,6 +3,7 @@ import {graphql} from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
+import Employment from '../components/Employment';
 
 function getData(data) {
   const edge = data.allYamlYaml.edges.find(e => e.node.cv);
@@ -14,9 +15,13 @@ export default function CvPage({data}) {
   return (
     <Layout>
       <SEO title="CV" />
-      <h1>{cv.title}</h1>
-      <p>{cv.intro}</p>
-      <h2>{cv.employment.title}</h2>
+      <article>
+        <header>
+          <h1>{cv.title}</h1>
+          <p>{cv.intro}</p>
+        </header>
+        <Employment title={cv.employment.title} jobs={cv.employment.items} />
+      </article>
     </Layout>
   );
 }
