@@ -4,15 +4,19 @@ import {graphql} from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 
+function getData(data) {
+  const edge = data.allYamlYaml.edges.find(e => e.node.cv);
+  return edge.node.cv;
+}
+
 export default function CvPage({data}) {
-  const {
-    node: {cv},
-  } = data.allYamlYaml.edges[0];
+  const cv = getData(data);
   return (
     <Layout>
       <SEO title="CV" />
       <h1>{cv.title}</h1>
       <p>{cv.intro}</p>
+      <h2>Employment</h2>
     </Layout>
   );
 }
@@ -31,7 +35,7 @@ export const pageQuery = graphql`
               role
               start_date
               end_date
-              description
+              notes
             }
           }
         }
