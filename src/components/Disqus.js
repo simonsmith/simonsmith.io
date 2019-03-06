@@ -2,12 +2,10 @@ import React, {useEffect} from 'react';
 import loadScript from '../scripts/load-script';
 import urlJoin from 'url-join';
 
-const BASE_URL = 'https://simonsmith.io';
-
-export default function Disqus({path}) {
+export default function Disqus({path, baseUrl, scriptUrl}) {
   useEffect(() => {
-    loadScript('//simonsmithio.disqus.com/embed.js').then(() => {
-      const url = urlJoin(BASE_URL, path, '/');
+    loadScript(scriptUrl).then(() => {
+      const url = urlJoin(baseUrl, path, '/');
       window.DISQUS.reset({
         reload: true,
         config: function() {

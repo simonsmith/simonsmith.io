@@ -14,7 +14,11 @@ export default function PostTemplate({data, location}) {
         <h1 css={styles.header}>{frontmatter.title}</h1>
         <time css={styles.date}>{frontmatter.date}</time>
         <div css={styles.content} dangerouslySetInnerHTML={{__html: html}} />
-        <Disqus path={location.pathname} />
+        <Disqus
+          path={location.pathname}
+          baseUrl="https://simonsmith.io"
+          scriptUrl="//simonsmithio.disqus.com/embed.js"
+        />
       </div>
     </Layout>
   );
