@@ -13,12 +13,14 @@ export default function PostTemplate({data, location}) {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <div>
-        <h1 css={styles.header}>{frontmatter.title}</h1>
-        <time css={styles.date}>{frontmatter.date}</time>
+      <article>
+        <header>
+          <h1 css={styles.header}>{frontmatter.title}</h1>
+          <time css={styles.date}>{frontmatter.date}</time>
+        </header>
         <div css={styles.content} dangerouslySetInnerHTML={{__html: html}} />
         <Disqus path={location.pathname} baseUrl={url} scriptUrl={script} />
-      </div>
+      </article>
     </Layout>
   );
 }

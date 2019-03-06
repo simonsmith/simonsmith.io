@@ -3,17 +3,17 @@ import me from '../images/me.jpg';
 
 export default function Profile({title, text}) {
   return (
-    <div css={styles.root}>
-      <div css={styles.content}>
+    <article css={styles.root}>
+      <header css={styles.content}>
         <h2 css={styles.header}>{title}</h2>
         <p>{text}</p>
-      </div>
+      </header>
       <img
         css={styles.img}
         src={me}
         alt="Simon playing drums and singing into a microphone"
       />
-    </div>
+    </article>
   );
 }
 
