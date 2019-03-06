@@ -16,7 +16,7 @@ export default function CvPage({data}) {
       <SEO title="CV" />
       <h1>{cv.title}</h1>
       <p>{cv.intro}</p>
-      <h2>Employment</h2>
+      <h2>{cv.employment.title}</h2>
     </Layout>
   );
 }
@@ -31,11 +31,27 @@ export const pageQuery = graphql`
             title
             intro
             employment {
-              company
-              role
-              start_date
-              end_date
-              notes
+              title
+              items {
+                company
+                role
+                website
+                start_date
+                end_date
+                notes
+              }
+            }
+            skills {
+              title
+              items
+            }
+            projects {
+              title
+              items
+            }
+            interests {
+              title
+              items
             }
           }
         }
