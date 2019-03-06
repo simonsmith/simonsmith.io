@@ -2,8 +2,9 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
+import Disqus from '../components/Disqus';
 
-export default function PostTemplate({data}) {
+export default function PostTemplate({data, location}) {
   const {markdownRemark} = data;
   const {frontmatter, html} = markdownRemark;
   return (
@@ -13,6 +14,7 @@ export default function PostTemplate({data}) {
         <h1 css={styles.header}>{frontmatter.title}</h1>
         <time css={styles.date}>{frontmatter.date}</time>
         <div css={styles.content} dangerouslySetInnerHTML={{__html: html}} />
+        <Disqus path={location.pathname} />
       </div>
     </Layout>
   );
