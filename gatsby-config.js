@@ -3,7 +3,10 @@ module.exports = {
     title: 'simonsmith.io',
     description:
       'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: 'Simon Smith',
+    disqus: {
+      url: 'https://simonsmith.io',
+      script: '//simonsmithio.disqus.com/embed.js',
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
