@@ -14,9 +14,9 @@ export default function Layout({children}) {
           <Header />
         </Container>
       </div>
-      <div css={{flex: 1}}>
+      <main css={{flex: 1}} role="main">
         <Container>{children}</Container>
-      </div>
+      </main>
       <div css={styles.footer}>
         <Container>
           <Footer />
