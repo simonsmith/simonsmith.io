@@ -10935,6 +10935,16 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
+suitcss-utils-display@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/suitcss-utils-display/-/suitcss-utils-display-1.0.2.tgz#cb6a4e756eab9aefb149f3e4618c76d02bbab47f"
+  integrity sha1-y2pOdW6rmu+xSfPkYYx20Cu6tH8=
+
+suitcss-utils-list@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/suitcss-utils-list/-/suitcss-utils-list-1.0.0.tgz#ccfc6b9ea921e838ad0fdb5580917e1bac15db59"
+  integrity sha1-zPxrnqkh6DitD9tVgJF+G6wV21k=
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"

@@ -19,6 +19,8 @@
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
     "react-markdown": "^4.0.6",
+    "suitcss-utils-display": "^1.0.2",
+    "suitcss-utils-list": "^1.0.0",
     "url-join": "^4.0.0"
   },
   "keywords": [
