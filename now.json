@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "simonsmith.io",
+  "alias": ["simonsmith.io", "www.simonsmith.io"],
   "builds": [
     {
       "src": "package.json",
