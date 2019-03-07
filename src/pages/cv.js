@@ -4,6 +4,7 @@ import {graphql} from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Employment from '../components/Employment';
+import Skills from '../components/Skills';
 
 function getData(data) {
   const edge = data.allYamlYaml.edges.find(e => e.node.cv);
@@ -21,6 +22,7 @@ export default function CvPage({data}) {
           <p>{cv.intro}</p>
         </header>
         <Employment title={cv.employment.title} jobs={cv.employment.items} />
+        <Skills title={cv.skills.title} skills={cv.skills.items} />
       </article>
     </Layout>
   );
