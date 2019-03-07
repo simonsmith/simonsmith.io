@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'simonsmith.io',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+      'Personal blog covering JavaScript, CSS and other forms of front end tech',
     disqus: {
       url: 'https://simonsmith.io',
       script: '//simonsmithio.disqus.com/embed.js',

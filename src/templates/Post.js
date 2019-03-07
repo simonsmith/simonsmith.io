@@ -12,7 +12,7 @@ export default function PostTemplate({data, location}) {
   } = metadata.siteMetadata;
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <SEO description={post.excerpt} title={frontmatter.title} />
       <article>
         <header>
           <h1 css={styles.header}>{frontmatter.title}</h1>
@@ -44,6 +44,7 @@ export const pageQuery = graphql`
   query getMarkdown($path: String!) {
     post: markdownRemark(frontmatter: {path: {eq: $path}}) {
       html
+      excerpt
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
