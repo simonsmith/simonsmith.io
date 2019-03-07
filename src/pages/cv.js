@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Employment from '../components/Employment';
 import Skills from '../components/Skills';
+import CvSection from '../components/CvSection';
 
 function getData(data) {
   const edge = data.allYamlYaml.edges.find(e => e.node.cv);
@@ -23,6 +24,8 @@ export default function CvPage({data}) {
         </header>
         <Employment title={cv.employment.title} jobs={cv.employment.items} />
         <Skills title={cv.skills.title} skills={cv.skills.items} />
+        <CvSection title={cv.projects.title} items={cv.projects.items} />
+        <CvSection title={cv.interests.title} items={cv.interests.items} />
       </article>
     </Layout>
   );
