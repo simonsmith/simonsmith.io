@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link} from 'gatsby';
-import {resetList} from './styles';
+import 'suitcss-utils-list';
 
 export default function PostList({data}) {
   return (
-    <ul css={[resetList]}>
+    <ul className="u-listReset u-listNone">
       {data.map(item => (
         <PostItem key={item.node.id} post={item.node} />
       ))}

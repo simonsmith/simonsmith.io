@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from 'gatsby';
-import {resetList} from './styles';
+import 'suitcss-utils-list';
 
 export default function Nav() {
   return (
     <nav role="navigation">
-      <ul css={[styles.root, resetList]}>
+      <ul className="u-listReset u-listNone" css={styles.root}>
         <li>
           <Link to="/">Blog</Link>
         </li>
