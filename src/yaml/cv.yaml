@@ -1,5 +1,7 @@
 cv:
+  name: Simon Smith
   title: CV
+  website: simonsmith.io
   intro: I've been building websites professionally for over ten years and I specialise in HTML, CSS and JavaScript. I'm passionate about the latest web technologies and writing great code.
   employment:
     title: Employment
@@ -144,16 +146,18 @@ cv:
   skills:
     title: Skills
     items:
-      - API development and design with Node.js.
       - Strong JavaScript experience, both OO and functional patterns.
       - Strong experience with component and state libraries (VueJS + Vuex, React + Redux).
       - Expertise with CSS to facilitate component based UI development (SUIT CSS, BEM, CSS in JS).
       - Leadership of small agile teams.
-      - Comfortable with and CLI and related software (Vim, tmux, zsh).
+      - Comfortable with CLI and related software (Vim, tmux, zsh).
+      - API development and design with Node.js.
+      - Understanding of continuous integration and deployment.
       - Strong experience with Git to manage source control.
+      - Management of popular open source projects.
       - Organising project work streams on task boards (Trello, Github projects etc).
       - Experience with writing documentation to support projects, particularly in open source.
-      - Facilitating interviews and hiring process for new developers
+      - Facilitating interviews and hiring process for new developers.
       - Usage of unit and functional testing to provide confidence in design.
       - Excellent communication skills, written and verbal. Especially with non-technical team members.
       - Pairing with and mentoring other developers to gain and share knowledge.
@@ -161,8 +165,8 @@ cv:
   projects:
     title: Personal Projects
     items:
-      - Created a [small React & Redux application](https://simonsmith.io/github-user-search/) for browsing GitHub users
-      - Project lead on [SUIT CSS](https://github.com/orgs/suitcss/), an open-source project for best practices when writing and distributing UI components.
+      - Created a [small React & Redux application](https://simonsmith.io/github-user-search/) for browsing GitHub users.
+      - Project lead on [SUIT CSS](https://github.com/orgs/suitcss/), an open-source project for best practices when writing and distributing UI components. Used by Twitter, BBC and many others.
       - Contributing various [PostCSS](https://github.com/postcss/postcss) plugins [on Github](https://github.com/search?q=user%3Asimonsmith+postcss-) as well as maintaining several existing plugins.
       - Creating, owning and maintaining a level design community - [interlopers.net](http://www.interlopers.net). The site has been running for over 10 years and is a recognised resource for Source engine development.
 

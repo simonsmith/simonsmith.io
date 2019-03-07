@@ -19,17 +19,46 @@ export default function CvPage({data}) {
       <SEO title="CV" />
       <article>
         <header>
-          <h1>{cv.title}</h1>
+          <h1 css={styles.heading}>
+            <span className="u-hiddenScreen">{cv.name}</span> {cv.title}
+          </h1>
+          <p css={styles.site} className="u-hiddenScreen">
+            {cv.website}
+          </p>
           <p>{cv.intro}</p>
         </header>
         <Employment title={cv.employment.title} jobs={cv.employment.items} />
-        <Skills title={cv.skills.title} skills={cv.skills.items} />
-        <CvSection title={cv.projects.title} items={cv.projects.items} />
-        <CvSection title={cv.interests.title} items={cv.interests.items} />
+        <div css={styles.item}>
+          <Skills title={cv.skills.title} skills={cv.skills.items} />
+        </div>
+        <div css={styles.item}>
+          <CvSection title={cv.projects.title} items={cv.projects.items} />
+        </div>
+        <div css={styles.item}>
+          <CvSection title={cv.interests.title} items={cv.interests.items} />
+        </div>
       </article>
     </Layout>
   );
 }
+
+const styles = {
+  heading: {
+    '@media print': {
+      marginBottom: 0,
+    },
+  },
+
+  site: {
+    '@media print': {
+      marginTop: 5,
+    },
+  },
+
+  item: {
+    marginTop: '2.2rem',
+  },
+};
 
 export const pageQuery = graphql`
   query {
@@ -40,12 +69,13 @@ export const pageQuery = graphql`
           cv {
             title
             intro
+            name
+            website
             employment {
               title
               items {
                 company
                 role
-                website
                 start_date
                 end_date
                 notes

@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import 'suitcss-utils-display';
+import 'suitcss-utils-list';
 
 export default function Employment({title, jobs}) {
   return (
@@ -12,7 +14,7 @@ export default function Employment({title, jobs}) {
 
 function JobList({jobs}) {
   return (
-    <ul>
+    <ul className="u-listReset u-listNone">
       {jobs.map((job, i) => (
         <li key={i}>
           <Job {...job} />
@@ -22,31 +24,24 @@ function JobList({jobs}) {
   );
 }
 
-function Job({company, role, website, start_date, end_date, notes}) {
+function Job({company, role, start_date, end_date, notes}) {
   return (
     <section className="entry vcalendar">
       <header>
-        <h3 className="fn org">
+        <h3 css={styles.heading} className="fn org">
           {company}
           <span>{role}</span>
         </h3>
-        <div>
-          {website && (
-            <a className="company-url location" href={`http://${website}`}>
-              {website}
-            </a>
-          )}
-          <dl className="vevent">
-            <dt className="u-hiddenVisually">From</dt>
-            <dd>
-              <time className="dtstart">{start_date}</time>
-            </dd>
-            <dt>to</dt>
-            <dd>
-              {end_date ? <time className="dtend">{end_date}</time> : 'Present'}
-            </dd>
-          </dl>
-        </div>
+        <dl css={styles.dates} className="vevent">
+          <dt className="u-hiddenVisually">From</dt>
+          <dd>
+            <time className="dtstart">{start_date}</time>
+          </dd>
+          <dt css={styles.to}>to</dt>
+          <dd>
+            {end_date ? <time className="dtend">{end_date}</time> : 'Present'}
+          </dd>
+        </dl>
       </header>
       {notes && (
         <div className="summary">
@@ -60,7 +55,27 @@ function Job({company, role, website, start_date, end_date, notes}) {
 }
 
 const styles = {
-  root: {
-    background: 'red',
+  heading: {
+    marginBottom: 0,
+
+    '& span': {
+      fontSize: '0.75em',
+      display: 'block',
+      color: '#444',
+    },
+  },
+
+  dates: {
+    display: 'flex',
+    fontSize: '0.85rem',
+    marginTop: 0,
+
+    '& dd': {
+      margin: 0,
+    },
+  },
+
+  to: {
+    margin: '0 0.3em',
   },
 };
