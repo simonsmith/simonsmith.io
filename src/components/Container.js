@@ -14,5 +14,9 @@ const styles = {
     maxWidth: '720px',
     paddingLeft: '1.5rem',
     paddingRight: '1.5rem',
+
+    '@media print': {
+      maxWidth: '100%',
+    },
   },
 };

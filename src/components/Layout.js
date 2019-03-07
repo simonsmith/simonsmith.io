@@ -5,6 +5,7 @@ import Footer from './Footer';
 
 import 'normalize.css';
 import '../styles/global.css';
+import '../styles/print.css';
 
 export default function Layout({children}) {
   return (
@@ -36,9 +37,17 @@ const styles = {
   header: {
     marginBottom: '3rem',
     borderBottom: '1px solid #eee',
+
+    '@media print': {
+      display: 'none',
+    },
   },
 
   footer: {
     marginTop: '4rem',
+
+    '@media print': {
+      display: 'none',
+    },
   },
 };
