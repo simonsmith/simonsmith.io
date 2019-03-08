@@ -8,7 +8,7 @@ In a [React Router](https://reacttraining.com/react-router) application it's
 very common to want to render a default set of components on every route, such
 as a header and footer:
 
-```js
+```jsx
 <div className="App">
   <div className="Header">
     Page Header
@@ -30,7 +30,7 @@ as creating child layouts for specific use cases.
 The default layout is where components used on every page of our app will exist.
 React router offers a `render` prop which will be called when the route matches:
 
-```js
+```jsx
 // The usual way to render a pre-defined component
 <Route path="/" component={SomeComponent} />
 
@@ -42,7 +42,7 @@ This is useful because we can wrap a component around the `<Route />` and
 control where _our_ component is rendered whilst allowing all the usual props to
 be `Route` get passed through:
 
-```js
+```jsx
 const DefaultLayout = ({component: Component, ...rest}) => {
   return (
     <Route {...rest} render={matchProps => (
@@ -70,7 +70,8 @@ and footer but this could just easily be a group of other components. The
 
 It's important to rename the `component` prop to `Component` with de-structuring
 as it effects how JSX transforms our code:
-```js
+
+```jsx
 <component />
 // becomes
 React.createElement("component", null); // Not what we wanted
@@ -91,7 +92,7 @@ might be times when we want to add certain components for one view, like a blog
 post for example. A way to solve this is to build upon the `DefaultLayout` and
 then add the shared components just for the new view:
 
-```js
+```jsx
 const PostLayout = ({component: Component, ...rest}) => {
   return (
     <DefaultLayout {...rest} component={matchProps => (
@@ -107,7 +108,7 @@ const PostLayout = ({component: Component, ...rest}) => {
   );
 };
 ```
-```js
+```jsx
 <PostLayout path="/posts/:post" component={PostComponent} />
 ```
 

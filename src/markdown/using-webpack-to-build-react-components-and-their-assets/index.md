@@ -47,7 +47,7 @@ When building applications with webpack you need to define one or more entry poi
 
 **ui-App/index.js**
 
-``` js
+``` jsx
 import './index.css';
 
 import React from 'react';

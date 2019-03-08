@@ -14,7 +14,7 @@ At this point it's worth noting the use of [JSX in React](http://facebook.github
 
 Although it is not _required_ to use React you'd be a braver man than I to write heavily nested HTML structures without it.
 
-``` js
+``` jsx
 // This easy to read syntax gets translated into...
 <div className="Module">
   <h2 className="Module-header h3">{result.login}</h2>
@@ -58,7 +58,7 @@ For the purpose of this post we'll pretend that a user profile needs to be creat
 
 **bio.jsx**
 
-``` js
+``` jsx
 /** @jsx React.DOM */
 
 var React = require('react');
@@ -76,7 +76,7 @@ module.exports = React.createClass({
 
 **avatar.jsx**
 
-``` js
+``` jsx
 /** @jsx React.DOM */
 
 var React = require('react');
@@ -100,7 +100,7 @@ With the building blocks defined they can now be easily used to construct a prof
 
 **profile.jsx**
 
-``` js
+``` jsx
 /** @jsx React.DOM */
 
 var React  = require('react');
