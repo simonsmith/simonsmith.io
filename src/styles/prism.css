@@ -29,7 +29,7 @@ pre[class*='language-'] {
 pre[class*='language-'] {
   font-size: 0.85em;
   padding: 1em;
-  margin: 1em -1.5rem 1em -1.5rem;
+  margin: 2em -1.5rem;
   overflow: auto;
 }
 
