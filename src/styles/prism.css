@@ -45,9 +45,12 @@ pre[class*='language-'] {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-  padding: 0.1em;
+  padding: 0 0.1em;
   color: inherit;
-  font-weight: bold;
+  background-color: #eee;
+  border-radius: 4px;
+  font-size: 0.9em;
+  display: inline-block;
 }
 
 .gatsby-highlight-code-line {
