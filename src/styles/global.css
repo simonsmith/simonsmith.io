@@ -53,21 +53,9 @@ a {
   color: #A63A50;
 }
 
-pre {
-  background-color: #f8f8f8;
-  padding: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  margin: 25px 0;
-  overflow: auto;
-  white-space: pre;
-  word-wrap: normal;
-}
-
 blockquote {
   color: #555;
   border-left: 8px solid rgba(0, 0, 0, .3);
-  font-style: italic;
   padding-left: 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;

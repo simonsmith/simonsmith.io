@@ -3,6 +3,7 @@ import {graphql} from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Disqus from '../components/Disqus';
+import '../styles/prism.css';
 
 export default function PostTemplate({data, location}) {
   const {post, metadata} = data;
