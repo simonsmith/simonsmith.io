@@ -2,6 +2,7 @@
 date: 2017-04-20
 title: Organising webpack configuration for different environments
 path: "/organising-webpack-config-environments"
+draft: false
 ---
 
 A common question is how best to organise webpack config files, especially

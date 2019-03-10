@@ -2,6 +2,7 @@
 date: 2018-05-11
 title: Easier function arguments with destructuring
 path: "/easier-function-arguments-with-destructuring"
+draft: false
 ---
 
 This is just a simple tip but one I think is worth mentioning, particularly

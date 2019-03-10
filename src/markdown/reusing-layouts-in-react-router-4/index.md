@@ -2,6 +2,7 @@
 date: 2017-02-27
 title: Reusing layouts in React Router 4
 path: "/reusing-layouts-in-react-router-4"
+draft: false
 ---
 
 In a [React Router](https://reacttraining.com/react-router) application it's

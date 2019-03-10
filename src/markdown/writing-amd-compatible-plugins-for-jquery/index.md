@@ -2,6 +2,7 @@
 title: Writing AMD compatible plugins for jQuery
 date: 2012-12-21
 path: "/writing-amd-compatible-plugins-for-jquery"
+draft: false
 ---
 
 I&#8217;ve been tinkering with jQuery a lot these days. My love for [the Moo][1] is still strong, but I like switching around from time to time. I also find myself using [RequireJS][2] for almost every project big or small and I decided to find a nice way to write jQuery plugins that work with AMD or without.

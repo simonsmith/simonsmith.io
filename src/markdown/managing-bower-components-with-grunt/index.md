@@ -2,6 +2,7 @@
 title: Managing Bower components with Grunt
 date: 2014-01-13
 path: "/managing-bower-components-with-grunt"
+draft: false
 ---
 
 Originally it took me a while to get on board with using [Bower](http://bower.io) as part of my main development workflow. My biggest gripe was the way it handled repositories that were missing a `bower.json` file to configure ignored files etc.

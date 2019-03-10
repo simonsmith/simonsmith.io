@@ -2,6 +2,7 @@
 title: Handling props and class names in React
 date: 2016-02-02
 path: "/handling-props-and-class-names-in-react"
+draft: false
 ---
 
 If you spend any time writing React then you'll find a common task

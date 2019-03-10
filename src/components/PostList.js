@@ -13,6 +13,9 @@ export default function PostList({data}) {
 }
 
 function PostItem({post: {frontmatter}}) {
+  if (frontmatter.draft) {
+    return null;
+  }
   return (
     <li css={styles.listItem}>
       <Link css={styles.link} to={frontmatter.path}>

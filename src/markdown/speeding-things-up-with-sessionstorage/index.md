@@ -2,6 +2,7 @@
 title: Speeding things up with sessionStorage
 date: 2013-06-13
 path: "/speeding-things-up-with-sessionstorage"
+draft: false
 ---
 
 If you pass data between the client and server via Ajax and aren&#8217;t too worried about the content being fresh (perhaps it&#8217;s some static article text) then you might want to consider leaning upon [the DOM Storage API][1] to help speed things up, and in particular, `sessionStorage`.

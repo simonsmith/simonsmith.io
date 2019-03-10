@@ -2,6 +2,7 @@
 title: Destructuring objects as function parameters in ES6
 date: 2015-07-28
 path: "/destructuring-objects-as-function-parameters-in-es6"
+draft: false
 ---
 
 One of the new features available in ES6 is destructuring, which is a succinct way to extract values from objects and arrays.

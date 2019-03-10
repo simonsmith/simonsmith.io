@@ -2,6 +2,7 @@
 title: Unit testing React components without a DOM
 date: 2015-06-14
 path: "/unit-testing-react-components-without-a-dom"
+draft: false
 ---
 
 * _**Update 12/04/17**_ Airbnb's [Enzyme library](http://airbnb.io/enzyme/)

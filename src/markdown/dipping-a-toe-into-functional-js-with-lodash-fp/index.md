@@ -2,6 +2,7 @@
 date: 2016-07-12
 title: Dipping a toe into functional JS with lodash/fp
 path: "/dipping-a-toe-into-functional-js-with-lodash-fp"
+draft: false
 ---
 
 Recently I've been making an effort to write JavaScript in a more functional

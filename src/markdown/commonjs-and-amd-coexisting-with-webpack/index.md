@@ -2,6 +2,7 @@
 title: CommonJS and AMD coexisting with webpack
 date: 2014-11-04
 path: "/commonjs-and-amd-coexisting-with-webpack"
+draft: false
 ---
 
 The world of JavaScript modules and package managers can be a fragmented place. With a mixture of AMD, Bower, npm and CommonJS it can sometimes lead to interoperability headaches.

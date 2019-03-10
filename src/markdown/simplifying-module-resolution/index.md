@@ -2,6 +2,7 @@
 date: 2017-05-20
 title: Simplifying module resolution with Babel or webpack
 path: "/simplifying-module-resolution-with-babel-or-webpack"
+draft: false
 ---
 
 I like to keep my projects organised and this usually means varying levels of

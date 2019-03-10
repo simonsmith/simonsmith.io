@@ -2,6 +2,7 @@
 title: Modular HTML components with RequireJS
 date: 2013-07-04
 path: "/modular-html-components-with-requirejs"
+draft: false
 ---
 
 [RequireJS][1] is great, and if you are using or planning on using RequireJS for managing JavaScript then you&#8217;ll really notice the benefits.
