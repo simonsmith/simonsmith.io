@@ -5,6 +5,8 @@ import SEO from '../components/Seo';
 import Disqus from '../components/Disqus';
 import '../styles/prism.css';
 
+const isProduction = process.env.NODE_ENV == 'production';
+
 export default function PostTemplate({data, location}) {
   const {post, metadata} = data;
   const {frontmatter, html} = post;
@@ -20,7 +22,9 @@ export default function PostTemplate({data, location}) {
           <time css={styles.date}>{frontmatter.date}</time>
         </header>
         <div css={styles.content} dangerouslySetInnerHTML={{__html: html}} />
-        <Disqus path={location.pathname} baseUrl={url} scriptUrl={script} />
+        {isProduction && (
+          <Disqus path={location.pathname} baseUrl={url} scriptUrl={script} />
+        )}
       </article>
     </Layout>
   );
