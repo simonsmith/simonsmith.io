@@ -66,21 +66,8 @@ blockquote {
   margin-bottom: 2rem;
 }
 
-.Figure {
-  text-align: center;
-}
-
-figure .gatsby-resp-image-wrapper,
-.Figure img {
+figure .gatsby-resp-image-wrapper {
   margin-bottom: 0.8rem;
-}
-
-.Figure {
-  text-align: center;
-}
-
-.Figure img:not(.gatsby-resp-image-wrapper) {
-  max-width: 100%;
 }
 
 figcaption {
