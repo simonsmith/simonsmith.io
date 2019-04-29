@@ -4,15 +4,18 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Disqus from '../components/Disqus';
 import '../styles/prism.css';
+import {useInView} from 'react-intersection-observer';
 
 const isProduction = process.env.NODE_ENV == 'production';
 
 export default function PostTemplate({data, location}) {
+  const [ref, inView] = useInView({triggerOnce: true});
   const {post, metadata} = data;
   const {frontmatter, html} = post;
   const {
     disqus: {url, script},
   } = metadata.siteMetadata;
+  const showDisqus = isProduction && inView;
   return (
     <Layout>
       <SEO description={post.excerpt} title={frontmatter.title} />
@@ -22,9 +25,11 @@ export default function PostTemplate({data, location}) {
           <time css={styles.date}>{frontmatter.date}</time>
         </header>
         <div css={styles.content} dangerouslySetInnerHTML={{__html: html}} />
-        {isProduction && (
-          <Disqus path={location.pathname} baseUrl={url} scriptUrl={script} />
-        )}
+        <div ref={ref}>
+          {showDisqus && (
+            <Disqus path={location.pathname} baseUrl={url} scriptUrl={script} />
+          )}
+        </div>
       </article>
     </Layout>
   );
