@@ -13,6 +13,8 @@
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sharp": "^2.0.21",
     "gatsby-remark-autolink-headers": "^2.0.14",
+    "gatsby-remark-copy-linked-files": "^2.0.12",
+    "gatsby-remark-figure-caption": "^2.0.0",
     "gatsby-remark-images": "^3.0.5",
     "gatsby-remark-prismjs": "^3.2.4",
     "gatsby-remark-unwrap-images": "^1.0.1",

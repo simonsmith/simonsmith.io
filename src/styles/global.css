@@ -75,6 +75,10 @@ figure .gatsby-resp-image-wrapper,
   margin-bottom: 0.8rem;
 }
 
+.Figure {
+  text-align: center;
+}
+
 .Figure img:not(.gatsby-resp-image-wrapper) {
   max-width: 100%;
 }
