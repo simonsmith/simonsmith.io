@@ -65,3 +65,26 @@ blockquote {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+.Figure {
+  text-align: center;
+}
+
+figure .gatsby-resp-image-wrapper,
+.Figure img {
+  margin-bottom: 0.8rem;
+}
+
+.Figure img:not(.gatsby-resp-image-wrapper) {
+  max-width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+figure {
+  margin-bottom: 2rem;
+}
