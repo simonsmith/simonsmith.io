@@ -1,7 +1,7 @@
 ---
 date: 2019-03-13
 title: Tips and tricks for a better terminal experience
-path: "/streamlining-your-terminal-experience"
+path: "/terminal-tips-and-tricks"
 draft: true
 ---
 
