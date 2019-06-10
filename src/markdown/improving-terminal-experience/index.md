@@ -330,7 +330,12 @@ Taken from [the z README](https://github.com/agkozak/zsh-z)
   you have visited frequently in the past, or recently -- but most often a
   combination of the two (a concept known as "frecency")
 
+This avoids the need to create your own aliases for frequently used directories,
+instead allowing use of the `z` command and a partial match:
 
+![](./z-dotfiles.png)
+
+It can also be [combined with FZF](https://github.com/junegunn/fzf/wiki/Examples#z)
 
 ## nnn
 
