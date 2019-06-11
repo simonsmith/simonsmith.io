@@ -6,17 +6,16 @@ draft: true
 ---
 
 In modern web development it's almost a requirement to use a terminal and be
-familiar with the CLI to some degree. With tools such as npm, webpack and Babel
-all running from the command line you'd be hard pushed to find a project that
-doesn't require knowledge of it.
+familiar with the Command Line Interface (CLI) to some degree. With tools such as npm,
+webpack and Babel all running from the command line you'd be hard pushed to find
+a project that doesn't require some knowledge of it.
 
-That being said I've worked in a lot of different places over the years and it
-surprises me how often people are happy to work with a very basic terminal
-setup. Perhaps a more useful prompt will be installed, or some Git shortcuts but
-there is a _whole_ lot more that can be utilised to provide a more streamlined
-experience.
+However the CLI has a lot more to offer than the ability to run simple npm
+scripts. With some customisations it can be an extremely efficient tool and allow
+you to work more effectively than any Graphical User Interface (GUI)
+alternatives.
 
-In this post I'll be looking at how you can up your terminal game.
+In this post I'll be looking at a few ways to up your terminal game.
 
 ## Choosing a terminal emulator
 
@@ -28,8 +27,9 @@ reason it's useful to check out some alternatives. Here are my favourites:
 * [Alacritty](https://github.com/jwilm/alacritty) - My current terminal
   of choice. It's cross platform, lightweight and also supports GPU rendering
   which is extremely useful for a nice smooth experience when scrolling large
-  blocks of text or using terminal based editors like Vim.
-* [iTerm2](https://www.iterm2.com) - Tends to be the go to replacement on macOS
+  blocks of text (think log outputs) or using terminal based editors like Vim
+  and Nano.
+* [iTerm2](https://www.iterm2.com) - This is the go to replacement on macOS
   and for good reason. It's full of features and very customisable.
 * [Kitty](https://sw.kovidgoyal.net/kitty) - Another cross platform terminal
   designed for keyboard power users.
@@ -44,7 +44,7 @@ Most Linux distributions will ship with a package manager (`apt` on Ubuntu for
 example) that easily allows installation and updating of various open source
 command line tools.
 
-macOS offers no such thing out of the box, which is why we have the excellent
+macOS offers no such thing out of the box, but thankfully we have the excellent
 [Homebrew](https://brew.sh). If you're not using this already then take a moment
 to install it as it will be critical for managing a lot of the tools in this
 post.
@@ -56,11 +56,12 @@ You can even install macOS apps, fonts and other plugins with `brew cask`!
 Zsh and Bash are examples of shell interpreters and are what you interact with
 when running commands and applications on the command line.
 
-By default on macOS you will find yourself using Bash but it's recommended to
-switch to zsh. There are a lot of [great
-features](https://github.com/hmml/awesome-zsh) that exist out of the box and
-there are a plethora of Zsh plugins & frameworks available to make things
-even sweeter.
+By default on macOS you will find yourself using Bash (although this is [set to
+change](https://www.theverge.com/2019/6/4/18651872/apple-macos-catalina-zsh-bash-shell-replacement-features)
+in Catalina) but it's recommended to switch to the latest zsh. There are a lot
+of [great features](https://github.com/hmml/awesome-zsh) that exist out of the
+box and there are a plethora of Zsh plugins & frameworks available to make
+things even sweeter.
 
 ### How to switch to it?
 
@@ -99,6 +100,9 @@ from Homebrew and use that instead:
 brew install zsh
 ```
 
+> Note that Homebrew installs its binaries to `/usr/local/bin` so as not to
+  conflict with the existing items
+
 Once installed, add the Homebrew version to `/etc/shells` and run `chsh` again:
 
 ```bash{11}
@@ -126,6 +130,9 @@ brew install zsh
 sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
 chsh -s /usr/local/bin/zsh
 ```
+
+> This is your first taste of automating your setup and we'll get to that in more
+  detail later!
 
 The rest of this post will assume you are using Zsh.
 
@@ -168,10 +175,10 @@ plugins](https://github.com/unixorn/awesome-zsh-plugins#plugins) for me to list,
 so here are a few of my personal recommendations:
 
 * [zsh-completions](https://github.com/zsh-users/zsh-completions) This should
-almost be a mandatory plugin. Dozens of tab completions for various tools.
+almost be a default plugin. Dozens of tab completions for various tools.
 
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) -
-Top feature is highlighting valid commands in green as you type.
+My favourite feature is highlighting valid commands in green as you type.
 
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) -
 This will offer a suggestion as a command is typed. I recommend changing the
@@ -250,8 +257,8 @@ place. It's often one of the more heavily used tools outside the text editor.
 The key to working efficiently with Git is mastering a set of aliases for common
 tasks, such as commit, merge and rebase. Personally I recommend the [oh-my-zsh
 Git aliases](https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet),
-particularly as they are likely to be installed on other machines that you may
-use.
+(particularly as they are likely to be installed on other machines that you may
+use) but you are of course free to [define your own](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases).
 
 ### Avoid using full paths with git commands
 
@@ -268,7 +275,8 @@ git add src/components/Disqus.js
 
 Whilst it's possible to tab complete the names, it can quickly become tiresome
 if there are many files to add that are all scattered across different parts of
-the project.
+the project. After all, you should be doing [atomic
+commits](https://seesparkbox.com/foundry/atomic_commits_with_git) right?
 
 Enter `scmpuff`:
 
@@ -321,7 +329,11 @@ alias gdcs='git diff --cached | ydiff -s -w 0'
 
 ## Navigating the file system
 
-### z
+We've looked at some very specific use cases for improvement so far but what
+about just moving around in general? Let's avoid reaching for a GUI (like Finder
+on macOS) and see what tools can help us on the CLI.
+
+### Jumping to frequently visited directories
 
 Once you've spent some time using the CLI to navigate around to various
 directories it's possible to determine which places you visit most frequently.
@@ -337,7 +349,7 @@ instead allowing use of the `z` command and a partial match:
 
 ![](./z-dotfiles.png)
 
-It can also be [combined with FZF](https://github.com/junegunn/fzf/wiki/Examples#z)
+It can also be [combined with FZF](https://github.com/junegunn/fzf/wiki/Examples#z).
 
 ## nnn
 
