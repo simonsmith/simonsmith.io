@@ -319,7 +319,9 @@ alias gds='ydiff -s -w 0'
 alias gdcs='git diff --cached | ydiff -s -w 0'
 ```
 
-## z
+## Navigating the file system
+
+### z
 
 Once you've spent some time using the CLI to navigate around to various
 directories it's possible to determine which places you visit most frequently.
