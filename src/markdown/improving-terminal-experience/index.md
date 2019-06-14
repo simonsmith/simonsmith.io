@@ -351,6 +351,30 @@ instead allowing use of the `z` command and a partial match:
 
 It can also be [combined with FZF](https://github.com/junegunn/fzf/wiki/Examples#z).
 
+## Improving `ls` with exa
+
+When moving between directories on the command line it's fairly common to `cd dirname`
+and then use `ls` to list the contents of it to orientate yourself. There are
+[many flags you can use](https://ss64.com/osx/ls.html) to improve the output,
+but [`exa`](https://github.com/ogham/exa) takes that concept a bit further.
+From the documentation:
+
+> exa is a modern replacement for the command-line program ls that ships with
+  Unix and Linux operating systems, with more features and better defaults. It
+  uses colours to distinguish file types and metadata. It knows about symlinks,
+  extended attributes, and Git. And it’s small, fast, and just one single
+  binary.
+
+Here's my recommended alias for quickly listing the contents of the current
+directory:
+
+```bash
+alias l="exa -lbha --git --group-directories-first"
+```
+
+![Listing the contents of a directory with exa](./exa.png)
+
+
 ## nnn
 
 * Link and overview
