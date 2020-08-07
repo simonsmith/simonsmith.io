@@ -61,6 +61,6 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "prettier": "^1.16.4",
-    "prismjs": "^1.15.0"
+    "prismjs": "^1.21.0"
   }
 }
