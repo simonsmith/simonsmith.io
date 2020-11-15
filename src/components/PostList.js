@@ -5,7 +5,7 @@ import 'suitcss-utils-list';
 export default function PostList({data}) {
   return (
     <ul className="u-listReset u-listNone">
-      {data.map(item => (
+      {data.map((item) => (
         <PostItem key={item.node.id} post={item.node} />
       ))}
     </ul>

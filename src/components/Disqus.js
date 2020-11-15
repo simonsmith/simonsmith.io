@@ -8,7 +8,7 @@ export default function Disqus({path, baseUrl, scriptUrl}) {
       const url = urlJoin(baseUrl, path, '/');
       window.DISQUS.reset({
         reload: true,
-        config: function() {
+        config: function () {
           this.page.url = url;
           this.page.identifier = url;
         },

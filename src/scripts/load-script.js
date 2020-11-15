@@ -8,7 +8,7 @@ function loadScript(src) {
   const script = document.createElement('script');
   script.async = true;
 
-  scripts[src] = new Promise(function(resolve, reject) {
+  scripts[src] = new Promise(function (resolve, reject) {
     script.addEventListener('load', resolve);
     script.addEventListener('error', () =>
       reject(new Error(`Failed to load script: ${src}.`))

@@ -3,7 +3,6 @@
   "extends": [
     "eslint:recommended",
     "plugin:prettier/recommended",
-    "plugin:flowtype/recommended",
     "plugin:react/recommended"
   ],
   "plugins": [
@@ -13,6 +12,10 @@
     "node": true,
     "es6": true,
     "browser": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+      "sourceType": "module"
   },
   "settings": {
     "react": {

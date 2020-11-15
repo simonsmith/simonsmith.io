@@ -7,7 +7,7 @@ import Profile from '../components/Profile';
 import Social from '../components/Social';
 
 function getContactData(data) {
-  const edge = data.allYamlYaml.edges.find(e => e.node.contact);
+  const edge = data.allYamlYaml.edges.find((e) => e.node.contact);
   return edge.node.contact;
 }
 

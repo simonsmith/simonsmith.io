@@ -8,7 +8,7 @@ import Skills from '../components/Skills';
 import CvSection from '../components/CvSection';
 
 function getData(data) {
-  const edge = data.allYamlYaml.edges.find(e => e.node.cv);
+  const edge = data.allYamlYaml.edges.find((e) => e.node.cv);
   return edge.node.cv;
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Social({links}) {
-  const items = links.map(l => (
+  const items = links.map((l) => (
     <li css={styles.root} key={l.label}>
       <a css={styles.link} href={l.url}>
         {l.label}
