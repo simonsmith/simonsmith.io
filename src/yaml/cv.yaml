@@ -6,10 +6,22 @@ cv:
   employment:
     title: Employment
     items:
+      - company: Treatwell
+        role: Senior Front End Engineer
+        website: treatwell.co.uk
+        start_date: July 2019
+        notes:
+          - Rebuilt the user account pages with NextJS, Redux and CSS Modules. All built in TypeScript.
+          - Led the front end development on creating a brand new checkout application, using React, Redux, bespoke Webpack configuration and CSS modules. Integrated with multiple payment providers (including Stripe) and all tested in Cypress with visual regression.
+          - Proponent of accessibility at Treatwell and ensured the Checkout was a pleasant experience for less able users, including those relying on screenreaders.
+          - Working on an 'internal open source' repository of reusable components that implements Treatwell's design system. Includes basics for Text and Buttons and also more low level layout components.
+          - Organising a team of front end developers to ensure the products are delivered efficiently, including creating backlogs, code reviews and mentoring.
+
       - company: Sky
         role: Senior JavaScript Engineer
         website: nowtv.com
         start_date: December 2018
+        end_date: July 2019
         notes:
           - Working on the NowTV React + Redux single page application deployed across web and TV devices.
           - Introduced [Emotion](https://emotion.sh/docs/introduction) CSS-in-JS library to replace existing Sass BEM styling.
