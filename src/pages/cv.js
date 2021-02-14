@@ -31,7 +31,7 @@ export default function CvPage({data}) {
         <div css={styles.item}>
           <Skills title={cv.skills.title} skills={cv.skills.items} />
         </div>
-        <div css={[styles.item, {'pageBreakBefore': 'always'}]}>
+        <div css={[styles.item, {pageBreakBefore: 'always'}]}>
           <CvSection title={cv.projects.title} items={cv.projects.items} />
         </div>
         <div css={styles.item}>
