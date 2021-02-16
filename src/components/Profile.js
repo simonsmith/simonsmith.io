@@ -8,11 +8,7 @@ export default function Profile({title, text}) {
         <h2 css={styles.header}>{title}</h2>
         <p>{text}</p>
       </header>
-      <img
-        css={styles.img}
-        src={me}
-        alt="Simon playing drums and singing into a microphone"
-      />
+      <img css={styles.img} src={me} alt="Simon sitting at a table" />
     </article>
   );
 }
