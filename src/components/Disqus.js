@@ -14,7 +14,7 @@ export default function Disqus({path, baseUrl, scriptUrl}) {
         },
       });
     });
-  });
+  }, []);
   return (
     <div css={styles.root}>
       <div id="disqus_thread" />
