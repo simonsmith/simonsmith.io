@@ -1,5 +1,5 @@
 ---
-title: Handling network requests in React with a custom Hook
+title: Handling network request state in React with a custom Hook
 date: 2021-05-22
 path: "/handling-network-request-state-react-custom-hook"
 ---
