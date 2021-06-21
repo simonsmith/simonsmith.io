@@ -242,9 +242,20 @@ const paymentRequest = stripe.paymentRequest({
 
 Next is to `await` a promise from `canMakePayment`. It will return an object that indicates
 support of the two payment methods:
+
 ```js
 // {googlePay: false, applePay: true}
 const support = await paymentRequest.canMakePayment();
+```
+
+Then show the dialog to the user based on some form of user interaction (if
+you're using a custom Apple Pay button):
+
+```js
+button.addEventListener('click', (event) => {
+  paymentRequest.show();
+  event.preventDefault();
+}, false);
 ```
 
 To complete the payment an event handler needs to be added to `paymentmethod`
