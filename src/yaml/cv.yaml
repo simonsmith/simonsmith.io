@@ -7,9 +7,12 @@ cv:
     title: Employment
     items:
       - company: Treatwell
+        role2: Technical Lead (Front End)
+        role2_start: October 2021
         role: Senior Front End Engineer
         website: treatwell.co.uk
         start_date: July 2019
+        end_date: October 2021
         notes:
           - Rebuilt the user account pages with NextJS, Redux and CSS Modules. All built in TypeScript.
           - Led the front end development on creating a brand new checkout application, using React, Redux, bespoke Webpack configuration and CSS modules. Integrated with multiple payment providers (including Stripe) and all tested in Cypress with visual regression.

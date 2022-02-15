@@ -76,6 +76,8 @@ export const pageQuery = graphql`
               items {
                 company
                 role
+                role2
+                role2_start
                 start_date
                 end_date
                 notes

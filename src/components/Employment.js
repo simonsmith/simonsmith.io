@@ -24,14 +24,31 @@ function JobList({jobs}) {
   );
 }
 
-function Job({company, role, start_date, end_date, notes}) {
+function Job({company, role2, role2_start, role, start_date, end_date, notes}) {
+  let additionalRole = null;
+  if (role2 && role2_start) {
+    additionalRole = (
+      <>
+        <span>{role2}</span>
+        <dl css={styles.dates} className="vevent">
+          <dt className="u-hiddenVisually">From</dt>
+          <dd>
+            <time className="dtstart">{role2_start}</time>
+          </dd>
+          <dt css={styles.to}>to</dt>
+          <dd>Present</dd>
+        </dl>
+      </>
+    );
+  }
   return (
     <section className="entry vcalendar">
       <header>
         <h3 css={styles.heading} className="fn org">
           {company}
-          <span>{role}</span>
         </h3>
+        {additionalRole}
+        <span>{role}</span>
         <dl css={styles.dates} className="vevent">
           <dt className="u-hiddenVisually">From</dt>
           <dd>
