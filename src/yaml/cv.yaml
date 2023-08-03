@@ -2,23 +2,17 @@ cv:
   name: Simon Smith
   title: CV
   website: simonsmith.io
-  intro: I've been building websites professionally for over ten years and I specialise in HTML, CSS and JavaScript. I'm passionate about the latest web technologies and writing great code.
+  intro: I've been building websites professionally for over fifteen years and I specialise in TypeScript, React, CSS and all things front end. I'm passionate about the latest web technologies and helping teams to succeed.
   employment:
     title: Employment
     items:
       - company: Treatwell
-        role2: Technical Lead (Front End)
+        role2: Technical Lead
         role2_start: September 2021
         role: Senior Front End Engineer
         website: treatwell.co.uk
         start_date: July 2019
         end_date: September 2021
-        notes:
-          - Rebuilt the user account pages with NextJS, Redux and CSS Modules. All built in TypeScript.
-          - Led the front end development on creating a brand new checkout application, using React, Redux, bespoke Webpack configuration and CSS modules. Integrated with multiple payment providers (including Stripe) and all tested in Cypress with visual regression.
-          - Proponent of accessibility at Treatwell and ensured the Checkout was a pleasant experience for less able users, including those relying on screenreaders.
-          - Working on an 'internal open source' repository of reusable components that implements Treatwell's design system. Includes basics for Text and Buttons and also more low level layout components.
-          - Organising a team of front end developers to ensure the products are delivered efficiently, including creating backlogs, code reviews and mentoring.
 
       - company: Sky
         role: Senior JavaScript Engineer
@@ -37,7 +31,7 @@ cv:
         start_date: May 2018
         end_date: December 2018
         notes:
-          - Used [VueJS](https://vuejs.org) (via [Nuxt](https://nuxtjs.org)) to build a new Simba website that communicates with Shopify via the [Buy SDK](https://shopify.github.io/js-buy-sdk/).
+          - Used [VueJS](https://vuejs.org) (via [Nuxt](https://nuxtjs.org)) to build a new website that communicates with Shopify via the [Buy SDK](https://shopify.github.io/js-buy-sdk/).
           - Built a NodeJS Express API to wrap the Shopify Buy SDK. This also involved various non-trivial data transformations to provide sensible payloads for the Nuxt application.
           - Led knowledge sharing sessions on various topics with junior members of the team.
           - Carried out a round of performance focused improvements on the existing Shopify site. This resulted in a 3 second load time on mobile, down from 30 seconds.
@@ -49,7 +43,7 @@ cv:
         start_date: November 2017
         end_date: May 2018
         notes:
-          - Helped lead a small team on the redesign of the existing Now TV React & Redux single page application.
+          - Led a small team on the redesign of the existing Now TV React & Redux single page application.
           - Wrote, refactored and tested dozens of new components, including best practices for styling in a large code base.
           - Code reviews and pairing with other team members to learn and share knowledge.
           - Managing expectations with other teams in the business (design requirements, API changes).
@@ -59,63 +53,37 @@ cv:
         website: bdcgdv.com
         start_date: October 2017
         end_date: November 2017
-        notes:
-          - Worked on an internal dashboard SPA built with [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/).
 
       - company: Olive Jar
         role: Senior Front End Engineer
         website: olivejar.co.uk
         start_date: March 2017
         end_date: September 2017
-        notes:
-          - Developed a school results web application for the Department for Education.
-          - Rewrote areas of the site to be component based (with SUIT CSS) to allow easier maintenance and reuse.
-          - Introduced webpack to handle generation of script bundles across the entire application.
-          - Rewrote various jQuery plugins and introduced Jest to handle unit testing.
 
       - company: New Look
         role: Senior JavaScript Engineer
         website: newlook.co.uk
         start_date: August 2016
         end_date: February 2017
-        notes:
-          - Developed an initial version of an iOS app with [React Native](http://facebook.github.io/react-native/).
-          - Used [Redux](http://redux.js.org/) to store data from multiple API endpoints.
-          - Unit tested React components and Redux reducers with [Jest](https://facebook.github.io/jest/)'s snapshot feature.
-          - Added type checking with [Flow](https://flowtype.org/).
 
       - company: BBC Three
         role: Senior Front End Engineer
         website: bbc.co.uk/bbcthree
         start_date: March 2015
         end_date: August 2016
-        notes:
-          - Built a new web product for BBC Three.
-          - Using Node with [React](https://facebook.github.io/react/) and [Express JS](http://expressjs.com/) to serve components on the client and server.
-          - "[Shallow rendering](http://simonsmith.io/unit-testing-react-components-without-a-dom/) React components to aid unit testing with Mocha and Chai."
-          - Testing front end performance with Chrome Devtools and making appropriate optimisations in [webpack](http://webpack.github.io/) such as bundle splitting and asynchronous module loading.
-          - Writing reusable UI components with [SUIT CSS](http://suitcss.github.io/) and [PostCSS](https://github.com/postcss/postcss).
 
       - company: Shopa
         role: Front End Engineer
         website: shopa.com
         start_date: June 2014
         end_date: March 2015
-        notes:
-          - Re-built the Shopa website to match a new design and developed various modular components with [SUIT CSS](http://suitcss.github.io/).
-          - Setup tooling with gulp to support building of SUIT components, JS modules and icon fonts.
-          - Adopted [Flight](https://github.com/flightjs/flight) to structure the JavaScript across the site, building the components with [webpack](http://webpack.github.io/) and utilising various ES6 features with [6to5](http://6to5.org).
-          - Refactored Rails controllers to support front end requirements.
 
       - company: BBC
         role: Senior JavaScript Developer
         website: bbc.co.uk
+
         start_date: February 2014
         end_date: June 2014
-        notes:
-          - Worked on a client-side Angular JS application to allow journalists to update news content from various devices.
-          - Wrote unit tests and used the Karma test runner to run them against PhantomJS.
-          - Developed and maintained an internal BBC Bootstrap which extends Twitter Bootstrap and has a variety of custom [SUIT CSS](http://suitcss.github.io/) components.
 
       - company: Universal Music
         role: Senior UI Engineer
@@ -175,24 +143,24 @@ cv:
       - Strong JavaScript experience, both OO and functional patterns.
       - Strong experience with component and state libraries (VueJS + Vuex, React + Redux).
       - Expertise with CSS to facilitate component based UI development (SUIT CSS, BEM, CSS in JS).
-      - Leadership of small agile teams.
+      - Leadership of agile software projects.
+      - Mentoring and providing feedback to team members
+      - Management of popular open source projects
+      - Pairing with and mentoring other developers to gain and share knowledge.
       - Implementing WAI ARIA to improve accessibility and testing with screen reader software.
       - Comfortable with CLI and related software (Vim, tmux, zsh).
       - API development and design with Node.js.
       - Understanding of continuous integration and deployment.
       - Strong experience with Git to manage source control.
-      - Management of popular open source projects.
       - Organising project work streams on task boards (Trello, Github projects etc).
       - Experience with writing documentation to support projects, particularly in open source.
       - Facilitating interviews and hiring process for new developers.
       - Usage of unit and functional testing to provide confidence in design.
       - Excellent communication skills, written and verbal. Especially with non-technical team members.
-      - Pairing with and mentoring other developers to gain and share knowledge.
 
   projects:
     title: Personal Projects
     items:
-      - Created a [small React & Redux application](https://simonsmith.io/github-user-search/) for browsing GitHub users.
       - Core team on [SUIT CSS](https://github.com/orgs/suitcss/), an open-source project for best practices when writing and distributing UI components. Used by Twitter, BBC and many others.
       - Contributing various [PostCSS](https://github.com/postcss/postcss) plugins [on Github](https://github.com/search?q=user%3Asimonsmith+postcss-) as well as maintaining several existing plugins.
       - Creating, owning and maintaining a level design community - [interlopers.net](http://www.interlopers.net). The site has been running for over 10 years and is a recognised resource for Source engine development.
@@ -200,6 +168,6 @@ cv:
   interests:
     title: Interests
     items:
-      - Playing drums in [a loud rock band](https://open.spotify.com/artist/3SXIgXBMf5K7G7OUIkfTUT). We've completed three tours of Eastern Europe and released multiple CDs independently.
-      - In September 2010 I [visited Chernobyl](http://www.flickr.com/photos/simonblink24/sets/72157625051285708/) and returned radiation free!
-      - I have driven across California in a Mustang, visiting places such as Yosemite, Death Valley and Silicon Valley. The latter included visits to the Github and Mozilla offices.
+      - Playing drums in [a band](https://open.spotify.com/artist/3SXIgXBMf5K7G7OUIkfTUT). Completed three tours of Eastern Europe and released multiple CDs independently.
+      - In September 2010 I [visited Chernobyl](http://www.flickr.com/photos/simonblink24/sets/72157625051285708/).
+      - I have driven across California in a Mustang, visiting places such as Yosemite, Death Valley and Silicon Valley.

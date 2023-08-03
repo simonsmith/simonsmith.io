@@ -3,6 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import 'suitcss-utils-display';
 import 'suitcss-utils-list';
 
+const text = require('!!raw-loader!./treatwell.md');
+
 export default function Employment({title, jobs}) {
   return (
     <>
@@ -41,6 +43,23 @@ function Job({company, role2, role2_start, role, start_date, end_date, notes}) {
       </>
     );
   }
+
+  // quick and dirty workaround to getting markdown to work
+  // for a single item. We just care about Treatwell here
+  let noteComponent;
+  if (Array.isArray(notes)) {
+    noteComponent = (
+      <div className="summary">
+        {notes.map((note, i) => (
+          <ReactMarkdown key={i} source={note} />
+        ))}
+      </div>
+    );
+  }
+  if (company === 'Treatwell') {
+    noteComponent = <ReactMarkdown source={text} />;
+  }
+
   return (
     <section className="entry vcalendar">
       <header>
@@ -60,13 +79,7 @@ function Job({company, role2, role2_start, role, start_date, end_date, notes}) {
           </dd>
         </dl>
       </header>
-      {notes && (
-        <div className="summary">
-          {notes.map((note, i) => (
-            <ReactMarkdown key={i} source={note} />
-          ))}
-        </div>
-      )}
+      <div className="summary">{noteComponent}</div>
     </section>
   );
 }
