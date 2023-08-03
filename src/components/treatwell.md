@@ -1,4 +1,4 @@
-Led the rebuild of three seperate applications from an older jQuery + Backbone
+Led the rebuild of three separate applications from an older jQuery + Backbone
 architecture to React + Redux:
   - Components using CSS modules and TypeScript
   - Tested with Jest and Cypress
@@ -10,11 +10,14 @@ efficiently, including creating backlogs, code reviews and mentoring. Worked
 closely with Engineering Managers to collate feedback for team members and
 ensure their career goals are aligned.
 
+Working with native iOS/Android teams to implement parts of the Treatwell app
+with React Native.
+
 Provided support on larger features to product, marketing and other business
 areas and empowered other engineers to be able to lead the requirement gathering
 and development. This allowed me to focus on a role geared towards front end
 platform which mainly revolved around library updates, creating tooling to
-make other engineers more efficient and other general non-user facing tasks 
+make other engineers more efficient and other general non-user facing tasks.
 
 Proponent of accessibility at Treatwell and ensured the applications were a
 pleasant experience for less able users, including those relying on
