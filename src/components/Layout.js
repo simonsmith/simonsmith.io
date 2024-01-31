@@ -7,22 +7,38 @@ import 'normalize.css';
 import '../styles/global.css';
 import '../styles/print.css';
 
-export default function Layout({children}) {
+export default function Layout({
+  children,
+  withHeader = true,
+  withFooter = true,
+  centered = false,
+}) {
+  const mainStyles = {
+    flex: 1,
+    display: 'flex',
+  };
+  if (centered) {
+    mainStyles.placeItems = 'center';
+  }
   return (
     <div css={styles.root}>
-      <div css={styles.header}>
-        <Container wide>
-          <Header />
-        </Container>
-      </div>
-      <main css={{flex: 1}} role="main">
+      {withHeader && (
+        <div css={styles.header}>
+          <Container>
+            <Header />
+          </Container>
+        </div>
+      )}
+      <main css={mainStyles} role="main">
         <Container>{children}</Container>
       </main>
-      <div css={styles.footer}>
-        <Container>
-          <Footer />
-        </Container>
-      </div>
+      {withFooter && (
+        <div css={styles.footer}>
+          <Container wide>
+            <Footer />
+          </Container>
+        </div>
+      )}
     </div>
   );
 }
@@ -36,7 +52,7 @@ const styles = {
 
   header: {
     marginBottom: '3rem',
-    borderBottom: '1px solid #eee',
+    borderBottom: '1px solid #ddd',
 
     '@media print': {
       display: 'none',

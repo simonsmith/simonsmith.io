@@ -2,12 +2,6 @@ html {
   line-height: 1.25;
 }
 
-@media (max-width: 600px) {
-  html {
-    font-size: 14px;
-  }
-}
-
 @media (min-width: 600px) {
   html {
     font-size: 18px;

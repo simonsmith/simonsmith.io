@@ -7,10 +7,7 @@ export default function Nav() {
     <nav role="navigation">
       <ul className="u-listReset u-listNone" css={styles.root}>
         <li>
-          <Link to="/">Blog</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/blog">Blog</Link>
         </li>
       </ul>
     </nav>

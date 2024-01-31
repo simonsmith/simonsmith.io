@@ -2,7 +2,7 @@ cv:
   name: Simon Smith
   title: CV
   website: simonsmith.io
-  intro: I've been building websites professionally for over fifteen years and I specialise in TypeScript, React, CSS and all things front end. I'm passionate about the latest web technologies and helping teams to succeed.
+  intro: text here
   employment:
     title: Employment
     items:
@@ -102,40 +102,6 @@ cv:
         website: bbcworldwide.com
         start_date: August 2009
         end_date: December 2011
-
-      - company: SAS Design
-        role: UI Engineer
-        start_date: April 2009
-        end_date: June 2009
-
-      - company: De-construct
-        role: UI Engineer
-        start_date: March 2009
-        end_date: April 2009
-
-      - company: DGTL
-        role: UI Engineer
-        website: dgtl.net
-        start_date: November 2008
-        end_date: March 2009
-
-      - company: Focus
-        role: UI Engineer
-        website: focusintegrated.co.uk
-        start_date: October 2008
-        end_date: November 2008
-
-      - company: AKQA
-        role: UI Engineer
-        website: akqa.com
-        start_date: June 2008
-        end_date: September 2008
-
-      - company: AAT
-        role: UI Engineer
-        website: aat.org.uk
-        start_date: June 2007
-        end_date: June 2008
 
   skills:
     title: Skills
