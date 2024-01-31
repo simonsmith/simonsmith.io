@@ -65,8 +65,11 @@
     "prettier": "^2.2.1",
     "prismjs": "^1.23.0"
   },
+  "resolutions": {
+    "sharp": "0.29.0"
+  },
   "volta": {
-    "node": "12.15.0",
+    "node": "18.17.0",
     "yarn": "1.22.19"
   }
 }

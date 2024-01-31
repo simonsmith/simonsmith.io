@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'simonsmith.io',
     description:
-      'Personal blog covering JavaScript, CSS and other forms of front end tech',
+      'Technical leader based in London, UK',
     disqus: {
       url: 'https://simonsmith.io',
       script: '//simonsmithio.disqus.com/embed.js',
